@@ -4,6 +4,7 @@ LangChain agent with tool-use powered by Claude or OpenAI.
 """
 
 import os
+import logging
 from dotenv import load_dotenv
 from langchain_classic.agents import AgentExecutor, create_tool_calling_agent
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
@@ -11,25 +12,38 @@ from langchain_core.messages import HumanMessage, AIMessage
 
 load_dotenv()
 
+logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
+logger = logging.getLogger(__name__)
+
+
 # ── LLM setup ───────────────────────────────────────────────────────────────────
 
 def get_llm():
     """Return the configured LLM (Claude or OpenAI)."""
-    model = os.getenv("LLM_MODEL", "claude-3-5-sonnet-20241022")
+    model = os.getenv("LLM_MODEL", "claude-haiku-4-5-20251001")
     api_key = os.getenv("ANTHROPIC_API_KEY")
 
     if api_key and api_key != "your_anthropic_api_key_here":
         from langchain_anthropic import ChatAnthropic
+        logger.info("Using Anthropic model: %s", model)
         return ChatAnthropic(model=model, api_key=api_key, temperature=0)
 
     openai_key = os.getenv("OPENAI_API_KEY")
     if openai_key:
         from langchain_openai import ChatOpenAI
+        logger.info("Using OpenAI model: gpt-4o")
         return ChatOpenAI(model="gpt-4o", api_key=openai_key, temperature=0)
 
     raise ValueError(
         "No LLM API key found. Set ANTHROPIC_API_KEY or OPENAI_API_KEY in your .env file."
     )
+
+
+def _extract_text(output) -> str:
+    """Normalize LLM output to a plain string regardless of SDK version."""
+    if isinstance(output, list):
+        return " ".join(item.get("text", "") for item in output if isinstance(item, dict))
+    return str(output)
 
 
 # ── Agent factory ───────────────────────────────────────────────────────────────
@@ -57,6 +71,7 @@ def build_agent() -> AgentExecutor:
         return_intermediate_steps=True,
         handle_parsing_errors=True,
     )
+    logger.info("Agent executor built with %d tools", len(ALL_TOOLS))
     return executor
 
 
@@ -84,6 +99,7 @@ def ask(question: str, chat_history: list = None) -> dict:
     Returns:
         dict with 'answer' and 'steps' keys
     """
+    logger.info("Agent query: %s", question[:120])
     agent = get_agent()
     history_messages = []
     if chat_history:
@@ -104,8 +120,11 @@ def ask(question: str, chat_history: list = None) -> dict:
             "output": observation[:500] + "..." if len(str(observation)) > 500 else observation,
         })
 
+    answer = _extract_text(result["output"])
+    logger.info("Agent answered (%d chars, %d tool steps)", len(answer), len(steps))
+
     return {
-        "answer": result["output"],
+        "answer": answer,
         "steps": steps,
     }
 
@@ -115,6 +134,7 @@ def generate_full_analysis() -> str:
     from agent.prompts import INSIGHT_GENERATION_PROMPT
     from tools.mcp_tools import get_metric, get_pipeline_by_segment, get_product_usage, get_company_context
 
+    logger.info("Running full growth analysis")
     metrics = get_metric.invoke("all metrics")
     crm = get_pipeline_by_segment.invoke("by region")
     usage = get_product_usage.invoke("summary")
@@ -128,7 +148,7 @@ def generate_full_analysis() -> str:
     )
     llm = get_llm()
     response = llm.invoke(prompt)
-    return response.content
+    return _extract_text(response.content)
 
 
 if __name__ == "__main__":

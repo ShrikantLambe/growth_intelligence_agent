@@ -7,13 +7,23 @@ Run: python rag/build_vectorstore.py
 
 import os
 import glob
+import logging
 from dotenv import load_dotenv
 
 load_dotenv()
 
+logger = logging.getLogger(__name__)
+
 DOCS_DIR = os.path.join(os.path.dirname(__file__), "docs")
 VECTORSTORE_DIR = os.path.join(os.path.dirname(__file__), "vectorstore")
 os.makedirs(VECTORSTORE_DIR, exist_ok=True)
+
+_REQUIRED_FILES = ["index.faiss", "index.pkl"]
+
+
+def vectorstore_exists() -> bool:
+    """Return True if the FAISS index files are present on disk."""
+    return all(os.path.exists(os.path.join(VECTORSTORE_DIR, f)) for f in _REQUIRED_FILES)
 
 
 def build_vectorstore():
@@ -23,9 +33,9 @@ def build_vectorstore():
     from langchain_community.document_loaders import TextLoader
     from langchain_text_splitters import RecursiveCharacterTextSplitter
     from langchain_community.vectorstores import FAISS
-    from langchain_anthropic import ChatAnthropic
     from langchain_community.embeddings import HuggingFaceEmbeddings
 
+    logger.info("Loading company documents from %s", DOCS_DIR)
     print("📚 Loading company documents...")
     doc_paths = glob.glob(os.path.join(DOCS_DIR, "*.md"))
     if not doc_paths:
@@ -61,13 +71,20 @@ def build_vectorstore():
     print(f"   → Saved to: {VECTORSTORE_DIR}")
 
     print("\n✅ RAG knowledge base ready!\n")
+    logger.info("Vectorstore built: %d chunks saved to %s", len(chunks), VECTORSTORE_DIR)
     return vectorstore
 
 
 def load_vectorstore():
-    """Load an existing FAISS vectorstore."""
+    """Load an existing FAISS vectorstore. Raises if not yet built."""
     from langchain_community.vectorstores import FAISS
     from langchain_community.embeddings import HuggingFaceEmbeddings
+
+    if not vectorstore_exists():
+        raise FileNotFoundError(
+            f"Vectorstore not found at {VECTORSTORE_DIR}. "
+            "Run `python rag/build_vectorstore.py` first."
+        )
 
     embeddings = HuggingFaceEmbeddings(
         model_name="sentence-transformers/all-MiniLM-L6-v2",
@@ -90,10 +107,12 @@ def retrieve_context(query: str, k: int = 4) -> str:
     for i, doc in enumerate(docs, 1):
         source = doc.metadata.get("source", "unknown")
         context_parts.append(f"[Source: {source}]\n{doc.page_content}")
+    logger.debug("Retrieved %d chunks for query: %s", len(context_parts), query[:80])
     return "\n\n---\n\n".join(context_parts)
 
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     build_vectorstore()
     print("🔍 Test retrieval: 'What is our ICP?'")
     ctx = retrieve_context("What is our ideal customer profile?")

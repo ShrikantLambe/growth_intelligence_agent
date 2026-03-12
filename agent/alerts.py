@@ -4,10 +4,12 @@ Compares current period vs. a simulated previous period.
 """
 
 import os
-import json
+import logging
 import pandas as pd
 import numpy as np
 from datetime import datetime
+
+logger = logging.getLogger(__name__)
 
 PROCESSED_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "processed")
 
@@ -31,9 +33,14 @@ def compute_alerts(threshold_pct: float = 0.15) -> list[dict]:
     """
     metrics_path = os.path.join(PROCESSED_DIR, "metrics.csv")
     if not os.path.exists(metrics_path):
+        logger.warning("Metrics file not found at %s", metrics_path)
         return [{"error": "Metrics not found. Run metrics/compute_metrics.py first."}]
 
     current = pd.read_csv(metrics_path)
+    if current.empty:
+        logger.warning("Metrics file is empty")
+        return []
+
     previous = simulate_previous_metrics(current)
 
     alerts = []
@@ -42,6 +49,10 @@ def compute_alerts(threshold_pct: float = 0.15) -> list[dict]:
         segment = row["segment"]
         curr_val = row["metric_value"]
 
+        if pd.isna(curr_val):
+            logger.debug("Skipping %s/%s — current value is NaN", metric, segment)
+            continue
+
         prev_row = previous[
             (previous["metric_name"] == metric) & (previous["segment"] == segment)
         ]
@@ -49,7 +60,7 @@ def compute_alerts(threshold_pct: float = 0.15) -> list[dict]:
             continue
         prev_val = prev_row.iloc[0]["metric_value"]
 
-        if prev_val == 0:
+        if pd.isna(prev_val) or prev_val == 0:
             continue
 
         change_pct = (curr_val - prev_val) / abs(prev_val)
@@ -62,8 +73,8 @@ def compute_alerts(threshold_pct: float = 0.15) -> list[dict]:
             alerts.append({
                 "metric": metric,
                 "segment": segment,
-                "current_value": curr_val,
-                "previous_value": round(prev_val, 4),
+                "current_value": round(float(curr_val), 4),
+                "previous_value": round(float(prev_val), 4),
                 "change_pct": round(change_pct * 100, 1),
                 "direction": direction,
                 "is_positive": is_good,
@@ -72,23 +83,28 @@ def compute_alerts(threshold_pct: float = 0.15) -> list[dict]:
                 "timestamp": datetime.now().isoformat(),
             })
 
-    # Sort: high severity first
+    # Sort: high severity first, then bad changes before good ones
     severity_order = {"High": 0, "Medium": 1, "Low": 2}
-    alerts.sort(key=lambda x: severity_order.get(x["severity"], 3))
+    alerts.sort(key=lambda x: (severity_order.get(x["severity"], 3), x["is_positive"]))
+    logger.info("Alert check complete: %d alerts found (threshold=%.0f%%)", len(alerts), threshold_pct * 100)
     return alerts
 
 
 def _is_positive_change(metric_name: str, change_pct: float) -> bool:
-    """Determine if a metric increase is a good thing or bad thing."""
+    """Determine if a metric movement is favorable (True) or unfavorable (False)."""
     negative_metrics = ["Usage At-Risk Rate", "Sales Cycle Length (days)"]
-    name = metric_name.lower()
-    if any(n.lower() in name for n in negative_metrics):
+    if any(neg.lower() in metric_name.lower() for neg in negative_metrics):
         return change_pct < 0  # decrease is good for risk/cycle metrics
     return change_pct > 0
 
 
-def _compute_severity(abs_change: float, is_negative_change: bool) -> str:
-    if is_negative_change:
+def _compute_severity(abs_change: float, is_positive: bool) -> str:
+    """
+    Severity is driven by whether the change is unfavorable.
+    Unfavorable large changes = High; unfavorable moderate = Medium.
+    Favorable changes are generally Low unless surprisingly large (High).
+    """
+    if not is_positive:
         if abs_change >= 0.25:
             return "High"
         elif abs_change >= 0.15:
@@ -96,7 +112,7 @@ def _compute_severity(abs_change: float, is_negative_change: bool) -> str:
         return "Low"
     else:
         if abs_change >= 0.25:
-            return "High"
+            return "High"   # unusually large positive swing — worth noting
         return "Low"
 
 
@@ -142,5 +158,6 @@ Action: {a['recommended_action']}
 
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     alerts = compute_alerts()
     print(format_alerts_for_display(alerts))
