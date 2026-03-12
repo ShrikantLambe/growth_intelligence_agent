@@ -1,0 +1,28 @@
+# Environment / secrets
+.env
+
+# Data (generated, not source-controlled)
+data/raw/
+data/processed/
+{data/
+
+# RAG vectorstore (built artifact)
+rag/vectorstore/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
