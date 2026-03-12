@@ -98,3 +98,6 @@ streamlit run ui/app.py
 | 4 | MCP tools | `tools/mcp_tools.py` |
 | 5 | Agent core | `agent/` |
 | 6 | Streamlit UI | `ui/app.py` |
+
+## 🌐 Live Article
+[Read the full project write-up →](https://shrikantlambe.github.io/growth_intelligence_agent/)
