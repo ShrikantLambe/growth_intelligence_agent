@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>I Built an AI Agent That Acts as a Virtual Revenue Analyst</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --ink-light: #444;
+    --ink-muted: #777;
+    --rule: #e0dcd5;
+    --bg: #faf9f6;
+    --bg-warm: #f5f2ec;
+    --accent: #c0392b;
+    --accent-soft: #f8ede9;
+    --code-bg: #1e1e2e;
+    --code-fg: #cdd6f4;
+    --highlight: #2c5f8a;
+    --col: 680px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { font-size: 18px; scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 300;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Progress bar ── */
+  #progress {
+    position: fixed; top: 0; left: 0; height: 3px;
+    background: var(--accent); width: 0%;
+    transition: width 0.1s; z-index: 999;
+  }
+
+  /* ── Header ── */
+  .pub-header {
+    border-bottom: 1px solid var(--rule);
+    padding: 1.2rem 2rem;
+    display: flex; justify-content: space-between; align-items: center;
+    background: var(--bg);
+    position: sticky; top: 0; z-index: 100;
+  }
+  .pub-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; font-weight: 900;
+    letter-spacing: -0.02em; color: var(--ink);
+  }
+  .pub-tag {
+    font-size: 0.72rem; text-transform: uppercase;
+    letter-spacing: 0.12em; color: var(--ink-muted);
+    font-family: 'Source Serif 4', serif;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    max-width: 900px; margin: 0 auto;
+    padding: 5rem 2rem 3rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .hero-kicker {
+    font-size: 0.72rem; text-transform: uppercase;
+    letter-spacing: 0.18em; color: var(--accent);
+    font-weight: 600; margin-bottom: 1.2rem;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    line-height: 1.12; font-weight: 900;
+    letter-spacing: -0.03em; color: var(--ink);
+    margin-bottom: 1.2rem;
+  }
+  .hero h1 em { font-style: italic; color: var(--accent); }
+  .hero-deck {
+    font-size: 1.2rem; line-height: 1.65;
+    color: var(--ink-light); font-weight: 300;
+    max-width: 620px; margin-bottom: 2rem;
+  }
+  .hero-meta {
+    display: flex; align-items: center; gap: 1.5rem;
+    font-size: 0.8rem; color: var(--ink-muted);
+    font-family: 'Source Serif 4', serif;
+  }
+  .hero-meta strong { color: var(--ink); font-weight: 600; }
+  .hero-meta-sep { color: var(--rule); }
+  .tag-pill {
+    background: var(--accent-soft); color: var(--accent);
+    padding: 3px 10px; border-radius: 20px;
+    font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* ── Hero image ── */
+  .hero-img {
+    width: 100%; max-width: 900px; margin: 0 auto;
+    display: block; aspect-ratio: 16/7; object-fit: cover;
+    border-bottom: 1px solid var(--rule);
+  }
+  .hero-caption {
+    max-width: 900px; margin: 0 auto;
+    padding: 0.6rem 2rem;
+    font-size: 0.72rem; color: var(--ink-muted);
+    border-bottom: 2px solid var(--ink);
+    font-style: italic;
+  }
+
+  /* ── Body layout ── */
+  .body-wrap {
+    max-width: 900px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr min(var(--col), 100%) 1fr;
+    padding: 0 2rem;
+  }
+  .body-wrap > * { grid-column: 2; }
+
+  /* ── Typography ── */
+  .drop-cap::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem; font-weight: 900;
+    float: left; line-height: 0.75;
+    margin: 0.12em 0.1em 0 0;
+    color: var(--accent);
+  }
+
+  p { margin-bottom: 1.4rem; }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.9rem; font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 3.5rem 0 1rem;
+    line-height: 1.2;
+  }
+  h3 {
+    font-size: 1rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--ink-muted);
+    margin: 2.5rem 0 0.6rem;
+  }
+
+  /* ── Blockquote / callout ── */
+  blockquote {
+    grid-column: 1 / -1 !important;
+    margin: 2.5rem 0;
+    padding: 2rem 2.5rem;
+    background: var(--bg-warm);
+    border-left: 4px solid var(--accent);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem; font-style: italic;
+    line-height: 1.55; color: var(--ink);
+  }
+  blockquote cite {
+    display: block; margin-top: 0.8rem;
+    font-size: 0.78rem; font-style: normal;
+    font-family: 'Source Serif 4', serif;
+    color: var(--ink-muted); letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* ── Pull quote ── */
+  .pull {
+    grid-column: 1 / -1 !important;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
+    padding: 1.8rem 2rem;
+    margin: 2rem 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem; font-style: italic;
+    line-height: 1.4; color: var(--ink);
+    text-align: center;
+  }
+
+  /* ── Code ── */
+  pre {
+    background: var(--code-bg);
+    color: var(--code-fg);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem; line-height: 1.7;
+    padding: 1.5rem; border-radius: 6px;
+    overflow-x: auto; margin: 1.5rem 0;
+    grid-column: 1 / -1 !important;
+    border: 1px solid #313244;
+  }
+  code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82em;
+    background: #eee; padding: 1px 5px;
+    border-radius: 3px; color: var(--accent);
+  }
+  pre code { background: none; padding: 0; color: inherit; font-size: inherit; }
+
+  /* ── Tables ── */
+  .table-wrap {
+    grid-column: 1 / -1 !important;
+    overflow-x: auto; margin: 2rem 0;
+  }
+  table {
+    width: 100%; border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+  th {
+    text-align: left; padding: 0.7rem 1rem;
+    border-bottom: 2px solid var(--ink);
+    font-weight: 600; text-transform: uppercase;
+    font-size: 0.7rem; letter-spacing: 0.1em;
+    color: var(--ink-muted);
+  }
+  td { padding: 0.65rem 1rem; border-bottom: 1px solid var(--rule); }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: var(--bg-warm); }
+
+  /* ── Section images ── */
+  .section-img {
+    grid-column: 1 / -1 !important;
+    margin: 2.5rem 0 0.5rem;
+    border-radius: 6px; overflow: hidden;
+    border: 1px solid var(--rule);
+  }
+  .section-img img {
+    width: 100%; display: block;
+    aspect-ratio: 16/8; object-fit: cover;
+    transition: transform 0.4s;
+  }
+  .section-img:hover img { transform: scale(1.01); }
+  .img-caption {
+    font-size: 0.72rem; color: var(--ink-muted);
+    padding: 0.5rem 0 1.5rem;
+    font-style: italic; text-align: center;
+  }
+
+  /* ── Two-up image grid ── */
+  .img-duo {
+    grid-column: 1 / -1 !important;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1rem; margin: 2rem 0;
+  }
+  .img-duo figure { margin: 0; }
+  .img-duo img {
+    width: 100%; aspect-ratio: 4/3;
+    object-fit: cover; border-radius: 4px;
+    border: 1px solid var(--rule);
+  }
+  .img-duo figcaption {
+    font-size: 0.68rem; color: var(--ink-muted);
+    font-style: italic; margin-top: 0.3rem;
+    text-align: center;
+  }
+
+  /* ── Horizontal rule ── */
+  hr {
+    grid-column: 1 / -1 !important;
+    border: none; border-top: 1px solid var(--rule);
+    margin: 3rem 0;
+  }
+  .section-rule {
+    grid-column: 1 / -1 !important;
+    display: flex; align-items: center; gap: 1rem;
+    margin: 3rem 0 1rem;
+  }
+  .section-rule span {
+    font-size: 0.68rem; text-transform: uppercase;
+    letter-spacing: 0.15em; color: var(--ink-muted);
+    white-space: nowrap;
+  }
+  .section-rule::before, .section-rule::after {
+    content: ''; flex: 1; height: 1px;
+    background: var(--rule);
+  }
+
+  /* ── Checklist ── */
+  ul.checklist { list-style: none; padding: 0; margin: 1rem 0 1.5rem; }
+  ul.checklist li {
+    padding: 0.4rem 0 0.4rem 1.8rem;
+    position: relative;
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.92rem;
+  }
+  ul.checklist li::before {
+    content: '□'; position: absolute; left: 0;
+    color: var(--accent); font-size: 1rem;
+  }
+
+  /* ── Takeaway box ── */
+  .takeaway {
+    background: var(--highlight); color: white;
+    padding: 1.5rem 2rem; border-radius: 6px;
+    margin: 2rem 0;
+    grid-column: 1 / -1 !important;
+  }
+  .takeaway h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem; margin-bottom: 0.6rem;
+    font-style: italic;
+  }
+  .takeaway p { margin: 0; font-size: 0.92rem; line-height: 1.65; }
+
+  /* ── Stack badge ── */
+  .stack-badges {
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
+    margin: 1.5rem 0;
+  }
+  .badge {
+    background: var(--bg-warm);
+    border: 1px solid var(--rule);
+    padding: 4px 12px; border-radius: 20px;
+    font-size: 0.72rem; font-family: 'JetBrains Mono', monospace;
+    color: var(--ink-light);
+  }
+
+  /* ── Footer ── */
+  .article-footer {
+    max-width: 900px; margin: 4rem auto 0;
+    padding: 2rem 2rem 4rem;
+    border-top: 2px solid var(--ink);
+  }
+  .footer-cta {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem; font-style: italic;
+    color: var(--ink-light); margin-bottom: 1rem;
+  }
+  .footer-links {
+    font-size: 0.8rem; color: var(--ink-muted);
+  }
+  .footer-links a { color: var(--accent); text-decoration: none; }
+
+  /* ── Animations ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .body-wrap > * {
+    animation: fadeUp 0.5s ease both;
+  }
+
+  @media (max-width: 640px) {
+    .hero { padding: 3rem 1.5rem 2rem; }
+    .body-wrap { padding: 0 1.5rem; }
+    .img-duo { grid-template-columns: 1fr; }
+    blockquote { padding: 1.2rem 1.5rem; font-size: 1.1rem; }
+    .pull { font-size: 1.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<!-- Publication Header -->
+<header class="pub-header">
+  <div class="pub-name">Shrikant Lambe</div>
+  <div style="display:flex;gap:1.5rem;align-items:center;">
+    <span class="tag-pill">AI Engineering</span>
+    <span class="pub-tag">Portfolio Deep-Dive</span>
+  </div>
+</header>
+
+<!-- Hero Image -->
+<img class="hero-img"
+  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&q=80"
+  alt="Analytics dashboard with revenue metrics"
+  onerror="this.style.display='none'"/>
+<div class="hero-caption">A modern revenue intelligence dashboard — the kind of visibility this agent is designed to automate.</div>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-kicker">AI Agents · LangChain · RAG · MCP · Streamlit</div>
+  <h1>I Built an AI Agent That Acts as a <em>Virtual Revenue Analyst</em> — Here's Everything I Learned</h1>
+  <p class="hero-deck">How I combined LangChain, RAG, MCP tools, and Claude 3.5 Sonnet to build a SaaS Growth Intelligence Agent from scratch — and what it taught me about building production-grade AI systems.</p>
+  <div class="hero-meta">
+    <strong>Shrikant Lambe</strong>
+    <span class="hero-meta-sep">·</span>
+    <span>12 min read</span>
+    <span class="hero-meta-sep">·</span>
+    <span>March 2026</span>
+    <span class="hero-meta-sep">·</span>
+    <span class="tag-pill">Portfolio Project</span>
+  </div>
+</div>
+
+<!-- Article Body -->
+<div class="body-wrap">
+
+  <p class="drop-cap">Every revenue team I've ever spoken to has the same problem: <strong>too much data, not enough insight.</strong> They have a CRM, a data warehouse, a product analytics tool, and a BI dashboard. But they still spend Monday mornings manually assembling spreadsheets, trying to answer the same questions every week.</p>
+
+  <blockquote>
+    Why did our win rate drop? Which accounts are about to churn? Where is our pipeline thin?
+    <cite>— The questions every RevOps team asks on repeat</cite>
+  </blockquote>
+
+  <p>These aren't hard questions to answer in isolation. But doing it consistently, across segments, at speed, while also comparing findings against company strategy? That's where most teams fall short. So I asked myself: <strong>what if an AI agent could do this work automatically?</strong></p>
+
+  <p>That question became the <em>Growth Intelligence Agent</em> — a portfolio project I built to demonstrate how modern AI tooling can act as a virtual revenue analyst for a SaaS company. Here's the full story: what it does, how it's built, the decisions I made, and what I'd do differently.</p>
+
+  <!-- Section: What it does -->
+  <div class="section-rule"><span>The Problem</span></div>
+  <h2>What the Agent Actually Does</h2>
+
+  <p>The agent monitors six critical growth categories across three domains:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Domain</th><th>Metrics Monitored</th><th>Target</th></tr></thead>
+      <tbody>
+        <tr><td>New Logo Growth</td><td>Pipeline Coverage, Win Rate, Sales Cycle Length, Avg Deal Size</td><td>Coverage ≥ 3.5x · Win Rate ≥ 28%</td></tr>
+        <tr><td>Expansion Revenue</td><td>Net Revenue Retention, Product Attach Rate, Seat Expansion</td><td>NRR ≥ 120% · Attach ≥ 35%</td></tr>
+        <tr><td>Retention Risk</td><td>Usage At-Risk Rate, inactive accounts, renewal proximity</td><td>At-risk &lt; 10%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>When you ask it something like <em>"What's driving our EMEA win rate decline?"</em>, it doesn't just query a database. It pulls metrics from the warehouse, fetches CRM pipeline data by region, retrieves product usage signals, looks up your growth strategy from a RAG knowledge base, and synthesizes everything into a structured insight with root cause analysis and recommended actions.</p>
+
+  <div class="pull">That's the difference between a dashboard and an agent.</div>
+
+  <!-- Architecture image -->
+  <div class="section-img">
+    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80"
+      alt="AI agent system architecture diagram"
+      onerror="this.style.display='none'"/>
+  </div>
+  <p class="img-caption">A multi-layer AI agent system — tools, retrieval, and reasoning working in concert.</p>
+
+  <!-- Section: Architecture -->
+  <div class="section-rule"><span>Architecture</span></div>
+  <h2>The System Architecture</h2>
+
+  <p>The system has three pillars working together:</p>
+
+  <pre>┌─────────────────────────────────────────────────────────┐
+│                     Streamlit UI                         │
+│         (Dashboard · Chat · Alerts · Insights)           │
+└────────────────────────┬────────────────────────────────┘
+                         │
+┌────────────────────────▼────────────────────────────────┐
+│              Growth Intelligence Agent                    │
+│         (LangChain Agent + Claude 3.5 Sonnet)            │
+└──────┬────────────────┬──────────────────┬──────────────┘
+       │                │                  │
+  MCP Tools         RAG System         Metrics DB
+  (5 tools)      (FAISS/HuggingFace)   (CSV/Pandas)
+       │                │                  │
+  CRM/Usage         Company             dbt-style
+    Data            Playbooks          SQL Metrics</pre>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Layer</th><th>Choice</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>LLM</td><td>Claude 3.5 Sonnet</td><td>Best tool-use reliability; strong structured output</td></tr>
+        <tr><td>Agent Framework</td><td>LangChain</td><td>Mature tool-calling support, well-documented</td></tr>
+        <tr><td>Vector DB</td><td>FAISS (local)</td><td>No server needed, fast for small knowledge bases</td></tr>
+        <tr><td>Embeddings</td><td>HuggingFace all-MiniLM-L6-v2</td><td>Free, fast, good quality for English business docs</td></tr>
+        <tr><td>Data</td><td>CSV + Pandas</td><td>Simulates a data warehouse without the overhead</td></tr>
+        <tr><td>UI</td><td>Streamlit</td><td>Rapid prototyping, easy to deploy</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="stack-badges">
+    <span class="badge">Python</span><span class="badge">LangChain</span><span class="badge">Claude 3.5 Sonnet</span>
+    <span class="badge">FAISS</span><span class="badge">HuggingFace</span><span class="badge">Streamlit</span>
+    <span class="badge">Plotly</span><span class="badge">Pandas</span><span class="badge">Faker</span>
+  </div>
+
+  <!-- Section: Data -->
+  <div class="section-rule"><span>Phase 1</span></div>
+  <h2>Generating Realistic SaaS Data</h2>
+
+  <div class="img-duo">
+    <figure>
+      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
+        alt="SaaS sales funnel and CRM pipeline"
+        onerror="this.style.display='none'"/>
+      <figcaption>CRM pipeline — accounts, opportunities, and revenue data form the backbone of the agent's reasoning.</figcaption>
+    </figure>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&q=80"
+        alt="Python data pipeline analytics"
+        onerror="this.style.display='none'"/>
+      <figcaption>Python-based data generation — five tables simulating a complete B2B SaaS revenue funnel.</figcaption>
+    </figure>
+  </div>
+
+  <p>Before building any AI, I needed data. I used Python's <code>Faker</code> library to generate five tables that mirror a real B2B SaaS company: <strong>Accounts</strong> (200 companies across 6 industries and 4 regions), <strong>Opportunities</strong> (600 deals with realistic stage distribution), <strong>Product Usage</strong> (multi-product adoption per account), <strong>Marketing Leads</strong> (1,500 leads with source attribution), and <strong>Subscription Revenue</strong> (contract values and renewal flags).</p>
+
+  <p>The key was making the data <strong>analytically coherent</strong> — deal sizes follow a log-normal distribution, win rates vary realistically by stage, and usage patterns create genuine churn signals. Generic random data produces garbage metrics; I wanted metrics worth reasoning about.</p>
+
+  <!-- Section: Metrics Layer -->
+  <div class="section-rule"><span>Phase 2</span></div>
+  <h2>The dbt-Style Metrics Layer</h2>
+
+  <p>This is the most underrated part of the project. Instead of writing ad-hoc queries everywhere, I built a metrics computation engine inspired by dbt. Each metric is a standalone Python function with a SQL-equivalent comment explaining the logic:</p>
+
+  <pre><span style="color:#89b4fa">def</span> <span style="color:#a6e3a1">model_win_rate</span>(opps: pd.DataFrame, segment_col: <span style="color:#fab387">str</span> = <span style="color:#a6e3a1">None</span>) -> <span style="color:#fab387">list</span>:
+    <span style="color:#a6e3a1">"""
+    SQL equivalent:
+        SELECT
+            SUM(CASE WHEN stage = 'Closed Won' THEN 1 ELSE 0 END)::float
+            / NULLIF(SUM(CASE WHEN stage IN ('Closed Won','Closed Lost')
+              THEN 1 ELSE 0 END), 0) AS win_rate
+        FROM opportunities
+    """</span>
+    closed = opps[opps[<span style="color:#f38ba8">"stage"</span>].isin([<span style="color:#f38ba8">"Closed Won"</span>, <span style="color:#f38ba8">"Closed Lost"</span>])].copy()
+    won = (closed[<span style="color:#f38ba8">"stage"</span>] == <span style="color:#f38ba8">"Closed Won"</span>).sum()
+    <span style="color:#89b4fa">return</span> round(won / len(closed), <span style="color:#fab387">4</span>) <span style="color:#89b4fa">if</span> len(closed) <span style="color:#89b4fa">else</span> <span style="color:#fab387">0</span></pre>
+
+  <p>The output is a clean, structured metrics table with four columns: <code>metric_name</code>, <code>segment</code>, <code>metric_value</code>, <code>date</code>. This single table is what the agent queries — no matter how complex the underlying logic. <strong>Define once, query anywhere.</strong> That pattern separates a prototype from a production-grade data product.</p>
+
+  <!-- Section: RAG -->
+  <div class="section-rule"><span>Phase 3</span></div>
+  <h2>Building the RAG Knowledge Base</h2>
+
+  <p>This is where the project moves from "dashboarding" to "intelligence." A vanilla agent with metrics tools can tell you <em>what</em> happened. The RAG layer helps it explain <em>why</em> it matters — and recommend <em>what to do</em> — in the context of your specific company.</p>
+
+  <div class="section-img">
+    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=80"
+      alt="Vector embeddings and semantic search visualization"
+      onerror="this.style.display='none'"/>
+  </div>
+  <p class="img-caption">The RAG pipeline: company documents → chunking → embeddings → FAISS vector store → contextual retrieval during agent reasoning.</p>
+
+  <p>I created three markdown documents representing the kind of internal knowledge most RevOps teams have scattered across Notion and Google Docs:</p>
+
+  <ul style="padding-left:1.5rem;margin-bottom:1.5rem;">
+    <li style="margin-bottom:0.5rem;"><strong>Ideal Customer Profile</strong> — firmographic criteria, buyer personas, MEDDIC qualification questions</li>
+    <li style="margin-bottom:0.5rem;"><strong>Growth Strategy Playbook</strong> — annual targets, pipeline generation mix, expansion triggers, churn playbooks</li>
+    <li style="margin-bottom:0.5rem;"><strong>Pricing &amp; Sales Rules</strong> — tier definitions, discount guidelines, deal stage exit criteria, NRR calculation</li>
+  </ul>
+
+  <p>These are chunked into 800-token segments with 100-token overlap, embedded with HuggingFace's <code>all-MiniLM-L6-v2</code>, and stored in FAISS. When the agent receives a question, it retrieves the top-4 most relevant chunks alongside metric data.</p>
+
+  <div class="takeaway">
+    <h4>The RAG difference in practice</h4>
+    <p>Without RAG: <em>"Your win rate is 24%, below the 28% target."</em><br/><br/>
+    With RAG: <em>"Your win rate is 24%, below the 28% target. Based on your MEDDIC framework, deals lacking an identified Champion have a 60% lower close rate — consider reviewing open deals for champion qualification gaps before the end of quarter."</em></p>
+  </div>
+
+  <!-- Section: Tools -->
+  <div class="section-rule"><span>Phase 4</span></div>
+  <h2>MCP Tool Design</h2>
+
+  <p>I designed five tools following the Model Context Protocol (MCP) pattern — each is a LangChain <code>@tool</code> with a carefully written docstring that tells the LLM exactly what the tool does, what inputs it accepts, and when to use it:</p>
+
+  <pre><span style="color:#cba6f7">@tool</span>
+<span style="color:#89b4fa">def</span> <span style="color:#a6e3a1">get_pipeline_by_segment</span>(query: <span style="color:#fab387">str</span> = <span style="color:#f38ba8">"all"</span>) -> <span style="color:#fab387">str</span>:
+    <span style="color:#a6e3a1">"""
+    Retrieve CRM opportunity pipeline data, segmented by stage,
+    region, or industry.
+    Input examples: 'by region', 'by stage', 'by industry',
+    'open deals', 'all'.
+    Returns pipeline value, deal counts, and win rates per segment.
+    """</span></pre>
+
+  <p>The tool descriptions are not boilerplate — they are the <strong>prompt engineering that determines whether the agent uses the right tool at the right time</strong>. I rewrote them several times to reduce tool misselection. Vague descriptions lead to random tool selection; precise, example-rich descriptions lead to reliable reasoning chains.</p>
+
+  <!-- Section: Agent -->
+  <div class="section-rule"><span>Phase 5</span></div>
+  <h2>The Agent Core</h2>
+
+  <div class="img-duo">
+    <figure>
+      <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80"
+        alt="AI system reasoning and multi-step agent"
+        onerror="this.style.display='none'"/>
+      <figcaption>The agent reasons in a ReAct loop — calling tools, observing results, and building toward a final answer.</figcaption>
+    </figure>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80"
+        alt="Automated alert monitoring system"
+        onerror="this.style.display='none'"/>
+      <figcaption>The automated alert system flags metric anomalies and fires prioritized recommendations.</figcaption>
+    </figure>
+  </div>
+
+  <p>The heart of the system is a LangChain tool-calling agent powered by Claude 3.5 Sonnet. The system prompt does three critical things:</p>
+
+  <p><strong>It defines a persona with clear responsibilities</strong> — not "you are a helpful assistant" but a specific role with named metrics, explicit targets, and a defined output format. Every response must include: Key Insight, Root Cause Analysis, Supporting Data, and Recommended Actions.</p>
+
+  <p><strong>It establishes a comparison standard</strong> — the agent knows the targets and will automatically flag when metrics fall short, not just report the raw values.</p>
+
+  <p><strong>It's paired with an alert system</strong> — a separate module compares current metrics against a prior period and fires prioritized alerts (High / Medium / Low) when any metric changes beyond a configurable threshold.</p>
+
+  <!-- Section: UI -->
+  <div class="section-rule"><span>Phase 6</span></div>
+  <h2>The Streamlit Dashboard</h2>
+
+  <div class="section-img">
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80"
+      alt="Streamlit dashboard with dark theme analytics"
+      onerror="this.style.display='none'"/>
+  </div>
+  <p class="img-caption">The Growth Intelligence Agent dashboard — 8 KPI cards, AI chat, automated alerts, and full analysis in four tabs.</p>
+
+  <p>The UI has four tabs: <strong>AI Chat</strong> for natural language questions with multi-turn conversation history; <strong>Metrics Explorer</strong> with Plotly charts for win rate by region, pipeline distribution, and product usage; <strong>Alerts</strong> for one-click anomaly detection with severity-coded inline recommendations; and <strong>Insights</strong> for a full multi-tool analysis sweep across all metrics, segments, and risk signals.</p>
+
+  <p>The dark theme was intentional — the entire UI uses CSS custom properties for consistency, with a color system that maps green/amber/red directly to metric health status. Every KPI card tells you at a glance whether you're on track.</p>
+
+  <!-- Section: Lessons -->
+  <div class="section-rule"><span>Retrospective</span></div>
+  <h2>What I'd Do Differently</h2>
+
+  <p><strong>Replace simulated data with real integrations.</strong> The most impactful upgrade would be connecting to Salesforce, HubSpot, or Snowflake APIs. The tool layer is already designed to make this a drop-in replacement.</p>
+
+  <p><strong>Add metric history.</strong> The current alert system simulates prior-period data. A real time-series store (even SQLite) would make trend analysis and anomaly detection far more meaningful.</p>
+
+  <p><strong>Streaming responses.</strong> For better UX, agent responses should stream token-by-token rather than appearing after a 15–30 second wait. LangChain's streaming callbacks make this straightforward.</p>
+
+  <p><strong>Evaluation framework.</strong> I'd add a test suite for the agent — sample questions with expected answers — to catch regressions when the prompt or tools change. This is the discipline that separates AI demos from AI products.</p>
+
+  <p><strong>Dockerize it.</strong> A <code>docker-compose.yml</code> would make the project far easier to run and far more impressive to a hiring manager reviewing it.</p>
+
+  <!-- Section: Takeaways -->
+  <div class="section-rule"><span>Key Lessons</span></div>
+  <h2>What Building This Taught Me</h2>
+
+  <div class="takeaway">
+    <h4>Lesson 1: Tool descriptions are prompt engineering</h4>
+    <p>The single biggest factor in whether the agent picks the right tool is the quality of the @tool docstring. I rewrote mine three times before the agent reliably routed questions to the correct data source.</p>
+  </div>
+
+  <div class="takeaway" style="background:#2d4a3e;">
+    <h4>Lesson 2: RAG is only as good as the documents you give it</h4>
+    <p>Generic documents produce generic recommendations. The value comes from grounding the agent in your company's actual strategy, targets, and playbooks — not boilerplate business content.</p>
+  </div>
+
+  <div class="takeaway" style="background:#4a2d2d;">
+    <h4>Lesson 3: The metrics layer is the foundation everything else depends on</h4>
+    <p>If the data is messy or the metric definitions are inconsistent, the agent's reasoning will be wrong regardless of how good the LLM is. Invest in the data layer first — always.</p>
+  </div>
+
+  <div class="pull">Structure your prompts like job descriptions with KPIs — not personality descriptions.</div>
+
+  <hr/>
+
+  <h2>The Repo</h2>
+
+  <p>The full project is live on GitHub: <strong>github.com/ShrikantLambe/growth_intelligence_agent</strong></p>
+
+  <p>It's structured across six phases with a clean quickstart — you can have the agent running locally in under 10 minutes with your own Anthropic or OpenAI API key.</p>
+
+  <pre><span style="color:#89b4fa"># Clone and run in 4 commands</span>
+pip install -r requirements.txt
+python scripts/generate_data.py
+python rag/build_vectorstore.py
+streamlit run ui/app.py</pre>
+
+  <p>I'm planning to extend this into a multi-agent architecture — a Supervisor agent routing questions to specialist sub-agents (Pipeline Agent, Expansion Agent, Churn Risk Agent) for deeper domain reasoning. If you're building something similar, or have questions about any part of the stack, connect with me on LinkedIn.</p>
+
+  <div class="stack-badges">
+    <span class="badge">Python</span><span class="badge">LangChain</span>
+    <span class="badge">Claude 3.5 Sonnet</span><span class="badge">FAISS</span>
+    <span class="badge">HuggingFace</span><span class="badge">Streamlit</span>
+    <span class="badge">Plotly</span><span class="badge">RAG</span><span class="badge">MCP</span>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<div class="article-footer">
+  <div class="footer-cta">If this was useful, share it with someone building AI agents or working in RevOps.</div>
+  <div class="footer-links">
+    GitHub: <a href="https://github.com/ShrikantLambe/growth_intelligence_agent">github.com/ShrikantLambe/growth_intelligence_agent</a>
+    &nbsp;·&nbsp; Built March 2026
+  </div>
+</div>
+
+<script>
+  // Reading progress bar
+  window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    const pct = (doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100;
+    document.getElementById('progress').style.width = pct + '%';
+  });
+</script>
+</body>
+</html>
