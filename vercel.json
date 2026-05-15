@@ -1,18 +1,7 @@
 {
   "version": 2,
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "api/main.py"
-    }
-  ],
   "env": {
     "LLM_MODEL": "claude-haiku-4-5-20251001",
     "HF_HOME": "/tmp"
-  },
-  "functions": {
-    "api/main.py": {
-      "maxDuration": 300
-    }
   }
 }
