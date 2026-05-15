@@ -108,8 +108,8 @@ DASHBOARD_HTML = """<!DOCTYPE html>
   <div style="display:flex;align-items:center;gap:1rem">
     <span class="nav-badge" id="status-badge">⏳ Loading…</span>
     <div class="nav-links">
+      <a href="/">← Article</a>
       <a href="/docs" target="_blank">API Docs</a>
-      <a href="/api/health">Health</a>
     </div>
   </div>
 </nav>
@@ -264,33 +264,53 @@ async function renderMetricsCharts() {
   if(metricsChartsLoaded) return;
   metricsChartsLoaded = true;
   try {
-    const data = await fetch('/api/metrics').then(r=>r.json());
     const COLORS = ['#3b82f6','#22c55e','#f59e0b','#ef4444','#a78bfa','#06b6d4','#f97316','#84cc16'];
+    const [metricsData, regionPipeline] = await Promise.all([
+      fetch('/api/metrics').then(r=>r.json()),
+      fetch('/api/pipeline?segment=region').then(r=>r.json()),
+    ]);
 
-    // Win Rate by Region
-    const wrRegion = data.filter(r=>r.metric_name==='Win Rate' && r.segment!=='All');
-    if(wrRegion.length) {
+    // Bug fix 1: Win Rate by Region — use pipeline API (metrics.csv has no regional rows)
+    const rData = (() => { try { return typeof regionPipeline.data==='string' ? JSON.parse(regionPipeline.data) : regionPipeline.data; } catch(e) { return []; } })();
+    if(Array.isArray(rData) && rData.length) {
       new Chart(document.getElementById('chart-winrate'), {
         type:'bar', data:{
-          labels: wrRegion.map(r=>r.segment),
-          datasets:[{data:wrRegion.map(r=>(r.metric_value*100).toFixed(1)),backgroundColor:COLORS,borderRadius:6}]
-        }, options:{plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>v+'%'},grid:{color:'#1e293b'}},x:{grid:{color:'#1e293b'}}},responsive:true}
+          labels: rData.map(r=>r.segment),
+          datasets:[{data:rData.map(r=>+(r.win_rate*100).toFixed(1)),backgroundColor:COLORS,borderRadius:6}]
+        }, options:{
+          plugins:{legend:{display:false}},
+          scales:{
+            y:{ticks:{callback:v=>v+'%'},grid:{color:'#1e293b'},min:0},
+            x:{grid:{color:'#1e293b'}}
+          },
+          responsive:true
+        }
       });
     }
 
-    // All Metrics bar (overall only)
-    const overall = data.filter(r=>r.segment==='All');
-    const names = overall.map(r=>r.metric_name.replace('Net Revenue Retention','NRR').replace('Product Attach Rate','Attach').replace('Seat Expansion Rate','Expansion').replace('Usage At-Risk Rate','At-Risk').replace('Sales Cycle Length (days)','Cycle').replace('Pipeline Coverage','Coverage').replace('Average Deal Size','Deal $').replace('Lead Conversion Rate','Lead Conv').replace('Win Rate','Win Rate'));
+    // Bug fix 2: Rate-only metrics chart — exclude Deal Size to avoid scale domination
+    const RATE_METRICS = ['Win Rate','Net Revenue Retention','Product Attach Rate','Seat Expansion Rate','Usage At-Risk Rate','Lead Conversion Rate','Pipeline Coverage'];
+    const overall = metricsData.filter(r=>r.segment==='All' && RATE_METRICS.includes(r.metric_name));
+    const SHORT = {'Win Rate':'Win Rate','Net Revenue Retention':'NRR','Product Attach Rate':'Attach','Seat Expansion Rate':'Expansion','Usage At-Risk Rate':'At-Risk','Lead Conversion Rate':'Lead Conv','Pipeline Coverage':'Coverage'};
+    const PCT_METRICS = ['Win Rate','Net Revenue Retention','Product Attach Rate','Seat Expansion Rate','Usage At-Risk Rate','Lead Conversion Rate'];
+    const chartVals = overall.map(r=> PCT_METRICS.includes(r.metric_name) ? +(r.metric_value*100).toFixed(1) : +r.metric_value.toFixed(2));
     new Chart(document.getElementById('chart-metrics'), {
       type:'bar', data:{
-        labels: names,
-        datasets:[{data:overall.map(r=>parseFloat(r.metric_value.toFixed(4))),backgroundColor:COLORS,borderRadius:6}]
-      }, options:{plugins:{legend:{display:false}},scales:{y:{grid:{color:'#1e293b'}},x:{grid:{color:'#1e293b'},ticks:{maxRotation:45}}},responsive:true}
+        labels: overall.map(r=>SHORT[r.metric_name]||r.metric_name),
+        datasets:[{data:chartVals,backgroundColor:COLORS,borderRadius:6}]
+      }, options:{
+        plugins:{legend:{display:false}},
+        scales:{
+          y:{ticks:{callback:v=>v+'%'},grid:{color:'#1e293b'}},
+          x:{grid:{color:'#1e293b'},ticks:{maxRotation:30}}
+        },
+        responsive:true
+      }
     });
 
     // Table
     const tbody = document.getElementById('metrics-table-body');
-    tbody.innerHTML = data.map(r=>{
+    tbody.innerHTML = metricsData.map(r=>{
       const pill = statusPill(r.metric_name, r.metric_value);
       return `<tr><td>${r.metric_name}</td><td>${r.segment}</td><td style="font-family:monospace">${fmtVal(r.metric_name,r.metric_value)}</td><td>${pill}</td></tr>`;
     }).join('');
@@ -326,9 +346,19 @@ async function loadPipeline() {
       });
     }
     if(Array.isArray(iData) && iData.length) {
+      // Bug fix 3: indexAxis:'y' makes industries the Y labels and win-rate values on X.
+      // The % callback must go on the X scale, not Y.
       new Chart(document.getElementById('chart-pipeline-industry'),{
-        type:'bar', data:{labels:iData.map(r=>r.segment),datasets:[{label:'Win Rate',data:iData.map(r=>r.win_rate*100),backgroundColor:COLORS,borderRadius:6}]},
-        options:{plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>v+'%'},grid:{color:'#1e293b'}},x:{grid:{color:'#1e293b'}}},responsive:true,indexAxis:'y'}
+        type:'bar', data:{labels:iData.map(r=>r.segment),datasets:[{label:'Win Rate',data:iData.map(r=>+(r.win_rate*100).toFixed(1)),backgroundColor:COLORS,borderRadius:6}]},
+        options:{
+          plugins:{legend:{display:false}},
+          scales:{
+            x:{ticks:{callback:v=>v+'%'},grid:{color:'#1e293b'},min:0},
+            y:{grid:{color:'#1e293b'}}
+          },
+          responsive:true,
+          indexAxis:'y'
+        }
       });
     }
   } catch(e) { console.error(e); }
@@ -451,12 +481,22 @@ class AnalyzeResponse(BaseModel):
     analysis: str
 
 
-# ── Root ─────────────────────────────────────────────────────────────────────────
+# ── Root & Dashboard ─────────────────────────────────────────────────────────────
 
 from fastapi.responses import HTMLResponse
 
 @app.get("/", response_class=HTMLResponse)
 def root():
+    """Serve the portfolio article landing page."""
+    html_path = os.path.join(os.path.dirname(__file__), "..", "index.html")
+    if os.path.exists(html_path):
+        with open(html_path, "r", encoding="utf-8") as f:
+            return HTMLResponse(content=f.read())
+    return HTMLResponse(content='<meta http-equiv="refresh" content="0;url=/dashboard"/>')
+
+@app.get("/dashboard", response_class=HTMLResponse)
+def dashboard():
+    """Serve the live analytics dashboard."""
     return HTMLResponse(content=DASHBOARD_HTML)
 
 
