@@ -53,6 +53,15 @@ class AnalyzeResponse(BaseModel):
     analysis: str
 
 
+# ── Root ─────────────────────────────────────────────────────────────────────────
+
+from fastapi.responses import RedirectResponse
+
+@app.get("/")
+def root():
+    return RedirectResponse(url="/docs")
+
+
 # ── Health ───────────────────────────────────────────────────────────────────────
 
 @app.get("/api/health")
