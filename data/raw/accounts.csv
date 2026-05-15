@@ -1,0 +1,201 @@
+account_id,company_name,industry,employee_size,region,created_date
+ACC0001,Mccann-Chase,LegalTech,1-50,North America,2025-05-04
+ACC0002,Ellison-Matthews,HealthTech,51-200,EMEA,2025-10-28
+ACC0003,Hale-Lynch,LegalTech,2000+,North America,2024-06-15
+ACC0004,Reilly Group,RetailTech,1-50,North America,2025-11-06
+ACC0005,Moore-Nelson,HealthTech,51-200,North America,2024-07-15
+ACC0006,"Moore, Garza and Gonzales",HealthTech,2000+,LATAM,2025-06-29
+ACC0007,"Burke, Mcdaniel and Keller",RetailTech,2000+,APAC,2026-02-03
+ACC0008,"Cisneros, Mendoza and Norris",HealthTech,501-2000,APAC,2025-05-01
+ACC0009,"Jenkins, Chang and Cunningham",HealthTech,51-200,APAC,2025-10-28
+ACC0010,Sanchez LLC,FinTech,501-2000,North America,2025-02-07
+ACC0011,Sandoval-Barber,EdTech,2000+,APAC,2025-12-27
+ACC0012,King Ltd,LegalTech,501-2000,North America,2025-01-18
+ACC0013,Patrick-Chapman,FinTech,2000+,APAC,2024-05-07
+ACC0014,Smith-Collins,HRTech,201-500,EMEA,2025-11-30
+ACC0015,Thornton LLC,FinTech,51-200,APAC,2025-11-20
+ACC0016,Mendez PLC,HealthTech,1-50,LATAM,2025-05-01
+ACC0017,Snyder-Howard,RetailTech,201-500,EMEA,2025-01-26
+ACC0018,Pierce-Navarro,EdTech,51-200,APAC,2024-03-12
+ACC0019,"Hanson, Robinson and Lopez",LegalTech,1-50,EMEA,2024-08-12
+ACC0020,"Oconnor, Armstrong and Giles",LegalTech,51-200,EMEA,2024-10-24
+ACC0021,Wright-Montes,RetailTech,201-500,EMEA,2025-03-14
+ACC0022,Patrick-Davis,FinTech,51-200,North America,2025-03-23
+ACC0023,"Williams, Benson and Green",RetailTech,201-500,North America,2025-07-08
+ACC0024,Perry-Gonzales,HRTech,201-500,EMEA,2024-04-09
+ACC0025,"Everett, Stone and Hart",RetailTech,501-2000,LATAM,2025-09-16
+ACC0026,Villegas Ltd,EdTech,51-200,EMEA,2024-07-15
+ACC0027,Johnson Ltd,HRTech,201-500,LATAM,2024-06-22
+ACC0028,Harper Inc,RetailTech,201-500,EMEA,2025-09-21
+ACC0029,Olsen-King,HRTech,501-2000,North America,2025-12-23
+ACC0030,Kennedy Ltd,FinTech,51-200,EMEA,2024-03-15
+ACC0031,Woods-Roy,RetailTech,2000+,North America,2025-01-11
+ACC0032,Morris-Nelson,RetailTech,2000+,LATAM,2024-08-17
+ACC0033,Andrews Group,EdTech,2000+,North America,2024-03-15
+ACC0034,Zimmerman-Watson,LegalTech,1-50,APAC,2024-04-24
+ACC0035,"Smith, Bailey and Smith",EdTech,1-50,APAC,2024-11-21
+ACC0036,Mckay PLC,HealthTech,501-2000,North America,2025-05-16
+ACC0037,"Long, Palmer and Sanders",HRTech,51-200,North America,2024-05-10
+ACC0038,Caldwell-Johnson,EdTech,2000+,EMEA,2025-09-06
+ACC0039,Jordan-Greene,EdTech,51-200,North America,2024-06-06
+ACC0040,Drake PLC,EdTech,501-2000,North America,2025-10-18
+ACC0041,Richardson Group,EdTech,201-500,EMEA,2025-12-12
+ACC0042,"Sutton, Ochoa and Hall",HealthTech,2000+,North America,2025-11-14
+ACC0043,"Hamilton, Thomas and Martin",LegalTech,501-2000,North America,2024-08-13
+ACC0044,"Moore, Carpenter and Floyd",HealthTech,51-200,LATAM,2024-07-27
+ACC0045,"Peterson, Rogers and Smith",HealthTech,201-500,LATAM,2025-07-08
+ACC0046,Adkins-Brown,HRTech,51-200,APAC,2024-12-28
+ACC0047,Goodman-Martinez,LegalTech,201-500,LATAM,2024-08-29
+ACC0048,Carter and Sons,RetailTech,1-50,EMEA,2025-06-24
+ACC0049,Howard-Davis,FinTech,201-500,North America,2024-06-17
+ACC0050,Brown and Sons,HRTech,51-200,EMEA,2026-02-02
+ACC0051,"Smith, Ortega and Campbell",FinTech,1-50,EMEA,2025-12-02
+ACC0052,"Parker, Chang and Beck",FinTech,201-500,North America,2024-09-01
+ACC0053,Singleton-Green,HealthTech,201-500,LATAM,2025-07-05
+ACC0054,"Wright, Martin and Martinez",HRTech,51-200,LATAM,2025-06-06
+ACC0055,"Bean, Cross and Scott",RetailTech,501-2000,EMEA,2025-11-05
+ACC0056,"Carlson, Foster and Ruiz",FinTech,501-2000,APAC,2024-12-03
+ACC0057,"Park, Washington and Shaw",RetailTech,501-2000,North America,2024-03-22
+ACC0058,"Savage, White and Stone",LegalTech,1-50,North America,2024-12-24
+ACC0059,Williams Ltd,LegalTech,201-500,North America,2025-05-31
+ACC0060,"Ramos, Jackson and Alexander",HealthTech,51-200,LATAM,2025-09-19
+ACC0061,"Rodriguez, Wilson and Smith",RetailTech,51-200,APAC,2024-10-24
+ACC0062,Duncan PLC,HealthTech,1-50,LATAM,2024-07-26
+ACC0063,Anderson Ltd,FinTech,1-50,North America,2025-11-06
+ACC0064,"Valdez, Mcdonald and Cox",HealthTech,51-200,LATAM,2024-09-30
+ACC0065,"Williams, Carr and Scott",RetailTech,51-200,LATAM,2025-12-11
+ACC0066,"Floyd, Pierce and Johnson",HealthTech,501-2000,North America,2025-01-06
+ACC0067,"Harris, Evans and Wood",EdTech,501-2000,APAC,2024-12-03
+ACC0068,"Carter, Hansen and Rojas",LegalTech,2000+,LATAM,2025-09-04
+ACC0069,Ramsey PLC,HealthTech,201-500,EMEA,2025-12-12
+ACC0070,Allison-Walker,HRTech,2000+,North America,2025-03-25
+ACC0071,"Williams, Boyd and Frye",FinTech,1-50,LATAM,2024-09-13
+ACC0072,Scott LLC,HRTech,51-200,North America,2024-09-07
+ACC0073,Robinson Ltd,FinTech,51-200,North America,2024-06-10
+ACC0074,"Mclaughlin, Zamora and Contreras",FinTech,51-200,LATAM,2025-10-10
+ACC0075,Carter Inc,HRTech,51-200,North America,2024-05-16
+ACC0076,"Gonzales, Saunders and Robles",FinTech,501-2000,APAC,2025-05-18
+ACC0077,Leblanc-Porter,HealthTech,201-500,EMEA,2025-05-14
+ACC0078,Klein PLC,RetailTech,51-200,APAC,2024-10-29
+ACC0079,Serrano PLC,EdTech,1-50,North America,2024-10-28
+ACC0080,Jones Ltd,HRTech,2000+,North America,2025-11-26
+ACC0081,"Guzman, Pratt and Hernandez",HRTech,51-200,APAC,2025-09-27
+ACC0082,Bush-Alvarado,EdTech,1-50,EMEA,2025-01-27
+ACC0083,Salinas PLC,EdTech,51-200,LATAM,2024-08-02
+ACC0084,"Maynard, Tran and Reyes",LegalTech,201-500,North America,2024-03-28
+ACC0085,Copeland Ltd,HRTech,201-500,North America,2025-09-25
+ACC0086,Zamora-Padilla,EdTech,1-50,North America,2024-07-23
+ACC0087,"Rodriguez, Wright and Smith",HealthTech,201-500,APAC,2024-05-31
+ACC0088,Austin LLC,HealthTech,201-500,EMEA,2024-05-01
+ACC0089,Sanchez-Turner,EdTech,2000+,LATAM,2025-05-28
+ACC0090,Gay Inc,FinTech,1-50,LATAM,2025-05-02
+ACC0091,"Meyer, Johnson and Arnold",FinTech,1-50,APAC,2025-09-29
+ACC0092,Galvan-Coleman,LegalTech,201-500,EMEA,2024-11-14
+ACC0093,"Cohen, Rodriguez and Harvey",HRTech,501-2000,North America,2025-10-18
+ACC0094,Salinas Inc,FinTech,51-200,North America,2025-01-27
+ACC0095,Martinez-Miles,HRTech,2000+,EMEA,2024-11-26
+ACC0096,"Harris, Gonzales and Wright",HealthTech,1-50,APAC,2025-02-01
+ACC0097,Hull and Sons,FinTech,201-500,EMEA,2024-03-13
+ACC0098,Macdonald Ltd,HealthTech,1-50,APAC,2024-07-16
+ACC0099,"Robinson, Garcia and Thompson",RetailTech,2000+,EMEA,2025-06-12
+ACC0100,Vincent-Howe,HealthTech,51-200,LATAM,2026-01-15
+ACC0101,"Harris, Ferguson and Morrison",HealthTech,201-500,LATAM,2024-03-26
+ACC0102,Beard-Morrison,LegalTech,51-200,APAC,2025-08-30
+ACC0103,Edwards LLC,LegalTech,1-50,LATAM,2026-01-01
+ACC0104,Davis-Riley,RetailTech,51-200,EMEA,2024-10-26
+ACC0105,Rivera-Bartlett,EdTech,201-500,EMEA,2025-06-26
+ACC0106,Davis-Campbell,FinTech,51-200,LATAM,2025-03-10
+ACC0107,James-Jones,EdTech,1-50,APAC,2025-02-15
+ACC0108,Bell LLC,LegalTech,2000+,LATAM,2024-03-16
+ACC0109,Randolph Group,HRTech,201-500,North America,2025-10-14
+ACC0110,Collins LLC,EdTech,51-200,APAC,2026-01-01
+ACC0111,"Herman, Wade and Silva",FinTech,2000+,LATAM,2025-02-21
+ACC0112,Hess-Harper,LegalTech,201-500,LATAM,2024-05-30
+ACC0113,Mcguire-Aguilar,HRTech,1-50,LATAM,2024-06-29
+ACC0114,"Smith, Martin and Pena",HealthTech,201-500,North America,2024-11-20
+ACC0115,"Perez, Daniel and Anderson",FinTech,2000+,EMEA,2025-02-02
+ACC0116,"Sharp, Mclaughlin and Collins",RetailTech,1-50,APAC,2024-05-12
+ACC0117,"Hughes, Best and Cantrell",EdTech,1-50,APAC,2024-09-08
+ACC0118,"Robinson, Hanson and Park",EdTech,501-2000,APAC,2024-12-24
+ACC0119,Gonzalez-Callahan,LegalTech,201-500,EMEA,2025-07-28
+ACC0120,"Collins, Garcia and Parker",RetailTech,501-2000,EMEA,2024-05-20
+ACC0121,"Fuller, Hamilton and Stephens",HRTech,201-500,LATAM,2024-07-28
+ACC0122,Joseph-Harris,FinTech,201-500,APAC,2025-07-09
+ACC0123,"Hernandez, Norton and Bailey",RetailTech,2000+,APAC,2024-10-21
+ACC0124,Gilmore-Robbins,RetailTech,501-2000,EMEA,2024-09-04
+ACC0125,Bowman Inc,RetailTech,51-200,North America,2025-04-25
+ACC0126,Lee LLC,HRTech,2000+,APAC,2025-11-06
+ACC0127,Owens-Taylor,HealthTech,201-500,EMEA,2025-07-21
+ACC0128,Harper LLC,HealthTech,1-50,North America,2025-06-04
+ACC0129,Thomas PLC,RetailTech,2000+,North America,2024-10-31
+ACC0130,"Gibbs, Price and Moore",RetailTech,2000+,EMEA,2025-01-12
+ACC0131,"Rodriguez, Robinson and Taylor",RetailTech,501-2000,EMEA,2025-09-11
+ACC0132,"Jordan, Jones and Dyer",LegalTech,1-50,North America,2024-12-01
+ACC0133,"Flores, Chavez and Hendricks",HealthTech,51-200,LATAM,2025-12-20
+ACC0134,"Barnes, Perez and Perez",HRTech,51-200,North America,2024-10-30
+ACC0135,Smith Group,HealthTech,501-2000,APAC,2024-11-13
+ACC0136,"Butler, Rangel and Rice",HRTech,2000+,LATAM,2024-07-28
+ACC0137,Johnson-Bradley,RetailTech,51-200,LATAM,2024-11-06
+ACC0138,Perez-Miller,EdTech,51-200,APAC,2024-08-25
+ACC0139,Sampson LLC,RetailTech,51-200,APAC,2024-11-16
+ACC0140,Wong and Sons,FinTech,201-500,EMEA,2025-05-07
+ACC0141,Hansen Inc,EdTech,201-500,North America,2025-09-21
+ACC0142,Brooks Ltd,HealthTech,51-200,LATAM,2025-09-06
+ACC0143,Stephens-Le,LegalTech,51-200,North America,2024-12-12
+ACC0144,Bryant LLC,RetailTech,201-500,LATAM,2024-12-11
+ACC0145,"Jackson, Montgomery and Ortiz",FinTech,51-200,LATAM,2025-01-07
+ACC0146,Collins-Walker,HRTech,1-50,LATAM,2024-10-09
+ACC0147,"Garcia, Santos and Brown",FinTech,201-500,APAC,2025-01-06
+ACC0148,Price PLC,RetailTech,2000+,EMEA,2024-09-28
+ACC0149,"Wright, Matthews and Hansen",HealthTech,201-500,LATAM,2024-09-30
+ACC0150,Evans Ltd,FinTech,501-2000,APAC,2024-03-27
+ACC0151,"Henson, Trevino and Valdez",LegalTech,501-2000,EMEA,2024-10-19
+ACC0152,Perez-Becker,HealthTech,2000+,North America,2025-01-02
+ACC0153,Pena PLC,HRTech,2000+,North America,2025-11-16
+ACC0154,Richards-Mcclure,LegalTech,501-2000,EMEA,2024-10-25
+ACC0155,"Martinez, Ruiz and Newman",HealthTech,1-50,APAC,2025-01-17
+ACC0156,"White, Taylor and Meza",EdTech,51-200,LATAM,2025-03-12
+ACC0157,Reed Ltd,EdTech,501-2000,APAC,2024-12-05
+ACC0158,"Castillo, Reilly and Ellis",EdTech,1-50,LATAM,2026-01-21
+ACC0159,"Martinez, White and Wheeler",LegalTech,2000+,North America,2025-02-16
+ACC0160,"Shea, Rush and Gomez",HealthTech,1-50,North America,2026-01-09
+ACC0161,"Cisneros, Medina and Green",HealthTech,51-200,North America,2024-05-14
+ACC0162,Pena Ltd,HealthTech,51-200,EMEA,2024-10-13
+ACC0163,Stevens-Benjamin,LegalTech,1-50,EMEA,2024-10-21
+ACC0164,"Oneill, Lawrence and Miller",LegalTech,201-500,APAC,2025-08-22
+ACC0165,Rivera-Higgins,HRTech,2000+,North America,2025-08-26
+ACC0166,Chavez-Ross,EdTech,1-50,North America,2025-03-27
+ACC0167,Robles-Ballard,HRTech,501-2000,LATAM,2025-07-21
+ACC0168,Pope Group,FinTech,2000+,EMEA,2025-10-28
+ACC0169,"Sims, Fuller and English",LegalTech,201-500,North America,2024-07-10
+ACC0170,Sutton PLC,FinTech,201-500,LATAM,2024-04-03
+ACC0171,Smith LLC,EdTech,1-50,APAC,2026-01-28
+ACC0172,"Edwards, Mcdonald and Riggs",RetailTech,501-2000,North America,2024-11-23
+ACC0173,Jackson PLC,EdTech,501-2000,EMEA,2024-11-21
+ACC0174,Porter-Martinez,HealthTech,2000+,APAC,2024-05-20
+ACC0175,Adkins PLC,HRTech,501-2000,LATAM,2024-11-20
+ACC0176,May PLC,LegalTech,2000+,APAC,2025-03-16
+ACC0177,Peterson-Ayala,HealthTech,1-50,APAC,2024-11-05
+ACC0178,Wall LLC,HealthTech,501-2000,LATAM,2025-03-02
+ACC0179,Mitchell-Lin,FinTech,501-2000,APAC,2025-08-07
+ACC0180,"Juarez, Coleman and Lynch",RetailTech,51-200,APAC,2025-05-21
+ACC0181,Davis and Sons,EdTech,201-500,APAC,2024-07-20
+ACC0182,"Rodriguez, Delgado and Davis",FinTech,2000+,EMEA,2025-11-14
+ACC0183,"Hayden, Baldwin and Thomas",HealthTech,501-2000,LATAM,2024-07-21
+ACC0184,Reyes Inc,HealthTech,501-2000,LATAM,2024-11-08
+ACC0185,Vasquez-Huang,FinTech,1-50,APAC,2025-06-28
+ACC0186,Scott and Sons,RetailTech,51-200,APAC,2024-04-01
+ACC0187,"Lee, Barron and Ellis",HRTech,201-500,LATAM,2024-07-23
+ACC0188,Carr Group,HRTech,201-500,LATAM,2024-07-26
+ACC0189,Harper-Ford,EdTech,201-500,LATAM,2025-05-08
+ACC0190,"Montgomery, Boyd and Peterson",EdTech,201-500,EMEA,2025-10-09
+ACC0191,Crosby-Sullivan,LegalTech,51-200,APAC,2025-10-10
+ACC0192,"Shaffer, Anthony and Olsen",LegalTech,2000+,EMEA,2025-07-28
+ACC0193,Rosario Group,HealthTech,501-2000,APAC,2024-06-16
+ACC0194,"Rodriguez, Garcia and Perez",HRTech,2000+,APAC,2025-10-30
+ACC0195,Munoz Inc,HealthTech,201-500,EMEA,2025-02-05
+ACC0196,Davenport-Carter,HealthTech,201-500,North America,2024-08-12
+ACC0197,"Stout, Hicks and Jones",HealthTech,201-500,North America,2025-12-16
+ACC0198,Briggs LLC,HRTech,201-500,EMEA,2024-04-27
+ACC0199,Johnson-Robinson,RetailTech,1-50,North America,2024-07-02
+ACC0200,"Evans, Perez and Baldwin",EdTech,501-2000,LATAM,2024-11-15

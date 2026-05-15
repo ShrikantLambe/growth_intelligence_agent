@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "api/main.py"
+    }
+  ],
+  "env": {
+    "ANTHROPIC_API_KEY": "@anthropic_api_key",
+    "LLM_MODEL": "claude-haiku-4-5-20251001",
+    "FRONTEND_URL": "@frontend_url",
+    "HF_HOME": "/tmp"
+  },
+  "functions": {
+    "api/main.py": {
+      "maxDuration": 300
+    }
+  }
+}

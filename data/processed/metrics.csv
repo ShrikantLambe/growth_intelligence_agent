@@ -1,0 +1,17 @@
+metric_name,segment,metric_value,date
+Pipeline Coverage,All,4.2,2026-03-11
+Win Rate,All,0.6559,2026-03-11
+Win Rate,All,0.6559,2026-03-11
+Average Deal Size,All,51790.75,2026-03-11
+Sales Cycle Length (days),All,68.2,2026-03-11
+Net Revenue Retention,All,0.9993,2026-03-11
+Product Attach Rate,All,0.475,2026-03-11
+Seat Expansion Rate,All,0.24,2026-03-11
+Lead Conversion Rate,All,0.1953,2026-03-11
+Lead Conversion Rate,Cold Outreach,0.1731,2026-03-11
+Lead Conversion Rate,Event,0.1486,2026-03-11
+Lead Conversion Rate,LinkedIn,0.2278,2026-03-11
+Lead Conversion Rate,Organic Search,0.1772,2026-03-11
+Lead Conversion Rate,Paid Search,0.2143,2026-03-11
+Lead Conversion Rate,Referral,0.2333,2026-03-11
+Usage At-Risk Rate,All,0.615,2026-03-11
