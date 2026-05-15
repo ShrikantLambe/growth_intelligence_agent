@@ -1,201 +1,301 @@
-account_id,company_name,industry,employee_size,region,created_date
-ACC0001,Mccann-Chase,LegalTech,1-50,North America,2025-05-04
-ACC0002,Ellison-Matthews,HealthTech,51-200,EMEA,2025-10-28
-ACC0003,Hale-Lynch,LegalTech,2000+,North America,2024-06-15
-ACC0004,Reilly Group,RetailTech,1-50,North America,2025-11-06
-ACC0005,Moore-Nelson,HealthTech,51-200,North America,2024-07-15
-ACC0006,"Moore, Garza and Gonzales",HealthTech,2000+,LATAM,2025-06-29
-ACC0007,"Burke, Mcdaniel and Keller",RetailTech,2000+,APAC,2026-02-03
-ACC0008,"Cisneros, Mendoza and Norris",HealthTech,501-2000,APAC,2025-05-01
-ACC0009,"Jenkins, Chang and Cunningham",HealthTech,51-200,APAC,2025-10-28
-ACC0010,Sanchez LLC,FinTech,501-2000,North America,2025-02-07
-ACC0011,Sandoval-Barber,EdTech,2000+,APAC,2025-12-27
-ACC0012,King Ltd,LegalTech,501-2000,North America,2025-01-18
-ACC0013,Patrick-Chapman,FinTech,2000+,APAC,2024-05-07
-ACC0014,Smith-Collins,HRTech,201-500,EMEA,2025-11-30
-ACC0015,Thornton LLC,FinTech,51-200,APAC,2025-11-20
-ACC0016,Mendez PLC,HealthTech,1-50,LATAM,2025-05-01
-ACC0017,Snyder-Howard,RetailTech,201-500,EMEA,2025-01-26
-ACC0018,Pierce-Navarro,EdTech,51-200,APAC,2024-03-12
-ACC0019,"Hanson, Robinson and Lopez",LegalTech,1-50,EMEA,2024-08-12
-ACC0020,"Oconnor, Armstrong and Giles",LegalTech,51-200,EMEA,2024-10-24
-ACC0021,Wright-Montes,RetailTech,201-500,EMEA,2025-03-14
-ACC0022,Patrick-Davis,FinTech,51-200,North America,2025-03-23
-ACC0023,"Williams, Benson and Green",RetailTech,201-500,North America,2025-07-08
-ACC0024,Perry-Gonzales,HRTech,201-500,EMEA,2024-04-09
-ACC0025,"Everett, Stone and Hart",RetailTech,501-2000,LATAM,2025-09-16
-ACC0026,Villegas Ltd,EdTech,51-200,EMEA,2024-07-15
-ACC0027,Johnson Ltd,HRTech,201-500,LATAM,2024-06-22
-ACC0028,Harper Inc,RetailTech,201-500,EMEA,2025-09-21
-ACC0029,Olsen-King,HRTech,501-2000,North America,2025-12-23
-ACC0030,Kennedy Ltd,FinTech,51-200,EMEA,2024-03-15
-ACC0031,Woods-Roy,RetailTech,2000+,North America,2025-01-11
-ACC0032,Morris-Nelson,RetailTech,2000+,LATAM,2024-08-17
-ACC0033,Andrews Group,EdTech,2000+,North America,2024-03-15
-ACC0034,Zimmerman-Watson,LegalTech,1-50,APAC,2024-04-24
-ACC0035,"Smith, Bailey and Smith",EdTech,1-50,APAC,2024-11-21
-ACC0036,Mckay PLC,HealthTech,501-2000,North America,2025-05-16
-ACC0037,"Long, Palmer and Sanders",HRTech,51-200,North America,2024-05-10
-ACC0038,Caldwell-Johnson,EdTech,2000+,EMEA,2025-09-06
-ACC0039,Jordan-Greene,EdTech,51-200,North America,2024-06-06
-ACC0040,Drake PLC,EdTech,501-2000,North America,2025-10-18
-ACC0041,Richardson Group,EdTech,201-500,EMEA,2025-12-12
-ACC0042,"Sutton, Ochoa and Hall",HealthTech,2000+,North America,2025-11-14
-ACC0043,"Hamilton, Thomas and Martin",LegalTech,501-2000,North America,2024-08-13
-ACC0044,"Moore, Carpenter and Floyd",HealthTech,51-200,LATAM,2024-07-27
-ACC0045,"Peterson, Rogers and Smith",HealthTech,201-500,LATAM,2025-07-08
-ACC0046,Adkins-Brown,HRTech,51-200,APAC,2024-12-28
-ACC0047,Goodman-Martinez,LegalTech,201-500,LATAM,2024-08-29
-ACC0048,Carter and Sons,RetailTech,1-50,EMEA,2025-06-24
-ACC0049,Howard-Davis,FinTech,201-500,North America,2024-06-17
-ACC0050,Brown and Sons,HRTech,51-200,EMEA,2026-02-02
-ACC0051,"Smith, Ortega and Campbell",FinTech,1-50,EMEA,2025-12-02
-ACC0052,"Parker, Chang and Beck",FinTech,201-500,North America,2024-09-01
-ACC0053,Singleton-Green,HealthTech,201-500,LATAM,2025-07-05
-ACC0054,"Wright, Martin and Martinez",HRTech,51-200,LATAM,2025-06-06
-ACC0055,"Bean, Cross and Scott",RetailTech,501-2000,EMEA,2025-11-05
-ACC0056,"Carlson, Foster and Ruiz",FinTech,501-2000,APAC,2024-12-03
-ACC0057,"Park, Washington and Shaw",RetailTech,501-2000,North America,2024-03-22
-ACC0058,"Savage, White and Stone",LegalTech,1-50,North America,2024-12-24
-ACC0059,Williams Ltd,LegalTech,201-500,North America,2025-05-31
-ACC0060,"Ramos, Jackson and Alexander",HealthTech,51-200,LATAM,2025-09-19
-ACC0061,"Rodriguez, Wilson and Smith",RetailTech,51-200,APAC,2024-10-24
-ACC0062,Duncan PLC,HealthTech,1-50,LATAM,2024-07-26
-ACC0063,Anderson Ltd,FinTech,1-50,North America,2025-11-06
-ACC0064,"Valdez, Mcdonald and Cox",HealthTech,51-200,LATAM,2024-09-30
-ACC0065,"Williams, Carr and Scott",RetailTech,51-200,LATAM,2025-12-11
-ACC0066,"Floyd, Pierce and Johnson",HealthTech,501-2000,North America,2025-01-06
-ACC0067,"Harris, Evans and Wood",EdTech,501-2000,APAC,2024-12-03
-ACC0068,"Carter, Hansen and Rojas",LegalTech,2000+,LATAM,2025-09-04
-ACC0069,Ramsey PLC,HealthTech,201-500,EMEA,2025-12-12
-ACC0070,Allison-Walker,HRTech,2000+,North America,2025-03-25
-ACC0071,"Williams, Boyd and Frye",FinTech,1-50,LATAM,2024-09-13
-ACC0072,Scott LLC,HRTech,51-200,North America,2024-09-07
-ACC0073,Robinson Ltd,FinTech,51-200,North America,2024-06-10
-ACC0074,"Mclaughlin, Zamora and Contreras",FinTech,51-200,LATAM,2025-10-10
-ACC0075,Carter Inc,HRTech,51-200,North America,2024-05-16
-ACC0076,"Gonzales, Saunders and Robles",FinTech,501-2000,APAC,2025-05-18
-ACC0077,Leblanc-Porter,HealthTech,201-500,EMEA,2025-05-14
-ACC0078,Klein PLC,RetailTech,51-200,APAC,2024-10-29
-ACC0079,Serrano PLC,EdTech,1-50,North America,2024-10-28
-ACC0080,Jones Ltd,HRTech,2000+,North America,2025-11-26
-ACC0081,"Guzman, Pratt and Hernandez",HRTech,51-200,APAC,2025-09-27
-ACC0082,Bush-Alvarado,EdTech,1-50,EMEA,2025-01-27
-ACC0083,Salinas PLC,EdTech,51-200,LATAM,2024-08-02
-ACC0084,"Maynard, Tran and Reyes",LegalTech,201-500,North America,2024-03-28
-ACC0085,Copeland Ltd,HRTech,201-500,North America,2025-09-25
-ACC0086,Zamora-Padilla,EdTech,1-50,North America,2024-07-23
-ACC0087,"Rodriguez, Wright and Smith",HealthTech,201-500,APAC,2024-05-31
-ACC0088,Austin LLC,HealthTech,201-500,EMEA,2024-05-01
-ACC0089,Sanchez-Turner,EdTech,2000+,LATAM,2025-05-28
-ACC0090,Gay Inc,FinTech,1-50,LATAM,2025-05-02
-ACC0091,"Meyer, Johnson and Arnold",FinTech,1-50,APAC,2025-09-29
-ACC0092,Galvan-Coleman,LegalTech,201-500,EMEA,2024-11-14
-ACC0093,"Cohen, Rodriguez and Harvey",HRTech,501-2000,North America,2025-10-18
-ACC0094,Salinas Inc,FinTech,51-200,North America,2025-01-27
-ACC0095,Martinez-Miles,HRTech,2000+,EMEA,2024-11-26
-ACC0096,"Harris, Gonzales and Wright",HealthTech,1-50,APAC,2025-02-01
-ACC0097,Hull and Sons,FinTech,201-500,EMEA,2024-03-13
-ACC0098,Macdonald Ltd,HealthTech,1-50,APAC,2024-07-16
-ACC0099,"Robinson, Garcia and Thompson",RetailTech,2000+,EMEA,2025-06-12
-ACC0100,Vincent-Howe,HealthTech,51-200,LATAM,2026-01-15
-ACC0101,"Harris, Ferguson and Morrison",HealthTech,201-500,LATAM,2024-03-26
-ACC0102,Beard-Morrison,LegalTech,51-200,APAC,2025-08-30
-ACC0103,Edwards LLC,LegalTech,1-50,LATAM,2026-01-01
-ACC0104,Davis-Riley,RetailTech,51-200,EMEA,2024-10-26
-ACC0105,Rivera-Bartlett,EdTech,201-500,EMEA,2025-06-26
-ACC0106,Davis-Campbell,FinTech,51-200,LATAM,2025-03-10
-ACC0107,James-Jones,EdTech,1-50,APAC,2025-02-15
-ACC0108,Bell LLC,LegalTech,2000+,LATAM,2024-03-16
-ACC0109,Randolph Group,HRTech,201-500,North America,2025-10-14
-ACC0110,Collins LLC,EdTech,51-200,APAC,2026-01-01
-ACC0111,"Herman, Wade and Silva",FinTech,2000+,LATAM,2025-02-21
-ACC0112,Hess-Harper,LegalTech,201-500,LATAM,2024-05-30
-ACC0113,Mcguire-Aguilar,HRTech,1-50,LATAM,2024-06-29
-ACC0114,"Smith, Martin and Pena",HealthTech,201-500,North America,2024-11-20
-ACC0115,"Perez, Daniel and Anderson",FinTech,2000+,EMEA,2025-02-02
-ACC0116,"Sharp, Mclaughlin and Collins",RetailTech,1-50,APAC,2024-05-12
-ACC0117,"Hughes, Best and Cantrell",EdTech,1-50,APAC,2024-09-08
-ACC0118,"Robinson, Hanson and Park",EdTech,501-2000,APAC,2024-12-24
-ACC0119,Gonzalez-Callahan,LegalTech,201-500,EMEA,2025-07-28
-ACC0120,"Collins, Garcia and Parker",RetailTech,501-2000,EMEA,2024-05-20
-ACC0121,"Fuller, Hamilton and Stephens",HRTech,201-500,LATAM,2024-07-28
-ACC0122,Joseph-Harris,FinTech,201-500,APAC,2025-07-09
-ACC0123,"Hernandez, Norton and Bailey",RetailTech,2000+,APAC,2024-10-21
-ACC0124,Gilmore-Robbins,RetailTech,501-2000,EMEA,2024-09-04
-ACC0125,Bowman Inc,RetailTech,51-200,North America,2025-04-25
-ACC0126,Lee LLC,HRTech,2000+,APAC,2025-11-06
-ACC0127,Owens-Taylor,HealthTech,201-500,EMEA,2025-07-21
-ACC0128,Harper LLC,HealthTech,1-50,North America,2025-06-04
-ACC0129,Thomas PLC,RetailTech,2000+,North America,2024-10-31
-ACC0130,"Gibbs, Price and Moore",RetailTech,2000+,EMEA,2025-01-12
-ACC0131,"Rodriguez, Robinson and Taylor",RetailTech,501-2000,EMEA,2025-09-11
-ACC0132,"Jordan, Jones and Dyer",LegalTech,1-50,North America,2024-12-01
-ACC0133,"Flores, Chavez and Hendricks",HealthTech,51-200,LATAM,2025-12-20
-ACC0134,"Barnes, Perez and Perez",HRTech,51-200,North America,2024-10-30
-ACC0135,Smith Group,HealthTech,501-2000,APAC,2024-11-13
-ACC0136,"Butler, Rangel and Rice",HRTech,2000+,LATAM,2024-07-28
-ACC0137,Johnson-Bradley,RetailTech,51-200,LATAM,2024-11-06
-ACC0138,Perez-Miller,EdTech,51-200,APAC,2024-08-25
-ACC0139,Sampson LLC,RetailTech,51-200,APAC,2024-11-16
-ACC0140,Wong and Sons,FinTech,201-500,EMEA,2025-05-07
-ACC0141,Hansen Inc,EdTech,201-500,North America,2025-09-21
-ACC0142,Brooks Ltd,HealthTech,51-200,LATAM,2025-09-06
-ACC0143,Stephens-Le,LegalTech,51-200,North America,2024-12-12
-ACC0144,Bryant LLC,RetailTech,201-500,LATAM,2024-12-11
-ACC0145,"Jackson, Montgomery and Ortiz",FinTech,51-200,LATAM,2025-01-07
-ACC0146,Collins-Walker,HRTech,1-50,LATAM,2024-10-09
-ACC0147,"Garcia, Santos and Brown",FinTech,201-500,APAC,2025-01-06
-ACC0148,Price PLC,RetailTech,2000+,EMEA,2024-09-28
-ACC0149,"Wright, Matthews and Hansen",HealthTech,201-500,LATAM,2024-09-30
-ACC0150,Evans Ltd,FinTech,501-2000,APAC,2024-03-27
-ACC0151,"Henson, Trevino and Valdez",LegalTech,501-2000,EMEA,2024-10-19
-ACC0152,Perez-Becker,HealthTech,2000+,North America,2025-01-02
-ACC0153,Pena PLC,HRTech,2000+,North America,2025-11-16
-ACC0154,Richards-Mcclure,LegalTech,501-2000,EMEA,2024-10-25
-ACC0155,"Martinez, Ruiz and Newman",HealthTech,1-50,APAC,2025-01-17
-ACC0156,"White, Taylor and Meza",EdTech,51-200,LATAM,2025-03-12
-ACC0157,Reed Ltd,EdTech,501-2000,APAC,2024-12-05
-ACC0158,"Castillo, Reilly and Ellis",EdTech,1-50,LATAM,2026-01-21
-ACC0159,"Martinez, White and Wheeler",LegalTech,2000+,North America,2025-02-16
-ACC0160,"Shea, Rush and Gomez",HealthTech,1-50,North America,2026-01-09
-ACC0161,"Cisneros, Medina and Green",HealthTech,51-200,North America,2024-05-14
-ACC0162,Pena Ltd,HealthTech,51-200,EMEA,2024-10-13
-ACC0163,Stevens-Benjamin,LegalTech,1-50,EMEA,2024-10-21
-ACC0164,"Oneill, Lawrence and Miller",LegalTech,201-500,APAC,2025-08-22
-ACC0165,Rivera-Higgins,HRTech,2000+,North America,2025-08-26
-ACC0166,Chavez-Ross,EdTech,1-50,North America,2025-03-27
-ACC0167,Robles-Ballard,HRTech,501-2000,LATAM,2025-07-21
-ACC0168,Pope Group,FinTech,2000+,EMEA,2025-10-28
-ACC0169,"Sims, Fuller and English",LegalTech,201-500,North America,2024-07-10
-ACC0170,Sutton PLC,FinTech,201-500,LATAM,2024-04-03
-ACC0171,Smith LLC,EdTech,1-50,APAC,2026-01-28
-ACC0172,"Edwards, Mcdonald and Riggs",RetailTech,501-2000,North America,2024-11-23
-ACC0173,Jackson PLC,EdTech,501-2000,EMEA,2024-11-21
-ACC0174,Porter-Martinez,HealthTech,2000+,APAC,2024-05-20
-ACC0175,Adkins PLC,HRTech,501-2000,LATAM,2024-11-20
-ACC0176,May PLC,LegalTech,2000+,APAC,2025-03-16
-ACC0177,Peterson-Ayala,HealthTech,1-50,APAC,2024-11-05
-ACC0178,Wall LLC,HealthTech,501-2000,LATAM,2025-03-02
-ACC0179,Mitchell-Lin,FinTech,501-2000,APAC,2025-08-07
-ACC0180,"Juarez, Coleman and Lynch",RetailTech,51-200,APAC,2025-05-21
-ACC0181,Davis and Sons,EdTech,201-500,APAC,2024-07-20
-ACC0182,"Rodriguez, Delgado and Davis",FinTech,2000+,EMEA,2025-11-14
-ACC0183,"Hayden, Baldwin and Thomas",HealthTech,501-2000,LATAM,2024-07-21
-ACC0184,Reyes Inc,HealthTech,501-2000,LATAM,2024-11-08
-ACC0185,Vasquez-Huang,FinTech,1-50,APAC,2025-06-28
-ACC0186,Scott and Sons,RetailTech,51-200,APAC,2024-04-01
-ACC0187,"Lee, Barron and Ellis",HRTech,201-500,LATAM,2024-07-23
-ACC0188,Carr Group,HRTech,201-500,LATAM,2024-07-26
-ACC0189,Harper-Ford,EdTech,201-500,LATAM,2025-05-08
-ACC0190,"Montgomery, Boyd and Peterson",EdTech,201-500,EMEA,2025-10-09
-ACC0191,Crosby-Sullivan,LegalTech,51-200,APAC,2025-10-10
-ACC0192,"Shaffer, Anthony and Olsen",LegalTech,2000+,EMEA,2025-07-28
-ACC0193,Rosario Group,HealthTech,501-2000,APAC,2024-06-16
-ACC0194,"Rodriguez, Garcia and Perez",HRTech,2000+,APAC,2025-10-30
-ACC0195,Munoz Inc,HealthTech,201-500,EMEA,2025-02-05
-ACC0196,Davenport-Carter,HealthTech,201-500,North America,2024-08-12
-ACC0197,"Stout, Hicks and Jones",HealthTech,201-500,North America,2025-12-16
-ACC0198,Briggs LLC,HRTech,201-500,EMEA,2024-04-27
-ACC0199,Johnson-Robinson,RetailTech,1-50,North America,2024-07-02
-ACC0200,"Evans, Perez and Baldwin",EdTech,501-2000,LATAM,2024-11-15
+account_id,company_name,industry,employee_size,region,created_date,tier
+ACC0001,Johnson Ltd,Technology,51-200,EMEA,2025-08-29,Enterprise
+ACC0002,Chambers Ltd,Manufacturing,201-500,North America,2024-08-18,Mid-Market
+ACC0003,Murphy Inc,Technology,201-500,North America,2026-03-18,SMB
+ACC0004,"Salazar, Berry and Thomas",Manufacturing,51-200,EMEA,2025-01-10,SMB
+ACC0005,White-Jenkins,Technology,501-2000,APAC,2025-02-06,Mid-Market
+ACC0006,Terry LLC,Public Sector,51-200,North America,2026-01-10,Mid-Market
+ACC0007,"Carlson, Page and Sparks",Financial Services,51-200,North America,2026-03-01,SMB
+ACC0008,Sanchez Group,Public Sector,51-200,North America,2024-09-26,Mid-Market
+ACC0009,Ortega-Williams,Media & Entertainment,51-200,EMEA,2025-09-30,SMB
+ACC0010,"Shepherd, Mccullough and Flores",Technology,51-200,North America,2026-01-23,SMB
+ACC0011,"Garcia, Lopez and Owens",Financial Services,201-500,APAC,2025-04-06,Enterprise
+ACC0012,Phillips and Sons,Manufacturing,501-2000,North America,2024-05-15,SMB
+ACC0013,"Flores, Holloway and Conrad",Technology,501-2000,EMEA,2025-10-29,Mid-Market
+ACC0014,Williams PLC,Media & Entertainment,201-500,North America,2025-09-02,SMB
+ACC0015,Hernandez-Rogers,Manufacturing,51-200,APAC,2026-03-13,SMB
+ACC0016,Gill Group,Technology,2000+,North America,2024-09-11,SMB
+ACC0017,"Burns, Price and Graham",Healthcare,51-200,North America,2024-06-25,Mid-Market
+ACC0018,"Luna, Wall and Kelly",Technology,201-500,North America,2025-07-19,SMB
+ACC0019,"Aguirre, Anderson and Ramirez",Healthcare,51-200,North America,2025-11-24,Mid-Market
+ACC0020,Castaneda-Berry,Technology,1-50,North America,2024-07-11,Enterprise
+ACC0021,Torres-Carter,Healthcare,51-200,EMEA,2024-08-12,SMB
+ACC0022,Hamilton Group,Public Sector,501-2000,North America,2026-04-03,SMB
+ACC0023,Cooper-Khan,Media & Entertainment,501-2000,North America,2024-06-27,Mid-Market
+ACC0024,Carney Inc,Technology,1-50,North America,2025-07-19,SMB
+ACC0025,Bruce LLC,Healthcare,1-50,EMEA,2024-07-13,Mid-Market
+ACC0026,White-Martin,Healthcare,51-200,EMEA,2025-10-31,Mid-Market
+ACC0027,Yang-Delgado,Healthcare,1-50,APAC,2025-05-18,Mid-Market
+ACC0028,"Hill, Kim and Lang",Financial Services,2000+,North America,2025-06-04,Mid-Market
+ACC0029,"Mccullough, Callahan and Wise",Healthcare,1-50,North America,2024-12-03,SMB
+ACC0030,Rodriguez-Cameron,Healthcare,1-50,LATAM,2024-06-08,Mid-Market
+ACC0031,"Smith, Schneider and Mitchell",Technology,501-2000,North America,2025-02-05,SMB
+ACC0032,Brown-Garza,Manufacturing,201-500,LATAM,2025-05-30,Mid-Market
+ACC0033,"Little, Walters and Harrington",Financial Services,501-2000,EMEA,2025-01-07,Enterprise
+ACC0034,Morgan-Hernandez,Financial Services,201-500,North America,2025-08-22,SMB
+ACC0035,Rodriguez LLC,Manufacturing,1-50,North America,2026-02-04,SMB
+ACC0036,Wright-Brown,Technology,51-200,APAC,2024-05-29,Mid-Market
+ACC0037,"Cooper, Wood and Smith",Manufacturing,501-2000,North America,2024-09-01,Mid-Market
+ACC0038,Benjamin-Holmes,Retail & E-commerce,51-200,APAC,2026-01-05,SMB
+ACC0039,"Griffin, Jones and Hernandez",Financial Services,501-2000,North America,2026-02-18,SMB
+ACC0040,"Wheeler, Brown and Fowler",Technology,51-200,LATAM,2025-05-02,SMB
+ACC0041,Carrillo LLC,Technology,201-500,North America,2025-11-22,Mid-Market
+ACC0042,"Smith, Scott and Hamilton",Technology,2000+,North America,2025-01-16,SMB
+ACC0043,"Baldwin, Carney and Hobbs",Technology,201-500,APAC,2024-10-08,SMB
+ACC0044,Cervantes Ltd,Media & Entertainment,501-2000,LATAM,2025-10-26,Mid-Market
+ACC0045,"Sanchez, Reid and Taylor",Retail & E-commerce,2000+,North America,2025-10-28,Mid-Market
+ACC0046,Woodward PLC,Technology,501-2000,LATAM,2025-01-04,Mid-Market
+ACC0047,"Arnold, Pierce and Price",Manufacturing,501-2000,EMEA,2024-06-06,SMB
+ACC0048,"Wade, Young and Dennis",Financial Services,2000+,North America,2024-08-29,SMB
+ACC0049,Morgan-Smith,Financial Services,1-50,North America,2024-12-12,Mid-Market
+ACC0050,Hernandez LLC,Technology,2000+,APAC,2026-01-22,SMB
+ACC0051,Adams and Sons,Technology,501-2000,North America,2025-02-25,Enterprise
+ACC0052,"Stone, Wise and Anderson",Technology,201-500,APAC,2024-07-19,Enterprise
+ACC0053,Peterson LLC,Healthcare,51-200,EMEA,2025-07-21,Mid-Market
+ACC0054,Guerrero Ltd,Technology,51-200,EMEA,2024-05-27,SMB
+ACC0055,Nguyen Ltd,Media & Entertainment,2000+,North America,2026-04-05,Mid-Market
+ACC0056,Blake-Brown,Public Sector,1-50,LATAM,2025-09-08,Mid-Market
+ACC0057,"Pearson, Andrews and Mills",Financial Services,1-50,North America,2025-08-07,Mid-Market
+ACC0058,"Simmons, Allen and Smith",Retail & E-commerce,501-2000,North America,2024-07-27,SMB
+ACC0059,Estrada-Castaneda,Healthcare,201-500,APAC,2024-09-24,Mid-Market
+ACC0060,Richards-Davis,Media & Entertainment,1-50,EMEA,2025-12-17,SMB
+ACC0061,"Neal, Taylor and Gentry",Technology,51-200,EMEA,2025-09-11,SMB
+ACC0062,"Miller, Kelley and Valencia",Healthcare,51-200,North America,2024-11-30,Mid-Market
+ACC0063,Sims-Martin,Technology,201-500,APAC,2025-07-05,Enterprise
+ACC0064,Young-Lopez,Technology,2000+,North America,2025-10-31,SMB
+ACC0065,Moore-Young,Financial Services,1-50,EMEA,2026-01-27,SMB
+ACC0066,Richards-Dickerson,Technology,1-50,EMEA,2025-04-01,SMB
+ACC0067,Peterson-Hernandez,Technology,51-200,North America,2026-03-05,SMB
+ACC0068,"Brown, Olson and Lucas",Technology,1-50,North America,2024-09-18,SMB
+ACC0069,"Orr, Ramsey and Anderson",Healthcare,51-200,North America,2025-08-15,SMB
+ACC0070,"Mosley, Woodward and Savage",Retail & E-commerce,501-2000,LATAM,2026-03-20,Enterprise
+ACC0071,Gonzalez-Gibson,Retail & E-commerce,51-200,LATAM,2024-05-29,SMB
+ACC0072,Petersen-Pierce,Technology,501-2000,APAC,2025-12-25,Mid-Market
+ACC0073,Lane-Kim,Financial Services,51-200,North America,2024-12-29,Mid-Market
+ACC0074,Fernandez-Thomas,Retail & E-commerce,51-200,APAC,2024-06-08,Enterprise
+ACC0075,"Rose, Murray and Mitchell",Retail & E-commerce,2000+,North America,2025-07-03,Mid-Market
+ACC0076,Berry PLC,Manufacturing,501-2000,North America,2025-05-10,SMB
+ACC0077,"Taylor, Fowler and Raymond",Public Sector,51-200,North America,2025-07-17,Enterprise
+ACC0078,"Sanchez, Byrd and Campbell",Financial Services,501-2000,EMEA,2025-01-23,SMB
+ACC0079,Reed PLC,Financial Services,201-500,North America,2025-07-28,Enterprise
+ACC0080,Lester Ltd,Healthcare,501-2000,North America,2024-05-28,Enterprise
+ACC0081,"Williams, Ryan and Nichols",Media & Entertainment,2000+,North America,2024-07-15,Mid-Market
+ACC0082,Murphy-Shaw,Manufacturing,51-200,APAC,2025-06-02,SMB
+ACC0083,"Martinez, Meyer and Lynn",Manufacturing,201-500,North America,2025-09-30,Mid-Market
+ACC0084,Hall Ltd,Manufacturing,2000+,LATAM,2024-07-23,SMB
+ACC0085,"Thomas, Fitzgerald and Powell",Retail & E-commerce,51-200,North America,2025-09-11,Mid-Market
+ACC0086,Young Ltd,Healthcare,201-500,EMEA,2025-01-17,SMB
+ACC0087,"King, Trujillo and Moore",Retail & E-commerce,2000+,North America,2025-10-23,SMB
+ACC0088,"Garrett, May and Willis",Manufacturing,201-500,North America,2026-01-09,SMB
+ACC0089,"Shepherd, Carroll and Carter",Manufacturing,51-200,EMEA,2025-09-23,Enterprise
+ACC0090,Lee Inc,Public Sector,201-500,North America,2026-01-30,Mid-Market
+ACC0091,Phillips-Black,Healthcare,501-2000,APAC,2025-03-17,Mid-Market
+ACC0092,Ruiz PLC,Healthcare,1-50,North America,2025-12-26,SMB
+ACC0093,Burke-Acevedo,Retail & E-commerce,201-500,North America,2024-12-25,Enterprise
+ACC0094,"Martinez, Myers and Taylor",Retail & E-commerce,201-500,North America,2024-12-25,SMB
+ACC0095,"Ramos, Ryan and Lopez",Healthcare,2000+,LATAM,2025-01-16,SMB
+ACC0096,Mendez-Saunders,Healthcare,501-2000,EMEA,2024-09-30,Mid-Market
+ACC0097,Valdez LLC,Retail & E-commerce,201-500,North America,2025-08-04,SMB
+ACC0098,Cook PLC,Manufacturing,201-500,North America,2025-08-13,Mid-Market
+ACC0099,"Robinson, Hoffman and Gonzalez",Financial Services,51-200,North America,2025-05-22,SMB
+ACC0100,"Garcia, Shelton and Walker",Technology,51-200,North America,2025-11-09,SMB
+ACC0101,"Berry, Williams and Curtis",Financial Services,201-500,North America,2025-02-13,Enterprise
+ACC0102,Patterson LLC,Financial Services,501-2000,APAC,2026-03-25,SMB
+ACC0103,Perez and Sons,Financial Services,1-50,EMEA,2025-04-19,Mid-Market
+ACC0104,Lee-Oliver,Media & Entertainment,501-2000,North America,2024-10-10,SMB
+ACC0105,Green Ltd,Healthcare,51-200,North America,2025-09-02,Mid-Market
+ACC0106,Davies Group,Financial Services,201-500,North America,2025-02-24,SMB
+ACC0107,Fischer PLC,Media & Entertainment,2000+,APAC,2024-10-15,Enterprise
+ACC0108,"Wood, Newman and Thompson",Healthcare,1-50,North America,2024-06-25,Mid-Market
+ACC0109,"Alexander, Bowen and Bennett",Technology,51-200,APAC,2025-05-14,Mid-Market
+ACC0110,Hammond-Wells,Manufacturing,51-200,North America,2025-02-07,Mid-Market
+ACC0111,"Ford, Jacobson and Miller",Technology,201-500,North America,2025-04-21,Mid-Market
+ACC0112,Moreno and Sons,Public Sector,1-50,North America,2026-03-14,SMB
+ACC0113,Franco Group,Technology,51-200,North America,2025-12-06,Mid-Market
+ACC0114,Fields-Scott,Media & Entertainment,201-500,North America,2025-07-26,SMB
+ACC0115,"Holloway, Jacobs and Jenkins",Healthcare,501-2000,North America,2025-12-18,SMB
+ACC0116,Sanchez and Sons,Financial Services,201-500,North America,2025-05-30,SMB
+ACC0117,Baker Group,Financial Services,2000+,APAC,2025-09-23,Enterprise
+ACC0118,"Hanson, Mcintyre and Anderson",Healthcare,1-50,EMEA,2025-06-10,SMB
+ACC0119,"Daniels, Lane and Jones",Technology,2000+,EMEA,2026-03-03,Mid-Market
+ACC0120,"Harrington, Pham and Haney",Financial Services,201-500,North America,2025-04-30,Enterprise
+ACC0121,Leonard-Orozco,Financial Services,51-200,North America,2025-04-09,SMB
+ACC0122,"Hebert, Poole and Gilbert",Manufacturing,51-200,APAC,2024-10-27,SMB
+ACC0123,"Andrade, Rivas and Smith",Retail & E-commerce,201-500,North America,2024-12-05,Mid-Market
+ACC0124,"Beltran, Saunders and Ayala",Healthcare,51-200,APAC,2025-08-06,SMB
+ACC0125,Miller Group,Media & Entertainment,51-200,North America,2024-12-25,SMB
+ACC0126,"Smith, Bartlett and Carrillo",Financial Services,201-500,EMEA,2025-05-17,Enterprise
+ACC0127,Abbott-Taylor,Retail & E-commerce,51-200,North America,2024-08-12,SMB
+ACC0128,Maddox-Adams,Technology,2000+,North America,2026-01-17,Mid-Market
+ACC0129,"Marks, Shepard and Edwards",Healthcare,51-200,North America,2024-12-13,SMB
+ACC0130,Edwards and Sons,Retail & E-commerce,1-50,North America,2025-08-31,Mid-Market
+ACC0131,Adams-Williams,Manufacturing,51-200,North America,2024-09-25,Mid-Market
+ACC0132,"Williams, Smith and Park",Manufacturing,51-200,North America,2025-01-05,Mid-Market
+ACC0133,"Miller, Landry and Carter",Technology,51-200,North America,2025-12-13,SMB
+ACC0134,"Thompson, Owens and Coleman",Manufacturing,51-200,LATAM,2024-12-05,Mid-Market
+ACC0135,Perez Ltd,Manufacturing,201-500,EMEA,2026-01-02,SMB
+ACC0136,Wilson PLC,Financial Services,51-200,North America,2024-10-15,Enterprise
+ACC0137,"Miller, Perez and Hanna",Technology,51-200,North America,2025-12-06,SMB
+ACC0138,"Bowman, Mejia and Olson",Technology,1-50,EMEA,2025-06-27,Mid-Market
+ACC0139,Whitaker-Jones,Technology,1-50,North America,2024-12-11,Enterprise
+ACC0140,Franklin PLC,Financial Services,201-500,North America,2026-02-19,Enterprise
+ACC0141,"Jones, Conley and Hall",Media & Entertainment,1-50,APAC,2025-08-03,Enterprise
+ACC0142,Hunter Group,Healthcare,501-2000,EMEA,2025-08-26,SMB
+ACC0143,Ray Group,Media & Entertainment,51-200,North America,2024-08-20,SMB
+ACC0144,Gibson-Riley,Healthcare,201-500,North America,2026-01-03,SMB
+ACC0145,Whitaker-Mccarthy,Technology,201-500,North America,2025-11-05,Mid-Market
+ACC0146,"Matthews, Smith and Hayes",Technology,51-200,EMEA,2024-08-14,Mid-Market
+ACC0147,Callahan-Hodges,Financial Services,51-200,North America,2025-01-05,Enterprise
+ACC0148,Yu-Walton,Technology,501-2000,North America,2024-08-19,SMB
+ACC0149,Thomas Inc,Financial Services,201-500,LATAM,2024-06-20,Enterprise
+ACC0150,Johnson and Sons,Technology,1-50,North America,2025-06-04,SMB
+ACC0151,Miles Inc,Media & Entertainment,51-200,APAC,2024-12-21,SMB
+ACC0152,Schmitt Group,Media & Entertainment,201-500,EMEA,2024-11-25,Mid-Market
+ACC0153,Christian-House,Media & Entertainment,501-2000,EMEA,2024-08-04,Mid-Market
+ACC0154,Barber-Miller,Public Sector,501-2000,North America,2024-09-02,SMB
+ACC0155,Sellers Group,Manufacturing,501-2000,North America,2024-09-01,Enterprise
+ACC0156,Schultz and Sons,Financial Services,201-500,EMEA,2025-07-04,Enterprise
+ACC0157,Hopkins-Moran,Healthcare,201-500,EMEA,2026-01-11,Mid-Market
+ACC0158,Ross-Burns,Financial Services,1-50,North America,2025-11-01,Mid-Market
+ACC0159,"Campbell, Meadows and Cervantes",Financial Services,2000+,EMEA,2024-09-28,Enterprise
+ACC0160,"Martin, Atkins and Wilson",Technology,1-50,North America,2025-02-25,SMB
+ACC0161,Burch-Wright,Technology,501-2000,APAC,2024-12-27,Mid-Market
+ACC0162,Thompson-Thomas,Financial Services,501-2000,North America,2024-07-13,Mid-Market
+ACC0163,"Goodman, Mueller and Wilson",Technology,1-50,North America,2025-06-24,Mid-Market
+ACC0164,Diaz-Hernandez,Technology,2000+,EMEA,2024-07-30,SMB
+ACC0165,Wright-Munoz,Financial Services,1-50,EMEA,2025-02-21,Enterprise
+ACC0166,Bates-Smith,Media & Entertainment,201-500,LATAM,2025-12-15,SMB
+ACC0167,Cook-Winters,Media & Entertainment,51-200,North America,2025-07-09,Mid-Market
+ACC0168,Russell-Abbott,Financial Services,201-500,North America,2025-11-17,Mid-Market
+ACC0169,"Freeman, Rosario and Lopez",Healthcare,501-2000,LATAM,2026-02-02,Mid-Market
+ACC0170,Brown-Williamson,Financial Services,2000+,APAC,2024-11-11,Mid-Market
+ACC0171,Smith Inc,Manufacturing,501-2000,North America,2024-08-29,SMB
+ACC0172,Kelly-Bentley,Technology,201-500,North America,2025-04-26,Mid-Market
+ACC0173,Perez Inc,Financial Services,2000+,EMEA,2025-10-03,SMB
+ACC0174,Ho Ltd,Financial Services,501-2000,North America,2025-02-18,Enterprise
+ACC0175,Coffey PLC,Manufacturing,501-2000,EMEA,2025-03-15,SMB
+ACC0176,"Powell, Bowers and Hubbard",Healthcare,51-200,APAC,2026-03-08,Enterprise
+ACC0177,Bell-Mayo,Financial Services,1-50,LATAM,2025-01-19,Enterprise
+ACC0178,Watson and Sons,Technology,1-50,APAC,2024-06-13,SMB
+ACC0179,Summers-Smith,Retail & E-commerce,51-200,North America,2024-07-15,SMB
+ACC0180,"Grant, Tucker and Moon",Retail & E-commerce,501-2000,EMEA,2024-10-15,Mid-Market
+ACC0181,Williams-Dillon,Manufacturing,501-2000,North America,2024-10-07,Enterprise
+ACC0182,Hoffman and Sons,Healthcare,2000+,North America,2025-08-25,SMB
+ACC0183,"James, Ferguson and Mcpherson",Technology,201-500,North America,2026-01-02,Mid-Market
+ACC0184,Allen and Sons,Media & Entertainment,1-50,EMEA,2026-02-16,Mid-Market
+ACC0185,Chavez Group,Technology,201-500,North America,2024-09-12,SMB
+ACC0186,"Thompson, Graves and Keith",Technology,201-500,North America,2025-03-19,SMB
+ACC0187,Tucker-Macias,Media & Entertainment,1-50,North America,2024-12-28,SMB
+ACC0188,"Anderson, Macias and Joseph",Manufacturing,501-2000,North America,2024-12-24,SMB
+ACC0189,Riddle-Fisher,Technology,51-200,EMEA,2025-04-26,SMB
+ACC0190,Moyer Group,Public Sector,201-500,North America,2025-01-02,SMB
+ACC0191,Clark Ltd,Financial Services,201-500,North America,2025-08-15,Mid-Market
+ACC0192,Parrish PLC,Financial Services,201-500,North America,2026-03-23,SMB
+ACC0193,Sims PLC,Technology,201-500,EMEA,2026-02-23,SMB
+ACC0194,Norris Inc,Retail & E-commerce,2000+,EMEA,2025-08-22,SMB
+ACC0195,Price Inc,Healthcare,201-500,North America,2024-05-20,SMB
+ACC0196,Roberts PLC,Manufacturing,1-50,EMEA,2026-01-05,SMB
+ACC0197,Hill-Brown,Financial Services,51-200,EMEA,2024-08-29,Mid-Market
+ACC0198,Day-Carter,Media & Entertainment,51-200,North America,2025-02-13,Enterprise
+ACC0199,Neal-Warner,Healthcare,2000+,North America,2024-10-18,Mid-Market
+ACC0200,"Rice, Lee and Walker",Technology,2000+,North America,2024-12-07,SMB
+ACC0201,"Byrd, Ross and Tucker",Retail & E-commerce,501-2000,North America,2024-12-21,SMB
+ACC0202,Pratt-Flores,Public Sector,501-2000,North America,2024-05-24,SMB
+ACC0203,Johnson LLC,Retail & E-commerce,51-200,LATAM,2025-03-06,Enterprise
+ACC0204,"Ramirez, Duarte and Ward",Financial Services,201-500,North America,2024-05-26,Mid-Market
+ACC0205,Huynh LLC,Healthcare,51-200,North America,2024-05-23,Mid-Market
+ACC0206,"Rodriguez, Bennett and Sims",Media & Entertainment,201-500,North America,2024-07-29,Mid-Market
+ACC0207,Johnson-White,Retail & E-commerce,2000+,North America,2025-06-09,SMB
+ACC0208,"Wagner, Patel and Sherman",Technology,1-50,North America,2024-11-26,Enterprise
+ACC0209,Stewart-Holt,Healthcare,51-200,North America,2025-03-31,SMB
+ACC0210,Lopez Inc,Media & Entertainment,51-200,EMEA,2025-11-07,SMB
+ACC0211,"Ward, Brandt and Carpenter",Retail & E-commerce,201-500,EMEA,2025-07-02,Enterprise
+ACC0212,Meadows-Roberts,Financial Services,2000+,North America,2025-04-08,Enterprise
+ACC0213,Le-Vargas,Healthcare,2000+,EMEA,2025-04-12,Enterprise
+ACC0214,Brewer Ltd,Public Sector,2000+,North America,2025-01-04,Enterprise
+ACC0215,Acosta Ltd,Healthcare,2000+,North America,2026-02-22,SMB
+ACC0216,"Williams, Ferguson and Miller",Technology,201-500,North America,2026-02-03,SMB
+ACC0217,"Booth, Gallagher and Fernandez",Healthcare,501-2000,EMEA,2025-08-19,Mid-Market
+ACC0218,"Martinez, Hill and Lewis",Media & Entertainment,1-50,North America,2025-11-17,SMB
+ACC0219,Gamble-Foster,Retail & E-commerce,1-50,North America,2026-03-19,Enterprise
+ACC0220,Stevenson Group,Retail & E-commerce,201-500,North America,2026-03-29,Enterprise
+ACC0221,Potter-Garcia,Manufacturing,201-500,North America,2026-02-08,Mid-Market
+ACC0222,Rowe-Johnson,Healthcare,1-50,APAC,2024-11-15,Mid-Market
+ACC0223,"Garcia, Fuentes and Garcia",Manufacturing,2000+,EMEA,2024-06-09,Mid-Market
+ACC0224,Turner-Pena,Public Sector,1-50,North America,2024-12-10,SMB
+ACC0225,"Martinez, Benson and Hanson",Technology,501-2000,North America,2025-01-15,Enterprise
+ACC0226,"Miranda, Jones and Hawkins",Healthcare,1-50,North America,2025-07-07,SMB
+ACC0227,Smith-Campos,Manufacturing,51-200,EMEA,2024-08-11,Mid-Market
+ACC0228,Griffin-Ruiz,Healthcare,1-50,North America,2025-12-18,SMB
+ACC0229,Rose Group,Manufacturing,501-2000,EMEA,2025-09-06,Mid-Market
+ACC0230,"Hawkins, Tran and Bird",Financial Services,501-2000,APAC,2025-03-02,Mid-Market
+ACC0231,Moss PLC,Financial Services,201-500,North America,2025-03-27,SMB
+ACC0232,Hernandez-Friedman,Financial Services,1-50,EMEA,2026-01-17,Enterprise
+ACC0233,Calderon-Davis,Manufacturing,501-2000,North America,2024-09-22,Enterprise
+ACC0234,Murphy-Hall,Healthcare,201-500,LATAM,2025-02-18,Mid-Market
+ACC0235,"Gray, Hansen and Miller",Manufacturing,501-2000,EMEA,2026-02-21,SMB
+ACC0236,Saunders-Jacobs,Financial Services,201-500,EMEA,2025-09-09,Enterprise
+ACC0237,Miller LLC,Retail & E-commerce,51-200,North America,2024-09-22,Mid-Market
+ACC0238,Wilson Inc,Healthcare,501-2000,EMEA,2024-09-17,SMB
+ACC0239,"Foley, Morales and Bell",Healthcare,201-500,APAC,2026-03-19,SMB
+ACC0240,Hensley-Pace,Manufacturing,1-50,EMEA,2025-07-09,SMB
+ACC0241,Payne-George,Financial Services,1-50,North America,2025-11-19,SMB
+ACC0242,Jones Inc,Technology,201-500,North America,2026-03-14,Enterprise
+ACC0243,Hines LLC,Financial Services,201-500,North America,2025-11-04,Mid-Market
+ACC0244,Alexander PLC,Manufacturing,201-500,EMEA,2026-01-18,SMB
+ACC0245,Williams LLC,Manufacturing,1-50,North America,2026-01-21,Mid-Market
+ACC0246,Huerta-Haynes,Financial Services,51-200,EMEA,2025-07-09,Mid-Market
+ACC0247,"Lin, Hayes and Haynes",Financial Services,1-50,North America,2024-05-20,SMB
+ACC0248,Blake-Welch,Manufacturing,1-50,North America,2025-03-06,SMB
+ACC0249,"George, Aguirre and Myers",Technology,2000+,North America,2025-11-25,SMB
+ACC0250,"Murillo, Cowan and Hendrix",Technology,201-500,North America,2025-01-29,Enterprise
+ACC0251,Bauer LLC,Manufacturing,201-500,North America,2024-05-30,SMB
+ACC0252,"Ortiz, Richardson and Garcia",Retail & E-commerce,1-50,North America,2026-03-26,Mid-Market
+ACC0253,Tapia-Baker,Financial Services,51-200,North America,2025-02-24,SMB
+ACC0254,Price Inc,Technology,1-50,North America,2025-05-17,Enterprise
+ACC0255,Gutierrez PLC,Financial Services,201-500,LATAM,2025-04-09,Enterprise
+ACC0256,"Burke, Maldonado and Berg",Technology,201-500,APAC,2024-10-25,Enterprise
+ACC0257,Cochran-Walters,Manufacturing,51-200,APAC,2025-10-24,Enterprise
+ACC0258,Bell-Leblanc,Healthcare,51-200,EMEA,2025-04-22,Mid-Market
+ACC0259,Gonzalez Inc,Healthcare,1-50,LATAM,2025-12-30,Enterprise
+ACC0260,"Hughes, Baker and Ramos",Healthcare,501-2000,North America,2024-06-12,Enterprise
+ACC0261,Perry-Reed,Healthcare,201-500,LATAM,2024-09-14,SMB
+ACC0262,Sanders Inc,Media & Entertainment,201-500,North America,2024-07-03,SMB
+ACC0263,Mora-Bailey,Public Sector,51-200,North America,2025-01-19,Enterprise
+ACC0264,Mcbride-Robertson,Financial Services,51-200,North America,2026-02-16,Mid-Market
+ACC0265,Robinson Inc,Financial Services,1-50,North America,2025-04-02,SMB
+ACC0266,Lewis-Roberts,Retail & E-commerce,501-2000,North America,2024-07-24,SMB
+ACC0267,Wright-Reid,Healthcare,2000+,North America,2026-03-03,Mid-Market
+ACC0268,Kane PLC,Healthcare,51-200,APAC,2024-12-13,Mid-Market
+ACC0269,"Valentine, Riley and Fuller",Financial Services,501-2000,LATAM,2025-04-28,SMB
+ACC0270,Bridges Ltd,Healthcare,1-50,North America,2025-01-21,SMB
+ACC0271,"Singh, Hoffman and Whitaker",Healthcare,51-200,North America,2025-06-29,Mid-Market
+ACC0272,Harris-Harmon,Manufacturing,1-50,APAC,2024-07-07,SMB
+ACC0273,"Marshall, Ayala and Smith",Technology,201-500,North America,2025-06-28,Mid-Market
+ACC0274,"Price, Wilson and Mccoy",Public Sector,201-500,APAC,2025-11-12,Mid-Market
+ACC0275,Good-Valentine,Technology,51-200,EMEA,2024-06-12,SMB
+ACC0276,Thornton PLC,Healthcare,2000+,North America,2025-06-01,SMB
+ACC0277,Russo Group,Financial Services,1-50,EMEA,2024-10-22,Enterprise
+ACC0278,"Nichols, Navarro and Mann",Healthcare,1-50,EMEA,2025-06-02,Enterprise
+ACC0279,"Roberson, Davidson and Singh",Media & Entertainment,201-500,North America,2025-08-26,SMB
+ACC0280,Sanchez Group,Financial Services,501-2000,North America,2024-11-11,SMB
+ACC0281,"Moses, Brown and White",Media & Entertainment,1-50,APAC,2025-05-05,SMB
+ACC0282,"Ryan, Sanchez and Evans",Healthcare,51-200,EMEA,2025-10-11,SMB
+ACC0283,"Roberts, Lindsey and Ryan",Retail & E-commerce,51-200,APAC,2025-01-21,Enterprise
+ACC0284,Mahoney PLC,Manufacturing,2000+,North America,2024-07-28,Mid-Market
+ACC0285,"Murray, Torres and Morales",Financial Services,201-500,EMEA,2025-06-02,SMB
+ACC0286,"Hamilton, Cruz and Brooks",Media & Entertainment,51-200,APAC,2024-05-20,SMB
+ACC0287,Lee LLC,Financial Services,51-200,LATAM,2025-03-19,Mid-Market
+ACC0288,Salinas Ltd,Technology,51-200,North America,2024-08-03,Enterprise
+ACC0289,Wade Ltd,Healthcare,501-2000,North America,2024-09-24,SMB
+ACC0290,Bartlett-Carter,Healthcare,1-50,EMEA,2026-01-19,SMB
+ACC0291,Lopez-Matthews,Media & Entertainment,1-50,North America,2025-01-22,Enterprise
+ACC0292,Lindsey-Davis,Retail & E-commerce,501-2000,APAC,2026-03-18,Mid-Market
+ACC0293,Maddox PLC,Financial Services,51-200,North America,2026-01-21,Mid-Market
+ACC0294,Parker-Martinez,Media & Entertainment,501-2000,North America,2024-06-18,Mid-Market
+ACC0295,"Griffin, Frazier and Bishop",Technology,2000+,North America,2024-12-17,SMB
+ACC0296,Davis Ltd,Manufacturing,51-200,North America,2026-04-09,SMB
+ACC0297,Alvarado-English,Technology,1-50,North America,2024-07-30,Mid-Market
+ACC0298,Brock Group,Financial Services,51-200,North America,2026-02-25,Mid-Market
+ACC0299,"Porter, Williams and Thomas",Healthcare,1-50,EMEA,2024-11-19,SMB
+ACC0300,"Gonzalez, Fowler and Wells",Healthcare,51-200,North America,2025-11-18,Mid-Market

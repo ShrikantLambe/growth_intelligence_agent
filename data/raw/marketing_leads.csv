@@ -1,1501 +1,2001 @@
 lead_id,source,campaign,created_date,converted_flag
-LEAD00001,LinkedIn,Q1 Spring Push,2025-09-19,0
-LEAD00002,Cold Outreach,Retention Drive,2025-12-17,0
-LEAD00003,Referral,Product Launch,2025-05-11,0
-LEAD00004,LinkedIn,Brand Awareness,2025-03-13,1
-LEAD00005,Referral,Q1 Spring Push,2025-06-30,1
-LEAD00006,LinkedIn,Competitor Conquest,2025-10-08,0
-LEAD00007,LinkedIn,Product Launch,2026-01-13,0
-LEAD00008,Organic Search,Product Launch,2026-01-23,0
-LEAD00009,Organic Search,Competitor Conquest,2025-06-28,0
-LEAD00010,LinkedIn,Competitor Conquest,2025-06-16,1
-LEAD00011,LinkedIn,Product Launch,2026-01-20,0
-LEAD00012,Event,Product Launch,2025-11-26,0
-LEAD00013,Referral,Competitor Conquest,2025-03-11,0
-LEAD00014,Organic Search,Q1 Spring Push,2025-10-03,0
-LEAD00015,Cold Outreach,Retention Drive,2026-01-26,0
-LEAD00016,Organic Search,Q1 Spring Push,2025-06-18,0
-LEAD00017,Cold Outreach,Brand Awareness,2026-02-28,0
-LEAD00018,LinkedIn,Product Launch,2025-09-28,0
-LEAD00019,LinkedIn,Brand Awareness,2025-06-12,0
-LEAD00020,Referral,Q1 Spring Push,2025-10-23,0
-LEAD00021,LinkedIn,Q1 Spring Push,2026-03-04,1
-LEAD00022,Event,Retention Drive,2026-01-18,0
-LEAD00023,LinkedIn,Retention Drive,2025-09-29,0
-LEAD00024,Cold Outreach,Brand Awareness,2025-05-22,0
-LEAD00025,Organic Search,Brand Awareness,2025-05-02,0
-LEAD00026,Event,Competitor Conquest,2026-02-14,0
-LEAD00027,Referral,Q1 Spring Push,2026-01-16,1
-LEAD00028,Organic Search,Competitor Conquest,2025-08-23,0
-LEAD00029,Event,Retention Drive,2025-04-23,1
-LEAD00030,Cold Outreach,Competitor Conquest,2025-04-30,0
-LEAD00031,LinkedIn,Product Launch,2025-03-11,0
-LEAD00032,Event,Q1 Spring Push,2025-07-16,0
-LEAD00033,Organic Search,Competitor Conquest,2026-01-21,0
-LEAD00034,Cold Outreach,Competitor Conquest,2025-07-14,0
-LEAD00035,Paid Search,Product Launch,2025-04-30,0
-LEAD00036,LinkedIn,Competitor Conquest,2025-12-08,0
-LEAD00037,Cold Outreach,Brand Awareness,2025-09-26,0
-LEAD00038,Organic Search,Q1 Spring Push,2025-07-11,0
-LEAD00039,Referral,Competitor Conquest,2025-12-14,1
-LEAD00040,LinkedIn,Retention Drive,2025-05-21,0
-LEAD00041,Organic Search,Competitor Conquest,2025-03-11,1
-LEAD00042,LinkedIn,Retention Drive,2025-04-13,0
-LEAD00043,LinkedIn,Retention Drive,2025-07-18,1
-LEAD00044,Referral,Product Launch,2025-04-28,0
-LEAD00045,Paid Search,Competitor Conquest,2025-08-27,0
-LEAD00046,Paid Search,Retention Drive,2025-08-03,1
-LEAD00047,Referral,Retention Drive,2025-09-17,0
-LEAD00048,Paid Search,Product Launch,2025-04-06,0
-LEAD00049,Cold Outreach,Retention Drive,2025-07-05,0
-LEAD00050,Event,Competitor Conquest,2025-09-26,1
-LEAD00051,Referral,Product Launch,2025-10-05,0
-LEAD00052,Organic Search,Retention Drive,2026-01-15,0
-LEAD00053,Event,Competitor Conquest,2025-09-25,0
-LEAD00054,Cold Outreach,Q1 Spring Push,2026-01-24,0
-LEAD00055,Paid Search,Retention Drive,2025-04-20,0
-LEAD00056,Paid Search,Product Launch,2025-07-23,0
-LEAD00057,Referral,Retention Drive,2025-05-20,0
-LEAD00058,Paid Search,Brand Awareness,2025-10-09,0
-LEAD00059,Cold Outreach,Brand Awareness,2025-08-01,0
-LEAD00060,LinkedIn,Q1 Spring Push,2025-05-17,0
-LEAD00061,Event,Competitor Conquest,2026-01-05,1
-LEAD00062,Organic Search,Brand Awareness,2025-06-03,0
-LEAD00063,Organic Search,Retention Drive,2025-09-09,0
-LEAD00064,LinkedIn,Q1 Spring Push,2025-11-11,1
-LEAD00065,Event,Competitor Conquest,2025-04-25,0
-LEAD00066,Referral,Competitor Conquest,2025-08-28,0
-LEAD00067,Paid Search,Product Launch,2025-07-11,0
-LEAD00068,Event,Competitor Conquest,2025-09-08,1
-LEAD00069,Paid Search,Brand Awareness,2025-04-02,0
-LEAD00070,Organic Search,Q1 Spring Push,2025-04-14,1
-LEAD00071,Cold Outreach,Competitor Conquest,2025-04-09,1
-LEAD00072,Paid Search,Q1 Spring Push,2025-12-31,0
-LEAD00073,Referral,Competitor Conquest,2025-03-20,0
-LEAD00074,Referral,Retention Drive,2025-12-09,0
-LEAD00075,Referral,Retention Drive,2025-07-24,0
-LEAD00076,Paid Search,Product Launch,2025-08-06,0
-LEAD00077,Event,Competitor Conquest,2025-11-10,0
-LEAD00078,LinkedIn,Competitor Conquest,2025-06-05,0
-LEAD00079,Organic Search,Q1 Spring Push,2025-05-25,0
-LEAD00080,LinkedIn,Q1 Spring Push,2025-05-18,0
-LEAD00081,Cold Outreach,Q1 Spring Push,2025-12-29,0
-LEAD00082,Event,Brand Awareness,2025-07-16,0
-LEAD00083,Event,Retention Drive,2026-01-25,0
-LEAD00084,Cold Outreach,Q1 Spring Push,2025-03-26,0
-LEAD00085,Event,Brand Awareness,2025-05-02,0
-LEAD00086,LinkedIn,Retention Drive,2026-03-06,1
-LEAD00087,Event,Competitor Conquest,2025-05-22,0
-LEAD00088,Referral,Brand Awareness,2025-10-12,0
-LEAD00089,Organic Search,Retention Drive,2025-10-07,0
-LEAD00090,Event,Brand Awareness,2026-02-08,0
-LEAD00091,Event,Product Launch,2025-05-22,0
-LEAD00092,LinkedIn,Retention Drive,2026-02-26,1
-LEAD00093,Organic Search,Product Launch,2025-06-26,0
-LEAD00094,LinkedIn,Brand Awareness,2026-01-03,1
-LEAD00095,LinkedIn,Brand Awareness,2026-03-04,0
-LEAD00096,Event,Product Launch,2025-05-13,0
-LEAD00097,Cold Outreach,Competitor Conquest,2025-09-03,0
-LEAD00098,LinkedIn,Product Launch,2025-07-06,0
-LEAD00099,Event,Q1 Spring Push,2025-09-17,0
-LEAD00100,Paid Search,Retention Drive,2025-12-23,0
-LEAD00101,Referral,Competitor Conquest,2025-11-10,0
-LEAD00102,Cold Outreach,Product Launch,2025-11-24,0
-LEAD00103,LinkedIn,Q1 Spring Push,2025-04-17,0
-LEAD00104,Organic Search,Q1 Spring Push,2025-12-16,0
-LEAD00105,Referral,Brand Awareness,2025-07-11,0
-LEAD00106,Event,Product Launch,2025-08-29,0
-LEAD00107,Referral,Competitor Conquest,2025-10-28,0
-LEAD00108,Referral,Q1 Spring Push,2025-10-15,1
-LEAD00109,Referral,Competitor Conquest,2025-03-29,0
-LEAD00110,Event,Q1 Spring Push,2026-01-21,0
-LEAD00111,Cold Outreach,Brand Awareness,2025-08-02,0
-LEAD00112,Cold Outreach,Brand Awareness,2025-09-21,0
-LEAD00113,Organic Search,Brand Awareness,2025-04-10,0
-LEAD00114,Referral,Product Launch,2025-04-01,0
-LEAD00115,Paid Search,Retention Drive,2025-09-20,0
-LEAD00116,Paid Search,Brand Awareness,2025-06-04,0
-LEAD00117,Organic Search,Q1 Spring Push,2026-03-05,1
-LEAD00118,Event,Q1 Spring Push,2025-03-26,0
-LEAD00119,Paid Search,Brand Awareness,2025-11-03,0
-LEAD00120,Organic Search,Retention Drive,2026-01-23,0
-LEAD00121,Event,Product Launch,2025-05-09,1
-LEAD00122,Cold Outreach,Q1 Spring Push,2026-01-26,0
-LEAD00123,Paid Search,Competitor Conquest,2025-04-09,0
-LEAD00124,Cold Outreach,Retention Drive,2025-12-07,0
-LEAD00125,Cold Outreach,Product Launch,2025-11-02,0
-LEAD00126,Cold Outreach,Q1 Spring Push,2025-04-18,0
-LEAD00127,LinkedIn,Competitor Conquest,2025-03-22,0
-LEAD00128,LinkedIn,Brand Awareness,2025-12-19,0
-LEAD00129,LinkedIn,Q1 Spring Push,2025-08-28,0
-LEAD00130,Organic Search,Brand Awareness,2025-10-27,0
-LEAD00131,Organic Search,Competitor Conquest,2025-11-29,1
-LEAD00132,Paid Search,Competitor Conquest,2026-01-15,0
-LEAD00133,Referral,Product Launch,2025-05-01,1
-LEAD00134,Referral,Brand Awareness,2026-01-18,0
-LEAD00135,Organic Search,Retention Drive,2025-11-03,1
-LEAD00136,Organic Search,Competitor Conquest,2025-12-25,0
-LEAD00137,Organic Search,Q1 Spring Push,2025-04-05,0
-LEAD00138,Paid Search,Brand Awareness,2025-08-23,0
-LEAD00139,Event,Competitor Conquest,2025-07-10,0
-LEAD00140,Cold Outreach,Q1 Spring Push,2025-06-08,0
-LEAD00141,Referral,Competitor Conquest,2026-01-08,0
-LEAD00142,LinkedIn,Brand Awareness,2025-03-27,0
-LEAD00143,Organic Search,Q1 Spring Push,2025-09-05,0
-LEAD00144,LinkedIn,Q1 Spring Push,2025-07-19,0
-LEAD00145,LinkedIn,Product Launch,2025-12-11,0
-LEAD00146,Referral,Product Launch,2025-10-09,0
-LEAD00147,Organic Search,Brand Awareness,2025-07-05,0
-LEAD00148,Cold Outreach,Competitor Conquest,2025-12-04,1
-LEAD00149,Paid Search,Q1 Spring Push,2025-05-12,1
-LEAD00150,Referral,Q1 Spring Push,2025-06-08,0
-LEAD00151,Referral,Retention Drive,2025-07-24,0
-LEAD00152,Organic Search,Q1 Spring Push,2025-09-19,0
-LEAD00153,Cold Outreach,Q1 Spring Push,2025-08-16,1
-LEAD00154,Cold Outreach,Retention Drive,2025-07-20,1
-LEAD00155,Event,Product Launch,2025-05-19,0
-LEAD00156,Organic Search,Q1 Spring Push,2025-12-29,0
-LEAD00157,Organic Search,Competitor Conquest,2025-04-29,0
-LEAD00158,Cold Outreach,Product Launch,2026-03-04,1
-LEAD00159,Organic Search,Brand Awareness,2026-01-21,1
-LEAD00160,Paid Search,Retention Drive,2026-02-07,0
-LEAD00161,Organic Search,Q1 Spring Push,2025-06-30,0
-LEAD00162,Event,Product Launch,2026-02-07,0
-LEAD00163,Referral,Brand Awareness,2025-03-29,0
-LEAD00164,Organic Search,Retention Drive,2025-06-05,0
-LEAD00165,Paid Search,Q1 Spring Push,2025-05-12,1
-LEAD00166,Organic Search,Q1 Spring Push,2025-10-22,1
-LEAD00167,Referral,Product Launch,2025-03-20,1
-LEAD00168,Paid Search,Competitor Conquest,2025-11-07,0
-LEAD00169,Organic Search,Product Launch,2026-01-19,0
-LEAD00170,Cold Outreach,Retention Drive,2025-08-31,0
-LEAD00171,Organic Search,Competitor Conquest,2026-01-29,0
-LEAD00172,Paid Search,Q1 Spring Push,2025-03-15,1
-LEAD00173,LinkedIn,Competitor Conquest,2025-03-21,0
-LEAD00174,Referral,Product Launch,2025-11-26,0
-LEAD00175,LinkedIn,Retention Drive,2025-07-24,1
-LEAD00176,Paid Search,Retention Drive,2025-03-22,0
-LEAD00177,Paid Search,Competitor Conquest,2025-05-02,1
-LEAD00178,Cold Outreach,Brand Awareness,2025-09-14,0
-LEAD00179,Event,Product Launch,2025-12-03,0
-LEAD00180,Event,Q1 Spring Push,2025-04-29,1
-LEAD00181,Event,Retention Drive,2025-11-19,0
-LEAD00182,Cold Outreach,Product Launch,2025-10-21,0
-LEAD00183,Organic Search,Product Launch,2025-03-26,1
-LEAD00184,Referral,Competitor Conquest,2025-12-11,0
-LEAD00185,Organic Search,Q1 Spring Push,2025-04-15,1
-LEAD00186,Paid Search,Competitor Conquest,2025-11-03,0
-LEAD00187,Referral,Q1 Spring Push,2026-01-17,0
-LEAD00188,Event,Product Launch,2025-12-21,0
-LEAD00189,Referral,Retention Drive,2026-01-11,0
-LEAD00190,Paid Search,Competitor Conquest,2025-05-12,1
-LEAD00191,Referral,Product Launch,2025-03-30,0
-LEAD00192,Paid Search,Q1 Spring Push,2025-09-26,0
-LEAD00193,Paid Search,Competitor Conquest,2025-11-29,0
-LEAD00194,Paid Search,Q1 Spring Push,2025-07-13,0
-LEAD00195,Organic Search,Competitor Conquest,2025-12-27,0
-LEAD00196,Event,Competitor Conquest,2025-12-10,0
-LEAD00197,Paid Search,Competitor Conquest,2025-12-02,0
-LEAD00198,LinkedIn,Product Launch,2025-09-21,0
-LEAD00199,Cold Outreach,Retention Drive,2026-02-09,1
-LEAD00200,Organic Search,Competitor Conquest,2025-07-20,0
-LEAD00201,LinkedIn,Product Launch,2025-10-11,0
-LEAD00202,Cold Outreach,Retention Drive,2025-12-14,0
-LEAD00203,Event,Product Launch,2026-01-26,0
-LEAD00204,Event,Competitor Conquest,2025-11-21,0
-LEAD00205,Referral,Brand Awareness,2026-03-04,0
-LEAD00206,Cold Outreach,Product Launch,2025-11-05,0
-LEAD00207,Event,Product Launch,2025-05-13,0
-LEAD00208,Event,Q1 Spring Push,2025-08-10,0
-LEAD00209,Organic Search,Competitor Conquest,2025-06-26,0
-LEAD00210,Event,Competitor Conquest,2025-07-09,1
-LEAD00211,Cold Outreach,Q1 Spring Push,2025-07-23,0
-LEAD00212,Organic Search,Retention Drive,2026-03-05,0
-LEAD00213,Referral,Product Launch,2026-01-03,0
-LEAD00214,Paid Search,Q1 Spring Push,2026-03-03,0
-LEAD00215,LinkedIn,Product Launch,2025-03-16,0
-LEAD00216,Event,Retention Drive,2026-02-27,0
-LEAD00217,Referral,Product Launch,2025-03-16,0
-LEAD00218,LinkedIn,Competitor Conquest,2025-03-16,0
-LEAD00219,Cold Outreach,Q1 Spring Push,2025-08-26,0
-LEAD00220,LinkedIn,Retention Drive,2026-02-23,0
-LEAD00221,LinkedIn,Retention Drive,2025-06-07,0
-LEAD00222,Paid Search,Q1 Spring Push,2025-04-28,0
-LEAD00223,Cold Outreach,Q1 Spring Push,2025-06-21,0
-LEAD00224,Cold Outreach,Brand Awareness,2026-02-13,0
-LEAD00225,LinkedIn,Competitor Conquest,2025-04-29,1
-LEAD00226,LinkedIn,Product Launch,2025-04-14,1
-LEAD00227,Organic Search,Retention Drive,2025-03-13,0
-LEAD00228,Paid Search,Brand Awareness,2025-11-09,0
-LEAD00229,Cold Outreach,Competitor Conquest,2025-05-18,0
-LEAD00230,Cold Outreach,Product Launch,2025-11-16,0
-LEAD00231,LinkedIn,Retention Drive,2025-03-28,0
-LEAD00232,Organic Search,Q1 Spring Push,2025-09-02,0
-LEAD00233,Referral,Retention Drive,2025-06-15,0
-LEAD00234,Referral,Retention Drive,2025-03-29,0
-LEAD00235,LinkedIn,Competitor Conquest,2025-04-28,0
-LEAD00236,Cold Outreach,Q1 Spring Push,2025-12-05,0
-LEAD00237,Referral,Q1 Spring Push,2026-01-29,0
-LEAD00238,Paid Search,Brand Awareness,2026-01-31,0
-LEAD00239,LinkedIn,Q1 Spring Push,2025-03-20,1
-LEAD00240,Paid Search,Product Launch,2025-06-18,1
-LEAD00241,Organic Search,Brand Awareness,2025-08-10,0
-LEAD00242,Event,Product Launch,2025-07-12,0
-LEAD00243,Referral,Q1 Spring Push,2025-10-13,0
-LEAD00244,Organic Search,Product Launch,2025-06-18,0
-LEAD00245,Referral,Retention Drive,2025-09-17,0
-LEAD00246,LinkedIn,Competitor Conquest,2025-05-12,0
-LEAD00247,Event,Retention Drive,2025-07-27,0
-LEAD00248,Event,Product Launch,2025-10-06,0
-LEAD00249,LinkedIn,Product Launch,2025-07-07,1
-LEAD00250,LinkedIn,Q1 Spring Push,2025-12-26,0
-LEAD00251,Referral,Product Launch,2025-04-29,0
-LEAD00252,Cold Outreach,Retention Drive,2025-10-16,0
-LEAD00253,Paid Search,Product Launch,2025-12-19,0
-LEAD00254,Organic Search,Brand Awareness,2025-05-21,0
-LEAD00255,LinkedIn,Brand Awareness,2025-12-07,1
-LEAD00256,Cold Outreach,Q1 Spring Push,2025-04-05,0
-LEAD00257,LinkedIn,Product Launch,2025-09-02,0
-LEAD00258,Paid Search,Retention Drive,2025-10-08,0
-LEAD00259,Organic Search,Competitor Conquest,2025-06-29,1
-LEAD00260,Referral,Brand Awareness,2025-12-22,0
-LEAD00261,Cold Outreach,Retention Drive,2025-06-25,1
-LEAD00262,Cold Outreach,Brand Awareness,2025-07-12,0
-LEAD00263,Event,Product Launch,2025-05-26,0
-LEAD00264,Referral,Brand Awareness,2025-03-24,0
-LEAD00265,Referral,Q1 Spring Push,2025-12-30,1
-LEAD00266,Organic Search,Brand Awareness,2026-02-27,0
-LEAD00267,Paid Search,Competitor Conquest,2025-09-10,0
-LEAD00268,Organic Search,Retention Drive,2025-04-17,1
-LEAD00269,Event,Product Launch,2025-10-20,0
-LEAD00270,Organic Search,Retention Drive,2025-07-26,0
-LEAD00271,Organic Search,Retention Drive,2025-08-22,0
-LEAD00272,LinkedIn,Retention Drive,2025-05-06,0
-LEAD00273,Organic Search,Brand Awareness,2025-08-20,0
-LEAD00274,Referral,Brand Awareness,2025-08-26,1
-LEAD00275,LinkedIn,Brand Awareness,2025-09-13,0
-LEAD00276,Referral,Retention Drive,2026-01-26,0
-LEAD00277,Referral,Competitor Conquest,2025-07-28,0
-LEAD00278,Cold Outreach,Competitor Conquest,2025-08-11,0
-LEAD00279,Event,Retention Drive,2026-01-26,1
-LEAD00280,LinkedIn,Competitor Conquest,2025-06-16,1
-LEAD00281,Organic Search,Retention Drive,2025-08-31,0
-LEAD00282,Referral,Brand Awareness,2025-08-11,1
-LEAD00283,Referral,Retention Drive,2025-12-31,1
-LEAD00284,Referral,Brand Awareness,2025-06-01,0
-LEAD00285,LinkedIn,Retention Drive,2025-10-07,0
-LEAD00286,Cold Outreach,Competitor Conquest,2025-11-17,0
-LEAD00287,Organic Search,Product Launch,2025-10-28,1
-LEAD00288,Cold Outreach,Competitor Conquest,2026-01-07,0
-LEAD00289,LinkedIn,Competitor Conquest,2025-12-10,0
-LEAD00290,Cold Outreach,Product Launch,2026-02-25,0
-LEAD00291,LinkedIn,Competitor Conquest,2026-02-05,1
-LEAD00292,LinkedIn,Retention Drive,2025-07-08,0
-LEAD00293,LinkedIn,Competitor Conquest,2025-03-21,0
-LEAD00294,LinkedIn,Retention Drive,2025-05-21,0
-LEAD00295,LinkedIn,Product Launch,2025-05-18,1
-LEAD00296,LinkedIn,Competitor Conquest,2025-03-22,1
-LEAD00297,Paid Search,Q1 Spring Push,2025-10-23,1
-LEAD00298,Cold Outreach,Brand Awareness,2026-02-15,0
-LEAD00299,Event,Q1 Spring Push,2025-06-21,0
-LEAD00300,Cold Outreach,Product Launch,2026-01-22,0
-LEAD00301,Paid Search,Retention Drive,2025-09-27,0
-LEAD00302,Cold Outreach,Brand Awareness,2025-10-24,0
-LEAD00303,Cold Outreach,Brand Awareness,2026-01-21,0
-LEAD00304,LinkedIn,Product Launch,2026-03-05,0
-LEAD00305,LinkedIn,Brand Awareness,2025-07-06,1
-LEAD00306,Paid Search,Q1 Spring Push,2025-11-20,0
-LEAD00307,Paid Search,Product Launch,2025-05-29,1
-LEAD00308,Event,Retention Drive,2025-03-12,0
-LEAD00309,Organic Search,Competitor Conquest,2025-07-19,0
-LEAD00310,Organic Search,Product Launch,2026-03-03,0
-LEAD00311,LinkedIn,Brand Awareness,2025-12-30,0
-LEAD00312,Event,Retention Drive,2025-09-17,0
-LEAD00313,LinkedIn,Q1 Spring Push,2026-01-10,1
-LEAD00314,Cold Outreach,Product Launch,2025-03-24,0
-LEAD00315,Paid Search,Product Launch,2026-01-04,0
-LEAD00316,Referral,Q1 Spring Push,2026-01-31,0
-LEAD00317,Referral,Competitor Conquest,2026-02-18,1
-LEAD00318,Organic Search,Retention Drive,2025-05-12,0
-LEAD00319,Organic Search,Brand Awareness,2026-02-17,1
-LEAD00320,Cold Outreach,Q1 Spring Push,2026-01-21,1
-LEAD00321,Event,Product Launch,2025-05-15,0
-LEAD00322,Paid Search,Brand Awareness,2026-02-25,0
-LEAD00323,Cold Outreach,Brand Awareness,2025-05-19,1
-LEAD00324,Paid Search,Retention Drive,2025-05-02,0
-LEAD00325,Event,Q1 Spring Push,2026-01-20,0
-LEAD00326,Organic Search,Retention Drive,2025-11-20,0
-LEAD00327,LinkedIn,Product Launch,2025-06-09,0
-LEAD00328,Cold Outreach,Q1 Spring Push,2025-11-22,1
-LEAD00329,Cold Outreach,Competitor Conquest,2025-09-05,0
-LEAD00330,Paid Search,Competitor Conquest,2025-04-01,0
-LEAD00331,Paid Search,Brand Awareness,2025-08-29,0
-LEAD00332,Event,Product Launch,2025-08-15,0
-LEAD00333,LinkedIn,Q1 Spring Push,2025-07-16,1
-LEAD00334,Paid Search,Competitor Conquest,2025-09-08,1
-LEAD00335,Event,Q1 Spring Push,2026-01-28,0
-LEAD00336,Organic Search,Competitor Conquest,2025-10-17,0
-LEAD00337,Cold Outreach,Brand Awareness,2025-03-25,0
-LEAD00338,Referral,Product Launch,2025-06-01,0
-LEAD00339,Referral,Product Launch,2026-02-04,0
-LEAD00340,Referral,Brand Awareness,2025-12-10,0
-LEAD00341,Cold Outreach,Competitor Conquest,2025-04-01,1
-LEAD00342,Referral,Retention Drive,2025-04-08,1
-LEAD00343,Organic Search,Product Launch,2025-08-21,0
-LEAD00344,Event,Q1 Spring Push,2025-12-15,0
-LEAD00345,Paid Search,Brand Awareness,2025-11-29,1
-LEAD00346,Referral,Q1 Spring Push,2025-11-12,0
-LEAD00347,Cold Outreach,Competitor Conquest,2025-10-20,0
-LEAD00348,Event,Retention Drive,2025-10-23,0
-LEAD00349,Cold Outreach,Competitor Conquest,2025-09-10,0
-LEAD00350,Event,Competitor Conquest,2025-07-06,0
-LEAD00351,Paid Search,Competitor Conquest,2026-01-15,0
-LEAD00352,Referral,Competitor Conquest,2025-11-13,1
-LEAD00353,Paid Search,Q1 Spring Push,2026-01-20,0
-LEAD00354,Organic Search,Competitor Conquest,2025-03-29,0
-LEAD00355,Paid Search,Competitor Conquest,2025-05-06,1
-LEAD00356,Paid Search,Brand Awareness,2025-04-27,0
-LEAD00357,Organic Search,Retention Drive,2025-07-02,0
-LEAD00358,Paid Search,Brand Awareness,2025-04-07,0
-LEAD00359,Event,Brand Awareness,2025-06-07,0
-LEAD00360,Event,Retention Drive,2026-03-02,0
-LEAD00361,Organic Search,Competitor Conquest,2026-01-10,0
-LEAD00362,LinkedIn,Competitor Conquest,2025-07-28,0
-LEAD00363,Organic Search,Product Launch,2025-05-30,0
-LEAD00364,LinkedIn,Product Launch,2025-07-03,0
-LEAD00365,LinkedIn,Competitor Conquest,2025-07-05,0
-LEAD00366,Event,Competitor Conquest,2025-04-08,0
-LEAD00367,Event,Retention Drive,2025-07-14,0
-LEAD00368,Paid Search,Retention Drive,2026-02-11,0
-LEAD00369,Referral,Retention Drive,2025-08-30,0
-LEAD00370,LinkedIn,Brand Awareness,2025-09-28,0
-LEAD00371,Event,Q1 Spring Push,2026-01-05,1
-LEAD00372,LinkedIn,Retention Drive,2026-02-26,0
-LEAD00373,Cold Outreach,Brand Awareness,2025-08-29,0
-LEAD00374,LinkedIn,Brand Awareness,2025-08-13,1
-LEAD00375,Cold Outreach,Product Launch,2025-11-05,0
-LEAD00376,LinkedIn,Retention Drive,2026-01-27,0
-LEAD00377,Organic Search,Brand Awareness,2026-01-12,0
-LEAD00378,Organic Search,Retention Drive,2025-09-26,0
-LEAD00379,Cold Outreach,Competitor Conquest,2025-05-25,1
-LEAD00380,Referral,Brand Awareness,2026-03-01,0
-LEAD00381,Event,Q1 Spring Push,2025-09-30,0
-LEAD00382,Referral,Brand Awareness,2025-05-22,0
-LEAD00383,Referral,Q1 Spring Push,2025-03-23,1
-LEAD00384,LinkedIn,Competitor Conquest,2025-06-27,0
-LEAD00385,Cold Outreach,Brand Awareness,2025-12-16,0
-LEAD00386,LinkedIn,Competitor Conquest,2025-11-28,0
-LEAD00387,Organic Search,Retention Drive,2025-11-22,0
-LEAD00388,Organic Search,Brand Awareness,2025-05-22,0
-LEAD00389,Paid Search,Retention Drive,2026-01-23,0
-LEAD00390,Event,Q1 Spring Push,2025-05-12,0
-LEAD00391,Organic Search,Retention Drive,2025-06-13,0
-LEAD00392,Paid Search,Brand Awareness,2026-01-31,0
-LEAD00393,LinkedIn,Retention Drive,2025-10-09,0
-LEAD00394,Event,Brand Awareness,2025-11-29,0
-LEAD00395,LinkedIn,Retention Drive,2025-06-21,0
-LEAD00396,Event,Product Launch,2026-03-02,0
-LEAD00397,Event,Product Launch,2025-05-20,0
-LEAD00398,Cold Outreach,Competitor Conquest,2025-10-25,0
-LEAD00399,Event,Retention Drive,2025-08-01,0
-LEAD00400,Cold Outreach,Q1 Spring Push,2025-06-17,0
-LEAD00401,Referral,Product Launch,2025-11-08,0
-LEAD00402,Cold Outreach,Brand Awareness,2025-08-01,1
-LEAD00403,Organic Search,Product Launch,2025-08-12,0
-LEAD00404,LinkedIn,Product Launch,2025-10-31,0
-LEAD00405,Paid Search,Competitor Conquest,2025-11-09,0
-LEAD00406,Paid Search,Q1 Spring Push,2025-11-06,1
-LEAD00407,LinkedIn,Competitor Conquest,2025-07-06,0
-LEAD00408,Referral,Competitor Conquest,2025-04-14,0
-LEAD00409,Paid Search,Product Launch,2025-10-23,0
-LEAD00410,LinkedIn,Brand Awareness,2025-04-08,1
-LEAD00411,Cold Outreach,Q1 Spring Push,2025-07-06,0
-LEAD00412,Organic Search,Q1 Spring Push,2025-10-02,0
-LEAD00413,Organic Search,Competitor Conquest,2025-09-06,0
-LEAD00414,Organic Search,Competitor Conquest,2025-12-30,0
-LEAD00415,Event,Retention Drive,2026-01-09,0
-LEAD00416,Event,Retention Drive,2025-11-03,0
-LEAD00417,Organic Search,Product Launch,2025-05-08,0
-LEAD00418,LinkedIn,Brand Awareness,2025-05-16,1
-LEAD00419,Cold Outreach,Product Launch,2025-08-07,0
-LEAD00420,Organic Search,Product Launch,2025-11-22,0
-LEAD00421,Referral,Competitor Conquest,2025-11-01,0
-LEAD00422,Organic Search,Competitor Conquest,2025-06-11,0
-LEAD00423,Organic Search,Brand Awareness,2025-06-05,0
-LEAD00424,Cold Outreach,Product Launch,2025-10-20,0
-LEAD00425,Paid Search,Brand Awareness,2025-07-11,0
-LEAD00426,LinkedIn,Q1 Spring Push,2025-04-15,0
-LEAD00427,Event,Q1 Spring Push,2025-04-06,0
-LEAD00428,Organic Search,Product Launch,2025-11-02,0
-LEAD00429,LinkedIn,Brand Awareness,2025-03-26,0
-LEAD00430,Paid Search,Competitor Conquest,2025-08-25,1
-LEAD00431,Referral,Brand Awareness,2025-10-08,1
-LEAD00432,Paid Search,Brand Awareness,2025-11-24,1
-LEAD00433,Paid Search,Competitor Conquest,2025-04-22,0
-LEAD00434,Cold Outreach,Competitor Conquest,2026-02-22,0
-LEAD00435,Organic Search,Competitor Conquest,2025-07-13,0
-LEAD00436,LinkedIn,Competitor Conquest,2026-01-19,0
-LEAD00437,Cold Outreach,Brand Awareness,2025-06-25,0
-LEAD00438,Referral,Retention Drive,2025-06-04,1
-LEAD00439,Referral,Q1 Spring Push,2026-02-13,0
-LEAD00440,Paid Search,Competitor Conquest,2025-04-17,0
-LEAD00441,Referral,Product Launch,2025-04-24,1
-LEAD00442,Event,Q1 Spring Push,2026-01-14,0
-LEAD00443,Event,Product Launch,2025-05-11,1
-LEAD00444,LinkedIn,Competitor Conquest,2025-07-10,0
-LEAD00445,Paid Search,Brand Awareness,2025-12-13,0
-LEAD00446,LinkedIn,Brand Awareness,2025-11-30,0
-LEAD00447,LinkedIn,Product Launch,2025-08-22,1
-LEAD00448,Event,Product Launch,2026-03-01,0
-LEAD00449,Event,Retention Drive,2025-04-25,0
-LEAD00450,Organic Search,Competitor Conquest,2025-11-30,0
-LEAD00451,Paid Search,Q1 Spring Push,2025-08-18,0
-LEAD00452,Event,Brand Awareness,2025-12-25,0
-LEAD00453,LinkedIn,Product Launch,2025-05-25,1
-LEAD00454,Cold Outreach,Retention Drive,2025-08-01,1
-LEAD00455,Referral,Competitor Conquest,2026-01-10,0
-LEAD00456,Paid Search,Product Launch,2025-10-26,0
-LEAD00457,Referral,Competitor Conquest,2026-01-04,0
-LEAD00458,Paid Search,Retention Drive,2025-11-21,0
-LEAD00459,LinkedIn,Product Launch,2025-08-09,0
-LEAD00460,Paid Search,Q1 Spring Push,2025-10-14,0
-LEAD00461,Paid Search,Retention Drive,2025-07-24,0
-LEAD00462,LinkedIn,Retention Drive,2025-03-26,0
-LEAD00463,Organic Search,Q1 Spring Push,2025-07-14,0
-LEAD00464,LinkedIn,Competitor Conquest,2025-03-25,1
-LEAD00465,Referral,Competitor Conquest,2025-05-10,0
-LEAD00466,Organic Search,Retention Drive,2026-02-09,0
-LEAD00467,Paid Search,Competitor Conquest,2025-09-11,1
-LEAD00468,Cold Outreach,Retention Drive,2025-03-13,0
-LEAD00469,Organic Search,Q1 Spring Push,2025-11-02,0
-LEAD00470,Referral,Brand Awareness,2025-08-21,0
-LEAD00471,Paid Search,Retention Drive,2026-02-18,0
-LEAD00472,LinkedIn,Product Launch,2025-06-27,0
-LEAD00473,LinkedIn,Competitor Conquest,2026-01-03,0
-LEAD00474,Cold Outreach,Retention Drive,2025-08-02,1
-LEAD00475,Organic Search,Brand Awareness,2026-02-17,1
-LEAD00476,Referral,Brand Awareness,2025-09-08,0
-LEAD00477,LinkedIn,Brand Awareness,2025-05-02,0
-LEAD00478,LinkedIn,Retention Drive,2025-10-02,0
-LEAD00479,Paid Search,Brand Awareness,2025-07-03,0
-LEAD00480,Paid Search,Retention Drive,2025-04-09,0
-LEAD00481,Referral,Q1 Spring Push,2025-12-05,0
-LEAD00482,Paid Search,Product Launch,2026-02-21,1
-LEAD00483,Paid Search,Competitor Conquest,2025-07-31,0
-LEAD00484,Referral,Q1 Spring Push,2025-07-28,1
-LEAD00485,Cold Outreach,Retention Drive,2025-07-06,0
-LEAD00486,Organic Search,Product Launch,2026-01-07,0
-LEAD00487,Paid Search,Brand Awareness,2025-12-09,0
-LEAD00488,Cold Outreach,Retention Drive,2025-10-23,0
-LEAD00489,Cold Outreach,Retention Drive,2025-11-23,0
-LEAD00490,Organic Search,Retention Drive,2025-05-23,0
-LEAD00491,Organic Search,Product Launch,2025-06-29,0
-LEAD00492,LinkedIn,Q1 Spring Push,2025-10-17,0
-LEAD00493,Cold Outreach,Q1 Spring Push,2025-08-22,0
-LEAD00494,Organic Search,Brand Awareness,2025-12-23,0
-LEAD00495,Referral,Competitor Conquest,2025-07-22,1
-LEAD00496,LinkedIn,Retention Drive,2025-04-09,0
-LEAD00497,Organic Search,Retention Drive,2025-07-23,1
-LEAD00498,Cold Outreach,Retention Drive,2026-01-04,0
-LEAD00499,Organic Search,Brand Awareness,2025-09-27,0
-LEAD00500,Cold Outreach,Q1 Spring Push,2025-06-04,0
-LEAD00501,Referral,Q1 Spring Push,2025-08-19,0
-LEAD00502,Paid Search,Competitor Conquest,2026-01-25,0
-LEAD00503,Paid Search,Product Launch,2025-08-25,1
-LEAD00504,LinkedIn,Product Launch,2026-01-09,0
-LEAD00505,Referral,Brand Awareness,2025-03-26,0
-LEAD00506,LinkedIn,Q1 Spring Push,2025-09-04,0
-LEAD00507,Referral,Competitor Conquest,2025-08-25,0
-LEAD00508,Event,Retention Drive,2025-08-07,0
-LEAD00509,Referral,Brand Awareness,2025-05-01,1
-LEAD00510,Cold Outreach,Competitor Conquest,2026-01-23,0
-LEAD00511,LinkedIn,Competitor Conquest,2025-03-30,1
-LEAD00512,Cold Outreach,Product Launch,2025-07-01,0
-LEAD00513,Cold Outreach,Retention Drive,2026-01-28,0
-LEAD00514,Referral,Q1 Spring Push,2025-07-10,0
-LEAD00515,Paid Search,Brand Awareness,2025-11-04,0
-LEAD00516,LinkedIn,Retention Drive,2026-02-15,0
-LEAD00517,Organic Search,Retention Drive,2026-01-15,0
-LEAD00518,Referral,Q1 Spring Push,2025-07-17,0
-LEAD00519,Event,Brand Awareness,2025-09-11,0
-LEAD00520,Organic Search,Retention Drive,2026-03-03,0
-LEAD00521,Cold Outreach,Competitor Conquest,2025-12-10,1
-LEAD00522,Referral,Q1 Spring Push,2026-01-28,0
-LEAD00523,Cold Outreach,Brand Awareness,2025-10-02,0
-LEAD00524,Referral,Competitor Conquest,2025-04-26,0
-LEAD00525,LinkedIn,Product Launch,2025-11-23,0
-LEAD00526,Cold Outreach,Retention Drive,2025-10-30,0
-LEAD00527,Organic Search,Competitor Conquest,2025-06-11,0
-LEAD00528,Referral,Q1 Spring Push,2026-03-05,1
-LEAD00529,Referral,Competitor Conquest,2025-03-22,1
-LEAD00530,Cold Outreach,Retention Drive,2025-07-05,0
-LEAD00531,Event,Brand Awareness,2025-03-23,0
-LEAD00532,Cold Outreach,Competitor Conquest,2025-10-08,0
-LEAD00533,Paid Search,Q1 Spring Push,2025-12-04,1
-LEAD00534,Organic Search,Product Launch,2026-02-26,1
-LEAD00535,Cold Outreach,Product Launch,2025-04-13,0
-LEAD00536,Cold Outreach,Retention Drive,2025-12-04,0
-LEAD00537,Referral,Product Launch,2025-07-12,1
-LEAD00538,Organic Search,Product Launch,2025-12-23,0
-LEAD00539,Referral,Competitor Conquest,2025-07-13,0
-LEAD00540,Referral,Retention Drive,2025-11-07,1
-LEAD00541,Event,Competitor Conquest,2026-02-13,0
-LEAD00542,Organic Search,Competitor Conquest,2025-08-11,0
-LEAD00543,Cold Outreach,Retention Drive,2025-05-10,0
-LEAD00544,LinkedIn,Q1 Spring Push,2025-07-05,0
-LEAD00545,Event,Retention Drive,2025-05-02,0
-LEAD00546,Referral,Product Launch,2025-03-11,0
-LEAD00547,Organic Search,Competitor Conquest,2025-05-20,1
-LEAD00548,Organic Search,Brand Awareness,2025-04-14,0
-LEAD00549,Referral,Q1 Spring Push,2025-07-01,0
-LEAD00550,Cold Outreach,Brand Awareness,2025-07-25,0
-LEAD00551,Organic Search,Product Launch,2025-10-15,0
-LEAD00552,Referral,Brand Awareness,2025-07-30,0
-LEAD00553,Paid Search,Retention Drive,2025-03-26,0
-LEAD00554,Event,Competitor Conquest,2026-01-03,0
-LEAD00555,Cold Outreach,Competitor Conquest,2025-08-10,0
-LEAD00556,Cold Outreach,Brand Awareness,2025-07-13,0
-LEAD00557,Paid Search,Retention Drive,2025-11-25,0
-LEAD00558,Cold Outreach,Q1 Spring Push,2025-04-04,0
-LEAD00559,Paid Search,Product Launch,2025-12-21,0
-LEAD00560,Organic Search,Competitor Conquest,2025-07-02,0
-LEAD00561,Paid Search,Retention Drive,2026-02-15,0
-LEAD00562,LinkedIn,Brand Awareness,2025-09-10,0
-LEAD00563,Paid Search,Retention Drive,2026-02-23,0
-LEAD00564,LinkedIn,Competitor Conquest,2026-01-12,0
-LEAD00565,Organic Search,Retention Drive,2025-11-17,0
-LEAD00566,LinkedIn,Brand Awareness,2026-02-16,0
-LEAD00567,Event,Brand Awareness,2025-12-24,0
-LEAD00568,Event,Retention Drive,2025-04-03,0
-LEAD00569,Organic Search,Competitor Conquest,2025-07-20,1
-LEAD00570,Organic Search,Q1 Spring Push,2025-05-03,0
-LEAD00571,Organic Search,Retention Drive,2026-02-18,0
-LEAD00572,Paid Search,Q1 Spring Push,2025-11-26,0
-LEAD00573,Paid Search,Brand Awareness,2025-03-14,0
-LEAD00574,Event,Competitor Conquest,2026-01-20,0
-LEAD00575,LinkedIn,Brand Awareness,2025-12-31,1
-LEAD00576,Paid Search,Competitor Conquest,2025-08-11,1
-LEAD00577,Organic Search,Product Launch,2025-07-12,0
-LEAD00578,Event,Product Launch,2026-01-27,0
-LEAD00579,Cold Outreach,Competitor Conquest,2025-09-08,0
-LEAD00580,Paid Search,Product Launch,2025-06-13,0
-LEAD00581,Paid Search,Product Launch,2025-08-04,0
-LEAD00582,Referral,Competitor Conquest,2025-06-20,0
-LEAD00583,LinkedIn,Q1 Spring Push,2025-07-28,0
-LEAD00584,Organic Search,Retention Drive,2026-02-04,1
-LEAD00585,LinkedIn,Competitor Conquest,2025-12-17,1
-LEAD00586,Referral,Q1 Spring Push,2025-04-07,0
-LEAD00587,Paid Search,Retention Drive,2026-02-10,0
-LEAD00588,Cold Outreach,Retention Drive,2025-10-11,0
-LEAD00589,Cold Outreach,Retention Drive,2025-10-07,0
-LEAD00590,LinkedIn,Brand Awareness,2026-03-07,0
-LEAD00591,Event,Retention Drive,2025-12-26,0
-LEAD00592,Referral,Product Launch,2025-06-06,0
-LEAD00593,Event,Competitor Conquest,2025-03-19,0
-LEAD00594,Cold Outreach,Competitor Conquest,2025-11-30,0
-LEAD00595,Organic Search,Q1 Spring Push,2025-06-09,0
-LEAD00596,Cold Outreach,Product Launch,2025-06-18,0
-LEAD00597,LinkedIn,Product Launch,2026-01-23,0
-LEAD00598,LinkedIn,Retention Drive,2025-09-18,0
-LEAD00599,Paid Search,Q1 Spring Push,2026-02-25,0
-LEAD00600,Event,Retention Drive,2025-10-30,0
-LEAD00601,LinkedIn,Competitor Conquest,2025-06-26,0
-LEAD00602,Organic Search,Brand Awareness,2025-10-30,1
-LEAD00603,LinkedIn,Q1 Spring Push,2026-02-15,0
-LEAD00604,Organic Search,Competitor Conquest,2025-10-10,0
-LEAD00605,Organic Search,Competitor Conquest,2025-09-19,0
-LEAD00606,Cold Outreach,Retention Drive,2025-05-26,0
-LEAD00607,Cold Outreach,Retention Drive,2025-05-11,0
-LEAD00608,LinkedIn,Brand Awareness,2025-04-04,0
-LEAD00609,Cold Outreach,Retention Drive,2025-04-01,0
-LEAD00610,Referral,Retention Drive,2025-11-05,1
-LEAD00611,Event,Retention Drive,2025-12-03,1
-LEAD00612,LinkedIn,Competitor Conquest,2026-01-20,0
-LEAD00613,Referral,Competitor Conquest,2026-01-29,1
-LEAD00614,Referral,Product Launch,2025-07-11,1
-LEAD00615,Organic Search,Brand Awareness,2025-03-30,0
-LEAD00616,Event,Retention Drive,2025-06-19,0
-LEAD00617,LinkedIn,Retention Drive,2025-06-29,0
-LEAD00618,Referral,Competitor Conquest,2025-08-10,0
-LEAD00619,Paid Search,Retention Drive,2026-01-05,0
-LEAD00620,Referral,Product Launch,2025-03-16,0
-LEAD00621,Event,Q1 Spring Push,2025-03-21,0
-LEAD00622,Referral,Q1 Spring Push,2025-12-21,0
-LEAD00623,LinkedIn,Q1 Spring Push,2025-05-07,0
-LEAD00624,Organic Search,Q1 Spring Push,2025-09-03,0
-LEAD00625,Organic Search,Retention Drive,2025-12-23,0
-LEAD00626,LinkedIn,Brand Awareness,2025-10-07,1
-LEAD00627,Organic Search,Product Launch,2025-12-29,0
-LEAD00628,Referral,Q1 Spring Push,2025-10-06,0
-LEAD00629,Paid Search,Product Launch,2025-07-04,0
-LEAD00630,Event,Brand Awareness,2026-02-05,1
-LEAD00631,Referral,Competitor Conquest,2025-05-22,0
-LEAD00632,Referral,Brand Awareness,2025-08-30,0
-LEAD00633,Cold Outreach,Retention Drive,2026-01-03,0
-LEAD00634,Event,Competitor Conquest,2025-07-24,0
-LEAD00635,Paid Search,Brand Awareness,2026-01-25,0
-LEAD00636,Cold Outreach,Retention Drive,2025-08-14,0
-LEAD00637,Referral,Brand Awareness,2025-06-08,0
-LEAD00638,Cold Outreach,Competitor Conquest,2025-10-20,1
-LEAD00639,Paid Search,Q1 Spring Push,2025-05-23,0
-LEAD00640,Cold Outreach,Brand Awareness,2025-05-28,0
-LEAD00641,Cold Outreach,Retention Drive,2026-01-27,0
-LEAD00642,Event,Retention Drive,2025-05-20,0
-LEAD00643,Event,Retention Drive,2025-12-05,0
-LEAD00644,Event,Q1 Spring Push,2026-01-09,0
-LEAD00645,Event,Product Launch,2026-03-02,0
-LEAD00646,Paid Search,Product Launch,2025-03-15,0
-LEAD00647,Event,Competitor Conquest,2026-01-27,0
-LEAD00648,Event,Brand Awareness,2025-08-18,0
-LEAD00649,Referral,Q1 Spring Push,2025-09-18,0
-LEAD00650,Referral,Q1 Spring Push,2025-06-14,0
-LEAD00651,LinkedIn,Q1 Spring Push,2026-01-12,0
-LEAD00652,Event,Product Launch,2025-10-16,0
-LEAD00653,LinkedIn,Q1 Spring Push,2025-12-23,1
-LEAD00654,Referral,Product Launch,2026-02-09,0
-LEAD00655,LinkedIn,Product Launch,2026-02-26,0
-LEAD00656,LinkedIn,Competitor Conquest,2026-01-20,0
-LEAD00657,Referral,Brand Awareness,2025-10-30,0
-LEAD00658,Organic Search,Q1 Spring Push,2025-11-28,0
-LEAD00659,Event,Retention Drive,2025-11-10,0
-LEAD00660,Event,Competitor Conquest,2026-01-12,0
-LEAD00661,LinkedIn,Competitor Conquest,2025-06-01,0
-LEAD00662,Referral,Q1 Spring Push,2025-08-15,0
-LEAD00663,Organic Search,Brand Awareness,2025-06-01,0
-LEAD00664,Cold Outreach,Q1 Spring Push,2025-11-05,0
-LEAD00665,Cold Outreach,Product Launch,2025-10-07,0
-LEAD00666,Referral,Q1 Spring Push,2025-04-20,0
-LEAD00667,Paid Search,Brand Awareness,2025-06-08,0
-LEAD00668,Paid Search,Retention Drive,2025-08-07,0
-LEAD00669,Event,Competitor Conquest,2026-02-18,0
-LEAD00670,Referral,Retention Drive,2025-10-14,1
-LEAD00671,Paid Search,Q1 Spring Push,2026-02-09,0
-LEAD00672,Referral,Brand Awareness,2025-05-09,0
-LEAD00673,Cold Outreach,Competitor Conquest,2025-09-13,0
-LEAD00674,Paid Search,Retention Drive,2025-06-23,0
-LEAD00675,Paid Search,Retention Drive,2025-05-27,0
-LEAD00676,Organic Search,Competitor Conquest,2025-03-19,1
-LEAD00677,Paid Search,Retention Drive,2025-10-19,1
-LEAD00678,Paid Search,Retention Drive,2025-06-26,0
-LEAD00679,LinkedIn,Brand Awareness,2025-04-20,0
-LEAD00680,Cold Outreach,Competitor Conquest,2025-10-23,0
-LEAD00681,LinkedIn,Brand Awareness,2025-11-24,0
-LEAD00682,Event,Brand Awareness,2026-03-03,0
-LEAD00683,Paid Search,Q1 Spring Push,2025-05-04,0
-LEAD00684,Organic Search,Product Launch,2025-08-12,0
-LEAD00685,Cold Outreach,Competitor Conquest,2025-08-22,0
-LEAD00686,Cold Outreach,Q1 Spring Push,2025-06-09,0
-LEAD00687,Cold Outreach,Competitor Conquest,2025-04-01,1
-LEAD00688,Referral,Retention Drive,2025-09-09,1
-LEAD00689,Cold Outreach,Q1 Spring Push,2026-01-07,0
-LEAD00690,Paid Search,Competitor Conquest,2026-03-07,0
-LEAD00691,Organic Search,Brand Awareness,2025-03-28,0
-LEAD00692,LinkedIn,Product Launch,2026-01-24,0
-LEAD00693,Cold Outreach,Brand Awareness,2025-11-18,0
-LEAD00694,Referral,Brand Awareness,2026-02-21,0
-LEAD00695,Cold Outreach,Retention Drive,2025-11-24,0
-LEAD00696,Cold Outreach,Competitor Conquest,2026-01-14,1
-LEAD00697,Event,Retention Drive,2025-07-02,0
-LEAD00698,Paid Search,Retention Drive,2025-04-01,1
-LEAD00699,Event,Product Launch,2026-02-06,0
-LEAD00700,Cold Outreach,Q1 Spring Push,2026-01-05,0
-LEAD00701,Event,Product Launch,2025-06-17,0
-LEAD00702,LinkedIn,Product Launch,2025-03-29,0
-LEAD00703,Cold Outreach,Retention Drive,2025-05-01,1
-LEAD00704,Event,Competitor Conquest,2026-03-10,0
-LEAD00705,Cold Outreach,Q1 Spring Push,2025-09-27,0
-LEAD00706,Referral,Brand Awareness,2026-01-08,0
-LEAD00707,Referral,Competitor Conquest,2025-09-07,0
-LEAD00708,Organic Search,Product Launch,2026-02-15,0
-LEAD00709,Referral,Retention Drive,2025-07-25,0
-LEAD00710,Referral,Product Launch,2025-09-21,0
-LEAD00711,Event,Q1 Spring Push,2025-11-16,1
-LEAD00712,Referral,Q1 Spring Push,2025-11-04,0
-LEAD00713,LinkedIn,Brand Awareness,2026-02-07,0
-LEAD00714,Organic Search,Q1 Spring Push,2025-07-09,0
-LEAD00715,Organic Search,Retention Drive,2025-04-25,0
-LEAD00716,LinkedIn,Product Launch,2026-01-15,0
-LEAD00717,LinkedIn,Q1 Spring Push,2025-09-22,0
-LEAD00718,Paid Search,Q1 Spring Push,2025-05-08,0
-LEAD00719,Organic Search,Competitor Conquest,2025-05-19,0
-LEAD00720,Organic Search,Q1 Spring Push,2025-08-30,1
-LEAD00721,Cold Outreach,Q1 Spring Push,2026-01-05,0
-LEAD00722,Referral,Q1 Spring Push,2025-10-08,1
-LEAD00723,Referral,Q1 Spring Push,2026-01-18,0
-LEAD00724,Event,Q1 Spring Push,2025-10-12,0
-LEAD00725,Referral,Q1 Spring Push,2025-04-29,0
-LEAD00726,Paid Search,Retention Drive,2025-04-08,0
-LEAD00727,Referral,Competitor Conquest,2025-07-17,0
-LEAD00728,Event,Retention Drive,2026-01-19,0
-LEAD00729,Cold Outreach,Q1 Spring Push,2025-07-22,0
-LEAD00730,Event,Product Launch,2026-01-15,0
-LEAD00731,Event,Q1 Spring Push,2025-05-12,1
-LEAD00732,Paid Search,Retention Drive,2026-01-06,0
-LEAD00733,LinkedIn,Brand Awareness,2025-08-08,0
-LEAD00734,Event,Competitor Conquest,2025-12-06,0
-LEAD00735,Organic Search,Q1 Spring Push,2026-01-05,0
-LEAD00736,Referral,Retention Drive,2025-04-12,0
-LEAD00737,LinkedIn,Retention Drive,2025-06-07,0
-LEAD00738,Paid Search,Competitor Conquest,2025-10-04,0
-LEAD00739,LinkedIn,Brand Awareness,2026-03-07,0
-LEAD00740,Cold Outreach,Product Launch,2026-02-10,0
-LEAD00741,Event,Q1 Spring Push,2025-08-07,0
-LEAD00742,Paid Search,Product Launch,2026-02-04,0
-LEAD00743,Cold Outreach,Competitor Conquest,2025-03-21,0
-LEAD00744,Referral,Retention Drive,2025-03-22,0
-LEAD00745,Event,Retention Drive,2025-09-21,0
-LEAD00746,Referral,Brand Awareness,2025-12-18,0
-LEAD00747,Organic Search,Competitor Conquest,2025-11-19,1
-LEAD00748,Cold Outreach,Product Launch,2025-03-22,0
-LEAD00749,Event,Product Launch,2025-11-09,0
-LEAD00750,LinkedIn,Competitor Conquest,2025-11-26,0
-LEAD00751,Organic Search,Brand Awareness,2026-03-06,0
-LEAD00752,Organic Search,Retention Drive,2026-01-12,1
-LEAD00753,Referral,Product Launch,2025-04-22,1
-LEAD00754,LinkedIn,Q1 Spring Push,2026-02-24,0
-LEAD00755,LinkedIn,Product Launch,2025-11-19,0
-LEAD00756,Cold Outreach,Product Launch,2025-09-19,0
-LEAD00757,Paid Search,Product Launch,2025-12-01,0
-LEAD00758,LinkedIn,Q1 Spring Push,2026-03-01,1
-LEAD00759,Paid Search,Competitor Conquest,2025-04-10,0
-LEAD00760,Organic Search,Brand Awareness,2025-11-24,0
-LEAD00761,Paid Search,Brand Awareness,2025-09-02,0
-LEAD00762,Event,Retention Drive,2025-08-01,0
-LEAD00763,Organic Search,Q1 Spring Push,2025-12-28,0
-LEAD00764,Paid Search,Product Launch,2025-12-03,0
-LEAD00765,Cold Outreach,Brand Awareness,2025-09-30,0
-LEAD00766,Cold Outreach,Product Launch,2026-02-16,0
-LEAD00767,Event,Product Launch,2025-06-10,0
-LEAD00768,Paid Search,Brand Awareness,2025-11-05,0
-LEAD00769,LinkedIn,Product Launch,2025-06-24,1
-LEAD00770,Referral,Product Launch,2026-01-29,0
-LEAD00771,Cold Outreach,Retention Drive,2026-02-06,0
-LEAD00772,Referral,Retention Drive,2025-09-01,1
-LEAD00773,Referral,Product Launch,2025-09-28,0
-LEAD00774,Event,Competitor Conquest,2025-07-01,0
-LEAD00775,Event,Competitor Conquest,2025-04-19,0
-LEAD00776,Event,Q1 Spring Push,2025-11-25,0
-LEAD00777,Paid Search,Competitor Conquest,2025-11-11,0
-LEAD00778,LinkedIn,Competitor Conquest,2025-08-30,0
-LEAD00779,LinkedIn,Brand Awareness,2025-06-03,0
-LEAD00780,Organic Search,Brand Awareness,2025-07-27,1
-LEAD00781,Paid Search,Retention Drive,2026-02-18,0
-LEAD00782,Event,Brand Awareness,2025-08-05,0
-LEAD00783,Referral,Competitor Conquest,2025-09-04,0
-LEAD00784,LinkedIn,Brand Awareness,2025-08-28,0
-LEAD00785,Referral,Product Launch,2025-10-27,1
-LEAD00786,LinkedIn,Q1 Spring Push,2025-10-12,0
-LEAD00787,Event,Retention Drive,2025-04-16,0
-LEAD00788,LinkedIn,Product Launch,2026-01-20,1
-LEAD00789,LinkedIn,Q1 Spring Push,2025-06-05,1
-LEAD00790,Paid Search,Brand Awareness,2025-11-03,0
-LEAD00791,Cold Outreach,Brand Awareness,2025-12-04,0
-LEAD00792,Paid Search,Retention Drive,2025-10-29,0
-LEAD00793,LinkedIn,Brand Awareness,2025-09-15,1
-LEAD00794,Referral,Competitor Conquest,2025-05-19,0
-LEAD00795,Organic Search,Competitor Conquest,2025-04-11,0
-LEAD00796,Paid Search,Competitor Conquest,2025-11-15,0
-LEAD00797,Cold Outreach,Product Launch,2025-07-12,0
-LEAD00798,Event,Retention Drive,2025-07-15,0
-LEAD00799,Referral,Brand Awareness,2026-01-27,0
-LEAD00800,Paid Search,Competitor Conquest,2025-03-19,0
-LEAD00801,Referral,Competitor Conquest,2025-05-30,0
-LEAD00802,Paid Search,Retention Drive,2026-01-05,1
-LEAD00803,Cold Outreach,Q1 Spring Push,2025-06-29,0
-LEAD00804,LinkedIn,Brand Awareness,2025-11-16,0
-LEAD00805,Cold Outreach,Competitor Conquest,2025-03-23,0
-LEAD00806,LinkedIn,Retention Drive,2026-02-28,0
-LEAD00807,Organic Search,Product Launch,2025-12-23,0
-LEAD00808,LinkedIn,Retention Drive,2025-04-23,0
-LEAD00809,Event,Retention Drive,2025-08-23,0
-LEAD00810,Paid Search,Competitor Conquest,2026-02-07,0
-LEAD00811,Paid Search,Competitor Conquest,2026-01-15,0
-LEAD00812,Referral,Brand Awareness,2026-01-23,0
-LEAD00813,Cold Outreach,Retention Drive,2025-12-11,1
-LEAD00814,Cold Outreach,Retention Drive,2025-07-04,1
-LEAD00815,Paid Search,Q1 Spring Push,2025-08-26,1
-LEAD00816,Paid Search,Brand Awareness,2025-04-08,0
-LEAD00817,Referral,Q1 Spring Push,2025-09-04,0
-LEAD00818,Paid Search,Brand Awareness,2025-08-13,0
-LEAD00819,Organic Search,Product Launch,2025-06-10,0
-LEAD00820,Cold Outreach,Q1 Spring Push,2025-08-24,0
-LEAD00821,Paid Search,Product Launch,2025-11-26,0
-LEAD00822,Cold Outreach,Competitor Conquest,2025-12-20,0
-LEAD00823,LinkedIn,Retention Drive,2025-11-28,0
-LEAD00824,Cold Outreach,Competitor Conquest,2025-10-21,0
-LEAD00825,Paid Search,Competitor Conquest,2026-02-07,0
-LEAD00826,Event,Product Launch,2025-06-15,0
-LEAD00827,Event,Competitor Conquest,2025-07-19,0
-LEAD00828,Organic Search,Q1 Spring Push,2025-10-15,0
-LEAD00829,Referral,Brand Awareness,2025-03-18,0
-LEAD00830,LinkedIn,Competitor Conquest,2025-05-02,0
-LEAD00831,Paid Search,Competitor Conquest,2025-11-04,0
-LEAD00832,Event,Competitor Conquest,2025-07-20,1
-LEAD00833,Cold Outreach,Product Launch,2025-03-19,0
-LEAD00834,Referral,Q1 Spring Push,2025-11-09,0
-LEAD00835,Paid Search,Brand Awareness,2025-04-24,0
-LEAD00836,Cold Outreach,Q1 Spring Push,2025-03-19,0
-LEAD00837,Paid Search,Competitor Conquest,2025-08-13,0
-LEAD00838,Event,Q1 Spring Push,2025-09-04,0
-LEAD00839,Organic Search,Retention Drive,2025-09-26,1
-LEAD00840,Paid Search,Brand Awareness,2025-11-25,0
-LEAD00841,Referral,Q1 Spring Push,2026-02-02,0
-LEAD00842,Cold Outreach,Competitor Conquest,2025-08-28,0
-LEAD00843,Referral,Product Launch,2025-08-20,0
-LEAD00844,LinkedIn,Q1 Spring Push,2025-03-13,1
-LEAD00845,LinkedIn,Competitor Conquest,2025-07-06,0
-LEAD00846,Organic Search,Retention Drive,2025-04-09,0
-LEAD00847,Referral,Product Launch,2025-07-13,0
-LEAD00848,Paid Search,Product Launch,2026-03-02,0
-LEAD00849,Paid Search,Brand Awareness,2026-01-07,0
-LEAD00850,Referral,Product Launch,2026-01-31,0
-LEAD00851,Organic Search,Brand Awareness,2025-12-23,0
-LEAD00852,Paid Search,Product Launch,2025-03-11,0
-LEAD00853,Cold Outreach,Retention Drive,2025-11-21,1
-LEAD00854,Organic Search,Retention Drive,2025-04-17,0
-LEAD00855,Cold Outreach,Q1 Spring Push,2025-08-24,0
-LEAD00856,Referral,Q1 Spring Push,2025-05-09,0
-LEAD00857,Referral,Product Launch,2025-11-04,1
-LEAD00858,Paid Search,Product Launch,2026-01-24,0
-LEAD00859,Organic Search,Q1 Spring Push,2025-09-20,1
-LEAD00860,Cold Outreach,Q1 Spring Push,2025-11-19,0
-LEAD00861,Organic Search,Product Launch,2025-12-16,0
-LEAD00862,Event,Q1 Spring Push,2025-09-25,1
-LEAD00863,Cold Outreach,Product Launch,2025-04-26,0
-LEAD00864,Event,Competitor Conquest,2025-08-04,0
-LEAD00865,Paid Search,Q1 Spring Push,2025-09-10,1
-LEAD00866,Organic Search,Competitor Conquest,2025-04-11,0
-LEAD00867,Referral,Product Launch,2025-07-20,0
-LEAD00868,Cold Outreach,Brand Awareness,2025-04-13,0
-LEAD00869,Organic Search,Q1 Spring Push,2025-11-20,0
-LEAD00870,Event,Competitor Conquest,2026-01-18,0
-LEAD00871,Event,Product Launch,2025-11-03,0
-LEAD00872,Event,Brand Awareness,2025-04-22,0
-LEAD00873,Cold Outreach,Product Launch,2025-09-22,0
-LEAD00874,Cold Outreach,Brand Awareness,2025-04-04,1
-LEAD00875,LinkedIn,Q1 Spring Push,2025-05-04,0
-LEAD00876,Referral,Competitor Conquest,2025-06-23,0
-LEAD00877,Paid Search,Retention Drive,2025-05-15,0
-LEAD00878,Organic Search,Product Launch,2026-03-01,0
-LEAD00879,Organic Search,Brand Awareness,2025-11-10,0
-LEAD00880,Paid Search,Retention Drive,2026-01-30,0
-LEAD00881,LinkedIn,Competitor Conquest,2025-10-11,1
-LEAD00882,Referral,Product Launch,2025-04-17,0
-LEAD00883,Cold Outreach,Retention Drive,2025-07-27,1
-LEAD00884,LinkedIn,Product Launch,2025-10-20,0
-LEAD00885,Organic Search,Retention Drive,2025-08-11,0
-LEAD00886,LinkedIn,Q1 Spring Push,2025-11-14,0
-LEAD00887,LinkedIn,Brand Awareness,2025-11-07,0
-LEAD00888,Organic Search,Product Launch,2025-03-25,0
-LEAD00889,Paid Search,Retention Drive,2025-08-28,0
-LEAD00890,Paid Search,Competitor Conquest,2025-04-23,0
-LEAD00891,Referral,Q1 Spring Push,2025-12-03,1
-LEAD00892,Paid Search,Product Launch,2026-01-06,1
-LEAD00893,Event,Retention Drive,2025-11-27,1
-LEAD00894,Organic Search,Competitor Conquest,2025-07-15,0
-LEAD00895,Cold Outreach,Product Launch,2025-11-06,0
-LEAD00896,Event,Product Launch,2025-10-07,0
-LEAD00897,Referral,Product Launch,2025-10-23,0
-LEAD00898,Referral,Q1 Spring Push,2025-09-08,0
-LEAD00899,Paid Search,Competitor Conquest,2025-07-29,0
-LEAD00900,Event,Competitor Conquest,2025-12-22,0
-LEAD00901,Referral,Q1 Spring Push,2025-08-28,0
-LEAD00902,Organic Search,Brand Awareness,2025-05-11,0
-LEAD00903,Event,Product Launch,2025-10-31,0
-LEAD00904,LinkedIn,Competitor Conquest,2025-10-17,0
-LEAD00905,Event,Competitor Conquest,2026-02-03,0
-LEAD00906,Cold Outreach,Competitor Conquest,2025-12-01,0
-LEAD00907,Paid Search,Q1 Spring Push,2026-03-05,1
-LEAD00908,Cold Outreach,Brand Awareness,2025-07-03,0
-LEAD00909,Referral,Competitor Conquest,2025-09-01,0
-LEAD00910,LinkedIn,Retention Drive,2026-02-03,0
-LEAD00911,Organic Search,Q1 Spring Push,2025-08-26,0
-LEAD00912,Paid Search,Product Launch,2025-07-31,0
-LEAD00913,Cold Outreach,Brand Awareness,2025-06-24,0
-LEAD00914,Cold Outreach,Brand Awareness,2025-03-20,0
-LEAD00915,Referral,Competitor Conquest,2025-11-05,1
-LEAD00916,Organic Search,Brand Awareness,2025-04-22,0
-LEAD00917,Organic Search,Product Launch,2025-10-29,0
-LEAD00918,Cold Outreach,Product Launch,2025-11-01,0
-LEAD00919,Event,Product Launch,2026-03-05,0
-LEAD00920,Organic Search,Competitor Conquest,2025-08-20,1
-LEAD00921,Organic Search,Retention Drive,2025-12-05,0
-LEAD00922,Paid Search,Competitor Conquest,2025-11-02,0
-LEAD00923,Event,Retention Drive,2025-04-08,0
-LEAD00924,Event,Brand Awareness,2025-08-13,0
-LEAD00925,Cold Outreach,Q1 Spring Push,2026-01-15,0
-LEAD00926,LinkedIn,Product Launch,2025-10-25,0
-LEAD00927,Cold Outreach,Competitor Conquest,2025-03-19,0
-LEAD00928,Paid Search,Competitor Conquest,2026-03-11,0
-LEAD00929,Cold Outreach,Competitor Conquest,2025-06-16,1
-LEAD00930,LinkedIn,Competitor Conquest,2025-12-14,0
-LEAD00931,Paid Search,Product Launch,2025-11-30,1
-LEAD00932,Event,Q1 Spring Push,2025-07-24,0
-LEAD00933,Paid Search,Product Launch,2025-11-29,0
-LEAD00934,Paid Search,Product Launch,2025-10-30,1
-LEAD00935,Referral,Competitor Conquest,2025-04-25,0
-LEAD00936,Organic Search,Product Launch,2026-01-30,0
-LEAD00937,Referral,Q1 Spring Push,2025-10-21,0
-LEAD00938,Organic Search,Retention Drive,2025-11-11,1
-LEAD00939,Cold Outreach,Q1 Spring Push,2026-03-07,0
-LEAD00940,Organic Search,Retention Drive,2026-02-18,1
-LEAD00941,Event,Q1 Spring Push,2025-08-31,1
-LEAD00942,LinkedIn,Competitor Conquest,2025-07-12,0
-LEAD00943,Event,Competitor Conquest,2025-09-20,0
-LEAD00944,LinkedIn,Brand Awareness,2025-11-09,0
-LEAD00945,Cold Outreach,Competitor Conquest,2025-08-30,0
-LEAD00946,LinkedIn,Brand Awareness,2026-01-19,0
-LEAD00947,Cold Outreach,Competitor Conquest,2025-12-30,1
-LEAD00948,Organic Search,Retention Drive,2025-10-19,1
-LEAD00949,Paid Search,Brand Awareness,2025-07-23,0
-LEAD00950,Cold Outreach,Competitor Conquest,2025-06-21,0
-LEAD00951,Paid Search,Q1 Spring Push,2025-04-19,0
-LEAD00952,LinkedIn,Q1 Spring Push,2025-04-21,0
-LEAD00953,Organic Search,Brand Awareness,2025-03-29,0
-LEAD00954,Event,Competitor Conquest,2025-08-19,0
-LEAD00955,Organic Search,Brand Awareness,2025-08-04,0
-LEAD00956,Referral,Q1 Spring Push,2025-08-26,0
-LEAD00957,Paid Search,Product Launch,2025-06-18,0
-LEAD00958,Cold Outreach,Retention Drive,2026-02-23,0
-LEAD00959,Organic Search,Brand Awareness,2025-04-01,1
-LEAD00960,Referral,Product Launch,2025-07-26,0
-LEAD00961,Referral,Retention Drive,2025-11-08,0
-LEAD00962,Paid Search,Q1 Spring Push,2026-01-16,0
-LEAD00963,Cold Outreach,Q1 Spring Push,2025-12-19,0
-LEAD00964,LinkedIn,Competitor Conquest,2025-10-19,0
-LEAD00965,LinkedIn,Competitor Conquest,2025-04-02,0
-LEAD00966,Paid Search,Retention Drive,2025-04-21,1
-LEAD00967,Organic Search,Brand Awareness,2025-11-17,0
-LEAD00968,Event,Q1 Spring Push,2025-04-16,0
-LEAD00969,Cold Outreach,Competitor Conquest,2025-04-11,0
-LEAD00970,Event,Competitor Conquest,2025-11-12,0
-LEAD00971,Organic Search,Brand Awareness,2026-01-26,0
-LEAD00972,LinkedIn,Retention Drive,2025-12-05,1
-LEAD00973,Organic Search,Retention Drive,2025-09-04,0
-LEAD00974,LinkedIn,Competitor Conquest,2025-05-20,1
-LEAD00975,LinkedIn,Q1 Spring Push,2025-05-13,0
-LEAD00976,Referral,Competitor Conquest,2025-09-29,0
-LEAD00977,Cold Outreach,Product Launch,2025-06-18,0
-LEAD00978,Event,Product Launch,2026-01-16,0
-LEAD00979,Event,Competitor Conquest,2025-10-01,0
-LEAD00980,LinkedIn,Product Launch,2025-06-29,1
-LEAD00981,Paid Search,Retention Drive,2025-10-17,0
-LEAD00982,Cold Outreach,Q1 Spring Push,2025-05-09,1
-LEAD00983,Event,Q1 Spring Push,2025-10-22,0
-LEAD00984,Cold Outreach,Retention Drive,2025-07-10,0
-LEAD00985,Paid Search,Competitor Conquest,2025-10-13,0
-LEAD00986,Referral,Q1 Spring Push,2025-09-22,0
-LEAD00987,Cold Outreach,Product Launch,2025-11-16,1
-LEAD00988,Organic Search,Product Launch,2025-07-05,0
-LEAD00989,LinkedIn,Product Launch,2026-02-28,0
-LEAD00990,LinkedIn,Competitor Conquest,2025-03-29,0
-LEAD00991,LinkedIn,Competitor Conquest,2025-08-23,0
-LEAD00992,Cold Outreach,Brand Awareness,2025-10-18,1
-LEAD00993,Paid Search,Retention Drive,2025-08-22,0
-LEAD00994,LinkedIn,Retention Drive,2026-02-12,1
-LEAD00995,Cold Outreach,Brand Awareness,2025-07-20,0
-LEAD00996,Event,Product Launch,2025-07-28,0
-LEAD00997,LinkedIn,Product Launch,2025-11-24,0
-LEAD00998,Cold Outreach,Product Launch,2025-04-12,0
-LEAD00999,Cold Outreach,Retention Drive,2026-01-18,1
-LEAD01000,Paid Search,Competitor Conquest,2025-08-05,0
-LEAD01001,Paid Search,Q1 Spring Push,2026-01-21,0
-LEAD01002,Referral,Product Launch,2026-02-13,0
-LEAD01003,Event,Brand Awareness,2025-05-12,1
-LEAD01004,Paid Search,Competitor Conquest,2025-11-06,0
-LEAD01005,Paid Search,Competitor Conquest,2025-07-04,1
-LEAD01006,Event,Product Launch,2025-04-11,0
-LEAD01007,Cold Outreach,Q1 Spring Push,2025-07-17,0
-LEAD01008,Cold Outreach,Competitor Conquest,2025-10-22,0
-LEAD01009,Referral,Brand Awareness,2026-03-06,0
-LEAD01010,Organic Search,Q1 Spring Push,2025-07-04,1
-LEAD01011,Event,Product Launch,2026-02-28,0
-LEAD01012,Event,Competitor Conquest,2025-10-22,0
-LEAD01013,Organic Search,Retention Drive,2025-12-09,0
-LEAD01014,Cold Outreach,Competitor Conquest,2025-10-10,0
-LEAD01015,Organic Search,Brand Awareness,2026-02-07,0
-LEAD01016,Event,Product Launch,2025-08-16,0
-LEAD01017,Organic Search,Competitor Conquest,2025-05-31,0
-LEAD01018,Event,Competitor Conquest,2026-02-07,0
-LEAD01019,Event,Retention Drive,2025-03-11,0
-LEAD01020,Cold Outreach,Q1 Spring Push,2025-11-25,0
-LEAD01021,Organic Search,Product Launch,2025-05-09,0
-LEAD01022,Organic Search,Retention Drive,2025-07-26,0
-LEAD01023,Organic Search,Q1 Spring Push,2026-01-05,0
-LEAD01024,Cold Outreach,Product Launch,2026-01-26,0
-LEAD01025,Organic Search,Q1 Spring Push,2026-01-07,0
-LEAD01026,LinkedIn,Retention Drive,2025-12-14,0
-LEAD01027,Cold Outreach,Q1 Spring Push,2025-11-04,0
-LEAD01028,Event,Brand Awareness,2025-04-08,0
-LEAD01029,Paid Search,Retention Drive,2025-07-03,0
-LEAD01030,Event,Brand Awareness,2025-05-05,0
-LEAD01031,Paid Search,Q1 Spring Push,2025-04-06,0
-LEAD01032,Paid Search,Q1 Spring Push,2025-12-05,0
-LEAD01033,Paid Search,Product Launch,2025-05-07,1
-LEAD01034,Event,Brand Awareness,2025-10-20,0
-LEAD01035,Event,Competitor Conquest,2026-02-01,1
-LEAD01036,LinkedIn,Competitor Conquest,2025-04-13,0
-LEAD01037,Referral,Competitor Conquest,2026-01-28,0
-LEAD01038,Cold Outreach,Competitor Conquest,2025-03-21,0
-LEAD01039,Paid Search,Q1 Spring Push,2025-04-23,1
-LEAD01040,Cold Outreach,Product Launch,2025-03-11,0
-LEAD01041,Cold Outreach,Retention Drive,2025-05-06,0
-LEAD01042,Paid Search,Brand Awareness,2025-08-01,1
-LEAD01043,Event,Product Launch,2026-01-31,0
-LEAD01044,Event,Q1 Spring Push,2025-03-26,0
-LEAD01045,Organic Search,Brand Awareness,2025-04-18,0
-LEAD01046,LinkedIn,Brand Awareness,2025-12-27,1
-LEAD01047,Paid Search,Brand Awareness,2026-03-06,0
-LEAD01048,Paid Search,Competitor Conquest,2026-01-17,1
-LEAD01049,Organic Search,Product Launch,2025-06-15,0
-LEAD01050,LinkedIn,Retention Drive,2025-07-04,0
-LEAD01051,LinkedIn,Retention Drive,2025-10-18,1
-LEAD01052,Event,Q1 Spring Push,2026-02-15,0
-LEAD01053,Referral,Product Launch,2025-09-16,1
-LEAD01054,Cold Outreach,Retention Drive,2025-06-02,0
-LEAD01055,Referral,Competitor Conquest,2025-05-12,0
-LEAD01056,Organic Search,Retention Drive,2025-03-11,1
-LEAD01057,Paid Search,Product Launch,2025-08-30,1
-LEAD01058,LinkedIn,Q1 Spring Push,2025-04-18,0
-LEAD01059,Cold Outreach,Product Launch,2025-03-29,0
-LEAD01060,Cold Outreach,Competitor Conquest,2025-12-08,0
-LEAD01061,LinkedIn,Competitor Conquest,2025-06-27,0
-LEAD01062,Referral,Retention Drive,2025-11-14,0
-LEAD01063,Organic Search,Brand Awareness,2025-08-15,0
-LEAD01064,Organic Search,Q1 Spring Push,2026-01-31,0
-LEAD01065,Organic Search,Product Launch,2025-05-21,0
-LEAD01066,Cold Outreach,Brand Awareness,2025-06-01,1
-LEAD01067,Organic Search,Competitor Conquest,2025-03-30,0
-LEAD01068,Cold Outreach,Product Launch,2025-07-09,0
-LEAD01069,Cold Outreach,Retention Drive,2025-03-19,0
-LEAD01070,Organic Search,Retention Drive,2025-12-04,1
-LEAD01071,Cold Outreach,Q1 Spring Push,2025-03-11,0
-LEAD01072,Event,Brand Awareness,2025-11-06,0
-LEAD01073,Cold Outreach,Retention Drive,2025-03-26,0
-LEAD01074,Event,Competitor Conquest,2025-12-15,0
-LEAD01075,Event,Product Launch,2025-12-12,0
-LEAD01076,Paid Search,Retention Drive,2025-09-12,1
-LEAD01077,Referral,Competitor Conquest,2025-08-29,0
-LEAD01078,Organic Search,Brand Awareness,2025-03-29,1
-LEAD01079,Event,Q1 Spring Push,2025-10-14,0
-LEAD01080,LinkedIn,Brand Awareness,2025-11-22,0
-LEAD01081,Cold Outreach,Retention Drive,2025-08-22,1
-LEAD01082,LinkedIn,Retention Drive,2026-02-21,0
-LEAD01083,Event,Competitor Conquest,2026-02-10,0
-LEAD01084,Event,Competitor Conquest,2025-09-24,0
-LEAD01085,Organic Search,Q1 Spring Push,2025-09-13,0
-LEAD01086,Paid Search,Competitor Conquest,2025-09-11,0
-LEAD01087,Referral,Competitor Conquest,2025-11-30,1
-LEAD01088,Event,Product Launch,2025-08-13,1
-LEAD01089,Referral,Q1 Spring Push,2025-12-22,1
-LEAD01090,LinkedIn,Product Launch,2025-07-14,0
-LEAD01091,LinkedIn,Brand Awareness,2025-08-04,0
-LEAD01092,Event,Brand Awareness,2026-01-15,0
-LEAD01093,Cold Outreach,Competitor Conquest,2025-12-19,0
-LEAD01094,Cold Outreach,Competitor Conquest,2026-03-09,1
-LEAD01095,Cold Outreach,Product Launch,2026-01-14,0
-LEAD01096,Organic Search,Product Launch,2025-08-21,0
-LEAD01097,LinkedIn,Q1 Spring Push,2025-12-19,0
-LEAD01098,Referral,Brand Awareness,2026-01-10,0
-LEAD01099,Event,Competitor Conquest,2025-03-27,0
-LEAD01100,LinkedIn,Competitor Conquest,2025-06-28,0
-LEAD01101,Cold Outreach,Competitor Conquest,2026-01-03,0
-LEAD01102,Organic Search,Q1 Spring Push,2026-01-06,1
-LEAD01103,Event,Q1 Spring Push,2025-03-26,1
-LEAD01104,Cold Outreach,Brand Awareness,2025-08-04,0
-LEAD01105,Cold Outreach,Q1 Spring Push,2025-08-01,0
-LEAD01106,LinkedIn,Competitor Conquest,2026-01-28,0
-LEAD01107,Paid Search,Retention Drive,2025-12-23,0
-LEAD01108,Paid Search,Product Launch,2025-10-19,0
-LEAD01109,LinkedIn,Product Launch,2025-04-04,0
-LEAD01110,Paid Search,Competitor Conquest,2025-03-15,0
-LEAD01111,Organic Search,Retention Drive,2025-05-03,0
-LEAD01112,Event,Product Launch,2025-11-14,0
-LEAD01113,Referral,Q1 Spring Push,2025-10-22,1
-LEAD01114,Paid Search,Competitor Conquest,2026-03-02,0
-LEAD01115,Organic Search,Q1 Spring Push,2025-08-29,0
-LEAD01116,LinkedIn,Product Launch,2025-11-18,0
-LEAD01117,Referral,Q1 Spring Push,2025-06-23,0
-LEAD01118,Organic Search,Brand Awareness,2026-01-14,0
-LEAD01119,LinkedIn,Brand Awareness,2025-03-12,0
-LEAD01120,LinkedIn,Q1 Spring Push,2025-12-08,0
-LEAD01121,Organic Search,Brand Awareness,2025-11-23,1
-LEAD01122,LinkedIn,Retention Drive,2026-01-19,0
-LEAD01123,LinkedIn,Competitor Conquest,2025-09-06,0
-LEAD01124,Organic Search,Q1 Spring Push,2025-04-03,0
-LEAD01125,Event,Product Launch,2025-09-23,1
-LEAD01126,LinkedIn,Retention Drive,2025-06-14,0
-LEAD01127,Paid Search,Brand Awareness,2025-11-24,0
-LEAD01128,Organic Search,Q1 Spring Push,2026-01-04,0
-LEAD01129,Event,Q1 Spring Push,2026-02-18,0
-LEAD01130,Cold Outreach,Product Launch,2025-12-03,0
-LEAD01131,Organic Search,Q1 Spring Push,2025-06-05,0
-LEAD01132,LinkedIn,Competitor Conquest,2025-11-28,0
-LEAD01133,Paid Search,Q1 Spring Push,2026-01-05,0
-LEAD01134,Event,Brand Awareness,2025-05-29,0
-LEAD01135,LinkedIn,Competitor Conquest,2025-04-23,0
-LEAD01136,Referral,Q1 Spring Push,2025-07-07,0
-LEAD01137,Event,Q1 Spring Push,2025-12-16,0
-LEAD01138,Cold Outreach,Product Launch,2025-10-14,0
-LEAD01139,Event,Q1 Spring Push,2025-03-21,1
-LEAD01140,Referral,Competitor Conquest,2025-03-26,0
-LEAD01141,Event,Q1 Spring Push,2025-12-17,0
-LEAD01142,Event,Competitor Conquest,2025-05-28,0
-LEAD01143,Referral,Retention Drive,2025-10-23,0
-LEAD01144,Organic Search,Product Launch,2025-05-23,0
-LEAD01145,Cold Outreach,Q1 Spring Push,2025-06-22,0
-LEAD01146,Cold Outreach,Retention Drive,2025-10-30,0
-LEAD01147,Paid Search,Brand Awareness,2025-03-14,0
-LEAD01148,Organic Search,Product Launch,2025-11-17,0
-LEAD01149,Paid Search,Brand Awareness,2026-02-19,1
-LEAD01150,LinkedIn,Product Launch,2025-10-24,0
-LEAD01151,Organic Search,Product Launch,2025-11-24,0
-LEAD01152,Organic Search,Brand Awareness,2025-04-22,0
-LEAD01153,LinkedIn,Brand Awareness,2026-01-28,0
-LEAD01154,Event,Brand Awareness,2026-01-02,0
-LEAD01155,Event,Brand Awareness,2025-09-26,0
-LEAD01156,Cold Outreach,Q1 Spring Push,2025-09-10,0
-LEAD01157,LinkedIn,Product Launch,2025-10-31,0
-LEAD01158,Event,Retention Drive,2026-01-16,0
-LEAD01159,Cold Outreach,Competitor Conquest,2025-04-11,0
-LEAD01160,Cold Outreach,Retention Drive,2025-06-02,0
-LEAD01161,Referral,Product Launch,2025-09-26,0
-LEAD01162,Event,Competitor Conquest,2025-12-22,0
-LEAD01163,Cold Outreach,Competitor Conquest,2025-09-04,0
-LEAD01164,Referral,Q1 Spring Push,2025-07-01,1
-LEAD01165,Paid Search,Product Launch,2025-12-05,0
-LEAD01166,Cold Outreach,Product Launch,2025-04-14,0
-LEAD01167,LinkedIn,Product Launch,2025-12-11,0
-LEAD01168,Cold Outreach,Retention Drive,2025-12-05,0
-LEAD01169,Organic Search,Competitor Conquest,2025-11-06,1
-LEAD01170,Cold Outreach,Competitor Conquest,2026-01-19,0
-LEAD01171,Paid Search,Q1 Spring Push,2025-05-07,0
-LEAD01172,Referral,Q1 Spring Push,2026-01-14,1
-LEAD01173,Cold Outreach,Q1 Spring Push,2026-01-03,0
-LEAD01174,Organic Search,Brand Awareness,2025-12-28,0
-LEAD01175,Event,Q1 Spring Push,2026-03-07,0
-LEAD01176,Organic Search,Retention Drive,2025-09-19,0
-LEAD01177,Organic Search,Product Launch,2025-12-30,0
-LEAD01178,Event,Competitor Conquest,2025-12-18,0
-LEAD01179,Referral,Product Launch,2025-11-07,0
-LEAD01180,Cold Outreach,Brand Awareness,2025-04-24,1
-LEAD01181,Organic Search,Q1 Spring Push,2026-01-18,0
-LEAD01182,Organic Search,Retention Drive,2025-08-11,0
-LEAD01183,Paid Search,Q1 Spring Push,2025-11-15,1
-LEAD01184,Paid Search,Brand Awareness,2025-04-10,0
-LEAD01185,Cold Outreach,Competitor Conquest,2025-03-25,0
-LEAD01186,Organic Search,Competitor Conquest,2025-12-15,0
-LEAD01187,Paid Search,Q1 Spring Push,2025-10-18,0
-LEAD01188,Event,Brand Awareness,2026-01-10,0
-LEAD01189,Organic Search,Q1 Spring Push,2025-05-06,0
-LEAD01190,Referral,Retention Drive,2025-09-21,1
-LEAD01191,Cold Outreach,Competitor Conquest,2025-12-25,0
-LEAD01192,Cold Outreach,Brand Awareness,2025-04-26,0
-LEAD01193,LinkedIn,Q1 Spring Push,2025-10-24,0
-LEAD01194,Cold Outreach,Brand Awareness,2025-10-27,0
-LEAD01195,Cold Outreach,Q1 Spring Push,2026-03-10,0
-LEAD01196,Paid Search,Product Launch,2025-09-29,0
-LEAD01197,Referral,Competitor Conquest,2026-02-05,1
-LEAD01198,Referral,Brand Awareness,2025-12-27,1
-LEAD01199,Paid Search,Product Launch,2025-08-26,1
-LEAD01200,Referral,Competitor Conquest,2025-07-08,0
-LEAD01201,Referral,Retention Drive,2025-04-20,0
-LEAD01202,Cold Outreach,Product Launch,2025-08-27,0
-LEAD01203,Referral,Retention Drive,2025-06-11,0
-LEAD01204,Event,Product Launch,2025-08-27,0
-LEAD01205,Cold Outreach,Competitor Conquest,2025-06-15,1
-LEAD01206,Cold Outreach,Product Launch,2025-03-17,0
-LEAD01207,LinkedIn,Q1 Spring Push,2025-11-27,1
-LEAD01208,Organic Search,Brand Awareness,2025-05-30,0
-LEAD01209,Paid Search,Q1 Spring Push,2026-02-09,0
-LEAD01210,LinkedIn,Product Launch,2025-10-12,0
-LEAD01211,Event,Competitor Conquest,2025-11-07,0
-LEAD01212,Paid Search,Q1 Spring Push,2025-12-31,0
-LEAD01213,Cold Outreach,Product Launch,2025-08-30,1
-LEAD01214,Cold Outreach,Competitor Conquest,2025-09-02,0
-LEAD01215,Organic Search,Retention Drive,2026-02-02,1
-LEAD01216,Event,Product Launch,2026-02-24,0
-LEAD01217,Paid Search,Q1 Spring Push,2025-11-06,1
-LEAD01218,Event,Competitor Conquest,2025-12-25,1
-LEAD01219,Referral,Product Launch,2025-06-14,0
-LEAD01220,LinkedIn,Competitor Conquest,2025-08-13,0
-LEAD01221,Referral,Q1 Spring Push,2025-10-16,0
-LEAD01222,Organic Search,Q1 Spring Push,2025-05-06,1
-LEAD01223,Event,Product Launch,2026-03-06,0
-LEAD01224,Referral,Competitor Conquest,2025-06-01,0
-LEAD01225,LinkedIn,Retention Drive,2025-06-28,0
-LEAD01226,Paid Search,Competitor Conquest,2025-12-21,0
-LEAD01227,Organic Search,Retention Drive,2025-08-30,0
-LEAD01228,Paid Search,Product Launch,2025-08-18,0
-LEAD01229,Paid Search,Competitor Conquest,2025-12-07,0
-LEAD01230,Event,Retention Drive,2026-01-31,0
-LEAD01231,Referral,Competitor Conquest,2025-10-02,0
-LEAD01232,Referral,Competitor Conquest,2025-12-17,0
-LEAD01233,LinkedIn,Competitor Conquest,2025-12-02,1
-LEAD01234,Organic Search,Q1 Spring Push,2025-09-07,0
-LEAD01235,LinkedIn,Q1 Spring Push,2025-11-09,0
-LEAD01236,Event,Q1 Spring Push,2026-02-06,0
-LEAD01237,Organic Search,Brand Awareness,2025-12-05,0
-LEAD01238,Cold Outreach,Q1 Spring Push,2025-11-08,0
-LEAD01239,Event,Retention Drive,2026-02-17,0
-LEAD01240,Referral,Q1 Spring Push,2026-02-15,0
-LEAD01241,LinkedIn,Q1 Spring Push,2025-09-10,0
-LEAD01242,Referral,Retention Drive,2025-12-02,0
-LEAD01243,Referral,Brand Awareness,2026-01-04,0
-LEAD01244,Organic Search,Brand Awareness,2025-08-15,0
-LEAD01245,Event,Q1 Spring Push,2025-06-27,0
-LEAD01246,Paid Search,Q1 Spring Push,2025-05-15,0
-LEAD01247,Referral,Retention Drive,2026-02-20,0
-LEAD01248,Paid Search,Competitor Conquest,2026-01-30,0
-LEAD01249,Organic Search,Product Launch,2025-11-21,0
-LEAD01250,Cold Outreach,Product Launch,2025-12-19,0
-LEAD01251,Event,Retention Drive,2025-05-04,0
-LEAD01252,LinkedIn,Competitor Conquest,2026-01-03,0
-LEAD01253,LinkedIn,Retention Drive,2025-08-03,0
-LEAD01254,Cold Outreach,Competitor Conquest,2025-11-09,1
-LEAD01255,Event,Retention Drive,2026-02-01,0
-LEAD01256,Event,Competitor Conquest,2026-01-21,0
-LEAD01257,Paid Search,Brand Awareness,2025-06-04,0
-LEAD01258,Organic Search,Competitor Conquest,2026-01-22,0
-LEAD01259,Paid Search,Brand Awareness,2025-12-19,0
-LEAD01260,Event,Brand Awareness,2025-09-12,1
-LEAD01261,Paid Search,Competitor Conquest,2025-10-30,1
-LEAD01262,LinkedIn,Competitor Conquest,2025-04-13,0
-LEAD01263,Organic Search,Retention Drive,2025-07-05,0
-LEAD01264,LinkedIn,Competitor Conquest,2025-08-14,1
-LEAD01265,Cold Outreach,Product Launch,2025-07-29,0
-LEAD01266,Event,Brand Awareness,2025-09-01,0
-LEAD01267,Referral,Retention Drive,2025-07-24,1
-LEAD01268,Cold Outreach,Q1 Spring Push,2025-04-28,0
-LEAD01269,Organic Search,Product Launch,2025-03-18,0
-LEAD01270,Organic Search,Product Launch,2026-01-17,0
-LEAD01271,Paid Search,Retention Drive,2025-08-19,0
-LEAD01272,Paid Search,Competitor Conquest,2025-07-18,0
-LEAD01273,LinkedIn,Competitor Conquest,2025-07-15,0
-LEAD01274,Referral,Q1 Spring Push,2026-01-27,0
-LEAD01275,Organic Search,Competitor Conquest,2025-08-02,0
-LEAD01276,LinkedIn,Q1 Spring Push,2025-09-30,0
-LEAD01277,Event,Competitor Conquest,2025-11-23,0
-LEAD01278,Referral,Q1 Spring Push,2025-10-20,0
-LEAD01279,Event,Product Launch,2025-07-14,0
-LEAD01280,Paid Search,Brand Awareness,2025-05-25,1
-LEAD01281,Event,Competitor Conquest,2026-02-08,1
-LEAD01282,LinkedIn,Competitor Conquest,2025-07-12,0
-LEAD01283,Paid Search,Q1 Spring Push,2025-03-26,0
-LEAD01284,LinkedIn,Product Launch,2026-01-28,0
-LEAD01285,LinkedIn,Competitor Conquest,2026-01-29,1
-LEAD01286,Cold Outreach,Competitor Conquest,2025-08-09,0
-LEAD01287,Cold Outreach,Brand Awareness,2025-12-07,0
-LEAD01288,Organic Search,Competitor Conquest,2025-09-17,0
-LEAD01289,LinkedIn,Product Launch,2025-11-30,0
-LEAD01290,Referral,Competitor Conquest,2025-07-11,0
-LEAD01291,Paid Search,Competitor Conquest,2025-09-11,0
-LEAD01292,Event,Competitor Conquest,2026-03-06,0
-LEAD01293,Event,Product Launch,2026-01-31,0
-LEAD01294,Event,Retention Drive,2025-12-27,0
-LEAD01295,Cold Outreach,Brand Awareness,2026-03-04,0
-LEAD01296,Referral,Product Launch,2025-06-29,1
-LEAD01297,Organic Search,Competitor Conquest,2025-10-28,0
-LEAD01298,Organic Search,Competitor Conquest,2026-01-06,0
-LEAD01299,Cold Outreach,Retention Drive,2026-01-21,0
-LEAD01300,Cold Outreach,Product Launch,2025-08-08,1
-LEAD01301,Paid Search,Retention Drive,2025-08-30,0
-LEAD01302,Paid Search,Product Launch,2025-03-29,0
-LEAD01303,Organic Search,Brand Awareness,2025-09-06,0
-LEAD01304,LinkedIn,Retention Drive,2026-01-07,1
-LEAD01305,Cold Outreach,Competitor Conquest,2025-08-12,0
-LEAD01306,LinkedIn,Retention Drive,2025-08-05,0
-LEAD01307,LinkedIn,Q1 Spring Push,2025-12-11,0
-LEAD01308,LinkedIn,Product Launch,2025-06-01,0
-LEAD01309,Event,Competitor Conquest,2025-08-28,0
-LEAD01310,Cold Outreach,Competitor Conquest,2025-04-21,0
-LEAD01311,Event,Q1 Spring Push,2026-01-26,0
-LEAD01312,Organic Search,Q1 Spring Push,2025-04-13,0
-LEAD01313,Referral,Q1 Spring Push,2025-06-30,1
-LEAD01314,Event,Retention Drive,2026-01-19,0
-LEAD01315,Event,Retention Drive,2026-02-23,0
-LEAD01316,Referral,Product Launch,2025-11-17,0
-LEAD01317,Event,Competitor Conquest,2026-01-12,0
-LEAD01318,Referral,Q1 Spring Push,2025-09-13,0
-LEAD01319,Referral,Competitor Conquest,2025-04-15,0
-LEAD01320,Cold Outreach,Competitor Conquest,2026-03-08,0
-LEAD01321,Paid Search,Retention Drive,2025-10-17,0
-LEAD01322,Cold Outreach,Brand Awareness,2025-10-05,0
-LEAD01323,Referral,Product Launch,2026-03-09,0
-LEAD01324,Referral,Q1 Spring Push,2026-03-04,0
-LEAD01325,LinkedIn,Retention Drive,2025-05-08,1
-LEAD01326,Paid Search,Retention Drive,2025-08-03,0
-LEAD01327,Referral,Product Launch,2025-04-30,0
-LEAD01328,Organic Search,Retention Drive,2025-08-04,0
-LEAD01329,Cold Outreach,Competitor Conquest,2025-12-13,1
-LEAD01330,LinkedIn,Retention Drive,2025-12-20,0
-LEAD01331,Organic Search,Product Launch,2025-06-26,0
-LEAD01332,Event,Competitor Conquest,2025-04-24,1
-LEAD01333,Event,Product Launch,2025-09-27,0
-LEAD01334,Organic Search,Q1 Spring Push,2025-07-31,0
-LEAD01335,Event,Product Launch,2026-02-25,1
-LEAD01336,Event,Q1 Spring Push,2025-05-23,0
-LEAD01337,Cold Outreach,Product Launch,2025-07-22,0
-LEAD01338,LinkedIn,Product Launch,2025-11-09,0
-LEAD01339,Paid Search,Brand Awareness,2025-12-02,0
-LEAD01340,Paid Search,Competitor Conquest,2025-10-29,0
-LEAD01341,LinkedIn,Q1 Spring Push,2025-12-28,0
-LEAD01342,Cold Outreach,Retention Drive,2026-01-18,0
-LEAD01343,Event,Q1 Spring Push,2026-01-16,1
-LEAD01344,LinkedIn,Product Launch,2026-01-23,1
-LEAD01345,LinkedIn,Product Launch,2025-08-23,1
-LEAD01346,Organic Search,Competitor Conquest,2026-02-02,1
-LEAD01347,Cold Outreach,Q1 Spring Push,2025-11-24,0
-LEAD01348,Referral,Brand Awareness,2025-04-21,0
-LEAD01349,Paid Search,Product Launch,2025-10-10,0
-LEAD01350,Paid Search,Retention Drive,2025-04-22,1
-LEAD01351,Organic Search,Q1 Spring Push,2025-09-17,0
-LEAD01352,Referral,Retention Drive,2025-05-08,0
-LEAD01353,Paid Search,Retention Drive,2025-11-01,0
-LEAD01354,Paid Search,Retention Drive,2026-02-24,0
-LEAD01355,Event,Retention Drive,2025-12-23,0
-LEAD01356,LinkedIn,Q1 Spring Push,2025-11-20,0
-LEAD01357,Paid Search,Product Launch,2026-01-28,1
-LEAD01358,Paid Search,Brand Awareness,2025-10-22,0
-LEAD01359,Organic Search,Brand Awareness,2025-03-14,0
-LEAD01360,LinkedIn,Competitor Conquest,2025-07-01,0
-LEAD01361,Referral,Product Launch,2025-11-03,0
-LEAD01362,Cold Outreach,Brand Awareness,2025-08-22,1
-LEAD01363,Event,Brand Awareness,2025-12-17,1
-LEAD01364,Cold Outreach,Competitor Conquest,2025-08-02,0
-LEAD01365,Referral,Retention Drive,2025-10-23,0
-LEAD01366,Event,Q1 Spring Push,2025-05-05,0
-LEAD01367,Paid Search,Retention Drive,2025-09-12,0
-LEAD01368,Cold Outreach,Q1 Spring Push,2025-07-24,0
-LEAD01369,Organic Search,Retention Drive,2025-11-02,1
-LEAD01370,LinkedIn,Retention Drive,2025-04-15,0
-LEAD01371,Event,Brand Awareness,2025-08-20,0
-LEAD01372,Paid Search,Brand Awareness,2025-08-04,1
-LEAD01373,LinkedIn,Product Launch,2026-02-02,0
-LEAD01374,LinkedIn,Brand Awareness,2025-12-27,0
-LEAD01375,Organic Search,Q1 Spring Push,2025-09-29,0
-LEAD01376,Cold Outreach,Brand Awareness,2025-11-22,0
-LEAD01377,LinkedIn,Product Launch,2025-05-28,0
-LEAD01378,LinkedIn,Retention Drive,2025-11-23,1
-LEAD01379,Organic Search,Retention Drive,2025-10-20,0
-LEAD01380,Cold Outreach,Q1 Spring Push,2025-05-22,0
-LEAD01381,Referral,Competitor Conquest,2025-09-30,0
-LEAD01382,Paid Search,Product Launch,2026-02-14,0
-LEAD01383,Referral,Q1 Spring Push,2025-10-22,0
-LEAD01384,Organic Search,Competitor Conquest,2025-12-14,0
-LEAD01385,Event,Competitor Conquest,2025-11-10,0
-LEAD01386,LinkedIn,Q1 Spring Push,2025-04-16,0
-LEAD01387,Event,Q1 Spring Push,2025-07-18,0
-LEAD01388,Referral,Q1 Spring Push,2025-06-11,0
-LEAD01389,Organic Search,Brand Awareness,2025-04-15,0
-LEAD01390,Referral,Q1 Spring Push,2025-08-11,1
-LEAD01391,LinkedIn,Brand Awareness,2025-09-15,0
-LEAD01392,Event,Brand Awareness,2025-07-02,0
-LEAD01393,Referral,Brand Awareness,2025-03-20,0
-LEAD01394,Referral,Q1 Spring Push,2025-09-01,0
-LEAD01395,Organic Search,Q1 Spring Push,2025-11-17,0
-LEAD01396,Organic Search,Product Launch,2026-01-17,1
-LEAD01397,Cold Outreach,Competitor Conquest,2025-11-16,0
-LEAD01398,Paid Search,Brand Awareness,2025-06-09,1
-LEAD01399,Cold Outreach,Q1 Spring Push,2025-10-30,0
-LEAD01400,Organic Search,Q1 Spring Push,2026-02-15,0
-LEAD01401,Organic Search,Brand Awareness,2025-09-24,0
-LEAD01402,Referral,Brand Awareness,2025-03-19,0
-LEAD01403,Paid Search,Retention Drive,2025-07-19,1
-LEAD01404,LinkedIn,Product Launch,2025-05-16,1
-LEAD01405,Referral,Competitor Conquest,2025-04-03,0
-LEAD01406,Event,Product Launch,2025-05-20,1
-LEAD01407,Referral,Brand Awareness,2025-09-28,0
-LEAD01408,Referral,Product Launch,2026-01-23,0
-LEAD01409,LinkedIn,Q1 Spring Push,2025-09-12,0
-LEAD01410,Paid Search,Product Launch,2025-03-21,0
-LEAD01411,Referral,Q1 Spring Push,2025-11-23,1
-LEAD01412,Paid Search,Competitor Conquest,2025-08-26,1
-LEAD01413,Organic Search,Brand Awareness,2025-11-25,0
-LEAD01414,Event,Retention Drive,2025-10-02,0
-LEAD01415,LinkedIn,Competitor Conquest,2025-04-10,0
-LEAD01416,Event,Q1 Spring Push,2026-01-04,1
-LEAD01417,LinkedIn,Competitor Conquest,2025-07-23,0
-LEAD01418,Event,Product Launch,2025-08-19,0
-LEAD01419,LinkedIn,Competitor Conquest,2025-12-17,0
-LEAD01420,Event,Q1 Spring Push,2025-12-26,0
-LEAD01421,Organic Search,Q1 Spring Push,2025-11-08,0
-LEAD01422,Referral,Product Launch,2025-10-26,1
-LEAD01423,Cold Outreach,Retention Drive,2025-07-23,1
-LEAD01424,Organic Search,Retention Drive,2026-01-27,0
-LEAD01425,Paid Search,Product Launch,2025-08-20,0
-LEAD01426,Event,Brand Awareness,2026-02-12,0
-LEAD01427,LinkedIn,Q1 Spring Push,2026-02-14,0
-LEAD01428,Cold Outreach,Competitor Conquest,2025-12-02,0
-LEAD01429,Referral,Product Launch,2025-05-11,0
-LEAD01430,Event,Competitor Conquest,2025-06-19,0
-LEAD01431,Cold Outreach,Q1 Spring Push,2025-04-15,0
-LEAD01432,Organic Search,Product Launch,2026-01-12,0
-LEAD01433,Organic Search,Retention Drive,2025-10-26,1
-LEAD01434,Event,Q1 Spring Push,2025-10-21,0
-LEAD01435,Event,Competitor Conquest,2025-08-23,0
-LEAD01436,Paid Search,Brand Awareness,2025-07-01,0
-LEAD01437,Paid Search,Brand Awareness,2025-04-19,0
-LEAD01438,Event,Brand Awareness,2026-03-10,0
-LEAD01439,Event,Retention Drive,2025-07-10,1
-LEAD01440,Cold Outreach,Product Launch,2025-12-14,0
-LEAD01441,Organic Search,Product Launch,2025-12-06,0
-LEAD01442,Referral,Product Launch,2026-03-05,0
-LEAD01443,Referral,Brand Awareness,2026-03-01,0
-LEAD01444,LinkedIn,Q1 Spring Push,2025-12-14,1
-LEAD01445,Organic Search,Retention Drive,2025-09-12,0
-LEAD01446,Event,Q1 Spring Push,2025-07-04,0
-LEAD01447,Referral,Q1 Spring Push,2026-02-16,0
-LEAD01448,Event,Brand Awareness,2025-11-15,0
-LEAD01449,Paid Search,Product Launch,2026-01-22,0
-LEAD01450,Cold Outreach,Brand Awareness,2025-07-23,1
-LEAD01451,LinkedIn,Retention Drive,2025-10-31,0
-LEAD01452,LinkedIn,Brand Awareness,2025-07-20,0
-LEAD01453,LinkedIn,Brand Awareness,2025-03-13,1
-LEAD01454,Event,Retention Drive,2025-07-07,0
-LEAD01455,Cold Outreach,Retention Drive,2025-04-18,1
-LEAD01456,Referral,Product Launch,2025-04-08,1
-LEAD01457,LinkedIn,Competitor Conquest,2026-02-24,0
-LEAD01458,Cold Outreach,Competitor Conquest,2025-09-08,0
-LEAD01459,Organic Search,Product Launch,2025-08-30,0
-LEAD01460,LinkedIn,Retention Drive,2025-07-24,0
-LEAD01461,Event,Product Launch,2025-10-27,0
-LEAD01462,LinkedIn,Brand Awareness,2025-08-23,0
-LEAD01463,LinkedIn,Brand Awareness,2025-12-04,0
-LEAD01464,Event,Brand Awareness,2025-05-02,1
-LEAD01465,Referral,Retention Drive,2025-09-15,1
-LEAD01466,Organic Search,Competitor Conquest,2025-03-26,0
-LEAD01467,Cold Outreach,Product Launch,2025-06-17,1
-LEAD01468,Event,Retention Drive,2025-04-05,0
-LEAD01469,Referral,Brand Awareness,2026-02-06,1
-LEAD01470,Organic Search,Competitor Conquest,2026-02-19,0
-LEAD01471,Event,Q1 Spring Push,2026-02-12,0
-LEAD01472,Organic Search,Competitor Conquest,2025-09-12,0
-LEAD01473,Organic Search,Q1 Spring Push,2025-11-03,0
-LEAD01474,LinkedIn,Retention Drive,2025-04-05,1
-LEAD01475,Event,Product Launch,2026-01-26,0
-LEAD01476,Paid Search,Product Launch,2025-08-02,0
-LEAD01477,Organic Search,Brand Awareness,2025-11-19,0
-LEAD01478,LinkedIn,Product Launch,2025-03-29,1
-LEAD01479,Referral,Competitor Conquest,2026-01-20,0
-LEAD01480,LinkedIn,Retention Drive,2025-10-03,0
-LEAD01481,Referral,Brand Awareness,2025-05-19,1
-LEAD01482,Paid Search,Brand Awareness,2026-01-01,1
-LEAD01483,Paid Search,Brand Awareness,2025-10-06,0
-LEAD01484,Event,Competitor Conquest,2025-06-05,1
-LEAD01485,Referral,Q1 Spring Push,2025-12-31,0
-LEAD01486,Cold Outreach,Brand Awareness,2025-06-27,0
-LEAD01487,Cold Outreach,Brand Awareness,2025-07-15,0
-LEAD01488,Referral,Competitor Conquest,2025-08-13,0
-LEAD01489,Event,Q1 Spring Push,2025-08-08,0
-LEAD01490,Paid Search,Retention Drive,2025-10-08,1
-LEAD01491,Event,Retention Drive,2025-09-01,0
-LEAD01492,Event,Retention Drive,2025-10-12,1
-LEAD01493,Referral,Product Launch,2025-08-17,1
-LEAD01494,Referral,Retention Drive,2025-07-19,0
-LEAD01495,Organic Search,Q1 Spring Push,2025-10-24,0
-LEAD01496,Cold Outreach,Q1 Spring Push,2025-09-22,0
-LEAD01497,LinkedIn,Retention Drive,2025-07-08,0
-LEAD01498,Organic Search,Q1 Spring Push,2025-05-16,0
-LEAD01499,Cold Outreach,Q1 Spring Push,2025-03-17,0
-LEAD01500,Paid Search,Retention Drive,2025-07-01,0
+LEAD00001,Organic Search,Q1 Spring Push,2026-02-25,0
+LEAD00002,Paid Search,Product Launch,2026-04-14,0
+LEAD00003,Referral,Q1 Spring Push,2025-05-14,0
+LEAD00004,Organic Search,Brand Awareness,2026-03-03,0
+LEAD00005,LinkedIn,Competitor Conquest,2026-03-14,0
+LEAD00006,Organic Search,Retention Drive,2025-07-18,0
+LEAD00007,Paid Search,Retention Drive,2025-10-29,0
+LEAD00008,Cold Outreach,Brand Awareness,2025-09-19,0
+LEAD00009,Referral,Q1 Spring Push,2025-10-18,1
+LEAD00010,Referral,Q1 Spring Push,2025-12-28,0
+LEAD00011,Referral,Q1 Spring Push,2026-01-08,0
+LEAD00012,Event,Product Launch,2025-12-10,0
+LEAD00013,Referral,Retention Drive,2026-01-30,0
+LEAD00014,Event,Retention Drive,2026-02-17,1
+LEAD00015,Event,Competitor Conquest,2025-08-03,0
+LEAD00016,LinkedIn,Competitor Conquest,2025-07-01,1
+LEAD00017,Paid Search,Q1 Spring Push,2026-04-14,0
+LEAD00018,Cold Outreach,Retention Drive,2026-01-06,0
+LEAD00019,Cold Outreach,Brand Awareness,2025-06-25,0
+LEAD00020,Paid Search,Brand Awareness,2026-04-21,0
+LEAD00021,Organic Search,Q1 Spring Push,2025-12-12,0
+LEAD00022,Organic Search,Product Launch,2025-08-03,0
+LEAD00023,Cold Outreach,Product Launch,2025-07-06,0
+LEAD00024,Referral,Brand Awareness,2025-06-23,0
+LEAD00025,Paid Search,Competitor Conquest,2025-12-26,0
+LEAD00026,Paid Search,Brand Awareness,2026-01-27,0
+LEAD00027,LinkedIn,Q1 Spring Push,2025-05-25,0
+LEAD00028,Organic Search,Retention Drive,2025-09-13,0
+LEAD00029,Organic Search,Product Launch,2025-10-15,1
+LEAD00030,Referral,Competitor Conquest,2025-10-25,0
+LEAD00031,Referral,Q1 Spring Push,2025-08-12,0
+LEAD00032,Organic Search,Competitor Conquest,2025-06-04,0
+LEAD00033,Organic Search,Competitor Conquest,2025-07-11,0
+LEAD00034,LinkedIn,Q1 Spring Push,2026-03-12,0
+LEAD00035,LinkedIn,Competitor Conquest,2026-05-10,0
+LEAD00036,Paid Search,Brand Awareness,2025-05-31,1
+LEAD00037,Cold Outreach,Q1 Spring Push,2025-07-04,0
+LEAD00038,Referral,Product Launch,2026-01-15,0
+LEAD00039,Cold Outreach,Q1 Spring Push,2025-12-22,0
+LEAD00040,LinkedIn,Retention Drive,2026-01-27,0
+LEAD00041,Organic Search,Competitor Conquest,2026-03-19,0
+LEAD00042,Cold Outreach,Competitor Conquest,2026-02-16,0
+LEAD00043,Referral,Retention Drive,2025-06-04,0
+LEAD00044,Event,Q1 Spring Push,2025-07-17,0
+LEAD00045,Organic Search,Brand Awareness,2025-07-27,1
+LEAD00046,Cold Outreach,Brand Awareness,2026-02-05,0
+LEAD00047,Cold Outreach,Retention Drive,2025-07-04,1
+LEAD00048,Paid Search,Competitor Conquest,2026-05-13,0
+LEAD00049,Cold Outreach,Q1 Spring Push,2025-11-30,0
+LEAD00050,LinkedIn,Brand Awareness,2026-03-13,0
+LEAD00051,Event,Brand Awareness,2025-08-23,0
+LEAD00052,Event,Product Launch,2026-04-20,0
+LEAD00053,Paid Search,Competitor Conquest,2025-12-04,0
+LEAD00054,Organic Search,Q1 Spring Push,2025-07-26,1
+LEAD00055,Event,Product Launch,2025-05-26,0
+LEAD00056,LinkedIn,Product Launch,2026-02-03,1
+LEAD00057,Organic Search,Q1 Spring Push,2026-04-30,0
+LEAD00058,LinkedIn,Retention Drive,2025-06-28,0
+LEAD00059,Cold Outreach,Product Launch,2026-03-20,0
+LEAD00060,LinkedIn,Q1 Spring Push,2025-11-25,0
+LEAD00061,Referral,Q1 Spring Push,2025-07-11,1
+LEAD00062,Referral,Competitor Conquest,2025-07-22,0
+LEAD00063,Organic Search,Q1 Spring Push,2025-11-02,0
+LEAD00064,Paid Search,Q1 Spring Push,2026-03-10,0
+LEAD00065,Organic Search,Q1 Spring Push,2025-12-11,0
+LEAD00066,Referral,Q1 Spring Push,2025-06-02,0
+LEAD00067,Organic Search,Competitor Conquest,2025-10-21,1
+LEAD00068,Organic Search,Product Launch,2025-07-12,0
+LEAD00069,Event,Competitor Conquest,2025-10-30,0
+LEAD00070,LinkedIn,Retention Drive,2025-07-01,0
+LEAD00071,Organic Search,Q1 Spring Push,2025-09-24,0
+LEAD00072,Referral,Q1 Spring Push,2026-03-23,0
+LEAD00073,Organic Search,Retention Drive,2026-02-04,0
+LEAD00074,Cold Outreach,Retention Drive,2026-01-03,0
+LEAD00075,LinkedIn,Retention Drive,2025-09-29,0
+LEAD00076,Paid Search,Q1 Spring Push,2026-04-14,1
+LEAD00077,Organic Search,Retention Drive,2025-06-15,0
+LEAD00078,Event,Retention Drive,2026-03-01,0
+LEAD00079,Organic Search,Brand Awareness,2025-12-16,0
+LEAD00080,LinkedIn,Retention Drive,2025-06-12,1
+LEAD00081,Event,Retention Drive,2025-08-01,1
+LEAD00082,Cold Outreach,Product Launch,2026-02-01,0
+LEAD00083,Referral,Q1 Spring Push,2025-11-21,1
+LEAD00084,Paid Search,Competitor Conquest,2025-07-11,0
+LEAD00085,Event,Retention Drive,2025-11-24,0
+LEAD00086,Referral,Product Launch,2026-03-22,0
+LEAD00087,LinkedIn,Q1 Spring Push,2025-09-03,0
+LEAD00088,Paid Search,Product Launch,2025-05-25,1
+LEAD00089,Paid Search,Product Launch,2025-09-10,0
+LEAD00090,Event,Brand Awareness,2025-11-03,0
+LEAD00091,Paid Search,Q1 Spring Push,2025-11-10,0
+LEAD00092,Organic Search,Retention Drive,2026-03-17,0
+LEAD00093,Organic Search,Retention Drive,2025-11-11,0
+LEAD00094,Organic Search,Product Launch,2025-12-20,1
+LEAD00095,Paid Search,Product Launch,2025-11-22,0
+LEAD00096,Cold Outreach,Product Launch,2026-05-03,0
+LEAD00097,Paid Search,Q1 Spring Push,2026-05-04,0
+LEAD00098,Event,Q1 Spring Push,2025-11-22,1
+LEAD00099,Cold Outreach,Product Launch,2025-11-06,0
+LEAD00100,Event,Retention Drive,2025-06-29,0
+LEAD00101,Cold Outreach,Q1 Spring Push,2026-03-15,0
+LEAD00102,Organic Search,Product Launch,2026-02-05,0
+LEAD00103,Referral,Brand Awareness,2025-07-12,0
+LEAD00104,LinkedIn,Q1 Spring Push,2025-07-03,0
+LEAD00105,Referral,Brand Awareness,2026-02-27,0
+LEAD00106,Paid Search,Brand Awareness,2026-03-11,1
+LEAD00107,Cold Outreach,Competitor Conquest,2026-01-27,0
+LEAD00108,Event,Retention Drive,2026-04-11,0
+LEAD00109,Paid Search,Retention Drive,2025-11-04,0
+LEAD00110,LinkedIn,Brand Awareness,2025-05-15,0
+LEAD00111,LinkedIn,Competitor Conquest,2025-09-14,0
+LEAD00112,Paid Search,Retention Drive,2025-06-16,0
+LEAD00113,Organic Search,Product Launch,2025-09-25,0
+LEAD00114,Cold Outreach,Brand Awareness,2025-10-09,0
+LEAD00115,Cold Outreach,Brand Awareness,2026-01-04,0
+LEAD00116,Referral,Q1 Spring Push,2025-12-14,1
+LEAD00117,LinkedIn,Retention Drive,2026-04-23,0
+LEAD00118,LinkedIn,Competitor Conquest,2025-09-26,0
+LEAD00119,LinkedIn,Competitor Conquest,2025-12-03,0
+LEAD00120,Paid Search,Competitor Conquest,2026-01-15,1
+LEAD00121,Paid Search,Q1 Spring Push,2025-12-15,1
+LEAD00122,Cold Outreach,Q1 Spring Push,2025-12-24,0
+LEAD00123,Cold Outreach,Q1 Spring Push,2025-11-11,0
+LEAD00124,Organic Search,Product Launch,2025-06-03,0
+LEAD00125,Paid Search,Brand Awareness,2026-02-06,0
+LEAD00126,Event,Retention Drive,2026-01-01,0
+LEAD00127,Organic Search,Brand Awareness,2025-10-20,0
+LEAD00128,Cold Outreach,Q1 Spring Push,2025-09-15,0
+LEAD00129,Referral,Product Launch,2025-10-23,0
+LEAD00130,Paid Search,Product Launch,2025-09-14,0
+LEAD00131,Paid Search,Retention Drive,2025-09-17,0
+LEAD00132,Event,Q1 Spring Push,2025-12-05,0
+LEAD00133,Cold Outreach,Competitor Conquest,2026-01-27,0
+LEAD00134,LinkedIn,Q1 Spring Push,2025-11-04,0
+LEAD00135,Organic Search,Brand Awareness,2026-05-10,0
+LEAD00136,LinkedIn,Brand Awareness,2025-11-22,0
+LEAD00137,Paid Search,Competitor Conquest,2025-05-26,0
+LEAD00138,Referral,Q1 Spring Push,2025-07-28,0
+LEAD00139,Event,Product Launch,2025-11-26,0
+LEAD00140,Referral,Retention Drive,2025-07-25,0
+LEAD00141,Cold Outreach,Product Launch,2025-10-26,0
+LEAD00142,Organic Search,Competitor Conquest,2026-03-20,0
+LEAD00143,Paid Search,Brand Awareness,2026-03-28,0
+LEAD00144,Paid Search,Product Launch,2026-04-28,0
+LEAD00145,Event,Q1 Spring Push,2026-02-08,0
+LEAD00146,Paid Search,Competitor Conquest,2025-12-20,0
+LEAD00147,Paid Search,Retention Drive,2026-04-09,0
+LEAD00148,LinkedIn,Q1 Spring Push,2026-02-16,0
+LEAD00149,Paid Search,Competitor Conquest,2026-02-23,0
+LEAD00150,Cold Outreach,Competitor Conquest,2025-09-12,0
+LEAD00151,Event,Product Launch,2026-03-09,0
+LEAD00152,Cold Outreach,Competitor Conquest,2026-02-22,0
+LEAD00153,Referral,Retention Drive,2026-01-31,0
+LEAD00154,Referral,Brand Awareness,2026-01-31,0
+LEAD00155,Organic Search,Q1 Spring Push,2025-10-22,1
+LEAD00156,Referral,Brand Awareness,2025-07-27,1
+LEAD00157,Cold Outreach,Retention Drive,2026-04-24,0
+LEAD00158,Event,Competitor Conquest,2025-11-18,0
+LEAD00159,Event,Brand Awareness,2025-10-26,0
+LEAD00160,Referral,Product Launch,2025-10-14,0
+LEAD00161,Paid Search,Competitor Conquest,2025-09-22,0
+LEAD00162,LinkedIn,Retention Drive,2026-03-27,0
+LEAD00163,LinkedIn,Product Launch,2026-02-23,0
+LEAD00164,Paid Search,Brand Awareness,2025-06-07,0
+LEAD00165,Cold Outreach,Product Launch,2025-09-04,0
+LEAD00166,LinkedIn,Q1 Spring Push,2025-11-07,0
+LEAD00167,Organic Search,Brand Awareness,2025-10-17,1
+LEAD00168,LinkedIn,Retention Drive,2026-04-22,0
+LEAD00169,LinkedIn,Competitor Conquest,2025-10-31,1
+LEAD00170,LinkedIn,Product Launch,2025-10-23,0
+LEAD00171,Organic Search,Product Launch,2025-11-28,0
+LEAD00172,Event,Competitor Conquest,2026-04-10,0
+LEAD00173,Organic Search,Competitor Conquest,2026-03-04,0
+LEAD00174,LinkedIn,Product Launch,2026-02-16,0
+LEAD00175,Cold Outreach,Product Launch,2025-12-15,0
+LEAD00176,Organic Search,Product Launch,2026-04-05,0
+LEAD00177,Event,Brand Awareness,2026-02-25,1
+LEAD00178,LinkedIn,Q1 Spring Push,2025-06-03,0
+LEAD00179,Referral,Q1 Spring Push,2025-06-23,0
+LEAD00180,Event,Q1 Spring Push,2025-10-27,0
+LEAD00181,Event,Retention Drive,2026-05-12,0
+LEAD00182,Organic Search,Product Launch,2026-01-07,0
+LEAD00183,LinkedIn,Q1 Spring Push,2026-05-06,0
+LEAD00184,LinkedIn,Brand Awareness,2026-02-05,0
+LEAD00185,Event,Q1 Spring Push,2025-06-08,1
+LEAD00186,Paid Search,Competitor Conquest,2025-08-25,0
+LEAD00187,Organic Search,Retention Drive,2025-06-28,0
+LEAD00188,Paid Search,Retention Drive,2025-10-24,0
+LEAD00189,Cold Outreach,Product Launch,2026-03-21,0
+LEAD00190,LinkedIn,Competitor Conquest,2025-06-14,0
+LEAD00191,Paid Search,Competitor Conquest,2026-01-22,0
+LEAD00192,Organic Search,Retention Drive,2025-11-07,0
+LEAD00193,Organic Search,Competitor Conquest,2025-12-11,0
+LEAD00194,Event,Q1 Spring Push,2025-05-15,0
+LEAD00195,Referral,Retention Drive,2026-02-16,0
+LEAD00196,Paid Search,Brand Awareness,2025-06-25,1
+LEAD00197,Event,Product Launch,2025-11-25,0
+LEAD00198,Paid Search,Brand Awareness,2025-06-07,0
+LEAD00199,LinkedIn,Retention Drive,2025-07-19,0
+LEAD00200,LinkedIn,Product Launch,2025-08-30,0
+LEAD00201,Referral,Product Launch,2026-05-04,0
+LEAD00202,Referral,Brand Awareness,2026-01-13,0
+LEAD00203,Event,Retention Drive,2026-04-04,0
+LEAD00204,Organic Search,Brand Awareness,2026-01-31,0
+LEAD00205,Organic Search,Q1 Spring Push,2026-01-13,0
+LEAD00206,Cold Outreach,Competitor Conquest,2025-11-27,0
+LEAD00207,Organic Search,Q1 Spring Push,2025-08-21,0
+LEAD00208,Event,Brand Awareness,2026-05-02,0
+LEAD00209,Paid Search,Brand Awareness,2026-01-10,0
+LEAD00210,Paid Search,Product Launch,2025-05-28,1
+LEAD00211,Event,Competitor Conquest,2025-08-21,1
+LEAD00212,Paid Search,Q1 Spring Push,2026-04-11,0
+LEAD00213,Cold Outreach,Product Launch,2026-04-18,1
+LEAD00214,Referral,Product Launch,2026-03-11,1
+LEAD00215,Organic Search,Product Launch,2026-01-14,0
+LEAD00216,Referral,Competitor Conquest,2025-12-06,0
+LEAD00217,Organic Search,Competitor Conquest,2026-02-13,1
+LEAD00218,Referral,Retention Drive,2025-09-27,1
+LEAD00219,Cold Outreach,Competitor Conquest,2026-04-04,0
+LEAD00220,Cold Outreach,Competitor Conquest,2026-02-18,0
+LEAD00221,LinkedIn,Retention Drive,2025-10-05,0
+LEAD00222,Event,Competitor Conquest,2026-05-04,0
+LEAD00223,Event,Q1 Spring Push,2025-12-12,0
+LEAD00224,Referral,Product Launch,2026-01-03,1
+LEAD00225,LinkedIn,Brand Awareness,2025-11-03,0
+LEAD00226,Referral,Brand Awareness,2026-03-06,0
+LEAD00227,Event,Product Launch,2026-05-12,1
+LEAD00228,Organic Search,Brand Awareness,2025-09-05,0
+LEAD00229,LinkedIn,Competitor Conquest,2025-11-04,0
+LEAD00230,LinkedIn,Retention Drive,2026-04-08,0
+LEAD00231,LinkedIn,Q1 Spring Push,2025-10-29,1
+LEAD00232,Cold Outreach,Competitor Conquest,2026-01-04,0
+LEAD00233,Event,Brand Awareness,2025-08-27,0
+LEAD00234,Event,Brand Awareness,2025-05-23,0
+LEAD00235,Organic Search,Competitor Conquest,2026-01-08,0
+LEAD00236,Paid Search,Brand Awareness,2025-06-25,1
+LEAD00237,Event,Product Launch,2026-01-01,1
+LEAD00238,Referral,Product Launch,2026-01-04,0
+LEAD00239,Paid Search,Product Launch,2026-05-08,0
+LEAD00240,Organic Search,Competitor Conquest,2025-10-23,1
+LEAD00241,Event,Q1 Spring Push,2025-08-22,0
+LEAD00242,Cold Outreach,Product Launch,2025-10-08,0
+LEAD00243,Paid Search,Retention Drive,2025-06-11,0
+LEAD00244,Cold Outreach,Competitor Conquest,2026-03-30,0
+LEAD00245,Organic Search,Brand Awareness,2026-03-02,0
+LEAD00246,Paid Search,Competitor Conquest,2025-05-22,0
+LEAD00247,Paid Search,Competitor Conquest,2026-05-14,0
+LEAD00248,Organic Search,Competitor Conquest,2025-08-19,0
+LEAD00249,LinkedIn,Competitor Conquest,2026-02-16,0
+LEAD00250,Paid Search,Product Launch,2026-02-02,0
+LEAD00251,LinkedIn,Q1 Spring Push,2025-09-26,0
+LEAD00252,Referral,Product Launch,2026-04-14,1
+LEAD00253,Event,Product Launch,2026-01-02,0
+LEAD00254,Cold Outreach,Competitor Conquest,2025-06-28,0
+LEAD00255,Cold Outreach,Product Launch,2026-04-04,0
+LEAD00256,Paid Search,Brand Awareness,2026-04-12,0
+LEAD00257,LinkedIn,Competitor Conquest,2025-09-08,0
+LEAD00258,Event,Q1 Spring Push,2025-12-29,1
+LEAD00259,Event,Retention Drive,2026-04-23,1
+LEAD00260,Organic Search,Q1 Spring Push,2025-11-03,0
+LEAD00261,Referral,Brand Awareness,2025-09-08,0
+LEAD00262,LinkedIn,Competitor Conquest,2025-11-23,0
+LEAD00263,LinkedIn,Brand Awareness,2026-01-12,0
+LEAD00264,Cold Outreach,Competitor Conquest,2025-07-06,0
+LEAD00265,Organic Search,Brand Awareness,2026-03-24,0
+LEAD00266,Organic Search,Competitor Conquest,2026-03-04,0
+LEAD00267,Organic Search,Retention Drive,2025-12-22,1
+LEAD00268,Cold Outreach,Product Launch,2025-11-07,0
+LEAD00269,LinkedIn,Competitor Conquest,2025-08-24,0
+LEAD00270,LinkedIn,Brand Awareness,2026-05-06,0
+LEAD00271,Referral,Brand Awareness,2025-06-01,0
+LEAD00272,LinkedIn,Competitor Conquest,2025-07-05,0
+LEAD00273,Event,Competitor Conquest,2025-06-11,0
+LEAD00274,Cold Outreach,Competitor Conquest,2025-12-15,0
+LEAD00275,Referral,Retention Drive,2025-07-26,0
+LEAD00276,Event,Q1 Spring Push,2026-03-10,0
+LEAD00277,LinkedIn,Retention Drive,2025-09-17,1
+LEAD00278,Paid Search,Q1 Spring Push,2025-09-10,0
+LEAD00279,Referral,Product Launch,2026-02-16,1
+LEAD00280,Event,Q1 Spring Push,2026-03-21,0
+LEAD00281,LinkedIn,Product Launch,2025-11-28,0
+LEAD00282,Cold Outreach,Product Launch,2026-01-03,0
+LEAD00283,Referral,Q1 Spring Push,2025-06-08,0
+LEAD00284,Organic Search,Competitor Conquest,2026-03-29,0
+LEAD00285,Event,Product Launch,2025-07-24,0
+LEAD00286,Event,Brand Awareness,2025-11-02,0
+LEAD00287,Cold Outreach,Competitor Conquest,2025-06-14,0
+LEAD00288,Referral,Competitor Conquest,2026-01-15,0
+LEAD00289,Paid Search,Q1 Spring Push,2026-03-18,1
+LEAD00290,Organic Search,Product Launch,2026-03-16,0
+LEAD00291,Referral,Brand Awareness,2025-11-01,1
+LEAD00292,Referral,Q1 Spring Push,2025-07-16,1
+LEAD00293,Referral,Competitor Conquest,2025-12-02,0
+LEAD00294,Event,Product Launch,2025-08-21,0
+LEAD00295,Referral,Q1 Spring Push,2025-10-24,0
+LEAD00296,Organic Search,Brand Awareness,2026-03-01,0
+LEAD00297,Event,Product Launch,2025-09-01,0
+LEAD00298,Event,Brand Awareness,2026-03-01,1
+LEAD00299,Event,Q1 Spring Push,2025-07-12,0
+LEAD00300,Paid Search,Q1 Spring Push,2025-12-25,0
+LEAD00301,Cold Outreach,Competitor Conquest,2025-06-25,0
+LEAD00302,Event,Competitor Conquest,2026-04-14,0
+LEAD00303,Cold Outreach,Product Launch,2026-01-19,0
+LEAD00304,Event,Product Launch,2025-09-07,1
+LEAD00305,Event,Product Launch,2026-05-03,0
+LEAD00306,Referral,Competitor Conquest,2025-11-17,0
+LEAD00307,Event,Retention Drive,2025-12-21,0
+LEAD00308,Paid Search,Retention Drive,2025-10-25,0
+LEAD00309,Organic Search,Retention Drive,2026-04-17,0
+LEAD00310,Cold Outreach,Competitor Conquest,2025-06-13,0
+LEAD00311,Organic Search,Competitor Conquest,2025-12-16,1
+LEAD00312,Cold Outreach,Product Launch,2025-06-15,0
+LEAD00313,Organic Search,Retention Drive,2026-03-23,0
+LEAD00314,Event,Product Launch,2025-11-03,0
+LEAD00315,Cold Outreach,Product Launch,2026-04-16,0
+LEAD00316,Organic Search,Product Launch,2026-04-18,0
+LEAD00317,Organic Search,Brand Awareness,2025-07-15,0
+LEAD00318,LinkedIn,Competitor Conquest,2026-01-09,1
+LEAD00319,Organic Search,Competitor Conquest,2025-12-11,0
+LEAD00320,Event,Competitor Conquest,2025-05-25,0
+LEAD00321,Cold Outreach,Q1 Spring Push,2025-09-19,0
+LEAD00322,Cold Outreach,Brand Awareness,2025-06-25,0
+LEAD00323,Referral,Q1 Spring Push,2026-03-16,0
+LEAD00324,Organic Search,Retention Drive,2026-01-19,0
+LEAD00325,Organic Search,Retention Drive,2025-09-11,0
+LEAD00326,Paid Search,Retention Drive,2026-02-11,0
+LEAD00327,LinkedIn,Competitor Conquest,2025-12-13,0
+LEAD00328,Referral,Q1 Spring Push,2025-05-14,1
+LEAD00329,Cold Outreach,Product Launch,2025-10-19,0
+LEAD00330,Event,Retention Drive,2025-08-13,1
+LEAD00331,Event,Q1 Spring Push,2025-08-22,0
+LEAD00332,Cold Outreach,Q1 Spring Push,2026-01-28,0
+LEAD00333,Cold Outreach,Product Launch,2025-07-12,0
+LEAD00334,Event,Competitor Conquest,2025-12-05,1
+LEAD00335,Organic Search,Product Launch,2025-06-14,1
+LEAD00336,Organic Search,Q1 Spring Push,2026-04-01,0
+LEAD00337,Cold Outreach,Brand Awareness,2025-08-09,0
+LEAD00338,Paid Search,Q1 Spring Push,2026-01-07,0
+LEAD00339,Paid Search,Retention Drive,2025-12-15,0
+LEAD00340,Referral,Retention Drive,2025-09-05,0
+LEAD00341,Event,Brand Awareness,2025-07-08,0
+LEAD00342,Referral,Q1 Spring Push,2025-06-09,1
+LEAD00343,Event,Product Launch,2026-03-03,1
+LEAD00344,Paid Search,Product Launch,2025-07-10,0
+LEAD00345,Referral,Brand Awareness,2026-03-10,0
+LEAD00346,Event,Retention Drive,2026-01-04,0
+LEAD00347,Paid Search,Product Launch,2025-10-22,0
+LEAD00348,LinkedIn,Competitor Conquest,2025-05-24,0
+LEAD00349,Organic Search,Brand Awareness,2025-06-24,0
+LEAD00350,Event,Brand Awareness,2025-07-30,1
+LEAD00351,Referral,Retention Drive,2026-02-20,0
+LEAD00352,LinkedIn,Competitor Conquest,2025-11-01,1
+LEAD00353,Organic Search,Q1 Spring Push,2025-12-27,0
+LEAD00354,Organic Search,Retention Drive,2025-10-18,1
+LEAD00355,Organic Search,Brand Awareness,2025-11-25,0
+LEAD00356,Event,Product Launch,2025-12-25,1
+LEAD00357,Organic Search,Product Launch,2025-11-02,0
+LEAD00358,Cold Outreach,Q1 Spring Push,2026-02-14,0
+LEAD00359,Referral,Retention Drive,2025-09-06,0
+LEAD00360,Organic Search,Retention Drive,2025-12-21,0
+LEAD00361,Referral,Q1 Spring Push,2026-02-16,0
+LEAD00362,Paid Search,Product Launch,2025-11-19,0
+LEAD00363,Event,Retention Drive,2025-08-05,0
+LEAD00364,Referral,Competitor Conquest,2025-07-15,0
+LEAD00365,Organic Search,Retention Drive,2025-05-14,1
+LEAD00366,Organic Search,Competitor Conquest,2025-07-28,1
+LEAD00367,Event,Brand Awareness,2025-05-17,1
+LEAD00368,Event,Competitor Conquest,2025-05-18,0
+LEAD00369,LinkedIn,Brand Awareness,2025-09-17,0
+LEAD00370,Referral,Competitor Conquest,2025-08-21,1
+LEAD00371,Cold Outreach,Product Launch,2025-12-09,0
+LEAD00372,Referral,Brand Awareness,2025-10-18,1
+LEAD00373,Event,Q1 Spring Push,2026-04-05,0
+LEAD00374,Event,Product Launch,2025-07-24,0
+LEAD00375,Organic Search,Retention Drive,2025-09-04,0
+LEAD00376,Event,Competitor Conquest,2025-06-02,1
+LEAD00377,Referral,Competitor Conquest,2025-09-02,0
+LEAD00378,Referral,Retention Drive,2025-05-22,0
+LEAD00379,Organic Search,Product Launch,2026-05-11,1
+LEAD00380,Event,Brand Awareness,2026-01-09,0
+LEAD00381,Cold Outreach,Retention Drive,2025-05-29,0
+LEAD00382,Referral,Product Launch,2025-06-03,0
+LEAD00383,Cold Outreach,Product Launch,2026-02-14,0
+LEAD00384,Organic Search,Retention Drive,2025-11-15,0
+LEAD00385,Cold Outreach,Competitor Conquest,2026-02-16,0
+LEAD00386,LinkedIn,Product Launch,2025-08-11,1
+LEAD00387,Cold Outreach,Brand Awareness,2025-12-12,0
+LEAD00388,LinkedIn,Q1 Spring Push,2025-06-25,0
+LEAD00389,Referral,Brand Awareness,2025-06-19,1
+LEAD00390,Referral,Competitor Conquest,2025-07-02,0
+LEAD00391,Cold Outreach,Q1 Spring Push,2025-07-03,1
+LEAD00392,LinkedIn,Q1 Spring Push,2026-05-12,0
+LEAD00393,LinkedIn,Competitor Conquest,2025-11-14,0
+LEAD00394,Organic Search,Product Launch,2026-04-01,0
+LEAD00395,Referral,Competitor Conquest,2026-03-12,0
+LEAD00396,Cold Outreach,Brand Awareness,2026-01-19,1
+LEAD00397,LinkedIn,Brand Awareness,2025-10-07,0
+LEAD00398,Cold Outreach,Brand Awareness,2026-03-20,0
+LEAD00399,Cold Outreach,Competitor Conquest,2026-02-21,0
+LEAD00400,Organic Search,Q1 Spring Push,2025-11-12,0
+LEAD00401,Cold Outreach,Q1 Spring Push,2026-02-06,0
+LEAD00402,Paid Search,Competitor Conquest,2025-11-26,1
+LEAD00403,Cold Outreach,Product Launch,2025-09-11,0
+LEAD00404,Cold Outreach,Q1 Spring Push,2025-10-11,0
+LEAD00405,LinkedIn,Product Launch,2025-11-29,0
+LEAD00406,Event,Competitor Conquest,2025-08-31,0
+LEAD00407,Event,Competitor Conquest,2026-03-08,0
+LEAD00408,Organic Search,Q1 Spring Push,2026-03-11,1
+LEAD00409,Organic Search,Product Launch,2026-04-18,0
+LEAD00410,Event,Retention Drive,2026-05-10,0
+LEAD00411,LinkedIn,Competitor Conquest,2026-04-02,0
+LEAD00412,Event,Product Launch,2025-08-26,1
+LEAD00413,Paid Search,Q1 Spring Push,2025-12-31,0
+LEAD00414,Cold Outreach,Competitor Conquest,2026-02-02,0
+LEAD00415,LinkedIn,Q1 Spring Push,2025-05-21,0
+LEAD00416,Event,Product Launch,2025-07-16,0
+LEAD00417,Referral,Q1 Spring Push,2026-03-08,1
+LEAD00418,LinkedIn,Product Launch,2026-03-01,0
+LEAD00419,LinkedIn,Q1 Spring Push,2026-04-18,0
+LEAD00420,LinkedIn,Product Launch,2026-01-21,0
+LEAD00421,LinkedIn,Retention Drive,2025-10-08,0
+LEAD00422,Referral,Brand Awareness,2025-11-09,1
+LEAD00423,Paid Search,Competitor Conquest,2026-01-08,0
+LEAD00424,Paid Search,Q1 Spring Push,2026-05-14,1
+LEAD00425,Organic Search,Product Launch,2025-12-19,0
+LEAD00426,LinkedIn,Q1 Spring Push,2025-10-06,0
+LEAD00427,Paid Search,Brand Awareness,2025-11-24,0
+LEAD00428,Paid Search,Q1 Spring Push,2025-05-30,1
+LEAD00429,Referral,Brand Awareness,2025-11-11,0
+LEAD00430,Event,Retention Drive,2025-08-17,0
+LEAD00431,Referral,Brand Awareness,2026-01-27,1
+LEAD00432,Referral,Q1 Spring Push,2026-03-09,1
+LEAD00433,Referral,Q1 Spring Push,2025-07-18,0
+LEAD00434,Cold Outreach,Product Launch,2026-02-05,0
+LEAD00435,Event,Q1 Spring Push,2025-08-08,0
+LEAD00436,Referral,Competitor Conquest,2026-01-31,1
+LEAD00437,Referral,Product Launch,2026-02-05,1
+LEAD00438,LinkedIn,Retention Drive,2025-11-18,0
+LEAD00439,Cold Outreach,Q1 Spring Push,2025-10-03,0
+LEAD00440,Organic Search,Retention Drive,2026-05-03,0
+LEAD00441,Paid Search,Product Launch,2025-12-17,0
+LEAD00442,Organic Search,Product Launch,2025-10-23,0
+LEAD00443,LinkedIn,Retention Drive,2026-04-06,0
+LEAD00444,Organic Search,Competitor Conquest,2025-07-31,0
+LEAD00445,Event,Brand Awareness,2026-01-29,0
+LEAD00446,Paid Search,Product Launch,2025-07-15,0
+LEAD00447,Event,Retention Drive,2025-09-23,0
+LEAD00448,Referral,Brand Awareness,2025-12-10,0
+LEAD00449,Cold Outreach,Brand Awareness,2025-08-05,0
+LEAD00450,Organic Search,Retention Drive,2026-01-13,0
+LEAD00451,Paid Search,Brand Awareness,2026-03-07,0
+LEAD00452,Paid Search,Product Launch,2026-01-27,0
+LEAD00453,Referral,Brand Awareness,2025-06-25,1
+LEAD00454,Referral,Q1 Spring Push,2025-05-18,0
+LEAD00455,Cold Outreach,Product Launch,2025-10-17,0
+LEAD00456,Cold Outreach,Q1 Spring Push,2025-06-28,0
+LEAD00457,Event,Product Launch,2025-12-22,0
+LEAD00458,Paid Search,Retention Drive,2025-06-12,0
+LEAD00459,Cold Outreach,Retention Drive,2026-03-21,0
+LEAD00460,Event,Brand Awareness,2025-06-28,0
+LEAD00461,Referral,Competitor Conquest,2026-01-22,0
+LEAD00462,Paid Search,Competitor Conquest,2026-02-24,0
+LEAD00463,LinkedIn,Competitor Conquest,2025-11-07,0
+LEAD00464,Organic Search,Competitor Conquest,2026-02-11,0
+LEAD00465,LinkedIn,Product Launch,2026-02-07,0
+LEAD00466,Referral,Product Launch,2025-06-17,0
+LEAD00467,Paid Search,Product Launch,2025-10-25,0
+LEAD00468,Event,Product Launch,2026-04-08,1
+LEAD00469,LinkedIn,Competitor Conquest,2026-03-24,0
+LEAD00470,Event,Q1 Spring Push,2025-07-10,1
+LEAD00471,Organic Search,Q1 Spring Push,2026-05-08,0
+LEAD00472,Event,Q1 Spring Push,2026-03-08,0
+LEAD00473,Paid Search,Product Launch,2025-06-27,1
+LEAD00474,Referral,Q1 Spring Push,2026-03-21,0
+LEAD00475,Referral,Q1 Spring Push,2026-01-31,0
+LEAD00476,Organic Search,Competitor Conquest,2026-02-20,0
+LEAD00477,Paid Search,Product Launch,2026-04-16,0
+LEAD00478,Referral,Retention Drive,2026-03-12,1
+LEAD00479,Organic Search,Retention Drive,2025-12-14,1
+LEAD00480,Organic Search,Competitor Conquest,2026-03-03,0
+LEAD00481,Organic Search,Product Launch,2025-10-08,0
+LEAD00482,LinkedIn,Brand Awareness,2026-01-19,0
+LEAD00483,Cold Outreach,Q1 Spring Push,2025-09-05,0
+LEAD00484,Paid Search,Q1 Spring Push,2025-12-21,1
+LEAD00485,LinkedIn,Q1 Spring Push,2025-11-11,0
+LEAD00486,Cold Outreach,Q1 Spring Push,2025-07-09,0
+LEAD00487,Organic Search,Brand Awareness,2025-07-11,0
+LEAD00488,Paid Search,Brand Awareness,2025-06-29,0
+LEAD00489,Event,Q1 Spring Push,2025-12-27,0
+LEAD00490,Cold Outreach,Brand Awareness,2025-05-15,0
+LEAD00491,Event,Product Launch,2025-06-13,0
+LEAD00492,Organic Search,Competitor Conquest,2025-09-12,1
+LEAD00493,Event,Competitor Conquest,2025-12-23,1
+LEAD00494,Organic Search,Product Launch,2026-02-10,0
+LEAD00495,Event,Competitor Conquest,2025-10-09,0
+LEAD00496,LinkedIn,Retention Drive,2025-06-23,0
+LEAD00497,LinkedIn,Product Launch,2025-10-30,0
+LEAD00498,LinkedIn,Retention Drive,2025-09-04,0
+LEAD00499,Referral,Competitor Conquest,2026-04-02,0
+LEAD00500,Referral,Retention Drive,2025-05-24,0
+LEAD00501,Event,Q1 Spring Push,2026-01-14,1
+LEAD00502,LinkedIn,Q1 Spring Push,2025-11-10,0
+LEAD00503,Referral,Q1 Spring Push,2026-04-14,0
+LEAD00504,Cold Outreach,Product Launch,2025-12-15,0
+LEAD00505,LinkedIn,Retention Drive,2025-10-11,0
+LEAD00506,Paid Search,Q1 Spring Push,2026-03-05,0
+LEAD00507,Organic Search,Product Launch,2025-11-02,0
+LEAD00508,Event,Competitor Conquest,2025-11-05,0
+LEAD00509,Organic Search,Retention Drive,2026-04-07,1
+LEAD00510,LinkedIn,Product Launch,2026-04-29,0
+LEAD00511,Organic Search,Product Launch,2026-04-05,1
+LEAD00512,Organic Search,Competitor Conquest,2026-02-27,0
+LEAD00513,Event,Product Launch,2025-08-17,0
+LEAD00514,Event,Competitor Conquest,2025-11-23,0
+LEAD00515,LinkedIn,Q1 Spring Push,2025-12-19,0
+LEAD00516,Organic Search,Q1 Spring Push,2025-07-09,1
+LEAD00517,Event,Q1 Spring Push,2025-10-24,0
+LEAD00518,Event,Competitor Conquest,2025-08-04,0
+LEAD00519,Event,Retention Drive,2025-08-31,0
+LEAD00520,Paid Search,Product Launch,2025-12-26,0
+LEAD00521,Cold Outreach,Product Launch,2026-01-26,0
+LEAD00522,LinkedIn,Competitor Conquest,2026-02-09,1
+LEAD00523,Event,Retention Drive,2026-04-05,0
+LEAD00524,Event,Brand Awareness,2025-06-14,0
+LEAD00525,Referral,Product Launch,2026-04-17,0
+LEAD00526,Event,Product Launch,2025-12-27,0
+LEAD00527,Organic Search,Retention Drive,2025-11-24,1
+LEAD00528,Organic Search,Retention Drive,2026-03-21,0
+LEAD00529,Organic Search,Brand Awareness,2026-02-07,0
+LEAD00530,Referral,Q1 Spring Push,2026-01-11,0
+LEAD00531,Paid Search,Retention Drive,2026-04-22,0
+LEAD00532,Referral,Q1 Spring Push,2026-04-20,0
+LEAD00533,Paid Search,Q1 Spring Push,2025-11-13,0
+LEAD00534,Event,Retention Drive,2026-02-04,0
+LEAD00535,Paid Search,Brand Awareness,2026-03-09,0
+LEAD00536,Event,Competitor Conquest,2025-08-30,1
+LEAD00537,Organic Search,Product Launch,2026-05-02,0
+LEAD00538,Referral,Retention Drive,2026-04-25,0
+LEAD00539,Paid Search,Competitor Conquest,2026-04-04,0
+LEAD00540,Cold Outreach,Product Launch,2026-01-24,0
+LEAD00541,Event,Product Launch,2025-08-31,0
+LEAD00542,Referral,Retention Drive,2025-11-21,0
+LEAD00543,LinkedIn,Brand Awareness,2025-11-11,1
+LEAD00544,Referral,Q1 Spring Push,2025-05-15,0
+LEAD00545,Event,Product Launch,2025-07-06,0
+LEAD00546,Referral,Retention Drive,2025-06-27,0
+LEAD00547,Cold Outreach,Q1 Spring Push,2026-03-02,0
+LEAD00548,Event,Q1 Spring Push,2025-09-01,0
+LEAD00549,Organic Search,Brand Awareness,2026-02-21,0
+LEAD00550,Organic Search,Brand Awareness,2026-03-30,0
+LEAD00551,Organic Search,Competitor Conquest,2026-01-02,0
+LEAD00552,Cold Outreach,Competitor Conquest,2025-06-16,0
+LEAD00553,Cold Outreach,Retention Drive,2025-09-07,0
+LEAD00554,Organic Search,Competitor Conquest,2025-10-17,0
+LEAD00555,Cold Outreach,Product Launch,2025-10-01,0
+LEAD00556,LinkedIn,Brand Awareness,2025-11-04,0
+LEAD00557,Organic Search,Competitor Conquest,2025-12-31,0
+LEAD00558,Cold Outreach,Q1 Spring Push,2025-07-01,0
+LEAD00559,Cold Outreach,Product Launch,2025-05-21,1
+LEAD00560,Event,Q1 Spring Push,2025-12-17,1
+LEAD00561,LinkedIn,Q1 Spring Push,2026-01-20,0
+LEAD00562,LinkedIn,Q1 Spring Push,2025-11-17,0
+LEAD00563,LinkedIn,Competitor Conquest,2026-03-20,0
+LEAD00564,Organic Search,Competitor Conquest,2025-10-05,0
+LEAD00565,Paid Search,Brand Awareness,2025-11-20,0
+LEAD00566,Cold Outreach,Competitor Conquest,2026-03-17,0
+LEAD00567,Paid Search,Product Launch,2025-09-16,1
+LEAD00568,Organic Search,Retention Drive,2026-04-28,0
+LEAD00569,Cold Outreach,Q1 Spring Push,2025-11-10,0
+LEAD00570,Event,Product Launch,2026-04-17,0
+LEAD00571,Paid Search,Competitor Conquest,2025-12-27,1
+LEAD00572,Paid Search,Product Launch,2026-04-09,0
+LEAD00573,Paid Search,Competitor Conquest,2025-10-12,1
+LEAD00574,Referral,Brand Awareness,2026-02-09,0
+LEAD00575,Event,Competitor Conquest,2025-11-20,1
+LEAD00576,Cold Outreach,Product Launch,2025-11-17,0
+LEAD00577,Cold Outreach,Retention Drive,2025-05-27,0
+LEAD00578,Event,Competitor Conquest,2025-11-14,0
+LEAD00579,Cold Outreach,Q1 Spring Push,2025-07-31,0
+LEAD00580,Event,Q1 Spring Push,2025-06-07,0
+LEAD00581,Referral,Brand Awareness,2026-05-07,1
+LEAD00582,Organic Search,Product Launch,2025-09-01,0
+LEAD00583,Cold Outreach,Competitor Conquest,2025-12-31,0
+LEAD00584,Referral,Competitor Conquest,2026-03-11,1
+LEAD00585,Referral,Retention Drive,2026-03-26,0
+LEAD00586,Organic Search,Product Launch,2025-10-11,0
+LEAD00587,Event,Retention Drive,2025-11-02,0
+LEAD00588,Paid Search,Product Launch,2025-06-01,0
+LEAD00589,Referral,Brand Awareness,2026-05-06,1
+LEAD00590,Paid Search,Q1 Spring Push,2025-05-21,0
+LEAD00591,LinkedIn,Competitor Conquest,2025-10-16,0
+LEAD00592,LinkedIn,Competitor Conquest,2025-08-20,0
+LEAD00593,Cold Outreach,Product Launch,2025-09-22,0
+LEAD00594,LinkedIn,Retention Drive,2026-02-20,0
+LEAD00595,Referral,Competitor Conquest,2025-06-24,0
+LEAD00596,Paid Search,Q1 Spring Push,2026-03-31,0
+LEAD00597,Event,Q1 Spring Push,2025-07-03,1
+LEAD00598,Cold Outreach,Retention Drive,2025-08-09,0
+LEAD00599,Organic Search,Retention Drive,2026-04-28,0
+LEAD00600,Event,Product Launch,2026-01-20,0
+LEAD00601,Event,Q1 Spring Push,2026-02-03,0
+LEAD00602,Cold Outreach,Brand Awareness,2025-09-19,0
+LEAD00603,LinkedIn,Competitor Conquest,2026-05-11,0
+LEAD00604,Cold Outreach,Retention Drive,2025-12-20,0
+LEAD00605,Paid Search,Brand Awareness,2025-10-14,0
+LEAD00606,Event,Competitor Conquest,2026-04-28,1
+LEAD00607,Organic Search,Brand Awareness,2025-08-22,1
+LEAD00608,Event,Brand Awareness,2026-02-16,0
+LEAD00609,Cold Outreach,Product Launch,2025-08-03,0
+LEAD00610,Cold Outreach,Competitor Conquest,2026-04-18,0
+LEAD00611,Event,Product Launch,2025-06-23,0
+LEAD00612,LinkedIn,Competitor Conquest,2025-12-03,0
+LEAD00613,Referral,Q1 Spring Push,2025-05-16,0
+LEAD00614,Event,Retention Drive,2025-10-26,0
+LEAD00615,Cold Outreach,Brand Awareness,2025-08-04,0
+LEAD00616,Organic Search,Q1 Spring Push,2026-03-28,0
+LEAD00617,Organic Search,Retention Drive,2026-02-25,1
+LEAD00618,Organic Search,Q1 Spring Push,2025-07-26,0
+LEAD00619,LinkedIn,Product Launch,2025-09-24,0
+LEAD00620,Referral,Product Launch,2026-01-12,0
+LEAD00621,Referral,Product Launch,2025-08-13,1
+LEAD00622,Cold Outreach,Competitor Conquest,2026-01-01,0
+LEAD00623,Referral,Product Launch,2025-06-27,1
+LEAD00624,Organic Search,Q1 Spring Push,2026-03-19,0
+LEAD00625,LinkedIn,Q1 Spring Push,2026-03-03,0
+LEAD00626,Paid Search,Q1 Spring Push,2026-04-05,0
+LEAD00627,LinkedIn,Product Launch,2025-10-26,0
+LEAD00628,Organic Search,Competitor Conquest,2026-04-07,0
+LEAD00629,LinkedIn,Product Launch,2025-05-28,0
+LEAD00630,LinkedIn,Competitor Conquest,2026-02-21,0
+LEAD00631,Paid Search,Product Launch,2025-06-11,1
+LEAD00632,Referral,Q1 Spring Push,2026-03-15,0
+LEAD00633,Cold Outreach,Competitor Conquest,2025-07-04,0
+LEAD00634,Referral,Retention Drive,2026-01-04,1
+LEAD00635,Cold Outreach,Q1 Spring Push,2025-08-13,0
+LEAD00636,Organic Search,Product Launch,2026-01-24,0
+LEAD00637,Cold Outreach,Product Launch,2026-04-29,0
+LEAD00638,Paid Search,Product Launch,2025-12-28,0
+LEAD00639,Paid Search,Q1 Spring Push,2025-11-17,0
+LEAD00640,Event,Competitor Conquest,2025-09-03,0
+LEAD00641,LinkedIn,Product Launch,2026-01-06,0
+LEAD00642,Paid Search,Brand Awareness,2025-10-25,0
+LEAD00643,Organic Search,Retention Drive,2025-12-06,0
+LEAD00644,Organic Search,Competitor Conquest,2025-10-05,0
+LEAD00645,Cold Outreach,Brand Awareness,2025-12-02,0
+LEAD00646,Referral,Competitor Conquest,2026-02-01,0
+LEAD00647,Referral,Q1 Spring Push,2025-09-26,0
+LEAD00648,Paid Search,Retention Drive,2026-01-05,1
+LEAD00649,Referral,Retention Drive,2025-11-15,1
+LEAD00650,LinkedIn,Brand Awareness,2025-10-07,1
+LEAD00651,Event,Q1 Spring Push,2026-01-24,0
+LEAD00652,Referral,Brand Awareness,2026-03-13,0
+LEAD00653,Organic Search,Brand Awareness,2026-01-25,0
+LEAD00654,LinkedIn,Product Launch,2025-07-31,0
+LEAD00655,Organic Search,Product Launch,2025-08-18,0
+LEAD00656,Paid Search,Retention Drive,2025-06-05,0
+LEAD00657,Organic Search,Competitor Conquest,2025-05-30,0
+LEAD00658,Event,Brand Awareness,2026-02-02,0
+LEAD00659,Paid Search,Competitor Conquest,2026-04-21,0
+LEAD00660,Cold Outreach,Q1 Spring Push,2025-09-25,0
+LEAD00661,Paid Search,Competitor Conquest,2026-01-13,0
+LEAD00662,Referral,Retention Drive,2026-05-12,1
+LEAD00663,Cold Outreach,Competitor Conquest,2026-04-26,0
+LEAD00664,Cold Outreach,Q1 Spring Push,2025-11-23,0
+LEAD00665,Referral,Q1 Spring Push,2025-10-14,1
+LEAD00666,Event,Brand Awareness,2025-10-22,0
+LEAD00667,Organic Search,Competitor Conquest,2025-07-05,0
+LEAD00668,Organic Search,Competitor Conquest,2025-09-04,0
+LEAD00669,Cold Outreach,Q1 Spring Push,2025-11-04,0
+LEAD00670,Cold Outreach,Product Launch,2026-04-20,0
+LEAD00671,Event,Brand Awareness,2025-05-27,1
+LEAD00672,Event,Q1 Spring Push,2026-02-06,1
+LEAD00673,Event,Retention Drive,2026-05-12,0
+LEAD00674,Cold Outreach,Brand Awareness,2026-04-22,0
+LEAD00675,Organic Search,Q1 Spring Push,2025-12-30,0
+LEAD00676,Paid Search,Competitor Conquest,2025-12-27,0
+LEAD00677,Event,Retention Drive,2025-09-21,0
+LEAD00678,Organic Search,Product Launch,2025-07-19,0
+LEAD00679,Cold Outreach,Competitor Conquest,2025-06-22,0
+LEAD00680,LinkedIn,Retention Drive,2026-01-11,1
+LEAD00681,Referral,Brand Awareness,2025-12-01,0
+LEAD00682,Event,Q1 Spring Push,2025-12-30,0
+LEAD00683,Event,Brand Awareness,2025-08-02,0
+LEAD00684,Cold Outreach,Product Launch,2025-05-24,0
+LEAD00685,Organic Search,Q1 Spring Push,2026-01-26,0
+LEAD00686,Organic Search,Competitor Conquest,2026-02-07,0
+LEAD00687,LinkedIn,Retention Drive,2025-08-17,0
+LEAD00688,Referral,Brand Awareness,2025-05-17,1
+LEAD00689,LinkedIn,Retention Drive,2026-03-21,1
+LEAD00690,Cold Outreach,Brand Awareness,2025-10-29,0
+LEAD00691,Cold Outreach,Retention Drive,2026-01-31,0
+LEAD00692,Event,Brand Awareness,2025-10-10,1
+LEAD00693,Organic Search,Retention Drive,2025-06-17,0
+LEAD00694,Organic Search,Q1 Spring Push,2026-03-19,0
+LEAD00695,Paid Search,Product Launch,2025-12-29,0
+LEAD00696,Organic Search,Competitor Conquest,2025-11-15,0
+LEAD00697,Paid Search,Q1 Spring Push,2025-11-14,0
+LEAD00698,LinkedIn,Retention Drive,2025-10-06,1
+LEAD00699,Referral,Brand Awareness,2025-11-06,1
+LEAD00700,Organic Search,Competitor Conquest,2026-02-04,0
+LEAD00701,Paid Search,Retention Drive,2025-12-24,0
+LEAD00702,Referral,Competitor Conquest,2026-03-20,0
+LEAD00703,Event,Q1 Spring Push,2026-01-22,0
+LEAD00704,Organic Search,Retention Drive,2025-12-29,0
+LEAD00705,Paid Search,Brand Awareness,2026-01-19,0
+LEAD00706,Cold Outreach,Competitor Conquest,2025-10-26,0
+LEAD00707,LinkedIn,Brand Awareness,2025-09-03,0
+LEAD00708,Paid Search,Brand Awareness,2025-06-22,0
+LEAD00709,Paid Search,Q1 Spring Push,2026-03-27,0
+LEAD00710,Paid Search,Retention Drive,2025-09-12,0
+LEAD00711,Event,Product Launch,2026-02-16,0
+LEAD00712,Paid Search,Product Launch,2025-11-25,1
+LEAD00713,Cold Outreach,Q1 Spring Push,2025-06-07,0
+LEAD00714,LinkedIn,Product Launch,2025-12-30,0
+LEAD00715,Cold Outreach,Q1 Spring Push,2025-07-14,0
+LEAD00716,LinkedIn,Q1 Spring Push,2025-09-06,0
+LEAD00717,Cold Outreach,Q1 Spring Push,2026-05-06,0
+LEAD00718,Referral,Product Launch,2025-08-19,0
+LEAD00719,Referral,Q1 Spring Push,2026-03-24,0
+LEAD00720,Paid Search,Competitor Conquest,2025-09-05,0
+LEAD00721,Event,Brand Awareness,2025-06-09,0
+LEAD00722,LinkedIn,Q1 Spring Push,2025-11-15,0
+LEAD00723,Paid Search,Retention Drive,2025-06-09,0
+LEAD00724,Cold Outreach,Retention Drive,2025-09-09,0
+LEAD00725,Organic Search,Q1 Spring Push,2026-02-28,0
+LEAD00726,Cold Outreach,Product Launch,2025-11-13,0
+LEAD00727,LinkedIn,Competitor Conquest,2025-11-11,0
+LEAD00728,Paid Search,Competitor Conquest,2025-06-21,1
+LEAD00729,Organic Search,Retention Drive,2025-09-26,0
+LEAD00730,Cold Outreach,Product Launch,2025-12-30,0
+LEAD00731,Cold Outreach,Brand Awareness,2025-10-26,0
+LEAD00732,Referral,Brand Awareness,2025-12-07,0
+LEAD00733,Paid Search,Brand Awareness,2025-07-05,0
+LEAD00734,Organic Search,Retention Drive,2025-11-18,0
+LEAD00735,Paid Search,Competitor Conquest,2025-05-29,0
+LEAD00736,Organic Search,Retention Drive,2025-12-17,0
+LEAD00737,Referral,Brand Awareness,2025-09-07,0
+LEAD00738,Paid Search,Q1 Spring Push,2025-09-24,0
+LEAD00739,Organic Search,Retention Drive,2026-03-12,0
+LEAD00740,Organic Search,Competitor Conquest,2025-11-15,0
+LEAD00741,Referral,Brand Awareness,2026-03-05,1
+LEAD00742,LinkedIn,Retention Drive,2025-06-08,0
+LEAD00743,Cold Outreach,Q1 Spring Push,2025-05-14,0
+LEAD00744,Paid Search,Product Launch,2025-10-05,0
+LEAD00745,Referral,Product Launch,2026-04-28,1
+LEAD00746,LinkedIn,Competitor Conquest,2025-10-10,0
+LEAD00747,LinkedIn,Brand Awareness,2025-12-11,0
+LEAD00748,Referral,Competitor Conquest,2025-06-01,1
+LEAD00749,Cold Outreach,Product Launch,2025-05-30,0
+LEAD00750,Event,Competitor Conquest,2025-08-04,0
+LEAD00751,Paid Search,Brand Awareness,2025-07-28,0
+LEAD00752,Cold Outreach,Product Launch,2025-11-03,0
+LEAD00753,Event,Q1 Spring Push,2026-03-05,0
+LEAD00754,Referral,Retention Drive,2025-05-29,0
+LEAD00755,Event,Competitor Conquest,2025-09-18,0
+LEAD00756,LinkedIn,Q1 Spring Push,2025-08-01,0
+LEAD00757,Organic Search,Q1 Spring Push,2026-03-04,0
+LEAD00758,Referral,Product Launch,2025-07-21,1
+LEAD00759,Referral,Retention Drive,2025-07-29,1
+LEAD00760,Cold Outreach,Competitor Conquest,2026-03-11,1
+LEAD00761,LinkedIn,Retention Drive,2025-09-21,1
+LEAD00762,Cold Outreach,Brand Awareness,2025-06-16,0
+LEAD00763,Organic Search,Brand Awareness,2025-07-29,0
+LEAD00764,LinkedIn,Q1 Spring Push,2026-03-13,0
+LEAD00765,Event,Q1 Spring Push,2025-05-20,0
+LEAD00766,Paid Search,Competitor Conquest,2026-03-06,0
+LEAD00767,Paid Search,Product Launch,2025-12-11,0
+LEAD00768,Referral,Q1 Spring Push,2025-09-08,0
+LEAD00769,Referral,Q1 Spring Push,2026-05-14,1
+LEAD00770,Organic Search,Retention Drive,2026-03-26,0
+LEAD00771,Paid Search,Q1 Spring Push,2025-08-29,1
+LEAD00772,LinkedIn,Q1 Spring Push,2025-12-12,1
+LEAD00773,LinkedIn,Product Launch,2025-08-08,0
+LEAD00774,Paid Search,Competitor Conquest,2025-06-12,0
+LEAD00775,Referral,Q1 Spring Push,2026-02-09,0
+LEAD00776,Organic Search,Product Launch,2026-02-16,0
+LEAD00777,Referral,Product Launch,2025-09-13,0
+LEAD00778,LinkedIn,Q1 Spring Push,2025-07-17,0
+LEAD00779,LinkedIn,Competitor Conquest,2025-10-29,0
+LEAD00780,Event,Competitor Conquest,2025-10-09,1
+LEAD00781,Organic Search,Q1 Spring Push,2025-07-30,0
+LEAD00782,LinkedIn,Q1 Spring Push,2025-06-18,0
+LEAD00783,Referral,Competitor Conquest,2026-04-23,0
+LEAD00784,Cold Outreach,Product Launch,2025-09-17,0
+LEAD00785,Cold Outreach,Q1 Spring Push,2026-02-22,0
+LEAD00786,LinkedIn,Retention Drive,2026-01-27,0
+LEAD00787,LinkedIn,Competitor Conquest,2025-08-25,0
+LEAD00788,Organic Search,Brand Awareness,2025-06-13,0
+LEAD00789,Event,Product Launch,2025-12-23,0
+LEAD00790,Event,Competitor Conquest,2026-04-10,0
+LEAD00791,Cold Outreach,Competitor Conquest,2025-09-15,0
+LEAD00792,Referral,Retention Drive,2025-06-11,1
+LEAD00793,Referral,Brand Awareness,2025-07-17,1
+LEAD00794,Cold Outreach,Retention Drive,2025-10-20,0
+LEAD00795,Organic Search,Product Launch,2026-01-16,1
+LEAD00796,Organic Search,Competitor Conquest,2025-11-30,1
+LEAD00797,Event,Product Launch,2026-03-22,0
+LEAD00798,Cold Outreach,Competitor Conquest,2025-10-11,0
+LEAD00799,Cold Outreach,Brand Awareness,2026-03-17,1
+LEAD00800,Organic Search,Competitor Conquest,2025-11-04,0
+LEAD00801,Referral,Product Launch,2025-12-01,0
+LEAD00802,Organic Search,Product Launch,2025-06-22,0
+LEAD00803,Referral,Brand Awareness,2025-09-05,1
+LEAD00804,LinkedIn,Product Launch,2026-02-21,0
+LEAD00805,LinkedIn,Product Launch,2026-03-31,0
+LEAD00806,Referral,Q1 Spring Push,2026-01-30,0
+LEAD00807,Organic Search,Q1 Spring Push,2025-11-11,1
+LEAD00808,Event,Q1 Spring Push,2025-11-21,0
+LEAD00809,Paid Search,Retention Drive,2025-09-02,0
+LEAD00810,Paid Search,Competitor Conquest,2025-08-31,0
+LEAD00811,LinkedIn,Retention Drive,2026-03-05,0
+LEAD00812,Event,Competitor Conquest,2026-04-08,0
+LEAD00813,Referral,Retention Drive,2025-12-13,1
+LEAD00814,Organic Search,Q1 Spring Push,2025-07-11,0
+LEAD00815,Referral,Brand Awareness,2026-01-06,1
+LEAD00816,LinkedIn,Product Launch,2025-12-18,0
+LEAD00817,Organic Search,Retention Drive,2025-07-06,0
+LEAD00818,Referral,Q1 Spring Push,2025-08-08,0
+LEAD00819,Event,Competitor Conquest,2025-12-31,1
+LEAD00820,Referral,Competitor Conquest,2026-01-01,1
+LEAD00821,Paid Search,Q1 Spring Push,2026-03-04,0
+LEAD00822,Paid Search,Brand Awareness,2025-06-09,0
+LEAD00823,Cold Outreach,Competitor Conquest,2026-04-07,1
+LEAD00824,Event,Retention Drive,2025-05-20,0
+LEAD00825,Cold Outreach,Brand Awareness,2026-04-08,0
+LEAD00826,Cold Outreach,Retention Drive,2026-04-03,0
+LEAD00827,Cold Outreach,Product Launch,2025-12-27,0
+LEAD00828,Event,Competitor Conquest,2025-08-28,1
+LEAD00829,Paid Search,Competitor Conquest,2025-12-10,0
+LEAD00830,Event,Product Launch,2026-05-04,0
+LEAD00831,Cold Outreach,Product Launch,2025-08-14,1
+LEAD00832,Referral,Q1 Spring Push,2025-08-05,0
+LEAD00833,LinkedIn,Competitor Conquest,2025-05-23,0
+LEAD00834,Organic Search,Retention Drive,2026-03-05,0
+LEAD00835,Organic Search,Retention Drive,2025-11-07,1
+LEAD00836,LinkedIn,Q1 Spring Push,2026-01-13,0
+LEAD00837,Paid Search,Product Launch,2025-10-15,0
+LEAD00838,Event,Retention Drive,2025-07-28,0
+LEAD00839,Organic Search,Product Launch,2026-04-15,0
+LEAD00840,Organic Search,Product Launch,2025-12-21,1
+LEAD00841,Organic Search,Product Launch,2025-12-16,0
+LEAD00842,Organic Search,Q1 Spring Push,2025-06-12,0
+LEAD00843,Organic Search,Retention Drive,2026-01-29,0
+LEAD00844,LinkedIn,Brand Awareness,2026-01-22,0
+LEAD00845,LinkedIn,Brand Awareness,2025-08-05,0
+LEAD00846,Paid Search,Retention Drive,2025-12-29,0
+LEAD00847,Paid Search,Q1 Spring Push,2026-04-17,0
+LEAD00848,LinkedIn,Retention Drive,2025-09-08,0
+LEAD00849,Paid Search,Product Launch,2025-08-21,0
+LEAD00850,Paid Search,Product Launch,2026-03-13,0
+LEAD00851,LinkedIn,Product Launch,2026-04-26,0
+LEAD00852,Cold Outreach,Competitor Conquest,2026-03-17,0
+LEAD00853,Organic Search,Brand Awareness,2025-12-23,0
+LEAD00854,Referral,Q1 Spring Push,2026-04-14,1
+LEAD00855,Paid Search,Competitor Conquest,2026-05-05,0
+LEAD00856,Cold Outreach,Q1 Spring Push,2026-01-20,0
+LEAD00857,Paid Search,Competitor Conquest,2025-08-15,0
+LEAD00858,Organic Search,Retention Drive,2025-11-17,0
+LEAD00859,Cold Outreach,Brand Awareness,2025-12-31,0
+LEAD00860,Event,Q1 Spring Push,2025-11-21,0
+LEAD00861,Event,Competitor Conquest,2026-04-15,0
+LEAD00862,Event,Brand Awareness,2025-08-14,0
+LEAD00863,LinkedIn,Retention Drive,2025-08-22,0
+LEAD00864,Paid Search,Competitor Conquest,2026-01-13,0
+LEAD00865,Organic Search,Brand Awareness,2026-04-01,1
+LEAD00866,Cold Outreach,Brand Awareness,2025-11-23,0
+LEAD00867,Referral,Brand Awareness,2025-11-10,1
+LEAD00868,Paid Search,Retention Drive,2026-05-08,0
+LEAD00869,Organic Search,Brand Awareness,2025-12-30,0
+LEAD00870,Cold Outreach,Q1 Spring Push,2025-10-01,0
+LEAD00871,Organic Search,Brand Awareness,2025-09-11,1
+LEAD00872,Referral,Competitor Conquest,2026-04-15,0
+LEAD00873,Referral,Retention Drive,2025-08-05,1
+LEAD00874,Paid Search,Product Launch,2026-01-02,1
+LEAD00875,Event,Competitor Conquest,2026-03-10,0
+LEAD00876,Paid Search,Retention Drive,2025-06-13,0
+LEAD00877,Organic Search,Q1 Spring Push,2026-02-09,1
+LEAD00878,Event,Retention Drive,2025-12-03,0
+LEAD00879,Organic Search,Q1 Spring Push,2025-05-14,0
+LEAD00880,Cold Outreach,Q1 Spring Push,2025-06-01,0
+LEAD00881,Cold Outreach,Retention Drive,2026-04-22,0
+LEAD00882,Referral,Q1 Spring Push,2025-08-28,0
+LEAD00883,LinkedIn,Product Launch,2026-01-30,0
+LEAD00884,Paid Search,Competitor Conquest,2026-04-08,0
+LEAD00885,Referral,Product Launch,2026-05-02,0
+LEAD00886,Paid Search,Brand Awareness,2025-10-18,0
+LEAD00887,Cold Outreach,Brand Awareness,2025-06-30,0
+LEAD00888,Organic Search,Brand Awareness,2026-02-27,0
+LEAD00889,Cold Outreach,Retention Drive,2026-01-26,1
+LEAD00890,Event,Retention Drive,2025-07-21,0
+LEAD00891,Event,Competitor Conquest,2025-07-20,0
+LEAD00892,Organic Search,Competitor Conquest,2025-06-16,0
+LEAD00893,Organic Search,Product Launch,2025-07-29,1
+LEAD00894,Referral,Retention Drive,2025-10-12,0
+LEAD00895,Referral,Retention Drive,2026-04-18,1
+LEAD00896,Referral,Retention Drive,2025-10-01,0
+LEAD00897,Paid Search,Retention Drive,2025-12-15,0
+LEAD00898,Cold Outreach,Brand Awareness,2026-01-16,0
+LEAD00899,LinkedIn,Q1 Spring Push,2025-05-25,0
+LEAD00900,Paid Search,Competitor Conquest,2025-11-10,0
+LEAD00901,Organic Search,Q1 Spring Push,2025-11-10,0
+LEAD00902,Referral,Competitor Conquest,2025-10-12,0
+LEAD00903,Paid Search,Product Launch,2025-08-12,0
+LEAD00904,Paid Search,Retention Drive,2025-06-08,0
+LEAD00905,Organic Search,Brand Awareness,2025-11-21,0
+LEAD00906,Paid Search,Competitor Conquest,2025-08-29,1
+LEAD00907,Cold Outreach,Product Launch,2026-02-11,0
+LEAD00908,Cold Outreach,Q1 Spring Push,2025-10-12,1
+LEAD00909,Paid Search,Competitor Conquest,2026-03-24,0
+LEAD00910,Organic Search,Competitor Conquest,2026-05-02,1
+LEAD00911,Event,Product Launch,2025-08-24,0
+LEAD00912,Cold Outreach,Competitor Conquest,2025-11-14,0
+LEAD00913,Organic Search,Product Launch,2025-05-15,0
+LEAD00914,Paid Search,Brand Awareness,2025-07-16,0
+LEAD00915,Referral,Q1 Spring Push,2026-04-07,1
+LEAD00916,Event,Competitor Conquest,2025-10-17,0
+LEAD00917,Referral,Competitor Conquest,2025-12-17,0
+LEAD00918,Event,Product Launch,2025-07-17,0
+LEAD00919,Cold Outreach,Q1 Spring Push,2026-02-26,0
+LEAD00920,Cold Outreach,Brand Awareness,2025-06-03,0
+LEAD00921,Referral,Competitor Conquest,2026-02-13,0
+LEAD00922,Referral,Q1 Spring Push,2026-01-16,0
+LEAD00923,Paid Search,Retention Drive,2025-08-22,0
+LEAD00924,Cold Outreach,Competitor Conquest,2025-12-19,0
+LEAD00925,Paid Search,Product Launch,2026-03-02,0
+LEAD00926,Organic Search,Product Launch,2025-10-06,0
+LEAD00927,Referral,Retention Drive,2025-12-05,0
+LEAD00928,Organic Search,Q1 Spring Push,2025-12-18,0
+LEAD00929,Paid Search,Product Launch,2025-12-18,0
+LEAD00930,Cold Outreach,Retention Drive,2026-03-21,0
+LEAD00931,Cold Outreach,Product Launch,2026-03-26,0
+LEAD00932,Paid Search,Product Launch,2026-04-30,0
+LEAD00933,Referral,Retention Drive,2025-08-12,1
+LEAD00934,Event,Q1 Spring Push,2025-11-06,1
+LEAD00935,Paid Search,Retention Drive,2025-10-08,0
+LEAD00936,Event,Competitor Conquest,2025-12-14,0
+LEAD00937,Cold Outreach,Q1 Spring Push,2025-09-29,0
+LEAD00938,Cold Outreach,Q1 Spring Push,2026-03-05,0
+LEAD00939,Cold Outreach,Q1 Spring Push,2025-11-14,0
+LEAD00940,Event,Product Launch,2026-04-06,0
+LEAD00941,Paid Search,Brand Awareness,2025-09-24,0
+LEAD00942,Referral,Q1 Spring Push,2025-05-18,0
+LEAD00943,Event,Q1 Spring Push,2025-10-05,0
+LEAD00944,Organic Search,Retention Drive,2025-12-03,0
+LEAD00945,Paid Search,Q1 Spring Push,2025-06-24,0
+LEAD00946,Referral,Retention Drive,2025-11-03,1
+LEAD00947,Cold Outreach,Product Launch,2025-12-30,0
+LEAD00948,LinkedIn,Product Launch,2025-09-02,0
+LEAD00949,Paid Search,Q1 Spring Push,2025-08-23,0
+LEAD00950,Cold Outreach,Q1 Spring Push,2025-10-04,0
+LEAD00951,Organic Search,Product Launch,2025-05-16,0
+LEAD00952,Paid Search,Brand Awareness,2025-07-04,0
+LEAD00953,LinkedIn,Brand Awareness,2025-09-09,0
+LEAD00954,Referral,Brand Awareness,2026-01-16,0
+LEAD00955,Cold Outreach,Competitor Conquest,2025-06-26,0
+LEAD00956,LinkedIn,Competitor Conquest,2025-12-14,0
+LEAD00957,Organic Search,Brand Awareness,2025-10-12,1
+LEAD00958,Cold Outreach,Competitor Conquest,2026-03-16,0
+LEAD00959,Paid Search,Q1 Spring Push,2025-11-18,0
+LEAD00960,Event,Competitor Conquest,2025-09-06,0
+LEAD00961,Referral,Q1 Spring Push,2025-12-17,0
+LEAD00962,Paid Search,Competitor Conquest,2026-04-13,0
+LEAD00963,Referral,Brand Awareness,2025-10-16,0
+LEAD00964,LinkedIn,Competitor Conquest,2026-01-01,0
+LEAD00965,Cold Outreach,Product Launch,2025-11-22,0
+LEAD00966,Referral,Competitor Conquest,2025-10-17,1
+LEAD00967,Paid Search,Retention Drive,2026-01-29,0
+LEAD00968,Event,Retention Drive,2025-07-06,1
+LEAD00969,Paid Search,Q1 Spring Push,2026-05-04,0
+LEAD00970,Event,Brand Awareness,2025-11-15,1
+LEAD00971,Event,Q1 Spring Push,2025-08-22,0
+LEAD00972,Paid Search,Product Launch,2025-08-13,0
+LEAD00973,LinkedIn,Brand Awareness,2026-02-21,0
+LEAD00974,Cold Outreach,Product Launch,2025-08-04,0
+LEAD00975,Event,Q1 Spring Push,2026-05-04,0
+LEAD00976,Event,Retention Drive,2025-10-23,0
+LEAD00977,Event,Brand Awareness,2025-12-11,1
+LEAD00978,Organic Search,Product Launch,2026-04-27,0
+LEAD00979,Paid Search,Competitor Conquest,2025-06-13,1
+LEAD00980,LinkedIn,Brand Awareness,2026-04-01,0
+LEAD00981,Organic Search,Competitor Conquest,2026-05-04,0
+LEAD00982,Organic Search,Retention Drive,2026-02-26,0
+LEAD00983,Organic Search,Competitor Conquest,2026-02-04,0
+LEAD00984,Event,Brand Awareness,2025-10-09,0
+LEAD00985,Referral,Brand Awareness,2025-09-22,1
+LEAD00986,Paid Search,Retention Drive,2025-09-15,0
+LEAD00987,LinkedIn,Product Launch,2025-10-18,0
+LEAD00988,Referral,Retention Drive,2025-08-28,0
+LEAD00989,Paid Search,Competitor Conquest,2025-10-25,1
+LEAD00990,Cold Outreach,Q1 Spring Push,2025-09-25,0
+LEAD00991,Paid Search,Competitor Conquest,2026-01-16,0
+LEAD00992,LinkedIn,Q1 Spring Push,2025-06-19,0
+LEAD00993,Paid Search,Q1 Spring Push,2026-03-27,0
+LEAD00994,Referral,Competitor Conquest,2025-07-15,1
+LEAD00995,Paid Search,Retention Drive,2025-09-14,0
+LEAD00996,Referral,Product Launch,2026-04-14,0
+LEAD00997,Event,Brand Awareness,2025-11-23,0
+LEAD00998,Cold Outreach,Retention Drive,2025-07-12,1
+LEAD00999,LinkedIn,Product Launch,2025-07-31,1
+LEAD01000,Event,Brand Awareness,2025-06-15,0
+LEAD01001,Paid Search,Competitor Conquest,2025-08-24,0
+LEAD01002,Referral,Q1 Spring Push,2026-03-22,0
+LEAD01003,LinkedIn,Product Launch,2026-05-08,1
+LEAD01004,Organic Search,Product Launch,2026-02-02,0
+LEAD01005,LinkedIn,Q1 Spring Push,2025-10-09,0
+LEAD01006,LinkedIn,Retention Drive,2025-09-07,0
+LEAD01007,Organic Search,Competitor Conquest,2025-10-22,0
+LEAD01008,Organic Search,Brand Awareness,2025-06-02,1
+LEAD01009,Paid Search,Brand Awareness,2025-07-30,0
+LEAD01010,Referral,Retention Drive,2025-05-29,1
+LEAD01011,Paid Search,Brand Awareness,2025-08-22,0
+LEAD01012,Referral,Product Launch,2025-11-26,0
+LEAD01013,Cold Outreach,Product Launch,2026-02-19,0
+LEAD01014,Referral,Q1 Spring Push,2025-12-03,0
+LEAD01015,LinkedIn,Q1 Spring Push,2026-05-12,1
+LEAD01016,Paid Search,Q1 Spring Push,2025-08-12,0
+LEAD01017,LinkedIn,Retention Drive,2025-09-17,1
+LEAD01018,Referral,Retention Drive,2026-01-19,1
+LEAD01019,LinkedIn,Product Launch,2025-12-25,1
+LEAD01020,Paid Search,Competitor Conquest,2025-07-19,0
+LEAD01021,Event,Competitor Conquest,2026-01-04,0
+LEAD01022,Referral,Product Launch,2026-04-05,0
+LEAD01023,Referral,Product Launch,2025-12-22,1
+LEAD01024,Paid Search,Product Launch,2025-08-20,0
+LEAD01025,Referral,Brand Awareness,2025-07-24,0
+LEAD01026,Event,Brand Awareness,2025-07-03,0
+LEAD01027,Event,Product Launch,2026-05-13,0
+LEAD01028,Event,Q1 Spring Push,2025-07-04,0
+LEAD01029,Organic Search,Q1 Spring Push,2025-11-30,1
+LEAD01030,Organic Search,Product Launch,2025-08-26,0
+LEAD01031,Event,Competitor Conquest,2025-11-28,0
+LEAD01032,Paid Search,Product Launch,2025-08-01,0
+LEAD01033,LinkedIn,Competitor Conquest,2025-11-14,0
+LEAD01034,Paid Search,Retention Drive,2026-04-04,0
+LEAD01035,Cold Outreach,Product Launch,2025-06-24,0
+LEAD01036,Cold Outreach,Competitor Conquest,2025-08-01,0
+LEAD01037,LinkedIn,Brand Awareness,2025-05-29,0
+LEAD01038,Organic Search,Brand Awareness,2026-02-12,0
+LEAD01039,Organic Search,Competitor Conquest,2025-06-05,0
+LEAD01040,LinkedIn,Retention Drive,2025-08-01,0
+LEAD01041,Cold Outreach,Product Launch,2025-10-31,0
+LEAD01042,LinkedIn,Q1 Spring Push,2026-02-03,0
+LEAD01043,LinkedIn,Q1 Spring Push,2025-07-18,0
+LEAD01044,Paid Search,Brand Awareness,2026-01-05,1
+LEAD01045,Referral,Brand Awareness,2026-04-27,1
+LEAD01046,Referral,Competitor Conquest,2026-04-22,0
+LEAD01047,Cold Outreach,Brand Awareness,2025-06-28,0
+LEAD01048,Organic Search,Q1 Spring Push,2025-09-15,0
+LEAD01049,Cold Outreach,Competitor Conquest,2026-02-15,0
+LEAD01050,LinkedIn,Retention Drive,2026-03-22,0
+LEAD01051,Organic Search,Product Launch,2025-05-18,1
+LEAD01052,Event,Product Launch,2026-04-02,0
+LEAD01053,LinkedIn,Q1 Spring Push,2025-09-29,0
+LEAD01054,Referral,Q1 Spring Push,2025-08-09,1
+LEAD01055,Paid Search,Retention Drive,2026-05-06,0
+LEAD01056,Paid Search,Brand Awareness,2025-05-16,0
+LEAD01057,Paid Search,Brand Awareness,2025-08-23,0
+LEAD01058,Organic Search,Competitor Conquest,2025-06-07,0
+LEAD01059,Event,Retention Drive,2026-02-28,1
+LEAD01060,Event,Competitor Conquest,2026-04-22,1
+LEAD01061,Paid Search,Retention Drive,2025-10-17,0
+LEAD01062,Paid Search,Q1 Spring Push,2025-12-06,0
+LEAD01063,Paid Search,Brand Awareness,2025-09-18,0
+LEAD01064,Referral,Retention Drive,2025-09-19,0
+LEAD01065,Organic Search,Product Launch,2026-03-31,0
+LEAD01066,Paid Search,Q1 Spring Push,2026-02-17,0
+LEAD01067,Event,Brand Awareness,2025-09-21,1
+LEAD01068,Organic Search,Product Launch,2025-12-08,0
+LEAD01069,Cold Outreach,Product Launch,2026-03-08,0
+LEAD01070,Paid Search,Brand Awareness,2026-02-12,0
+LEAD01071,Paid Search,Competitor Conquest,2026-01-19,0
+LEAD01072,Cold Outreach,Product Launch,2026-02-13,0
+LEAD01073,Cold Outreach,Competitor Conquest,2025-12-30,0
+LEAD01074,Organic Search,Brand Awareness,2025-11-17,0
+LEAD01075,Event,Product Launch,2026-04-26,0
+LEAD01076,Cold Outreach,Product Launch,2025-08-12,0
+LEAD01077,Referral,Competitor Conquest,2025-11-18,0
+LEAD01078,Referral,Brand Awareness,2026-01-28,0
+LEAD01079,LinkedIn,Retention Drive,2025-12-28,0
+LEAD01080,Organic Search,Brand Awareness,2026-01-23,0
+LEAD01081,LinkedIn,Q1 Spring Push,2025-08-23,1
+LEAD01082,Referral,Product Launch,2025-09-17,1
+LEAD01083,Referral,Competitor Conquest,2025-06-11,0
+LEAD01084,Referral,Q1 Spring Push,2025-06-26,1
+LEAD01085,LinkedIn,Product Launch,2025-10-11,0
+LEAD01086,LinkedIn,Q1 Spring Push,2026-02-08,0
+LEAD01087,Cold Outreach,Competitor Conquest,2025-08-08,0
+LEAD01088,Paid Search,Retention Drive,2025-09-23,1
+LEAD01089,Referral,Competitor Conquest,2025-09-14,0
+LEAD01090,Cold Outreach,Brand Awareness,2025-07-11,0
+LEAD01091,LinkedIn,Brand Awareness,2026-04-24,0
+LEAD01092,Cold Outreach,Retention Drive,2026-03-20,0
+LEAD01093,LinkedIn,Retention Drive,2025-10-21,0
+LEAD01094,Referral,Product Launch,2025-12-12,1
+LEAD01095,Cold Outreach,Retention Drive,2026-02-02,0
+LEAD01096,Cold Outreach,Product Launch,2026-03-09,0
+LEAD01097,Referral,Q1 Spring Push,2026-03-29,0
+LEAD01098,Paid Search,Brand Awareness,2025-09-22,0
+LEAD01099,LinkedIn,Product Launch,2026-02-01,0
+LEAD01100,Cold Outreach,Q1 Spring Push,2026-02-09,0
+LEAD01101,Paid Search,Q1 Spring Push,2026-01-09,0
+LEAD01102,Organic Search,Brand Awareness,2026-05-12,0
+LEAD01103,LinkedIn,Competitor Conquest,2025-08-06,0
+LEAD01104,Event,Competitor Conquest,2025-06-06,0
+LEAD01105,LinkedIn,Product Launch,2026-03-26,0
+LEAD01106,LinkedIn,Product Launch,2025-10-22,0
+LEAD01107,Event,Competitor Conquest,2025-07-13,0
+LEAD01108,LinkedIn,Competitor Conquest,2025-06-06,1
+LEAD01109,Event,Product Launch,2025-07-07,0
+LEAD01110,Paid Search,Brand Awareness,2025-11-21,0
+LEAD01111,Referral,Retention Drive,2025-10-23,1
+LEAD01112,Cold Outreach,Product Launch,2025-09-01,0
+LEAD01113,Paid Search,Competitor Conquest,2026-03-28,0
+LEAD01114,LinkedIn,Competitor Conquest,2026-02-26,0
+LEAD01115,Paid Search,Competitor Conquest,2026-04-27,0
+LEAD01116,Paid Search,Product Launch,2026-02-20,0
+LEAD01117,LinkedIn,Q1 Spring Push,2025-09-18,0
+LEAD01118,Event,Q1 Spring Push,2025-06-13,0
+LEAD01119,Cold Outreach,Q1 Spring Push,2026-02-21,0
+LEAD01120,Paid Search,Competitor Conquest,2025-05-28,0
+LEAD01121,LinkedIn,Competitor Conquest,2025-10-10,0
+LEAD01122,Event,Brand Awareness,2025-06-24,0
+LEAD01123,Organic Search,Competitor Conquest,2025-08-30,0
+LEAD01124,LinkedIn,Brand Awareness,2025-08-14,0
+LEAD01125,Cold Outreach,Product Launch,2025-10-09,0
+LEAD01126,Referral,Q1 Spring Push,2026-02-27,0
+LEAD01127,Organic Search,Retention Drive,2026-01-02,0
+LEAD01128,Paid Search,Competitor Conquest,2025-10-04,0
+LEAD01129,Organic Search,Q1 Spring Push,2025-09-06,0
+LEAD01130,LinkedIn,Retention Drive,2025-05-28,1
+LEAD01131,LinkedIn,Brand Awareness,2026-05-02,0
+LEAD01132,Referral,Brand Awareness,2025-10-13,1
+LEAD01133,Organic Search,Q1 Spring Push,2025-07-13,0
+LEAD01134,Organic Search,Retention Drive,2025-10-24,0
+LEAD01135,Paid Search,Q1 Spring Push,2026-03-11,1
+LEAD01136,Event,Competitor Conquest,2025-12-25,0
+LEAD01137,LinkedIn,Retention Drive,2026-01-10,0
+LEAD01138,Cold Outreach,Retention Drive,2025-07-27,0
+LEAD01139,LinkedIn,Brand Awareness,2026-04-25,1
+LEAD01140,Organic Search,Q1 Spring Push,2025-10-31,0
+LEAD01141,Referral,Brand Awareness,2025-06-22,0
+LEAD01142,Event,Q1 Spring Push,2026-02-09,0
+LEAD01143,Cold Outreach,Q1 Spring Push,2025-10-05,0
+LEAD01144,Cold Outreach,Retention Drive,2026-01-01,0
+LEAD01145,Cold Outreach,Retention Drive,2026-01-10,0
+LEAD01146,Event,Retention Drive,2025-09-14,1
+LEAD01147,Paid Search,Brand Awareness,2025-05-27,0
+LEAD01148,Event,Q1 Spring Push,2025-07-09,0
+LEAD01149,LinkedIn,Brand Awareness,2025-12-26,0
+LEAD01150,Organic Search,Competitor Conquest,2025-06-12,0
+LEAD01151,Organic Search,Retention Drive,2025-06-23,0
+LEAD01152,Paid Search,Q1 Spring Push,2025-05-16,0
+LEAD01153,Paid Search,Brand Awareness,2025-05-15,1
+LEAD01154,Referral,Competitor Conquest,2025-06-23,0
+LEAD01155,Referral,Competitor Conquest,2025-08-02,0
+LEAD01156,Organic Search,Brand Awareness,2025-09-29,0
+LEAD01157,Organic Search,Competitor Conquest,2026-01-27,0
+LEAD01158,Referral,Competitor Conquest,2026-01-04,1
+LEAD01159,LinkedIn,Retention Drive,2026-04-04,0
+LEAD01160,Referral,Brand Awareness,2026-04-02,0
+LEAD01161,Paid Search,Brand Awareness,2025-12-10,0
+LEAD01162,Paid Search,Competitor Conquest,2026-04-29,0
+LEAD01163,Organic Search,Retention Drive,2025-11-15,0
+LEAD01164,Referral,Q1 Spring Push,2025-12-20,0
+LEAD01165,Referral,Product Launch,2025-11-03,0
+LEAD01166,Cold Outreach,Retention Drive,2026-03-12,0
+LEAD01167,Organic Search,Q1 Spring Push,2025-07-26,0
+LEAD01168,Paid Search,Competitor Conquest,2025-08-06,0
+LEAD01169,LinkedIn,Competitor Conquest,2025-07-12,0
+LEAD01170,Paid Search,Q1 Spring Push,2025-06-08,0
+LEAD01171,Cold Outreach,Brand Awareness,2025-08-30,0
+LEAD01172,Referral,Competitor Conquest,2025-09-03,0
+LEAD01173,Event,Competitor Conquest,2026-02-23,0
+LEAD01174,Cold Outreach,Brand Awareness,2026-05-13,0
+LEAD01175,Referral,Competitor Conquest,2025-06-13,0
+LEAD01176,Paid Search,Competitor Conquest,2025-07-21,0
+LEAD01177,Referral,Competitor Conquest,2026-02-07,0
+LEAD01178,Referral,Product Launch,2025-07-06,0
+LEAD01179,Referral,Retention Drive,2025-07-26,0
+LEAD01180,Event,Brand Awareness,2025-07-06,0
+LEAD01181,Paid Search,Competitor Conquest,2025-05-29,0
+LEAD01182,Organic Search,Retention Drive,2025-06-14,0
+LEAD01183,LinkedIn,Product Launch,2026-02-21,0
+LEAD01184,LinkedIn,Product Launch,2026-02-14,0
+LEAD01185,LinkedIn,Product Launch,2025-11-30,0
+LEAD01186,Organic Search,Q1 Spring Push,2026-01-29,1
+LEAD01187,Referral,Retention Drive,2025-09-29,0
+LEAD01188,Cold Outreach,Competitor Conquest,2025-08-31,0
+LEAD01189,Referral,Brand Awareness,2026-02-22,0
+LEAD01190,Paid Search,Q1 Spring Push,2026-05-11,0
+LEAD01191,Event,Competitor Conquest,2025-08-21,0
+LEAD01192,Cold Outreach,Q1 Spring Push,2025-10-13,0
+LEAD01193,Cold Outreach,Retention Drive,2026-03-14,0
+LEAD01194,Event,Retention Drive,2025-05-14,0
+LEAD01195,Organic Search,Q1 Spring Push,2025-12-16,0
+LEAD01196,Event,Q1 Spring Push,2025-11-09,0
+LEAD01197,LinkedIn,Competitor Conquest,2025-10-07,0
+LEAD01198,Event,Brand Awareness,2025-07-22,1
+LEAD01199,Event,Product Launch,2025-11-08,1
+LEAD01200,LinkedIn,Product Launch,2025-09-09,0
+LEAD01201,Paid Search,Q1 Spring Push,2025-09-22,1
+LEAD01202,Cold Outreach,Product Launch,2026-01-01,0
+LEAD01203,LinkedIn,Brand Awareness,2025-09-26,0
+LEAD01204,Event,Retention Drive,2026-04-26,0
+LEAD01205,Event,Brand Awareness,2026-05-01,1
+LEAD01206,Paid Search,Brand Awareness,2025-05-14,0
+LEAD01207,Paid Search,Product Launch,2025-07-28,0
+LEAD01208,Referral,Competitor Conquest,2025-06-04,0
+LEAD01209,Paid Search,Product Launch,2026-02-28,0
+LEAD01210,Referral,Brand Awareness,2025-06-22,0
+LEAD01211,Paid Search,Retention Drive,2025-12-10,0
+LEAD01212,Organic Search,Brand Awareness,2025-08-27,1
+LEAD01213,Event,Competitor Conquest,2025-09-12,0
+LEAD01214,Referral,Brand Awareness,2025-06-19,1
+LEAD01215,Organic Search,Brand Awareness,2025-08-20,0
+LEAD01216,LinkedIn,Competitor Conquest,2025-06-17,0
+LEAD01217,Paid Search,Product Launch,2025-09-09,0
+LEAD01218,Cold Outreach,Q1 Spring Push,2025-11-20,1
+LEAD01219,Paid Search,Product Launch,2025-12-23,0
+LEAD01220,Referral,Q1 Spring Push,2025-06-16,0
+LEAD01221,Paid Search,Retention Drive,2025-06-22,0
+LEAD01222,Cold Outreach,Retention Drive,2026-01-18,0
+LEAD01223,Event,Q1 Spring Push,2025-10-22,0
+LEAD01224,Referral,Retention Drive,2026-04-10,0
+LEAD01225,Paid Search,Retention Drive,2026-04-04,0
+LEAD01226,Cold Outreach,Retention Drive,2025-08-20,1
+LEAD01227,Paid Search,Product Launch,2025-05-26,0
+LEAD01228,Cold Outreach,Product Launch,2025-05-26,0
+LEAD01229,Event,Retention Drive,2025-12-29,1
+LEAD01230,Referral,Product Launch,2026-04-12,1
+LEAD01231,Cold Outreach,Brand Awareness,2026-04-13,0
+LEAD01232,Paid Search,Retention Drive,2025-09-12,0
+LEAD01233,LinkedIn,Q1 Spring Push,2025-12-02,0
+LEAD01234,Event,Competitor Conquest,2026-03-16,1
+LEAD01235,LinkedIn,Q1 Spring Push,2025-08-10,0
+LEAD01236,Referral,Brand Awareness,2025-07-27,0
+LEAD01237,Organic Search,Q1 Spring Push,2025-09-30,0
+LEAD01238,Event,Retention Drive,2025-09-23,1
+LEAD01239,Cold Outreach,Competitor Conquest,2025-07-11,0
+LEAD01240,Paid Search,Brand Awareness,2025-08-28,0
+LEAD01241,LinkedIn,Brand Awareness,2025-12-30,0
+LEAD01242,Cold Outreach,Brand Awareness,2025-06-01,0
+LEAD01243,Referral,Competitor Conquest,2026-03-18,1
+LEAD01244,Cold Outreach,Competitor Conquest,2026-05-11,0
+LEAD01245,Paid Search,Competitor Conquest,2025-09-03,0
+LEAD01246,Organic Search,Competitor Conquest,2025-06-04,1
+LEAD01247,Paid Search,Competitor Conquest,2025-11-20,0
+LEAD01248,Referral,Product Launch,2026-02-04,0
+LEAD01249,Event,Product Launch,2025-12-08,0
+LEAD01250,Referral,Retention Drive,2025-09-15,0
+LEAD01251,Organic Search,Retention Drive,2026-01-27,0
+LEAD01252,Referral,Product Launch,2026-02-05,1
+LEAD01253,Event,Product Launch,2025-07-06,0
+LEAD01254,Referral,Retention Drive,2025-09-14,0
+LEAD01255,Referral,Brand Awareness,2026-01-17,0
+LEAD01256,Cold Outreach,Brand Awareness,2025-11-06,0
+LEAD01257,Organic Search,Brand Awareness,2025-12-04,0
+LEAD01258,LinkedIn,Competitor Conquest,2025-10-13,0
+LEAD01259,Organic Search,Q1 Spring Push,2025-10-17,0
+LEAD01260,LinkedIn,Competitor Conquest,2025-12-25,0
+LEAD01261,Organic Search,Product Launch,2025-06-10,0
+LEAD01262,Event,Brand Awareness,2026-05-02,0
+LEAD01263,Paid Search,Brand Awareness,2025-08-02,0
+LEAD01264,Referral,Product Launch,2025-07-02,1
+LEAD01265,Referral,Q1 Spring Push,2026-04-06,0
+LEAD01266,Paid Search,Competitor Conquest,2025-07-15,0
+LEAD01267,LinkedIn,Q1 Spring Push,2025-06-11,0
+LEAD01268,LinkedIn,Competitor Conquest,2026-01-07,0
+LEAD01269,Paid Search,Competitor Conquest,2026-04-14,0
+LEAD01270,Organic Search,Brand Awareness,2025-08-12,0
+LEAD01271,LinkedIn,Q1 Spring Push,2025-09-15,0
+LEAD01272,Organic Search,Brand Awareness,2025-10-15,0
+LEAD01273,Event,Retention Drive,2025-12-12,0
+LEAD01274,Referral,Competitor Conquest,2026-01-09,0
+LEAD01275,Paid Search,Brand Awareness,2025-08-02,0
+LEAD01276,Referral,Q1 Spring Push,2026-03-04,1
+LEAD01277,Event,Brand Awareness,2025-11-11,1
+LEAD01278,Cold Outreach,Product Launch,2026-02-09,0
+LEAD01279,Paid Search,Brand Awareness,2025-11-25,0
+LEAD01280,Paid Search,Brand Awareness,2026-01-04,0
+LEAD01281,Referral,Product Launch,2026-03-14,0
+LEAD01282,Referral,Competitor Conquest,2026-04-20,0
+LEAD01283,Event,Retention Drive,2025-11-04,1
+LEAD01284,Organic Search,Q1 Spring Push,2025-08-29,0
+LEAD01285,Cold Outreach,Retention Drive,2025-09-05,0
+LEAD01286,Paid Search,Q1 Spring Push,2026-04-06,0
+LEAD01287,Referral,Q1 Spring Push,2025-08-15,0
+LEAD01288,Organic Search,Q1 Spring Push,2025-07-25,0
+LEAD01289,Cold Outreach,Product Launch,2026-04-07,0
+LEAD01290,Event,Brand Awareness,2025-09-18,0
+LEAD01291,LinkedIn,Product Launch,2025-06-15,0
+LEAD01292,Paid Search,Retention Drive,2025-11-22,0
+LEAD01293,LinkedIn,Competitor Conquest,2026-05-04,0
+LEAD01294,LinkedIn,Retention Drive,2025-10-27,0
+LEAD01295,Organic Search,Competitor Conquest,2026-02-26,0
+LEAD01296,Paid Search,Brand Awareness,2025-08-15,0
+LEAD01297,LinkedIn,Retention Drive,2025-11-14,0
+LEAD01298,Cold Outreach,Retention Drive,2026-02-25,0
+LEAD01299,Paid Search,Brand Awareness,2026-02-11,0
+LEAD01300,Organic Search,Q1 Spring Push,2026-03-10,0
+LEAD01301,Referral,Brand Awareness,2025-12-04,0
+LEAD01302,Cold Outreach,Product Launch,2025-12-10,0
+LEAD01303,Organic Search,Product Launch,2026-01-23,0
+LEAD01304,Event,Competitor Conquest,2026-03-12,1
+LEAD01305,Cold Outreach,Competitor Conquest,2026-01-28,0
+LEAD01306,LinkedIn,Competitor Conquest,2026-02-02,0
+LEAD01307,Paid Search,Q1 Spring Push,2026-03-28,0
+LEAD01308,Cold Outreach,Retention Drive,2025-08-23,0
+LEAD01309,Organic Search,Q1 Spring Push,2025-09-06,0
+LEAD01310,Event,Brand Awareness,2025-10-14,0
+LEAD01311,Paid Search,Retention Drive,2025-11-11,0
+LEAD01312,LinkedIn,Competitor Conquest,2026-05-06,0
+LEAD01313,Organic Search,Competitor Conquest,2026-03-24,0
+LEAD01314,LinkedIn,Q1 Spring Push,2025-10-04,0
+LEAD01315,Cold Outreach,Product Launch,2025-05-20,0
+LEAD01316,Organic Search,Competitor Conquest,2025-09-15,0
+LEAD01317,Organic Search,Brand Awareness,2026-04-21,0
+LEAD01318,Organic Search,Retention Drive,2026-05-10,0
+LEAD01319,Organic Search,Competitor Conquest,2026-04-25,1
+LEAD01320,Organic Search,Brand Awareness,2025-11-05,0
+LEAD01321,Referral,Competitor Conquest,2026-02-15,0
+LEAD01322,Paid Search,Product Launch,2025-06-06,0
+LEAD01323,Paid Search,Q1 Spring Push,2026-02-20,0
+LEAD01324,Organic Search,Competitor Conquest,2025-06-28,0
+LEAD01325,LinkedIn,Retention Drive,2025-12-01,0
+LEAD01326,Organic Search,Q1 Spring Push,2025-09-16,1
+LEAD01327,Organic Search,Competitor Conquest,2026-04-21,0
+LEAD01328,Referral,Retention Drive,2026-02-17,0
+LEAD01329,Organic Search,Product Launch,2026-03-28,1
+LEAD01330,LinkedIn,Competitor Conquest,2025-09-19,1
+LEAD01331,Cold Outreach,Retention Drive,2025-10-01,0
+LEAD01332,Organic Search,Q1 Spring Push,2025-12-06,0
+LEAD01333,LinkedIn,Brand Awareness,2026-03-10,0
+LEAD01334,Paid Search,Retention Drive,2025-06-06,0
+LEAD01335,Event,Retention Drive,2026-02-03,0
+LEAD01336,Organic Search,Product Launch,2026-01-19,0
+LEAD01337,Referral,Competitor Conquest,2025-12-21,0
+LEAD01338,Cold Outreach,Product Launch,2026-01-06,0
+LEAD01339,Paid Search,Brand Awareness,2025-05-16,0
+LEAD01340,Cold Outreach,Retention Drive,2025-08-23,0
+LEAD01341,Referral,Product Launch,2025-11-28,0
+LEAD01342,LinkedIn,Retention Drive,2026-04-27,0
+LEAD01343,Event,Q1 Spring Push,2026-02-02,0
+LEAD01344,Cold Outreach,Q1 Spring Push,2026-01-13,1
+LEAD01345,Organic Search,Retention Drive,2025-09-10,0
+LEAD01346,LinkedIn,Retention Drive,2025-10-19,0
+LEAD01347,LinkedIn,Retention Drive,2025-12-31,0
+LEAD01348,Referral,Brand Awareness,2025-06-13,1
+LEAD01349,Event,Brand Awareness,2026-02-08,0
+LEAD01350,Paid Search,Competitor Conquest,2025-08-06,0
+LEAD01351,LinkedIn,Brand Awareness,2025-08-22,1
+LEAD01352,Paid Search,Competitor Conquest,2025-06-20,0
+LEAD01353,Organic Search,Q1 Spring Push,2026-01-18,0
+LEAD01354,Cold Outreach,Q1 Spring Push,2025-08-06,0
+LEAD01355,Event,Brand Awareness,2025-12-08,1
+LEAD01356,LinkedIn,Q1 Spring Push,2025-08-29,0
+LEAD01357,Paid Search,Retention Drive,2026-02-04,0
+LEAD01358,Organic Search,Q1 Spring Push,2026-02-02,0
+LEAD01359,Event,Retention Drive,2026-02-26,0
+LEAD01360,Referral,Q1 Spring Push,2025-08-15,0
+LEAD01361,LinkedIn,Retention Drive,2026-02-18,0
+LEAD01362,LinkedIn,Product Launch,2025-06-23,1
+LEAD01363,Referral,Product Launch,2025-08-11,0
+LEAD01364,Cold Outreach,Product Launch,2025-12-23,0
+LEAD01365,Organic Search,Competitor Conquest,2025-12-14,0
+LEAD01366,LinkedIn,Competitor Conquest,2025-09-13,0
+LEAD01367,LinkedIn,Brand Awareness,2026-05-14,1
+LEAD01368,Organic Search,Brand Awareness,2026-01-28,0
+LEAD01369,Cold Outreach,Q1 Spring Push,2026-04-14,0
+LEAD01370,Event,Competitor Conquest,2026-02-21,1
+LEAD01371,Event,Product Launch,2025-10-26,0
+LEAD01372,Event,Competitor Conquest,2025-07-16,0
+LEAD01373,Paid Search,Q1 Spring Push,2026-01-19,0
+LEAD01374,Cold Outreach,Competitor Conquest,2026-03-12,0
+LEAD01375,Event,Product Launch,2026-01-29,0
+LEAD01376,LinkedIn,Brand Awareness,2026-05-09,0
+LEAD01377,Referral,Retention Drive,2026-03-23,0
+LEAD01378,Event,Product Launch,2025-06-10,0
+LEAD01379,LinkedIn,Retention Drive,2025-07-06,0
+LEAD01380,LinkedIn,Brand Awareness,2025-12-26,1
+LEAD01381,Cold Outreach,Brand Awareness,2026-03-18,1
+LEAD01382,Referral,Product Launch,2025-05-16,0
+LEAD01383,Event,Brand Awareness,2026-01-19,0
+LEAD01384,Referral,Retention Drive,2025-07-12,1
+LEAD01385,Cold Outreach,Competitor Conquest,2025-05-20,0
+LEAD01386,Cold Outreach,Q1 Spring Push,2025-12-22,0
+LEAD01387,Cold Outreach,Brand Awareness,2025-06-21,0
+LEAD01388,Referral,Brand Awareness,2025-11-13,0
+LEAD01389,Organic Search,Competitor Conquest,2026-01-10,1
+LEAD01390,Referral,Competitor Conquest,2025-06-08,1
+LEAD01391,Paid Search,Competitor Conquest,2025-07-31,0
+LEAD01392,Referral,Retention Drive,2025-08-22,0
+LEAD01393,Cold Outreach,Q1 Spring Push,2025-07-10,0
+LEAD01394,Organic Search,Q1 Spring Push,2025-07-24,0
+LEAD01395,Organic Search,Product Launch,2025-11-11,0
+LEAD01396,Referral,Retention Drive,2025-10-11,0
+LEAD01397,Event,Q1 Spring Push,2025-11-18,0
+LEAD01398,Referral,Competitor Conquest,2025-07-25,0
+LEAD01399,Cold Outreach,Competitor Conquest,2025-06-27,1
+LEAD01400,Event,Q1 Spring Push,2026-01-24,0
+LEAD01401,Referral,Brand Awareness,2026-03-25,1
+LEAD01402,Paid Search,Q1 Spring Push,2025-09-23,0
+LEAD01403,Cold Outreach,Brand Awareness,2025-11-15,0
+LEAD01404,Cold Outreach,Competitor Conquest,2026-04-20,0
+LEAD01405,Paid Search,Brand Awareness,2026-02-21,0
+LEAD01406,Paid Search,Retention Drive,2025-06-17,0
+LEAD01407,Paid Search,Brand Awareness,2026-02-15,0
+LEAD01408,Cold Outreach,Brand Awareness,2025-11-15,0
+LEAD01409,Referral,Product Launch,2025-12-03,0
+LEAD01410,Event,Q1 Spring Push,2025-06-21,1
+LEAD01411,LinkedIn,Product Launch,2025-10-31,0
+LEAD01412,Paid Search,Competitor Conquest,2025-11-16,0
+LEAD01413,LinkedIn,Brand Awareness,2026-02-22,0
+LEAD01414,Cold Outreach,Q1 Spring Push,2026-02-06,0
+LEAD01415,Referral,Retention Drive,2025-12-14,0
+LEAD01416,Event,Competitor Conquest,2025-07-02,0
+LEAD01417,Event,Q1 Spring Push,2025-05-15,1
+LEAD01418,Referral,Competitor Conquest,2025-12-31,0
+LEAD01419,Organic Search,Brand Awareness,2025-10-23,0
+LEAD01420,Organic Search,Brand Awareness,2025-07-04,0
+LEAD01421,Referral,Product Launch,2025-09-30,1
+LEAD01422,Event,Product Launch,2025-06-07,1
+LEAD01423,Cold Outreach,Product Launch,2025-05-24,1
+LEAD01424,Cold Outreach,Product Launch,2025-10-01,0
+LEAD01425,Referral,Q1 Spring Push,2025-12-14,1
+LEAD01426,Paid Search,Retention Drive,2025-09-09,1
+LEAD01427,Cold Outreach,Retention Drive,2025-07-28,0
+LEAD01428,Paid Search,Retention Drive,2025-07-21,0
+LEAD01429,LinkedIn,Competitor Conquest,2026-01-01,0
+LEAD01430,Event,Brand Awareness,2025-10-06,0
+LEAD01431,LinkedIn,Product Launch,2025-12-02,0
+LEAD01432,Referral,Product Launch,2025-12-01,1
+LEAD01433,Cold Outreach,Product Launch,2025-08-12,0
+LEAD01434,Referral,Retention Drive,2025-05-17,1
+LEAD01435,LinkedIn,Retention Drive,2026-01-18,0
+LEAD01436,Event,Retention Drive,2026-01-20,0
+LEAD01437,LinkedIn,Q1 Spring Push,2025-09-21,0
+LEAD01438,Referral,Competitor Conquest,2026-04-11,0
+LEAD01439,Cold Outreach,Retention Drive,2025-09-27,0
+LEAD01440,Referral,Brand Awareness,2025-09-12,1
+LEAD01441,Cold Outreach,Brand Awareness,2026-04-11,0
+LEAD01442,Cold Outreach,Brand Awareness,2026-04-30,0
+LEAD01443,Event,Product Launch,2025-10-24,0
+LEAD01444,Paid Search,Retention Drive,2025-05-23,0
+LEAD01445,Event,Retention Drive,2025-08-27,0
+LEAD01446,Cold Outreach,Retention Drive,2025-05-31,0
+LEAD01447,Referral,Retention Drive,2026-04-17,0
+LEAD01448,Event,Q1 Spring Push,2026-04-08,0
+LEAD01449,Referral,Product Launch,2026-02-04,0
+LEAD01450,Paid Search,Product Launch,2026-02-11,0
+LEAD01451,Organic Search,Q1 Spring Push,2025-11-26,0
+LEAD01452,Organic Search,Retention Drive,2025-05-21,0
+LEAD01453,Cold Outreach,Competitor Conquest,2025-10-31,0
+LEAD01454,Event,Brand Awareness,2026-02-10,1
+LEAD01455,Organic Search,Competitor Conquest,2026-01-05,0
+LEAD01456,LinkedIn,Competitor Conquest,2026-02-01,0
+LEAD01457,Paid Search,Q1 Spring Push,2025-11-22,0
+LEAD01458,LinkedIn,Brand Awareness,2026-05-04,1
+LEAD01459,Cold Outreach,Retention Drive,2026-04-14,1
+LEAD01460,Event,Q1 Spring Push,2025-08-17,1
+LEAD01461,Organic Search,Brand Awareness,2026-04-30,0
+LEAD01462,Event,Brand Awareness,2026-04-09,0
+LEAD01463,Cold Outreach,Retention Drive,2025-09-01,0
+LEAD01464,Paid Search,Brand Awareness,2026-03-26,0
+LEAD01465,Cold Outreach,Retention Drive,2025-11-04,0
+LEAD01466,Referral,Product Launch,2025-08-28,0
+LEAD01467,Organic Search,Q1 Spring Push,2025-06-30,0
+LEAD01468,Organic Search,Q1 Spring Push,2025-12-06,0
+LEAD01469,Cold Outreach,Product Launch,2025-07-16,0
+LEAD01470,Referral,Competitor Conquest,2026-02-05,0
+LEAD01471,Referral,Brand Awareness,2025-09-24,0
+LEAD01472,Cold Outreach,Competitor Conquest,2025-09-27,0
+LEAD01473,Cold Outreach,Q1 Spring Push,2025-11-22,0
+LEAD01474,Paid Search,Competitor Conquest,2026-02-07,0
+LEAD01475,Event,Q1 Spring Push,2025-09-11,1
+LEAD01476,Event,Retention Drive,2026-03-25,0
+LEAD01477,Cold Outreach,Brand Awareness,2025-08-18,0
+LEAD01478,Referral,Retention Drive,2025-10-25,0
+LEAD01479,Event,Brand Awareness,2025-12-01,0
+LEAD01480,Organic Search,Brand Awareness,2025-06-28,0
+LEAD01481,LinkedIn,Q1 Spring Push,2025-09-05,0
+LEAD01482,Organic Search,Retention Drive,2025-09-09,1
+LEAD01483,Referral,Brand Awareness,2025-05-29,1
+LEAD01484,Event,Q1 Spring Push,2026-02-07,0
+LEAD01485,Cold Outreach,Retention Drive,2025-07-26,0
+LEAD01486,Referral,Q1 Spring Push,2025-08-14,0
+LEAD01487,Organic Search,Competitor Conquest,2026-02-07,0
+LEAD01488,LinkedIn,Competitor Conquest,2025-08-27,0
+LEAD01489,Referral,Brand Awareness,2025-05-31,1
+LEAD01490,Event,Q1 Spring Push,2025-09-22,0
+LEAD01491,Cold Outreach,Brand Awareness,2026-04-07,0
+LEAD01492,Event,Retention Drive,2025-06-21,0
+LEAD01493,Referral,Competitor Conquest,2026-01-29,1
+LEAD01494,Cold Outreach,Brand Awareness,2026-05-12,0
+LEAD01495,Cold Outreach,Brand Awareness,2026-02-13,0
+LEAD01496,Cold Outreach,Brand Awareness,2025-10-21,0
+LEAD01497,Organic Search,Product Launch,2025-06-30,1
+LEAD01498,Event,Competitor Conquest,2025-05-31,0
+LEAD01499,Referral,Brand Awareness,2026-01-30,0
+LEAD01500,Cold Outreach,Brand Awareness,2025-10-17,0
+LEAD01501,Event,Competitor Conquest,2025-11-02,0
+LEAD01502,Paid Search,Competitor Conquest,2026-01-05,0
+LEAD01503,Referral,Competitor Conquest,2026-04-23,0
+LEAD01504,Event,Product Launch,2026-04-08,0
+LEAD01505,Referral,Competitor Conquest,2026-04-10,1
+LEAD01506,Paid Search,Brand Awareness,2025-05-31,0
+LEAD01507,Event,Brand Awareness,2025-08-13,0
+LEAD01508,Paid Search,Brand Awareness,2026-03-20,0
+LEAD01509,Event,Product Launch,2026-03-31,0
+LEAD01510,Referral,Product Launch,2025-08-22,0
+LEAD01511,Cold Outreach,Q1 Spring Push,2026-03-18,0
+LEAD01512,Paid Search,Product Launch,2026-04-02,0
+LEAD01513,Event,Product Launch,2025-10-03,0
+LEAD01514,Referral,Product Launch,2025-09-30,0
+LEAD01515,Referral,Retention Drive,2026-02-07,1
+LEAD01516,Event,Q1 Spring Push,2025-07-27,0
+LEAD01517,Organic Search,Brand Awareness,2026-02-14,1
+LEAD01518,LinkedIn,Q1 Spring Push,2025-10-26,0
+LEAD01519,LinkedIn,Retention Drive,2026-04-12,0
+LEAD01520,Paid Search,Brand Awareness,2025-06-12,0
+LEAD01521,Event,Competitor Conquest,2026-04-09,1
+LEAD01522,Cold Outreach,Brand Awareness,2025-08-02,0
+LEAD01523,Organic Search,Brand Awareness,2026-04-15,0
+LEAD01524,Organic Search,Retention Drive,2025-08-14,1
+LEAD01525,Organic Search,Brand Awareness,2025-11-06,0
+LEAD01526,Organic Search,Product Launch,2026-05-11,0
+LEAD01527,LinkedIn,Competitor Conquest,2025-07-28,0
+LEAD01528,Organic Search,Q1 Spring Push,2025-07-30,0
+LEAD01529,Referral,Competitor Conquest,2025-07-26,1
+LEAD01530,Referral,Retention Drive,2025-10-28,1
+LEAD01531,LinkedIn,Competitor Conquest,2025-07-05,0
+LEAD01532,Paid Search,Competitor Conquest,2025-09-11,0
+LEAD01533,Cold Outreach,Retention Drive,2025-11-11,0
+LEAD01534,Paid Search,Product Launch,2025-10-28,0
+LEAD01535,Cold Outreach,Brand Awareness,2026-05-04,0
+LEAD01536,LinkedIn,Q1 Spring Push,2025-09-21,0
+LEAD01537,LinkedIn,Product Launch,2025-10-21,0
+LEAD01538,Organic Search,Product Launch,2025-10-19,0
+LEAD01539,LinkedIn,Competitor Conquest,2025-09-29,0
+LEAD01540,Cold Outreach,Brand Awareness,2025-11-29,0
+LEAD01541,Referral,Retention Drive,2026-01-29,1
+LEAD01542,Paid Search,Retention Drive,2026-02-04,0
+LEAD01543,Cold Outreach,Retention Drive,2025-11-09,0
+LEAD01544,Cold Outreach,Competitor Conquest,2025-11-04,0
+LEAD01545,Referral,Product Launch,2025-09-16,1
+LEAD01546,Organic Search,Brand Awareness,2025-06-29,0
+LEAD01547,LinkedIn,Brand Awareness,2025-08-05,0
+LEAD01548,Cold Outreach,Retention Drive,2025-10-05,0
+LEAD01549,Paid Search,Product Launch,2025-10-29,0
+LEAD01550,Referral,Retention Drive,2026-02-24,1
+LEAD01551,Referral,Product Launch,2026-02-26,0
+LEAD01552,LinkedIn,Product Launch,2025-09-07,0
+LEAD01553,Paid Search,Retention Drive,2025-08-16,0
+LEAD01554,Event,Q1 Spring Push,2026-04-11,0
+LEAD01555,Organic Search,Q1 Spring Push,2025-11-26,1
+LEAD01556,Cold Outreach,Brand Awareness,2026-01-31,0
+LEAD01557,Event,Brand Awareness,2026-04-11,0
+LEAD01558,LinkedIn,Retention Drive,2025-09-28,0
+LEAD01559,LinkedIn,Brand Awareness,2025-12-10,0
+LEAD01560,Organic Search,Product Launch,2026-02-20,0
+LEAD01561,LinkedIn,Retention Drive,2025-10-17,0
+LEAD01562,Organic Search,Competitor Conquest,2025-05-21,0
+LEAD01563,Cold Outreach,Product Launch,2026-03-17,0
+LEAD01564,Referral,Competitor Conquest,2026-03-26,1
+LEAD01565,Event,Competitor Conquest,2025-09-14,1
+LEAD01566,LinkedIn,Q1 Spring Push,2025-07-18,0
+LEAD01567,Event,Competitor Conquest,2025-07-19,0
+LEAD01568,Referral,Q1 Spring Push,2025-09-05,0
+LEAD01569,Cold Outreach,Brand Awareness,2026-04-01,0
+LEAD01570,Cold Outreach,Product Launch,2025-06-29,1
+LEAD01571,Paid Search,Product Launch,2026-03-19,0
+LEAD01572,Cold Outreach,Product Launch,2025-06-24,0
+LEAD01573,Paid Search,Q1 Spring Push,2025-11-14,0
+LEAD01574,Referral,Q1 Spring Push,2025-06-30,0
+LEAD01575,Cold Outreach,Product Launch,2025-11-09,0
+LEAD01576,Cold Outreach,Brand Awareness,2025-08-21,0
+LEAD01577,Cold Outreach,Brand Awareness,2026-02-18,1
+LEAD01578,Organic Search,Brand Awareness,2025-12-31,0
+LEAD01579,LinkedIn,Q1 Spring Push,2025-12-26,0
+LEAD01580,Event,Competitor Conquest,2025-06-11,0
+LEAD01581,Organic Search,Product Launch,2025-06-29,0
+LEAD01582,Organic Search,Brand Awareness,2025-11-01,0
+LEAD01583,Paid Search,Competitor Conquest,2026-04-26,0
+LEAD01584,Event,Competitor Conquest,2025-11-24,0
+LEAD01585,LinkedIn,Competitor Conquest,2025-10-18,0
+LEAD01586,Event,Brand Awareness,2026-01-01,1
+LEAD01587,Referral,Brand Awareness,2026-04-02,0
+LEAD01588,Cold Outreach,Q1 Spring Push,2025-06-07,0
+LEAD01589,Cold Outreach,Q1 Spring Push,2026-05-03,0
+LEAD01590,Event,Q1 Spring Push,2026-01-10,0
+LEAD01591,Organic Search,Product Launch,2025-07-26,0
+LEAD01592,Event,Q1 Spring Push,2026-05-10,0
+LEAD01593,Event,Brand Awareness,2025-07-02,0
+LEAD01594,Organic Search,Competitor Conquest,2025-06-25,0
+LEAD01595,Cold Outreach,Q1 Spring Push,2025-07-05,0
+LEAD01596,Organic Search,Product Launch,2026-04-03,0
+LEAD01597,Paid Search,Q1 Spring Push,2026-05-13,0
+LEAD01598,LinkedIn,Product Launch,2026-04-19,0
+LEAD01599,Event,Retention Drive,2026-02-05,0
+LEAD01600,LinkedIn,Competitor Conquest,2025-07-09,0
+LEAD01601,Event,Retention Drive,2026-04-13,0
+LEAD01602,LinkedIn,Q1 Spring Push,2026-02-13,0
+LEAD01603,Cold Outreach,Retention Drive,2025-07-24,0
+LEAD01604,Cold Outreach,Q1 Spring Push,2026-02-07,0
+LEAD01605,Paid Search,Product Launch,2026-02-20,0
+LEAD01606,LinkedIn,Brand Awareness,2025-07-11,0
+LEAD01607,LinkedIn,Product Launch,2025-10-08,0
+LEAD01608,Paid Search,Product Launch,2025-08-16,0
+LEAD01609,Organic Search,Brand Awareness,2025-12-21,0
+LEAD01610,Event,Q1 Spring Push,2025-09-04,1
+LEAD01611,LinkedIn,Retention Drive,2025-10-06,0
+LEAD01612,Organic Search,Competitor Conquest,2026-05-08,0
+LEAD01613,Cold Outreach,Brand Awareness,2025-07-17,0
+LEAD01614,Event,Retention Drive,2025-06-01,0
+LEAD01615,Cold Outreach,Brand Awareness,2025-09-26,0
+LEAD01616,LinkedIn,Brand Awareness,2025-09-01,0
+LEAD01617,Paid Search,Retention Drive,2026-02-06,0
+LEAD01618,Paid Search,Brand Awareness,2025-10-17,0
+LEAD01619,LinkedIn,Competitor Conquest,2025-09-19,0
+LEAD01620,Cold Outreach,Product Launch,2026-03-03,0
+LEAD01621,Event,Q1 Spring Push,2026-03-04,0
+LEAD01622,Event,Product Launch,2025-10-22,0
+LEAD01623,LinkedIn,Product Launch,2026-02-26,0
+LEAD01624,Referral,Q1 Spring Push,2026-05-06,1
+LEAD01625,LinkedIn,Brand Awareness,2026-02-02,1
+LEAD01626,Organic Search,Brand Awareness,2025-08-06,0
+LEAD01627,Paid Search,Retention Drive,2025-09-01,0
+LEAD01628,LinkedIn,Product Launch,2025-09-07,0
+LEAD01629,Cold Outreach,Q1 Spring Push,2026-04-10,1
+LEAD01630,Cold Outreach,Retention Drive,2025-12-17,0
+LEAD01631,Organic Search,Competitor Conquest,2026-01-24,0
+LEAD01632,LinkedIn,Brand Awareness,2025-06-25,1
+LEAD01633,Organic Search,Retention Drive,2025-10-07,0
+LEAD01634,Referral,Retention Drive,2025-12-21,0
+LEAD01635,LinkedIn,Product Launch,2025-11-06,0
+LEAD01636,Referral,Q1 Spring Push,2025-09-28,0
+LEAD01637,LinkedIn,Brand Awareness,2025-05-27,0
+LEAD01638,Paid Search,Brand Awareness,2025-06-24,0
+LEAD01639,Cold Outreach,Brand Awareness,2025-08-03,0
+LEAD01640,LinkedIn,Product Launch,2026-03-10,0
+LEAD01641,Cold Outreach,Retention Drive,2026-01-17,0
+LEAD01642,Event,Product Launch,2025-09-06,0
+LEAD01643,Referral,Brand Awareness,2025-08-26,0
+LEAD01644,Cold Outreach,Product Launch,2025-06-29,0
+LEAD01645,Paid Search,Competitor Conquest,2025-07-10,0
+LEAD01646,Cold Outreach,Brand Awareness,2026-04-10,0
+LEAD01647,LinkedIn,Brand Awareness,2025-05-15,0
+LEAD01648,Organic Search,Q1 Spring Push,2025-09-14,0
+LEAD01649,Paid Search,Brand Awareness,2025-11-13,0
+LEAD01650,Event,Product Launch,2025-12-26,0
+LEAD01651,Cold Outreach,Brand Awareness,2025-07-09,0
+LEAD01652,Cold Outreach,Product Launch,2025-07-13,0
+LEAD01653,Referral,Q1 Spring Push,2026-02-04,1
+LEAD01654,Referral,Product Launch,2025-11-03,0
+LEAD01655,LinkedIn,Q1 Spring Push,2025-12-13,0
+LEAD01656,Paid Search,Q1 Spring Push,2026-04-30,0
+LEAD01657,Referral,Q1 Spring Push,2025-11-07,0
+LEAD01658,LinkedIn,Product Launch,2025-09-28,0
+LEAD01659,Referral,Retention Drive,2025-09-29,0
+LEAD01660,Event,Brand Awareness,2025-09-23,1
+LEAD01661,Paid Search,Competitor Conquest,2025-12-20,0
+LEAD01662,Organic Search,Q1 Spring Push,2026-03-12,1
+LEAD01663,Organic Search,Competitor Conquest,2025-11-07,0
+LEAD01664,Organic Search,Competitor Conquest,2025-08-06,0
+LEAD01665,Organic Search,Brand Awareness,2025-10-24,0
+LEAD01666,Paid Search,Q1 Spring Push,2025-06-19,0
+LEAD01667,Paid Search,Retention Drive,2026-04-24,0
+LEAD01668,Cold Outreach,Product Launch,2025-09-02,1
+LEAD01669,Organic Search,Product Launch,2026-03-23,1
+LEAD01670,Referral,Product Launch,2026-03-28,0
+LEAD01671,Event,Brand Awareness,2026-04-03,0
+LEAD01672,LinkedIn,Competitor Conquest,2025-10-21,0
+LEAD01673,Referral,Competitor Conquest,2025-05-24,0
+LEAD01674,Organic Search,Product Launch,2025-09-27,0
+LEAD01675,Organic Search,Brand Awareness,2026-01-18,0
+LEAD01676,Paid Search,Retention Drive,2026-05-02,0
+LEAD01677,Organic Search,Product Launch,2025-09-11,0
+LEAD01678,Organic Search,Product Launch,2026-02-25,0
+LEAD01679,Cold Outreach,Brand Awareness,2025-11-30,0
+LEAD01680,LinkedIn,Competitor Conquest,2026-05-05,0
+LEAD01681,Referral,Q1 Spring Push,2025-06-06,1
+LEAD01682,Event,Q1 Spring Push,2026-04-24,0
+LEAD01683,Paid Search,Product Launch,2025-07-20,1
+LEAD01684,LinkedIn,Q1 Spring Push,2025-07-21,0
+LEAD01685,Cold Outreach,Product Launch,2025-10-23,0
+LEAD01686,Paid Search,Retention Drive,2025-12-21,0
+LEAD01687,Paid Search,Competitor Conquest,2026-02-22,0
+LEAD01688,Cold Outreach,Brand Awareness,2025-11-24,0
+LEAD01689,Paid Search,Competitor Conquest,2026-03-14,0
+LEAD01690,Referral,Competitor Conquest,2025-07-10,0
+LEAD01691,Cold Outreach,Competitor Conquest,2026-01-30,0
+LEAD01692,Paid Search,Q1 Spring Push,2026-01-29,1
+LEAD01693,Paid Search,Brand Awareness,2025-05-26,0
+LEAD01694,Event,Brand Awareness,2025-11-11,0
+LEAD01695,LinkedIn,Product Launch,2025-07-28,0
+LEAD01696,Cold Outreach,Product Launch,2025-08-26,0
+LEAD01697,Organic Search,Product Launch,2025-11-25,1
+LEAD01698,Paid Search,Competitor Conquest,2025-11-28,0
+LEAD01699,LinkedIn,Product Launch,2025-09-05,0
+LEAD01700,LinkedIn,Product Launch,2026-04-05,0
+LEAD01701,Referral,Q1 Spring Push,2025-07-01,0
+LEAD01702,Organic Search,Brand Awareness,2026-05-14,1
+LEAD01703,Paid Search,Retention Drive,2026-02-22,0
+LEAD01704,Organic Search,Product Launch,2025-10-10,0
+LEAD01705,Event,Brand Awareness,2025-10-13,0
+LEAD01706,Referral,Q1 Spring Push,2026-03-14,1
+LEAD01707,Paid Search,Product Launch,2026-03-14,0
+LEAD01708,Cold Outreach,Q1 Spring Push,2025-09-13,0
+LEAD01709,Paid Search,Product Launch,2025-09-23,1
+LEAD01710,Cold Outreach,Retention Drive,2025-12-26,0
+LEAD01711,Paid Search,Competitor Conquest,2026-04-12,0
+LEAD01712,Event,Q1 Spring Push,2025-10-23,1
+LEAD01713,Event,Competitor Conquest,2025-10-05,1
+LEAD01714,Event,Q1 Spring Push,2025-07-23,0
+LEAD01715,Cold Outreach,Brand Awareness,2025-05-16,0
+LEAD01716,Paid Search,Brand Awareness,2026-05-02,0
+LEAD01717,Event,Product Launch,2026-01-14,0
+LEAD01718,Event,Q1 Spring Push,2025-07-30,0
+LEAD01719,Cold Outreach,Competitor Conquest,2026-01-16,0
+LEAD01720,Event,Brand Awareness,2025-11-09,0
+LEAD01721,Organic Search,Competitor Conquest,2025-08-09,0
+LEAD01722,Organic Search,Brand Awareness,2025-08-05,0
+LEAD01723,Referral,Brand Awareness,2025-10-18,0
+LEAD01724,Paid Search,Competitor Conquest,2025-11-18,0
+LEAD01725,Event,Competitor Conquest,2025-06-03,1
+LEAD01726,Referral,Competitor Conquest,2026-03-31,0
+LEAD01727,Referral,Brand Awareness,2025-11-12,0
+LEAD01728,Referral,Retention Drive,2025-05-31,0
+LEAD01729,Organic Search,Retention Drive,2025-06-28,1
+LEAD01730,Organic Search,Product Launch,2025-07-25,0
+LEAD01731,Organic Search,Product Launch,2025-05-25,0
+LEAD01732,LinkedIn,Q1 Spring Push,2025-08-31,0
+LEAD01733,Referral,Retention Drive,2026-05-12,0
+LEAD01734,Paid Search,Product Launch,2026-01-18,0
+LEAD01735,Event,Competitor Conquest,2026-03-16,0
+LEAD01736,Paid Search,Brand Awareness,2025-08-07,0
+LEAD01737,Cold Outreach,Competitor Conquest,2026-01-22,0
+LEAD01738,Referral,Q1 Spring Push,2026-01-19,0
+LEAD01739,Referral,Product Launch,2026-05-14,0
+LEAD01740,Cold Outreach,Q1 Spring Push,2025-09-03,0
+LEAD01741,Organic Search,Brand Awareness,2026-01-11,1
+LEAD01742,Event,Product Launch,2025-08-10,0
+LEAD01743,Referral,Product Launch,2026-05-02,0
+LEAD01744,Organic Search,Product Launch,2026-02-08,0
+LEAD01745,Event,Q1 Spring Push,2026-01-05,0
+LEAD01746,LinkedIn,Brand Awareness,2025-06-10,1
+LEAD01747,LinkedIn,Brand Awareness,2025-11-20,0
+LEAD01748,LinkedIn,Competitor Conquest,2025-07-01,0
+LEAD01749,Referral,Retention Drive,2025-07-15,0
+LEAD01750,Organic Search,Q1 Spring Push,2025-09-01,0
+LEAD01751,Paid Search,Competitor Conquest,2025-10-30,1
+LEAD01752,Event,Competitor Conquest,2025-05-27,0
+LEAD01753,Referral,Competitor Conquest,2026-05-01,0
+LEAD01754,LinkedIn,Q1 Spring Push,2025-09-13,0
+LEAD01755,Paid Search,Product Launch,2025-06-25,1
+LEAD01756,Cold Outreach,Brand Awareness,2026-01-11,0
+LEAD01757,Referral,Brand Awareness,2025-12-07,0
+LEAD01758,Referral,Competitor Conquest,2026-01-24,0
+LEAD01759,Referral,Product Launch,2025-07-15,1
+LEAD01760,Cold Outreach,Retention Drive,2025-09-29,0
+LEAD01761,Organic Search,Brand Awareness,2025-05-23,1
+LEAD01762,Referral,Retention Drive,2025-06-14,0
+LEAD01763,Event,Q1 Spring Push,2025-05-22,0
+LEAD01764,Referral,Competitor Conquest,2025-12-15,1
+LEAD01765,Cold Outreach,Retention Drive,2025-11-26,1
+LEAD01766,LinkedIn,Q1 Spring Push,2026-02-02,0
+LEAD01767,LinkedIn,Competitor Conquest,2025-06-14,0
+LEAD01768,Cold Outreach,Q1 Spring Push,2025-12-11,0
+LEAD01769,Paid Search,Retention Drive,2025-09-04,0
+LEAD01770,Paid Search,Q1 Spring Push,2026-03-24,0
+LEAD01771,Organic Search,Retention Drive,2025-07-30,1
+LEAD01772,Organic Search,Competitor Conquest,2026-05-04,0
+LEAD01773,Event,Brand Awareness,2025-06-23,0
+LEAD01774,Referral,Q1 Spring Push,2025-12-23,0
+LEAD01775,LinkedIn,Q1 Spring Push,2026-04-11,0
+LEAD01776,Organic Search,Brand Awareness,2025-09-13,0
+LEAD01777,LinkedIn,Product Launch,2026-03-14,0
+LEAD01778,Organic Search,Product Launch,2025-06-08,1
+LEAD01779,Paid Search,Retention Drive,2025-11-04,0
+LEAD01780,Referral,Product Launch,2025-07-20,0
+LEAD01781,LinkedIn,Product Launch,2026-01-31,0
+LEAD01782,Organic Search,Competitor Conquest,2026-05-09,1
+LEAD01783,LinkedIn,Q1 Spring Push,2026-03-18,0
+LEAD01784,Referral,Retention Drive,2026-05-10,1
+LEAD01785,Paid Search,Brand Awareness,2026-01-10,0
+LEAD01786,Cold Outreach,Product Launch,2025-06-09,0
+LEAD01787,LinkedIn,Q1 Spring Push,2026-02-15,0
+LEAD01788,LinkedIn,Retention Drive,2026-04-08,0
+LEAD01789,Organic Search,Retention Drive,2026-03-01,1
+LEAD01790,Cold Outreach,Retention Drive,2026-04-07,1
+LEAD01791,Referral,Competitor Conquest,2025-06-28,1
+LEAD01792,LinkedIn,Brand Awareness,2025-10-18,0
+LEAD01793,Organic Search,Brand Awareness,2025-10-24,0
+LEAD01794,Organic Search,Brand Awareness,2025-10-26,0
+LEAD01795,LinkedIn,Product Launch,2026-03-10,0
+LEAD01796,LinkedIn,Retention Drive,2025-10-18,0
+LEAD01797,Referral,Product Launch,2026-01-11,0
+LEAD01798,Referral,Q1 Spring Push,2025-10-05,1
+LEAD01799,Referral,Retention Drive,2026-04-01,0
+LEAD01800,Event,Q1 Spring Push,2025-11-06,0
+LEAD01801,Paid Search,Brand Awareness,2025-12-10,0
+LEAD01802,Cold Outreach,Brand Awareness,2025-09-16,0
+LEAD01803,Referral,Retention Drive,2025-05-24,0
+LEAD01804,Referral,Retention Drive,2025-06-10,0
+LEAD01805,Event,Brand Awareness,2026-03-29,1
+LEAD01806,Event,Retention Drive,2025-08-23,0
+LEAD01807,Referral,Brand Awareness,2025-12-27,1
+LEAD01808,Cold Outreach,Product Launch,2025-12-05,0
+LEAD01809,Cold Outreach,Product Launch,2025-07-29,0
+LEAD01810,Paid Search,Product Launch,2025-11-24,0
+LEAD01811,Referral,Brand Awareness,2025-07-12,0
+LEAD01812,LinkedIn,Retention Drive,2026-03-04,0
+LEAD01813,Event,Product Launch,2025-05-28,0
+LEAD01814,Event,Retention Drive,2025-12-01,0
+LEAD01815,Paid Search,Retention Drive,2026-02-15,0
+LEAD01816,Organic Search,Brand Awareness,2025-06-22,0
+LEAD01817,Paid Search,Brand Awareness,2026-02-10,0
+LEAD01818,Cold Outreach,Brand Awareness,2026-01-09,0
+LEAD01819,LinkedIn,Retention Drive,2025-09-21,0
+LEAD01820,Referral,Retention Drive,2026-04-08,1
+LEAD01821,Paid Search,Retention Drive,2025-10-25,0
+LEAD01822,Organic Search,Brand Awareness,2025-09-03,1
+LEAD01823,LinkedIn,Retention Drive,2025-12-24,0
+LEAD01824,Referral,Brand Awareness,2026-04-18,0
+LEAD01825,Cold Outreach,Competitor Conquest,2025-07-14,0
+LEAD01826,Organic Search,Brand Awareness,2026-03-14,0
+LEAD01827,Organic Search,Q1 Spring Push,2026-04-23,1
+LEAD01828,Cold Outreach,Retention Drive,2025-08-13,0
+LEAD01829,Paid Search,Competitor Conquest,2026-01-30,0
+LEAD01830,Organic Search,Q1 Spring Push,2026-05-09,0
+LEAD01831,Organic Search,Brand Awareness,2025-12-20,0
+LEAD01832,LinkedIn,Retention Drive,2025-07-09,0
+LEAD01833,Referral,Retention Drive,2025-11-14,1
+LEAD01834,Cold Outreach,Retention Drive,2025-07-19,0
+LEAD01835,Paid Search,Competitor Conquest,2026-01-30,0
+LEAD01836,Referral,Product Launch,2026-03-29,1
+LEAD01837,Referral,Brand Awareness,2025-09-08,0
+LEAD01838,Organic Search,Competitor Conquest,2026-01-21,0
+LEAD01839,Paid Search,Product Launch,2026-01-22,0
+LEAD01840,Paid Search,Brand Awareness,2025-10-04,1
+LEAD01841,Referral,Competitor Conquest,2025-09-28,0
+LEAD01842,Paid Search,Q1 Spring Push,2025-10-17,1
+LEAD01843,Event,Competitor Conquest,2025-07-04,0
+LEAD01844,Event,Brand Awareness,2026-01-29,1
+LEAD01845,Cold Outreach,Retention Drive,2025-11-20,0
+LEAD01846,Paid Search,Retention Drive,2025-10-28,0
+LEAD01847,Cold Outreach,Brand Awareness,2026-03-02,0
+LEAD01848,Event,Competitor Conquest,2026-02-17,0
+LEAD01849,Event,Brand Awareness,2025-11-15,1
+LEAD01850,LinkedIn,Brand Awareness,2026-01-16,0
+LEAD01851,LinkedIn,Q1 Spring Push,2025-05-28,0
+LEAD01852,Cold Outreach,Q1 Spring Push,2025-09-25,0
+LEAD01853,Event,Retention Drive,2025-11-19,1
+LEAD01854,LinkedIn,Competitor Conquest,2025-09-28,1
+LEAD01855,Cold Outreach,Brand Awareness,2025-11-17,0
+LEAD01856,Paid Search,Brand Awareness,2025-09-11,0
+LEAD01857,Organic Search,Retention Drive,2025-06-18,0
+LEAD01858,Referral,Product Launch,2026-04-26,0
+LEAD01859,Cold Outreach,Product Launch,2026-03-29,0
+LEAD01860,Event,Retention Drive,2025-05-23,1
+LEAD01861,Referral,Retention Drive,2026-01-04,1
+LEAD01862,LinkedIn,Competitor Conquest,2025-12-23,0
+LEAD01863,Cold Outreach,Competitor Conquest,2025-12-06,0
+LEAD01864,Organic Search,Q1 Spring Push,2025-07-01,1
+LEAD01865,Organic Search,Product Launch,2025-12-18,0
+LEAD01866,Referral,Product Launch,2026-01-14,0
+LEAD01867,Organic Search,Retention Drive,2025-05-15,0
+LEAD01868,Organic Search,Brand Awareness,2026-02-12,0
+LEAD01869,Referral,Retention Drive,2025-11-07,0
+LEAD01870,Event,Product Launch,2026-01-09,1
+LEAD01871,Event,Product Launch,2025-12-26,0
+LEAD01872,Referral,Retention Drive,2026-04-15,1
+LEAD01873,LinkedIn,Competitor Conquest,2026-02-24,0
+LEAD01874,Cold Outreach,Retention Drive,2025-11-07,0
+LEAD01875,Referral,Product Launch,2025-09-24,1
+LEAD01876,Paid Search,Product Launch,2026-02-21,1
+LEAD01877,Referral,Q1 Spring Push,2025-11-02,0
+LEAD01878,Organic Search,Retention Drive,2025-09-06,0
+LEAD01879,Event,Retention Drive,2025-10-20,0
+LEAD01880,Cold Outreach,Retention Drive,2025-11-14,0
+LEAD01881,Event,Competitor Conquest,2026-01-06,0
+LEAD01882,Referral,Retention Drive,2025-09-01,0
+LEAD01883,Organic Search,Q1 Spring Push,2025-07-11,1
+LEAD01884,Cold Outreach,Q1 Spring Push,2025-07-09,0
+LEAD01885,Cold Outreach,Brand Awareness,2025-11-04,0
+LEAD01886,Organic Search,Q1 Spring Push,2026-01-24,0
+LEAD01887,LinkedIn,Product Launch,2025-09-26,0
+LEAD01888,Cold Outreach,Product Launch,2025-06-16,0
+LEAD01889,Event,Product Launch,2026-05-06,0
+LEAD01890,Cold Outreach,Brand Awareness,2025-09-07,0
+LEAD01891,LinkedIn,Brand Awareness,2026-01-30,0
+LEAD01892,LinkedIn,Q1 Spring Push,2026-01-09,0
+LEAD01893,Cold Outreach,Q1 Spring Push,2025-12-14,0
+LEAD01894,LinkedIn,Competitor Conquest,2025-06-14,0
+LEAD01895,Cold Outreach,Brand Awareness,2025-11-14,1
+LEAD01896,Event,Q1 Spring Push,2025-09-11,0
+LEAD01897,Organic Search,Brand Awareness,2025-08-28,0
+LEAD01898,Organic Search,Product Launch,2025-05-15,0
+LEAD01899,Referral,Retention Drive,2026-01-23,1
+LEAD01900,Referral,Competitor Conquest,2025-10-20,0
+LEAD01901,LinkedIn,Brand Awareness,2025-06-30,0
+LEAD01902,Paid Search,Retention Drive,2025-07-19,0
+LEAD01903,Organic Search,Competitor Conquest,2025-10-05,0
+LEAD01904,Event,Retention Drive,2025-07-29,1
+LEAD01905,Referral,Product Launch,2025-11-02,0
+LEAD01906,Paid Search,Brand Awareness,2026-03-02,0
+LEAD01907,Organic Search,Q1 Spring Push,2025-07-03,0
+LEAD01908,LinkedIn,Q1 Spring Push,2026-04-22,0
+LEAD01909,Paid Search,Product Launch,2025-10-12,0
+LEAD01910,Referral,Product Launch,2025-10-08,0
+LEAD01911,Referral,Product Launch,2026-05-14,1
+LEAD01912,Cold Outreach,Q1 Spring Push,2025-12-30,0
+LEAD01913,Event,Product Launch,2025-09-17,0
+LEAD01914,Cold Outreach,Competitor Conquest,2026-03-17,0
+LEAD01915,Organic Search,Brand Awareness,2025-07-03,0
+LEAD01916,Event,Competitor Conquest,2026-01-02,0
+LEAD01917,Referral,Brand Awareness,2025-06-25,0
+LEAD01918,Referral,Retention Drive,2025-08-21,0
+LEAD01919,Event,Product Launch,2026-01-19,0
+LEAD01920,Event,Brand Awareness,2025-11-27,0
+LEAD01921,Cold Outreach,Competitor Conquest,2026-04-18,0
+LEAD01922,Cold Outreach,Brand Awareness,2026-03-21,0
+LEAD01923,Event,Product Launch,2026-01-07,0
+LEAD01924,LinkedIn,Q1 Spring Push,2025-05-22,1
+LEAD01925,Referral,Competitor Conquest,2025-10-12,0
+LEAD01926,Referral,Product Launch,2026-02-20,1
+LEAD01927,Referral,Q1 Spring Push,2025-12-05,0
+LEAD01928,Cold Outreach,Competitor Conquest,2025-10-05,1
+LEAD01929,Organic Search,Q1 Spring Push,2025-11-25,0
+LEAD01930,Cold Outreach,Product Launch,2025-09-07,0
+LEAD01931,Cold Outreach,Competitor Conquest,2025-07-17,0
+LEAD01932,Paid Search,Product Launch,2025-12-19,0
+LEAD01933,Paid Search,Brand Awareness,2026-02-22,0
+LEAD01934,Referral,Q1 Spring Push,2026-03-24,0
+LEAD01935,Organic Search,Q1 Spring Push,2026-02-27,0
+LEAD01936,Referral,Q1 Spring Push,2025-05-22,0
+LEAD01937,Referral,Q1 Spring Push,2025-09-15,0
+LEAD01938,Paid Search,Brand Awareness,2025-06-01,1
+LEAD01939,Event,Brand Awareness,2025-06-07,0
+LEAD01940,Referral,Brand Awareness,2025-11-26,1
+LEAD01941,Organic Search,Q1 Spring Push,2026-04-24,0
+LEAD01942,Referral,Product Launch,2026-02-16,0
+LEAD01943,Cold Outreach,Competitor Conquest,2026-03-20,0
+LEAD01944,Paid Search,Retention Drive,2026-04-08,0
+LEAD01945,Event,Q1 Spring Push,2025-09-20,0
+LEAD01946,Referral,Retention Drive,2026-03-26,1
+LEAD01947,LinkedIn,Brand Awareness,2026-04-28,0
+LEAD01948,LinkedIn,Product Launch,2025-05-24,0
+LEAD01949,LinkedIn,Retention Drive,2025-12-09,0
+LEAD01950,Paid Search,Competitor Conquest,2025-10-12,0
+LEAD01951,Event,Brand Awareness,2025-06-07,1
+LEAD01952,Paid Search,Product Launch,2025-05-19,0
+LEAD01953,Organic Search,Retention Drive,2026-03-15,1
+LEAD01954,Organic Search,Product Launch,2026-02-27,0
+LEAD01955,Event,Brand Awareness,2025-05-27,0
+LEAD01956,Paid Search,Competitor Conquest,2025-10-04,0
+LEAD01957,LinkedIn,Retention Drive,2025-07-18,0
+LEAD01958,Paid Search,Competitor Conquest,2025-06-13,0
+LEAD01959,Organic Search,Product Launch,2025-11-19,1
+LEAD01960,Organic Search,Brand Awareness,2025-10-27,1
+LEAD01961,Paid Search,Competitor Conquest,2025-05-16,0
+LEAD01962,Cold Outreach,Brand Awareness,2025-05-17,0
+LEAD01963,LinkedIn,Retention Drive,2025-05-21,0
+LEAD01964,Paid Search,Product Launch,2026-01-06,0
+LEAD01965,LinkedIn,Brand Awareness,2026-02-28,0
+LEAD01966,Organic Search,Retention Drive,2025-07-09,1
+LEAD01967,LinkedIn,Product Launch,2026-02-11,0
+LEAD01968,LinkedIn,Brand Awareness,2025-05-15,0
+LEAD01969,LinkedIn,Brand Awareness,2026-05-13,0
+LEAD01970,Organic Search,Retention Drive,2026-01-31,0
+LEAD01971,Paid Search,Retention Drive,2025-12-25,0
+LEAD01972,Referral,Retention Drive,2025-07-05,0
+LEAD01973,Cold Outreach,Q1 Spring Push,2025-09-24,0
+LEAD01974,Cold Outreach,Brand Awareness,2025-08-12,0
+LEAD01975,Cold Outreach,Brand Awareness,2025-11-25,0
+LEAD01976,Organic Search,Q1 Spring Push,2025-09-14,0
+LEAD01977,Event,Competitor Conquest,2025-07-07,0
+LEAD01978,Referral,Retention Drive,2026-01-20,0
+LEAD01979,LinkedIn,Q1 Spring Push,2026-01-17,0
+LEAD01980,Event,Competitor Conquest,2025-12-30,0
+LEAD01981,Organic Search,Product Launch,2025-09-26,0
+LEAD01982,Paid Search,Q1 Spring Push,2026-04-06,1
+LEAD01983,Event,Retention Drive,2025-10-13,0
+LEAD01984,Organic Search,Brand Awareness,2025-07-11,0
+LEAD01985,Referral,Retention Drive,2026-01-25,0
+LEAD01986,Referral,Q1 Spring Push,2026-01-14,0
+LEAD01987,Cold Outreach,Brand Awareness,2026-02-13,0
+LEAD01988,Referral,Competitor Conquest,2026-04-04,1
+LEAD01989,Paid Search,Competitor Conquest,2026-05-04,0
+LEAD01990,Organic Search,Brand Awareness,2026-02-17,0
+LEAD01991,Referral,Competitor Conquest,2026-02-21,0
+LEAD01992,Cold Outreach,Product Launch,2025-11-10,0
+LEAD01993,Organic Search,Brand Awareness,2025-08-10,0
+LEAD01994,Event,Q1 Spring Push,2026-02-24,0
+LEAD01995,Cold Outreach,Q1 Spring Push,2026-01-12,0
+LEAD01996,Organic Search,Brand Awareness,2026-02-12,0
+LEAD01997,Organic Search,Q1 Spring Push,2025-08-31,0
+LEAD01998,Event,Competitor Conquest,2025-08-26,0
+LEAD01999,Organic Search,Brand Awareness,2026-04-02,0
+LEAD02000,LinkedIn,Product Launch,2025-10-28,1

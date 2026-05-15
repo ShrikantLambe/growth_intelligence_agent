@@ -1,0 +1,73 @@
+metric_name,quarter,metric_value
+Win Rate,2024-Q1,0.243
+Win Rate,2024-Q2,0.2373
+Win Rate,2024-Q3,0.2583
+Win Rate,2024-Q4,0.2576
+Win Rate,2025-Q1,0.2673
+Win Rate,2025-Q2,0.2669
+Win Rate,2025-Q3,0.2778
+Win Rate,2025-Q4,0.2788
+Pipeline Coverage,2024-Q1,3.3626
+Pipeline Coverage,2024-Q2,3.6348
+Pipeline Coverage,2024-Q3,3.6286
+Pipeline Coverage,2024-Q4,3.773
+Pipeline Coverage,2025-Q1,3.9322
+Pipeline Coverage,2025-Q2,4.0297
+Pipeline Coverage,2025-Q3,4.129
+Pipeline Coverage,2025-Q4,4.2619
+Net Revenue Retention,2024-Q1,1.0808
+Net Revenue Retention,2024-Q2,1.0787
+Net Revenue Retention,2024-Q3,1.0889
+Net Revenue Retention,2024-Q4,1.1017
+Net Revenue Retention,2025-Q1,1.111
+Net Revenue Retention,2025-Q2,1.1203
+Net Revenue Retention,2025-Q3,1.1269
+Net Revenue Retention,2025-Q4,1.1279
+Average Deal Size,2024-Q1,44653.0
+Average Deal Size,2024-Q2,44341.0
+Average Deal Size,2024-Q3,45721.0
+Average Deal Size,2024-Q4,46098.0
+Average Deal Size,2025-Q1,47174.0
+Average Deal Size,2025-Q2,48132.0
+Average Deal Size,2025-Q3,48929.0
+Average Deal Size,2025-Q4,49769.0
+Product Attach Rate,2024-Q1,0.3573
+Product Attach Rate,2024-Q2,0.361
+Product Attach Rate,2024-Q3,0.3669
+Product Attach Rate,2024-Q4,0.3813
+Product Attach Rate,2025-Q1,0.3914
+Product Attach Rate,2025-Q2,0.3895
+Product Attach Rate,2025-Q3,0.4067
+Product Attach Rate,2025-Q4,0.4162
+Seat Expansion Rate,2024-Q1,0.1894
+Seat Expansion Rate,2024-Q2,0.1968
+Seat Expansion Rate,2024-Q3,0.1977
+Seat Expansion Rate,2024-Q4,0.2023
+Seat Expansion Rate,2025-Q1,0.2057
+Seat Expansion Rate,2025-Q2,0.21
+Seat Expansion Rate,2025-Q3,0.2118
+Seat Expansion Rate,2025-Q4,0.2151
+Usage At-Risk Rate,2024-Q1,0.248
+Usage At-Risk Rate,2024-Q2,0.2258
+Usage At-Risk Rate,2024-Q3,0.215
+Usage At-Risk Rate,2024-Q4,0.1992
+Usage At-Risk Rate,2025-Q1,0.1968
+Usage At-Risk Rate,2025-Q2,0.1834
+Usage At-Risk Rate,2025-Q3,0.1882
+Usage At-Risk Rate,2025-Q4,0.175
+Sales Cycle Length (days),2024-Q1,87.0
+Sales Cycle Length (days),2024-Q2,88.0
+Sales Cycle Length (days),2024-Q3,84.0
+Sales Cycle Length (days),2024-Q4,80.0
+Sales Cycle Length (days),2025-Q1,75.0
+Sales Cycle Length (days),2025-Q2,78.0
+Sales Cycle Length (days),2025-Q3,71.0
+Sales Cycle Length (days),2025-Q4,68.0
+Lead Conversion Rate,2024-Q1,0.152
+Lead Conversion Rate,2024-Q2,0.1589
+Lead Conversion Rate,2024-Q3,0.1608
+Lead Conversion Rate,2024-Q4,0.1631
+Lead Conversion Rate,2025-Q1,0.1672
+Lead Conversion Rate,2025-Q2,0.1717
+Lead Conversion Rate,2025-Q3,0.1755
+Lead Conversion Rate,2025-Q4,0.1786

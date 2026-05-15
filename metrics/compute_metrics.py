@@ -46,7 +46,7 @@ def load_data():
 
 # ── Metric Models ───────────────────────────────────────────────────────────────
 
-def model_pipeline_coverage(opps: pd.DataFrame, quota: float = 5_000_000) -> dict:
+def model_pipeline_coverage(opps: pd.DataFrame, quota: float = 7_000_000) -> dict:
     """
     SQL equivalent:
         SELECT SUM(pipeline_value) / :quota AS pipeline_coverage
@@ -80,13 +80,15 @@ def model_win_rate(opps: pd.DataFrame, segment_col: str = None) -> list:
         return round(won / total, 4) if total else 0
 
     results = []
-    if segment_col and segment_col in opps.columns:
+    if segment_col:
         accounts_path = os.path.join(RAW_DIR, "accounts.csv")
-        accounts = pd.read_csv(accounts_path)[[col for col in ["account_id", segment_col] if col in pd.read_csv(accounts_path).columns]]
-        merged = opps.merge(accounts, on="account_id", how="left")
-        closed_seg = merged[merged["stage"].isin(["Closed Won", "Closed Lost"])]
-        for seg_val, grp in closed_seg.groupby(segment_col):
-            results.append(_metric("Win Rate", _wr(grp), str(seg_val)))
+        accts = pd.read_csv(accounts_path)
+        if segment_col in accts.columns:
+            merged = closed.merge(accts[["account_id", segment_col]], on="account_id", how="left")
+            for seg_val, grp in merged.groupby(segment_col):
+                results.append(_metric("Win Rate", _wr(grp), str(seg_val)))
+        else:
+            results.append(_metric("Win Rate", _wr(closed)))
     else:
         results.append(_metric("Win Rate", _wr(closed)))
     return results
@@ -138,8 +140,8 @@ def model_net_revenue_retention(subs: pd.DataFrame) -> dict:
         return _metric("Net Revenue Retention", 0.0)
 
     expansion_base = subs[subs["expansion_flag"] == 1]["contract_value"].sum()
-    expansion_arr = expansion_base * 0.20   # 20% incremental uplift on expanding accounts
-    churned_arr = base_arr * 0.05           # 5% annual churn (modeled; no churn table)
+    expansion_arr = expansion_base * 0.30   # 30% incremental uplift on expanding accounts
+    churned_arr = base_arr * 0.025          # 2.5% annual churn (modeled; no churn table)
 
     nrr = round((base_arr + expansion_arr - churned_arr) / base_arr, 4)
     logger.debug("NRR: base=%.0f expansion=%.0f churn=%.0f nrr=%.4f", base_arr, expansion_arr, churned_arr, nrr)
