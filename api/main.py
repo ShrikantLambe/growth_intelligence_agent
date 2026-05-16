@@ -165,10 +165,10 @@ def get_drill_down(kpi: str):
             raise HTTPException(status_code=503, detail=f"{name} not found. Run generate_data.py first.")
         return pd.read_csv(path)
 
-    def _fmt_pct(v):  return f"{v*100:.1f}%"
-    def _fmt_M(v):    return f"${v/1e6:.2f}M"
-    def _fmt_$(v):    return f"${v:,.0f}"  # noqa: E501
-    def _fmt_d(v):    return f"{v:.0f}d"
+    def _fmt_pct(v):     return f"{v*100:.1f}%"
+    def _fmt_M(v):       return f"${v/1e6:.2f}M"
+    def _fmt_dollar(v):  return f"${v:,.0f}"
+    def _fmt_d(v):       return f"{v:.0f}d"
 
     today = datetime.today()
 
@@ -243,7 +243,7 @@ def get_drill_down(kpi: str):
         ].sort_values("pipeline_value", ascending=False).head(6)
 
         close_rows = [[row["company_name"], row["stage"],
-                       _fmt_$(row["pipeline_value"]),
+                       _fmt_dollar(row["pipeline_value"]),
                        row["close_date"].strftime("%b %d")] for _, row in closing.iterrows()]
 
         return {"sections": [
@@ -286,7 +286,7 @@ def get_drill_down(kpi: str):
             er = grp["expansion_flag"].mean()
             reg_labels.append(reg)
             reg_exp_rates.append(round(er, 4))
-            reg_rows.append([reg, _fmt_pct(er), _fmt_$(grp["contract_value"].mean()), len(grp)])
+            reg_rows.append([reg, _fmt_pct(er), _fmt_dollar(grp["contract_value"].mean()), len(grp)])
         reg_rows.sort(key=lambda r: float(r[1][:-1]), reverse=True)
 
         # Quarterly NRR trend
@@ -396,7 +396,7 @@ def get_drill_down(kpi: str):
 
         # Top expanding accounts by ARR
         top_exp = merged[merged["expansion_flag"]==1].nlargest(6, "contract_value")
-        top_rows = [[row["company_name"], row["region"], _fmt_$(row["contract_value"])]
+        top_rows = [[row["company_name"], row["region"], _fmt_dollar(row["contract_value"])]
                     for _, row in top_exp.iterrows()]
 
         return {"sections": [
@@ -481,7 +481,7 @@ def get_drill_down(kpi: str):
         open_opps["age_days"] = (pd.Timestamp(today) - open_opps["created_date"]).dt.days
         stalled = open_opps[open_opps["age_days"] > 60].nlargest(6, "age_days")
         stalled_rows = [[row["company_name"], row["stage"],
-                         _fmt_$(row["pipeline_value"]), f"{row['age_days']}d open"]
+                         _fmt_dollar(row["pipeline_value"]), f"{row['age_days']}d open"]
                         for _, row in stalled.iterrows()]
 
         return {"sections": [
