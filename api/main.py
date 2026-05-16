@@ -221,9 +221,6 @@ def get_drill_down(kpi: str):
         QUOTA = 7_000_000
         opps  = _csv("opportunities.csv")
         accts = _csv("accounts.csv")
-        merged = opps.merge(accts[["account_id","company_name","region","stage"
-                                    if "stage" in accts.columns else "account_id"]], on="account_id", how="left")
-        # Re-merge properly
         merged = opps.merge(accts[["account_id","company_name","region"]], on="account_id", how="left")
         open_opps = merged[~merged["stage"].isin(["Closed Won","Closed Lost"])]
         total_pipe = open_opps["pipeline_value"].sum()
