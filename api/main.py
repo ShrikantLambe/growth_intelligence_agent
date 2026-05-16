@@ -142,6 +142,365 @@ def get_alerts(threshold_pct: float = 0.20):
         raise HTTPException(status_code=500, detail=str(e))
 
 
+# ── KPI Drill-downs ──────────────────────────────────────────────────────────────
+
+@app.get("/api/drill/{kpi}")
+def get_drill_down(kpi: str):
+    """
+    Return structured drill-down data for a KPI card.
+    Each response has a list of sections: chart | table | stats.
+    The frontend renders them generically without KPI-specific logic.
+    """
+    import pandas as pd
+    import numpy as np
+    from datetime import datetime, timedelta
+
+    BASE = os.path.dirname(__file__)
+    RAW  = os.path.join(BASE, "..", "data", "raw")
+    PROC = os.path.join(BASE, "..", "data", "processed")
+
+    def _csv(name, d=RAW):
+        path = os.path.join(d, name)
+        if not os.path.exists(path):
+            raise HTTPException(status_code=503, detail=f"{name} not found. Run generate_data.py first.")
+        return pd.read_csv(path)
+
+    def _fmt_pct(v):  return f"{v*100:.1f}%"
+    def _fmt_M(v):    return f"${v/1e6:.2f}M"
+    def _fmt_$(v):    return f"${v:,.0f}"  # noqa: E501
+    def _fmt_d(v):    return f"{v:.0f}d"
+
+    today = datetime.today()
+
+    # ── win-rate ─────────────────────────────────────────────────────────────────
+    if kpi == "win-rate":
+        opps  = _csv("opportunities.csv")
+        accts = _csv("accounts.csv")
+        hist  = _csv("metrics_history.csv")
+        merged = opps.merge(accts[["account_id","region","tier"]], on="account_id", how="left")
+        closed = merged[merged["stage"].isin(["Closed Won","Closed Lost"])]
+
+        # Quarterly trend
+        q_hist = hist[hist["metric_name"]=="Win Rate"].sort_values("quarter")
+        trend_labels = q_hist["quarter"].tolist()
+        trend_vals   = [round(v, 4) for v in q_hist["metric_value"].tolist()]
+
+        # By region
+        reg_rows = []
+        reg_labels, reg_vals = [], []
+        for reg, grp in closed.groupby("region"):
+            wr = (grp["stage"]=="Closed Won").sum() / len(grp)
+            reg_labels.append(reg)
+            reg_vals.append(round(wr, 4))
+            reg_rows.append([reg, _fmt_pct(wr), len(grp)])
+        order = sorted(range(len(reg_vals)), key=lambda i: reg_vals[i], reverse=True)
+        reg_labels = [reg_labels[i] for i in order]
+        reg_vals   = [reg_vals[i]   for i in order]
+
+        # By tier
+        tier_rows = []
+        for tier in ["Enterprise","Mid-Market","SMB"]:
+            g = closed[closed["tier"]==tier]
+            if len(g):
+                wr = (g["stage"]=="Closed Won").sum() / len(g)
+                tier_rows.append([tier, _fmt_pct(wr), len(g)])
+
+        return {"sections": [
+            {"type":"chart","title":"QUARTERLY TREND","chart_type":"line",
+             "labels":trend_labels,"datasets":[{"label":"Win Rate","values":trend_vals}],
+             "y_format":"pct"},
+            {"type":"chart","title":"BY REGION","chart_type":"bar",
+             "labels":reg_labels,"datasets":[{"label":"Win Rate","values":reg_vals}],
+             "target":0.28,"y_format":"pct"},
+            {"type":"table","title":"BY COMPANY TIER",
+             "columns":["Tier","Win Rate","Closed Deals"],"rows":tier_rows},
+        ]}
+
+    # ── pipeline-coverage ────────────────────────────────────────────────────────
+    elif kpi == "pipeline-coverage":
+        QUOTA = 7_000_000
+        opps  = _csv("opportunities.csv")
+        accts = _csv("accounts.csv")
+        merged = opps.merge(accts[["account_id","company_name","region","stage"
+                                    if "stage" in accts.columns else "account_id"]], on="account_id", how="left")
+        # Re-merge properly
+        merged = opps.merge(accts[["account_id","company_name","region"]], on="account_id", how="left")
+        open_opps = merged[~merged["stage"].isin(["Closed Won","Closed Lost"])]
+        total_pipe = open_opps["pipeline_value"].sum()
+        coverage   = round(total_pipe / QUOTA, 2)
+
+        # By region (sorted by value)
+        reg_pipe = open_opps.groupby("region")["pipeline_value"].sum().sort_values(ascending=False)
+
+        # Closing this month
+        opps_c = merged.copy()
+        opps_c["close_date"] = pd.to_datetime(opps_c["close_date"])
+        month_end = (today.replace(day=28) + timedelta(days=4)).replace(day=1) - timedelta(days=1)
+        closing = opps_c[
+            (opps_c["close_date"] >= pd.Timestamp(today)) &
+            (opps_c["close_date"] <= pd.Timestamp(month_end)) &
+            (~opps_c["stage"].isin(["Closed Won","Closed Lost"]))
+        ].sort_values("pipeline_value", ascending=False).head(6)
+
+        close_rows = [[row["company_name"], row["stage"],
+                       _fmt_$(row["pipeline_value"]),
+                       row["close_date"].strftime("%b %d")] for _, row in closing.iterrows()]
+
+        return {"sections": [
+            {"type":"stats","title":"COVERAGE BREAKDOWN","items":[
+                {"label":"Open Pipeline","value":_fmt_M(total_pipe)},
+                {"label":"Annual Quota", "value":_fmt_M(QUOTA)},
+                {"label":"Coverage",     "value":f"{coverage:.2f}x"},
+                {"label":"Open Deals",   "value":str(len(open_opps))},
+            ]},
+            {"type":"chart","title":"OPEN PIPELINE BY REGION","chart_type":"bar",
+             "labels":reg_pipe.index.tolist(),
+             "datasets":[{"label":"Open Pipeline","values":[round(v) for v in reg_pipe.values.tolist()]}],
+             "y_format":"$M"},
+            {"type":"table","title":"DEALS CLOSING THIS MONTH",
+             "columns":["Account","Stage","Value","Close Date"],
+             "rows": close_rows if close_rows else [["—","No deals closing this month","",""]],
+            },
+        ]}
+
+    # ── nrr ──────────────────────────────────────────────────────────────────────
+    elif kpi == "nrr":
+        subs  = _csv("subscription_revenue.csv")
+        accts = _csv("accounts.csv")
+        hist  = _csv("metrics_history.csv")
+        merged = subs.merge(accts[["account_id","region"]], on="account_id", how="left")
+
+        base_arr = subs["contract_value"].sum()
+        exp_base = subs[subs["expansion_flag"]==1]["contract_value"].sum()
+        exp_arr  = exp_base * 0.30
+        churn    = base_arr * 0.025
+        nrr      = round((base_arr + exp_arr - churn) / base_arr, 4)
+
+        # Waterfall data (use indexed chart)
+        waterfall_labels = ["Base ARR", "+Expansion", "−Churn", "Net ARR"]
+        waterfall_vals   = [round(base_arr), round(exp_arr), round(-churn), round(base_arr+exp_arr-churn)]
+
+        # By region
+        reg_rows, reg_labels, reg_exp_rates = [], [], []
+        for reg, grp in merged.groupby("region"):
+            er = grp["expansion_flag"].mean()
+            reg_labels.append(reg)
+            reg_exp_rates.append(round(er, 4))
+            reg_rows.append([reg, _fmt_pct(er), _fmt_$(grp["contract_value"].mean()), len(grp)])
+        reg_rows.sort(key=lambda r: float(r[1][:-1]), reverse=True)
+
+        # Quarterly NRR trend
+        q_nrr = hist[hist["metric_name"]=="Net Revenue Retention"].sort_values("quarter")
+
+        return {"sections": [
+            {"type":"stats","title":"ARR COMPONENTS","items":[
+                {"label":"Base ARR",     "value":_fmt_M(base_arr)},
+                {"label":"+Expansion",   "value":_fmt_M(exp_arr),  "color":"#4ade80"},
+                {"label":"−Churn (est.)","value":_fmt_M(churn),    "color":"#f87171"},
+                {"label":"Net ARR",      "value":_fmt_M(base_arr+exp_arr-churn), "color":"#60a5fa"},
+            ]},
+            {"type":"chart","title":"NRR QUARTERLY TREND","chart_type":"line",
+             "labels":q_nrr["quarter"].tolist(),
+             "datasets":[{"label":"NRR","values":[round(v,4) for v in q_nrr["metric_value"].tolist()]}],
+             "target":1.20,"y_format":"pct"},
+            {"type":"table","title":"EXPANSION RATE BY REGION",
+             "columns":["Region","Expand Rate","Avg ARR","Accounts"],"rows":reg_rows},
+        ]}
+
+    # ── deal-size ────────────────────────────────────────────────────────────────
+    elif kpi == "deal-size":
+        opps  = _csv("opportunities.csv")
+        accts = _csv("accounts.csv")
+        hist  = _csv("metrics_history.csv")
+        merged = opps[opps["stage"]=="Closed Won"].merge(
+            accts[["account_id","region","industry","tier"]], on="account_id", how="left")
+
+        # Distribution buckets
+        bins   = [0, 25_000, 50_000, 75_000, 100_000, 1_000_000]
+        labels = ["<$25k","$25–50k","$50–75k","$75–100k","$100k+"]
+        counts = pd.cut(merged["pipeline_value"], bins=bins, labels=labels).value_counts().reindex(labels).fillna(0)
+
+        # By region
+        reg = merged.groupby("region")["pipeline_value"].mean().sort_values(ascending=False)
+
+        # Quarterly trend
+        q_ads = hist[hist["metric_name"]=="Average Deal Size"].sort_values("quarter")
+
+        return {"sections": [
+            {"type":"chart","title":"DEAL SIZE DISTRIBUTION (CLOSED WON)","chart_type":"bar",
+             "labels":labels,
+             "datasets":[{"label":"Deals","values":counts.tolist()}],
+             "y_format":"count"},
+            {"type":"chart","title":"AVG DEAL SIZE BY REGION","chart_type":"bar",
+             "labels":reg.index.tolist(),
+             "datasets":[{"label":"Avg Deal Size","values":[round(v) for v in reg.values.tolist()]}],
+             "y_format":"$"},
+            {"type":"chart","title":"AVG DEAL SIZE QUARTERLY TREND","chart_type":"line",
+             "labels":q_ads["quarter"].tolist(),
+             "datasets":[{"label":"Avg Deal Size","values":[round(v) for v in q_ads["metric_value"].tolist()]}],
+             "y_format":"$"},
+        ]}
+
+    # ── product-attach ───────────────────────────────────────────────────────────
+    elif kpi == "product-attach":
+        usage = _csv("product_usage.csv")
+        accts = _csv("accounts.csv")
+        merged_accts = accts.merge(
+            usage.groupby("account_id")["product_name"].nunique().rename("n_products"),
+            on="account_id", how="left"
+        )
+        merged_accts["n_products"] = merged_accts["n_products"].fillna(0).astype(int)
+
+        # Product count distribution
+        dist = merged_accts["n_products"].value_counts().sort_index()
+        dist_labels = [f"{i} product{'s' if i!=1 else ''}" for i in dist.index]
+
+        # Usage by product module
+        prod_stats = usage.groupby("product_name").agg(
+            accounts=("account_id","nunique"),
+            users=("active_users","sum")
+        ).sort_values("users", ascending=False)
+
+        # Attach rate by company size
+        size_order = ["1-50","51-200","201-500","501-2000","2000+"]
+        size_rows = []
+        for sz in size_order:
+            g = merged_accts[merged_accts["employee_size"]==sz]
+            if len(g):
+                rate = (g["n_products"]>1).mean()
+                size_rows.append([sz, _fmt_pct(rate), len(g)])
+
+        return {"sections": [
+            {"type":"chart","title":"PRODUCT ADOPTION DISTRIBUTION","chart_type":"doughnut",
+             "labels":dist_labels,
+             "datasets":[{"label":"Accounts","values":dist.tolist()}]},
+            {"type":"chart","title":"ACTIVE USERS BY PRODUCT MODULE","chart_type":"bar",
+             "labels":prod_stats.index.tolist(),
+             "datasets":[{"label":"Active Users","values":prod_stats["users"].tolist()}],
+             "y_format":"count"},
+            {"type":"table","title":"ATTACH RATE BY COMPANY SIZE",
+             "columns":["Company Size","Attach Rate","Accounts"],"rows":size_rows},
+        ]}
+
+    # ── seat-expansion ───────────────────────────────────────────────────────────
+    elif kpi == "seat-expansion":
+        subs  = _csv("subscription_revenue.csv")
+        accts = _csv("accounts.csv")
+        merged = subs.merge(accts[["account_id","company_name","region","industry"]], on="account_id", how="left")
+
+        # Expansion rate by region
+        reg = merged.groupby("region")["expansion_flag"].mean().sort_values(ascending=False)
+
+        # By industry
+        ind = merged.groupby("industry")["expansion_flag"].mean().sort_values(ascending=False)
+
+        # Top expanding accounts by ARR
+        top_exp = merged[merged["expansion_flag"]==1].nlargest(6, "contract_value")
+        top_rows = [[row["company_name"], row["region"], _fmt_$(row["contract_value"])]
+                    for _, row in top_exp.iterrows()]
+
+        return {"sections": [
+            {"type":"chart","title":"EXPANSION RATE BY REGION","chart_type":"bar",
+             "labels":reg.index.tolist(),
+             "datasets":[{"label":"Expansion Rate","values":[round(v,4) for v in reg.values.tolist()]}],
+             "target":0.25,"y_format":"pct"},
+            {"type":"chart","title":"EXPANSION RATE BY INDUSTRY","chart_type":"bar",
+             "labels":ind.index.tolist(),
+             "datasets":[{"label":"Expansion Rate","values":[round(v,4) for v in ind.values.tolist()]}],
+             "y_format":"pct"},
+            {"type":"table","title":"TOP EXPANDING ACCOUNTS",
+             "columns":["Account","Region","ARR"],"rows":top_rows},
+        ]}
+
+    # ── at-risk ──────────────────────────────────────────────────────────────────
+    elif kpi == "at-risk":
+        usage = _csv("product_usage.csv")
+        accts = _csv("accounts.csv")
+        usage["last_active_date"] = usage["last_active_date"].astype(str)
+        cutoff_30 = (today - timedelta(days=30)).strftime("%Y-%m-%d")
+        cutoff_60 = (today - timedelta(days=60)).strftime("%Y-%m-%d")
+
+        at_risk_30 = usage[usage["last_active_date"] < cutoff_30]
+        at_risk_60 = usage[usage["last_active_date"] < cutoff_60]
+        total_accts = usage["account_id"].nunique()
+        n_risk_30   = at_risk_30["account_id"].nunique()
+        n_risk_60   = at_risk_60["account_id"].nunique()
+
+        # At-risk by product
+        prod_risk = (at_risk_30.groupby("product_name")["account_id"].nunique()
+                     .sort_values(ascending=False))
+
+        # At-risk account list (most recently active first, least bad first)
+        risk_accts = (at_risk_30.groupby("account_id")
+                      .agg(last_active=("last_active_date","max"), products=("product_name","count"))
+                      .reset_index()
+                      .merge(accts[["account_id","company_name","region"]], on="account_id", how="left")
+                      .sort_values("last_active", ascending=False)
+                      .head(8))
+        risk_accts["days_inactive"] = risk_accts["last_active"].apply(
+            lambda d: (today - datetime.strptime(d, "%Y-%m-%d")).days)
+        risk_rows = [[row["company_name"], row["region"],
+                      str(row["products"]),
+                      f"{row['days_inactive']}d ago"] for _, row in risk_accts.iterrows()]
+
+        return {"sections": [
+            {"type":"stats","title":"AT-RISK SUMMARY","items":[
+                {"label":"At-Risk (30d)",  "value":str(n_risk_30),  "color":"#f87171"},
+                {"label":"At-Risk (60d)",  "value":str(n_risk_60),  "color":"#fbbf24"},
+                {"label":"Healthy",        "value":str(total_accts - n_risk_30), "color":"#4ade80"},
+                {"label":"Total Accounts", "value":str(total_accts)},
+            ]},
+            {"type":"chart","title":"AT-RISK ACCOUNTS BY PRODUCT","chart_type":"bar",
+             "labels":prod_risk.index.tolist(),
+             "datasets":[{"label":"At-Risk Accounts","values":prod_risk.tolist()}],
+             "y_format":"count"},
+            {"type":"table","title":"AT-RISK ACCOUNT LIST (most recently active first)",
+             "columns":["Account","Region","Products","Last Active"],"rows":risk_rows},
+        ]}
+
+    # ── sales-cycle ──────────────────────────────────────────────────────────────
+    elif kpi == "sales-cycle":
+        opps  = _csv("opportunities.csv")
+        accts = _csv("accounts.csv")
+        hist  = _csv("metrics_history.csv")
+        merged = opps.merge(accts[["account_id","company_name","region"]], on="account_id", how="left")
+
+        # Cycle by region (closed won)
+        won = merged[merged["stage"]=="Closed Won"].copy()
+        won["created_date"] = pd.to_datetime(won["created_date"])
+        won["close_date"]   = pd.to_datetime(won["close_date"])
+        won["cycle_days"]   = (won["close_date"] - won["created_date"]).dt.days.clip(lower=0)
+        reg_cycle = won.groupby("region")["cycle_days"].mean().sort_values()
+
+        # Quarterly trend
+        q_cyc = hist[hist["metric_name"]=="Sales Cycle Length (days)"].sort_values("quarter")
+
+        # Stalled deals (open > 60 days without closing)
+        open_opps = merged[~merged["stage"].isin(["Closed Won","Closed Lost"])].copy()
+        open_opps["created_date"] = pd.to_datetime(open_opps["created_date"])
+        open_opps["age_days"] = (pd.Timestamp(today) - open_opps["created_date"]).dt.days
+        stalled = open_opps[open_opps["age_days"] > 60].nlargest(6, "age_days")
+        stalled_rows = [[row["company_name"], row["stage"],
+                         _fmt_$(row["pipeline_value"]), f"{row['age_days']}d open"]
+                        for _, row in stalled.iterrows()]
+
+        return {"sections": [
+            {"type":"chart","title":"AVG SALES CYCLE BY REGION (CLOSED WON)","chart_type":"bar",
+             "labels":reg_cycle.index.tolist(),
+             "datasets":[{"label":"Days","values":[round(v,1) for v in reg_cycle.values.tolist()]}],
+             "target":60,"y_format":"d"},
+            {"type":"chart","title":"SALES CYCLE QUARTERLY TREND","chart_type":"line",
+             "labels":q_cyc["quarter"].tolist(),
+             "datasets":[{"label":"Avg Days","values":[round(v,1) for v in q_cyc["metric_value"].tolist()]}],
+             "target":60,"y_format":"d"},
+            {"type":"table","title":"STALLED DEALS (OPEN > 60 DAYS)",
+             "columns":["Account","Stage","Value","Age"],"rows":stalled_rows},
+        ]}
+
+    else:
+        raise HTTPException(status_code=404, detail=f"Unknown KPI slug: {kpi}")
+
+
 # ── Agent chat ───────────────────────────────────────────────────────────────────
 
 @app.post("/api/ask", response_model=AskResponse)
@@ -291,6 +650,22 @@ tr:hover td{background:rgba(59,130,246,.04)}
 .modal-close:hover{color:#e2e8f0}
 .dm-row{display:flex;justify-content:space-between;padding:.4rem 0;border-bottom:1px solid #0f172a;font-size:.83rem}
 .dm-label{color:#94a3b8}.dm-val{color:#e2e8f0;font-family:monospace}
+/* Drill-down modal */
+.drill-modal-inner{max-width:680px;width:95%;max-height:88vh;overflow-y:auto}
+.drill-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.1rem;padding-bottom:1rem;border-bottom:1px solid #1e293b}
+.drill-kpi-name{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#64748b;margin-bottom:.25rem}
+.drill-kpi-value{font-size:1.7rem;font-weight:700;font-family:monospace;color:#f1f5f9;line-height:1}
+.drill-section{margin-bottom:1.25rem}
+.drill-section-title{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#475569;margin-bottom:.6rem;padding-bottom:.3rem;border-bottom:1px solid #0f172a}
+.drill-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:.55rem}
+.drill-stat{background:#070d1a;border:1px solid #1e293b;border-radius:8px;padding:.6rem .8rem}
+.drill-stat-label{font-size:.65rem;color:#64748b;margin-bottom:.15rem}
+.drill-stat-value{font-size:1.05rem;font-weight:700;font-family:monospace;color:#e2e8f0}
+.drill-footer{border-top:1px solid #1e293b;padding-top:.85rem;margin-top:.4rem;display:flex;justify-content:space-between;align-items:center;gap:.5rem;flex-wrap:wrap}
+/* Clickable KPI cards */
+.kpi-card{cursor:pointer;position:relative}
+.kpi-drill-icon{position:absolute;top:.7rem;right:.8rem;font-size:.65rem;color:#1e3a5f;transition:color .2s}
+.kpi-card:hover .kpi-drill-icon{color:#3b82f6}
 /* Footer */
 footer{border-top:1px solid #1e293b;margin-top:2rem;padding:1.2rem 2rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
 .footer-links{display:flex;gap:1.2rem;font-size:.78rem;color:#475569;flex-wrap:wrap}
@@ -456,6 +831,24 @@ footer{border-top:1px solid #1e293b;margin-top:2rem;padding:1.2rem 2rem;display:
   </div>
 </footer>
 
+<!-- Drill-down modal -->
+<div class="modal-overlay" id="drill-modal" onclick="if(event.target===this)closeDrill()">
+  <div class="modal drill-modal-inner">
+    <div class="drill-header">
+      <div>
+        <div class="drill-kpi-name" id="drill-kpi-name"></div>
+        <div class="drill-kpi-value" id="drill-kpi-value"></div>
+      </div>
+      <span class="modal-close" onclick="closeDrill()">✕</span>
+    </div>
+    <div id="drill-body"></div>
+    <div class="drill-footer">
+      <button class="btn" id="drill-ask-btn" style="font-size:.8rem;padding:.5rem 1rem">🤖 Ask agent about this</button>
+      <span style="font-size:.72rem;color:#334155">Powered by live data</span>
+    </div>
+  </div>
+</div>
+
 <script>
 // ── Config ────────────────────────────────────────────────────────────────────
 const SUGGESTIONS = [
@@ -467,14 +860,22 @@ const SUGGESTIONS = [
 ];
 
 const KPI_DEFS = [
-  {name:'Win Rate',                key:'Win Rate',                  fmt:'pct', target:0.28, minimize:false, tgtLabel:'≥ 28%',   deltaUnit:'pp'},
-  {name:'Pipeline Coverage',       key:'Pipeline Coverage',         fmt:'x',   target:3.5,  minimize:false, tgtLabel:'≥ 3.5x',  deltaUnit:'x'},
-  {name:'Net Rev Retention',       key:'Net Revenue Retention',     fmt:'pct', target:1.20, minimize:false, tgtLabel:'≥ 120%',  deltaUnit:'pp'},
-  {name:'Avg Deal Size',           key:'Average Deal Size',         fmt:'$',   target:55000,minimize:false, tgtLabel:'Maximize',deltaUnit:'$k'},
-  {name:'Product Attach',          key:'Product Attach Rate',       fmt:'pct', target:0.35, minimize:false, tgtLabel:'≥ 35%',   deltaUnit:'pp'},
-  {name:'Seat Expansion',          key:'Seat Expansion Rate',       fmt:'pct', target:0.25, minimize:false, tgtLabel:'≥ 25%',   deltaUnit:'pp'},
-  {name:'Usage At-Risk',           key:'Usage At-Risk Rate',        fmt:'pct', target:0.10, minimize:true,  tgtLabel:'< 10%',   deltaUnit:'pp'},
-  {name:'Sales Cycle (d)',         key:'Sales Cycle Length (days)', fmt:'d',   target:60,   minimize:true,  tgtLabel:'< 60d',   deltaUnit:'d'},
+  {name:'Win Rate',          key:'Win Rate',                  fmt:'pct',target:0.28, minimize:false,tgtLabel:'≥ 28%',  deltaUnit:'pp',
+   slug:'win-rate',          askQ:'Why is our win rate below target, and which region or segment should we prioritize?'},
+  {name:'Pipeline Coverage', key:'Pipeline Coverage',         fmt:'x',  target:3.5,  minimize:false,tgtLabel:'≥ 3.5x', deltaUnit:'x',
+   slug:'pipeline-coverage', askQ:'Is our pipeline coverage healthy and which deals should we focus on to improve it?'},
+  {name:'Net Rev Retention', key:'Net Revenue Retention',     fmt:'pct',target:1.20, minimize:false,tgtLabel:'≥ 120%', deltaUnit:'pp',
+   slug:'nrr',               askQ:'What is driving our NRR and which accounts have the highest expansion potential?'},
+  {name:'Avg Deal Size',     key:'Average Deal Size',         fmt:'$',  target:55000,minimize:false,tgtLabel:'Maximize',deltaUnit:'$k',
+   slug:'deal-size',         askQ:'Why is our average deal size below benchmark and how can we move upmarket?'},
+  {name:'Product Attach',    key:'Product Attach Rate',       fmt:'pct',target:0.35, minimize:false,tgtLabel:'≥ 35%',  deltaUnit:'pp',
+   slug:'product-attach',    askQ:'Which accounts are single-product and most ready for a second product expansion?'},
+  {name:'Seat Expansion',    key:'Seat Expansion Rate',       fmt:'pct',target:0.25, minimize:false,tgtLabel:'≥ 25%',  deltaUnit:'pp',
+   slug:'seat-expansion',    askQ:'Which accounts are expanding and what triggers seat expansion in our top accounts?'},
+  {name:'Usage At-Risk',     key:'Usage At-Risk Rate',        fmt:'pct',target:0.10, minimize:true, tgtLabel:'< 10%',  deltaUnit:'pp',
+   slug:'at-risk',           askQ:'Which accounts are most at churn risk and what immediate actions should we take?'},
+  {name:'Sales Cycle (d)',   key:'Sales Cycle Length (days)', fmt:'d',  target:60,   minimize:true, tgtLabel:'< 60d',  deltaUnit:'d',
+   slug:'sales-cycle',       askQ:'What is causing our sales cycle to exceed target and which deals are most stalled?'},
 ];
 
 const PERF_TARGET_METRICS = KPI_DEFS.filter(d=>d.key!=='Average Deal Size');
@@ -540,7 +941,8 @@ async function loadKPIs() {
         const warn = d.minimize ? v <= d.target*1.3 : v >= d.target*0.8;
         status = good ? 'good' : warn ? 'warn' : 'bad';
       }
-      return `<div class="kpi-card ${status}">
+      return `<div class="kpi-card ${status}" onclick="openDrill('${d.slug}','${d.name}','${display}',${JSON.stringify(d.askQ)})">
+        <span class="kpi-drill-icon">↗</span>
         <div class="kpi-label">${d.name}</div>
         <div class="kpi-value">${display}</div>
         <div class="kpi-meta">
@@ -887,6 +1289,163 @@ function askAgent(question) {
 document.getElementById('suggestions').innerHTML = SUGGESTIONS.map(s=>
   `<span class="chip" onclick="sendMessage(${JSON.stringify(s)})">${s.substring(0,36)}…</span>`
 ).join('');
+
+// ── Drill-down ────────────────────────────────────────────────────────────────
+const _drillCharts = [];
+
+function closeDrill() {
+  document.getElementById('drill-modal').classList.remove('open');
+  _drillCharts.forEach(c => { try { c.destroy(); } catch(e) {} });
+  _drillCharts.length = 0;
+  document.getElementById('drill-body').innerHTML = '';
+}
+
+async function openDrill(slug, kpiName, kpiValue, askQ) {
+  const modal = document.getElementById('drill-modal');
+  document.getElementById('drill-kpi-name').textContent = kpiName;
+  document.getElementById('drill-kpi-value').textContent = kpiValue;
+  document.getElementById('drill-body').innerHTML =
+    '<div style="text-align:center;padding:2.5rem 0"><div class="spinner"></div><div style="color:#475569;font-size:.8rem;margin-top:.8rem">Loading drill-down…</div></div>';
+  document.getElementById('drill-ask-btn').onclick = () => { closeDrill(); askAgent(askQ); };
+  modal.classList.add('open');
+
+  try {
+    const data = await fetch('/api/drill/' + slug).then(r => {
+      if(!r.ok) return r.json().then(e=>{ throw new Error(e.detail||r.statusText); });
+      return r.json();
+    });
+    document.getElementById('drill-body').innerHTML = '';
+    (data.sections || []).forEach(s => _renderDrillSection(s));
+  } catch(e) {
+    document.getElementById('drill-body').innerHTML =
+      `<p style="color:#f87171;font-size:.84rem;padding:1rem 0">Failed to load: ${escHtml(e.message)}</p>`;
+  }
+}
+
+function _renderDrillSection(section) {
+  const body = document.getElementById('drill-body');
+  const wrap = document.createElement('div');
+  wrap.className = 'drill-section';
+
+  if(section.title) {
+    const t = document.createElement('div');
+    t.className = 'drill-section-title';
+    t.textContent = section.title;
+    wrap.appendChild(t);
+  }
+
+  if(section.type === 'stats') {
+    const grid = document.createElement('div');
+    grid.className = 'drill-stats';
+    (section.items || []).forEach(item => {
+      const el = document.createElement('div');
+      el.className = 'drill-stat';
+      el.innerHTML = `<div class="drill-stat-label">${escHtml(String(item.label))}</div>
+        <div class="drill-stat-value" style="${item.color?'color:'+item.color:''}">${escHtml(String(item.value))}</div>`;
+      grid.appendChild(el);
+    });
+    wrap.appendChild(grid);
+    body.appendChild(wrap);
+
+  } else if(section.type === 'table') {
+    const t = document.createElement('table');
+    t.innerHTML = `<thead><tr>${(section.columns||[]).map(c=>`<th>${escHtml(String(c))}</th>`).join('')}</tr></thead>
+      <tbody>${(section.rows||[]).map(r=>`<tr>${r.map(c=>`<td>${escHtml(String(c))}</td>`).join('')}</tr>`).join('')}</tbody>`;
+    wrap.appendChild(t);
+    body.appendChild(wrap);
+
+  } else if(section.type === 'chart') {
+    // Append wrapper first so canvas has a parent when Chart.js renders
+    body.appendChild(wrap);
+    const canvas = document.createElement('canvas');
+    canvas.id = 'drill-c-' + Math.random().toString(36).slice(2);
+    canvas.height = section.chart_type === 'doughnut' ? 210 : 165;
+    wrap.appendChild(canvas);
+    _buildDrillChart(canvas, section);
+  }
+}
+
+function _buildDrillChart(canvas, s) {
+  const BLUE = '#3b82f6', GRID = '#1e293b';
+  const COLORS = ['#3b82f6','#22c55e','#f59e0b','#ef4444','#a78bfa','#06b6d4','#f97316','#84cc16'];
+
+  const yFmt = v => {
+    if(s.y_format==='pct')   return (v*100).toFixed(1)+'%';
+    if(s.y_format==='$M')    return '$'+Number(v/1e6).toFixed(1)+'M';
+    if(s.y_format==='$')     return '$'+Number(v).toLocaleString('en-US',{maximumFractionDigits:0});
+    if(s.y_format==='d')     return v+'d';
+    if(s.y_format==='x')     return v.toFixed(1)+'x';
+    return String(v);
+  };
+
+  const datasets = s.datasets || [{label: s.title||'', values: s.values||[]}];
+  const isDonut = s.chart_type === 'doughnut';
+  const isLine  = s.chart_type === 'line';
+
+  const chartDatasets = isDonut
+    ? [{ data: datasets[0].values, backgroundColor: COLORS, borderWidth: 1, borderColor: '#0a0f1e' }]
+    : datasets.map((ds, i) => ({
+        label: ds.label || '',
+        data: ds.values || [],
+        backgroundColor: isLine ? 'rgba(59,130,246,.1)' : (datasets.length > 1 ? COLORS[i] : BLUE),
+        borderColor: isLine ? (COLORS[i] || BLUE) : undefined,
+        borderWidth: isLine ? 2 : undefined,
+        tension: isLine ? 0.35 : undefined,
+        fill: isLine,
+        borderRadius: (!isLine && !isDonut) ? 4 : undefined,
+        pointBackgroundColor: isLine ? (COLORS[i] || BLUE) : undefined,
+        pointRadius: isLine ? 3 : undefined,
+      }));
+
+  const scalesOpts = isDonut ? {} : {
+    y: { ticks: { callback: yFmt, color: '#64748b', font: {size:11} }, grid: { color: GRID } },
+    x: { ticks: { color: '#64748b', font: {size:11} }, grid: { color: GRID } },
+  };
+
+  const chart = new Chart(canvas, {
+    type: s.chart_type,
+    data: { labels: s.labels || [], datasets: chartDatasets },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          display: isDonut || datasets.length > 1,
+          labels: { color: '#94a3b8', boxWidth: 11, font: {size:11} }
+        }
+      },
+      scales: scalesOpts,
+    }
+  });
+
+  // Target line plugin (bar + line charts only)
+  if(s.target != null && !isDonut) {
+    const pluginId = 'tgt-' + canvas.id;
+    Chart.register({
+      id: pluginId,
+      afterDraw(c) {
+        if(c.canvas.id !== canvas.id) return;
+        const { ctx, chartArea, scales } = c;
+        if(!scales.y) return;
+        const yPx = scales.y.getPixelForValue(s.target);
+        ctx.save();
+        ctx.beginPath();
+        ctx.setLineDash([5, 4]);
+        ctx.strokeStyle = '#f59e0b';
+        ctx.lineWidth = 1.5;
+        ctx.moveTo(chartArea.left, yPx);
+        ctx.lineTo(chartArea.right, yPx);
+        ctx.stroke();
+        ctx.setLineDash([]);
+        ctx.fillStyle = '#f59e0b';
+        ctx.font = '9px monospace';
+        ctx.fillText('Target ' + yFmt(s.target), chartArea.right - 72, yPx - 4);
+        ctx.restore();
+      }
+    });
+  }
+
+  _drillCharts.push(chart);
+}
 
 // ── Init ──────────────────────────────────────────────────────────────────────
 loadKPIs();
