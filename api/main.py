@@ -938,7 +938,7 @@ async function loadKPIs() {
         const warn = d.minimize ? v <= d.target*1.3 : v >= d.target*0.8;
         status = good ? 'good' : warn ? 'warn' : 'bad';
       }
-      return `<div class="kpi-card ${status}" onclick="openDrill('${d.slug}','${d.name}','${display}',${JSON.stringify(d.askQ)})">
+      return `<div class="kpi-card ${status}" onclick="openDrill('${d.slug}')">
         <span class="kpi-drill-icon">↗</span>
         <div class="kpi-label">${d.name}</div>
         <div class="kpi-value">${display}</div>
@@ -1297,7 +1297,15 @@ function closeDrill() {
   document.getElementById('drill-body').innerHTML = '';
 }
 
-async function openDrill(slug, kpiName, kpiValue, askQ) {
+async function openDrill(slug) {
+  const def = KPI_DEFS.find(k => k.slug === slug);
+  const kpiName  = def ? def.name : slug;
+  const askQ     = def ? def.askQ : 'Tell me about this metric.';
+  // Read the current display value from the already-rendered card
+  const cards = document.querySelectorAll('.kpi-card');
+  let kpiValue = '—';
+  cards.forEach(c => { if(c.getAttribute('onclick') === "openDrill('"+slug+"')") kpiValue = c.querySelector('.kpi-value')?.textContent || '—'; });
+
   const modal = document.getElementById('drill-modal');
   document.getElementById('drill-kpi-name').textContent = kpiName;
   document.getElementById('drill-kpi-value').textContent = kpiValue;
@@ -1399,6 +1407,29 @@ function _buildDrillChart(canvas, s) {
     x: { ticks: { color: '#64748b', font: {size:11} }, grid: { color: GRID } },
   };
 
+  // Inline target-line plugin scoped to this chart only (no global Chart.register)
+  const targetLinePlugin = (s.target != null && !isDonut) ? {
+    id: 'drillTarget',
+    afterDraw(c) {
+      const { ctx, chartArea, scales } = c;
+      if(!scales || !scales.y || !chartArea) return;
+      const yPx = scales.y.getPixelForValue(s.target);
+      ctx.save();
+      ctx.beginPath();
+      ctx.setLineDash([5, 4]);
+      ctx.strokeStyle = '#f59e0b';
+      ctx.lineWidth = 1.5;
+      ctx.moveTo(chartArea.left, yPx);
+      ctx.lineTo(chartArea.right, yPx);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillStyle = '#f59e0b';
+      ctx.font = '9px monospace';
+      ctx.fillText('Target ' + yFmt(s.target), chartArea.right - 72, yPx - 4);
+      ctx.restore();
+    }
+  } : null;
+
   const chart = new Chart(canvas, {
     type: s.chart_type,
     data: { labels: s.labels || [], datasets: chartDatasets },
@@ -1411,35 +1442,9 @@ function _buildDrillChart(canvas, s) {
         }
       },
       scales: scalesOpts,
-    }
+    },
+    plugins: targetLinePlugin ? [targetLinePlugin] : [],
   });
-
-  // Target line plugin (bar + line charts only)
-  if(s.target != null && !isDonut) {
-    const pluginId = 'tgt-' + canvas.id;
-    Chart.register({
-      id: pluginId,
-      afterDraw(c) {
-        if(c.canvas.id !== canvas.id) return;
-        const { ctx, chartArea, scales } = c;
-        if(!scales.y) return;
-        const yPx = scales.y.getPixelForValue(s.target);
-        ctx.save();
-        ctx.beginPath();
-        ctx.setLineDash([5, 4]);
-        ctx.strokeStyle = '#f59e0b';
-        ctx.lineWidth = 1.5;
-        ctx.moveTo(chartArea.left, yPx);
-        ctx.lineTo(chartArea.right, yPx);
-        ctx.stroke();
-        ctx.setLineDash([]);
-        ctx.fillStyle = '#f59e0b';
-        ctx.font = '9px monospace';
-        ctx.fillText('Target ' + yFmt(s.target), chartArea.right - 72, yPx - 4);
-        ctx.restore();
-      }
-    });
-  }
 
   _drillCharts.push(chart);
 }
