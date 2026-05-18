@@ -111,10 +111,60 @@ def get_metrics_history(metric_name: Optional[str] = None, quarter: Optional[str
 # ── Pipeline ─────────────────────────────────────────────────────────────────────
 
 @app.get("/api/pipeline")
-def get_pipeline(segment: str = "region"):
+def get_pipeline(
+    segment:    str = "region",
+    regions:    Optional[str] = None,
+    industries: Optional[str] = None,
+    tiers:      Optional[str] = None,
+):
+    import pandas as pd, json as _json
+    BASE = os.path.dirname(__file__)
+    RAW  = os.path.join(BASE, "..", "data", "raw")
+
+    # No filters — use existing tool (unchanged)
+    if not (regions or industries or tiers):
+        try:
+            from tools.mcp_tools import get_pipeline_by_segment
+            return {"data": get_pipeline_by_segment.invoke(f"by {segment}")}
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=str(e))
+
+    # With filters — compute on filtered DataFrames
     try:
-        from tools.mcp_tools import get_pipeline_by_segment
-        return {"data": get_pipeline_by_segment.invoke(f"by {segment}")}
+        opps  = pd.read_csv(os.path.join(RAW, "opportunities.csv"))
+        accts = pd.read_csv(os.path.join(RAW, "accounts.csv"))
+
+        accts_f = accts.copy()
+        if regions:
+            accts_f = accts_f[accts_f["region"].isin([r.strip() for r in regions.split(",")])]
+        if industries:
+            accts_f = accts_f[accts_f["industry"].isin([i.strip() for i in industries.split(",")])]
+        if tiers:
+            accts_f = accts_f[accts_f["tier"].isin([t.strip() for t in tiers.split(",")])]
+
+        merged = opps[opps["account_id"].isin(accts_f["account_id"])].merge(
+            accts_f[["account_id","region","industry"]], on="account_id", how="left"
+        )
+
+        seg_col = {"region":"region","industry":"industry","stage":"stage"}.get(segment,"region")
+
+        def _summ(df, col):
+            rows = []
+            for val, grp in df.groupby(col):
+                cl  = grp[grp["stage"].isin(["Closed Won","Closed Lost"])]
+                won = (grp["stage"]=="Closed Won").sum()
+                op  = grp[~grp["stage"].isin(["Closed Won","Closed Lost"])]["pipeline_value"]
+                rows.append({
+                    "segment": str(val),
+                    "open_pipeline_value": int(op.sum()),
+                    "total_deals": len(grp), "closed_won": int(won),
+                    "win_rate": round(won/len(cl), 3) if len(cl) else 0,
+                    "avg_deal_size": int(grp[grp["stage"]=="Closed Won"]["pipeline_value"].mean()) if won else 0,
+                })
+            return rows
+
+        result = _summ(merged, seg_col) if seg_col in merged.columns else []
+        return {"data": _json.dumps(result)}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -140,6 +190,149 @@ def get_alerts(threshold_pct: float = 0.20):
         return {"alerts": alerts, "count": len(alerts)}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+# ── Filtered KPIs ────────────────────────────────────────────────────────────────
+
+@app.get("/api/kpis")
+def get_kpis_filtered(
+    regions:    Optional[str] = None,   # "North America,EMEA"
+    industries: Optional[str] = None,   # "Technology,Healthcare"
+    tiers:      Optional[str] = None,   # "Enterprise,Mid-Market"
+    period:     Optional[str] = None,   # "2025-Q4"
+):
+    """
+    Recompute all KPIs on a filtered slice of the data.
+    Account-level filters (region/industry/tier) restrict which accounts count.
+    Period filters opportunity close_date for closed-deal metrics.
+    """
+    import pandas as pd, numpy as np
+    from datetime import datetime, timedelta
+
+    BASE = os.path.dirname(__file__)
+    RAW  = os.path.join(BASE, "..", "data", "raw")
+
+    def _csv(name):
+        path = os.path.join(RAW, name)
+        if not os.path.exists(path):
+            raise HTTPException(status_code=503, detail=f"{name} missing. Run generate_data.py.")
+        return pd.read_csv(path)
+
+    today = datetime.today()
+
+    opps  = _csv("opportunities.csv")
+    accts = _csv("accounts.csv")
+    usage = _csv("product_usage.csv")
+    subs  = _csv("subscription_revenue.csv")
+
+    # ── Account-level filters ────────────────────────────────────────────────────
+    accts_f = accts.copy()
+    if regions:
+        accts_f = accts_f[accts_f["region"].isin([r.strip() for r in regions.split(",")])]
+    if industries:
+        accts_f = accts_f[accts_f["industry"].isin([i.strip() for i in industries.split(",")])]
+    if tiers:
+        accts_f = accts_f[accts_f["tier"].isin([t.strip() for t in tiers.split(",")])]
+
+    acct_ids = set(accts_f["account_id"])
+    opps_f   = opps[opps["account_id"].isin(acct_ids)].copy()
+    usage_f  = usage[usage["account_id"].isin(acct_ids)].copy()
+    subs_f   = subs[subs["account_id"].isin(acct_ids)].copy()
+
+    # ── Period filter (applies to closed-deal metrics only) ──────────────────────
+    opps_period = opps_f.copy()
+    if period:
+        try:
+            year, q = int(period.split("-")[0]), int(period.split("-Q")[1])
+            qs = {1:(1,1),  2:(4,1),  3:(7,1),  4:(10,1)}
+            qe = {1:(3,31), 2:(6,30), 3:(9,30), 4:(12,31)}
+            start = pd.Timestamp(year, qs[q][0], qs[q][1])
+            end   = pd.Timestamp(year, qe[q][0], qe[q][1])
+            opps_period["close_date"] = pd.to_datetime(opps_period["close_date"])
+            opps_period = opps_period[
+                (opps_period["close_date"] >= start) &
+                (opps_period["close_date"] <= end)
+            ]
+        except Exception:
+            pass  # malformed period — ignore
+
+    # ── KPI computations ─────────────────────────────────────────────────────────
+    metrics = []
+
+    def _m(name, value, segment="All"):
+        metrics.append({"metric_name": name, "segment": segment,
+                        "metric_value": value, "date": today.strftime("%Y-%m-%d")})
+
+    # Pipeline Coverage (uses account-filtered open pipeline, no period filter)
+    QUOTA = 7_000_000
+    open_pipe = opps_f[~opps_f["stage"].isin(["Closed Won","Closed Lost"])]["pipeline_value"].sum()
+    _m("Pipeline Coverage", round(open_pipe / QUOTA, 2))
+
+    # Win Rate overall + by region (uses period-filtered closed deals)
+    closed = opps_period[opps_period["stage"].isin(["Closed Won","Closed Lost"])]
+    if len(closed):
+        wr_all = (closed["stage"]=="Closed Won").sum() / len(closed)
+        _m("Win Rate", round(wr_all, 4))
+        cl_reg = closed.merge(accts_f[["account_id","region"]], on="account_id", how="left")
+        for reg, grp in cl_reg.groupby("region"):
+            _m("Win Rate", round((grp["stage"]=="Closed Won").sum() / len(grp), 4), str(reg))
+    else:
+        _m("Win Rate", 0.0)
+
+    # Average Deal Size & Sales Cycle (period-filtered closed won)
+    won = opps_period[opps_period["stage"]=="Closed Won"].copy()
+    if len(won):
+        _m("Average Deal Size", round(float(won["pipeline_value"].mean()), 2))
+        won["created_date"] = pd.to_datetime(won["created_date"])
+        won["close_date"]   = pd.to_datetime(won["close_date"])
+        cyc = (won["close_date"] - won["created_date"]).dt.days.clip(lower=0).mean()
+        _m("Sales Cycle Length (days)", round(float(cyc), 1))
+    else:
+        _m("Average Deal Size", 0.0)
+        _m("Sales Cycle Length (days)", 0.0)
+
+    # NRR (account-filtered subscriptions)
+    if len(subs_f):
+        base = subs_f["contract_value"].sum()
+        if base > 0:
+            exp_arr  = subs_f[subs_f["expansion_flag"]==1]["contract_value"].sum() * 0.30
+            churn    = base * 0.025
+            _m("Net Revenue Retention", round((base + exp_arr - churn) / base, 4))
+        else:
+            _m("Net Revenue Retention", 0.0)
+
+    # Product Attach (account-filtered usage vs account count)
+    n_accts = len(accts_f)
+    if n_accts and len(usage_f):
+        multi = (usage_f.groupby("account_id")["product_name"].nunique() > 1).sum()
+        _m("Product Attach Rate", round(multi / n_accts, 4))
+    else:
+        _m("Product Attach Rate", 0.0)
+
+    # Seat Expansion
+    if len(subs_f):
+        _m("Seat Expansion Rate", round(float(subs_f["expansion_flag"].mean()), 4))
+    else:
+        _m("Seat Expansion Rate", 0.0)
+
+    # Usage At-Risk
+    if len(usage_f):
+        cutoff = (today - timedelta(days=30)).strftime("%Y-%m-%d")
+        usage_f["last_active_date"] = usage_f["last_active_date"].astype(str)
+        at_risk = usage_f[usage_f["last_active_date"] < cutoff]["account_id"].nunique()
+        total   = usage_f["account_id"].nunique()
+        _m("Usage At-Risk Rate", round(at_risk / total, 4) if total else 0.0)
+    else:
+        _m("Usage At-Risk Rate", 0.0)
+
+    return {
+        "metrics": metrics,
+        "context": {
+            "n_accounts":     int(n_accts),
+            "n_opportunities": int(len(opps_f)),
+            "filters_active": bool(regions or industries or tiers or period),
+        },
+    }
 
 
 # ── KPI Drill-downs ──────────────────────────────────────────────────────────────
@@ -647,6 +840,22 @@ tr:hover td{background:rgba(59,130,246,.04)}
 .modal-close:hover{color:#e2e8f0}
 .dm-row{display:flex;justify-content:space-between;padding:.4rem 0;border-bottom:1px solid #0f172a;font-size:.83rem}
 .dm-label{color:#94a3b8}.dm-val{color:#e2e8f0;font-family:monospace}
+/* Filter bar */
+.filter-bar{background:#111827;border:1px solid #1e293b;border-radius:12px;padding:.8rem 1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.filter-group{display:flex;align-items:center;gap:.45rem;flex-shrink:0}
+.filter-divider{width:1px;height:22px;background:#1e293b;flex-shrink:0}
+.filter-lbl{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#475569;white-space:nowrap}
+.filter-pills{display:flex;gap:.3rem;flex-wrap:wrap}
+.filter-pill{background:#0a0f1e;border:1px solid #1e293b;color:#64748b;padding:3px 10px;border-radius:20px;font-size:.75rem;cursor:pointer;transition:all .15s;white-space:nowrap;user-select:none}
+.filter-pill:hover{border-color:#3b82f6;color:#e2e8f0}
+.filter-pill.on{background:rgba(59,130,246,.18);border-color:#3b82f6;color:#93c5fd;font-weight:600}
+.filter-select{background:#0a0f1e;border:1px solid #1e293b;color:#94a3b8;padding:3px 9px;border-radius:6px;font-size:.75rem;cursor:pointer;outline:none;max-width:160px}
+.filter-select:focus,.filter-select:hover{border-color:#3b82f6}
+.filter-clear{background:transparent;border:1px solid #334155;color:#64748b;padding:3px 11px;border-radius:6px;font-size:.73rem;cursor:pointer;margin-left:auto;transition:all .15s;white-space:nowrap}
+.filter-clear:hover{border-color:#ef4444;color:#f87171}
+.filter-summary{background:rgba(59,130,246,.06);border:1px solid rgba(59,130,246,.2);border-radius:8px;padding:.5rem 1rem;font-size:.78rem;color:#94a3b8;margin-bottom:1rem;display:none;align-items:center;gap:.6rem;flex-wrap:wrap}
+.filter-summary-tag{background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#93c5fd;padding:2px 8px;border-radius:4px;font-size:.7rem;font-weight:600}
+.filter-ctx{color:#475569;font-size:.72rem}
 /* Drill-down modal */
 .drill-modal-inner{max-width:680px;width:95%;max-height:88vh;overflow-y:auto}
 .drill-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.1rem;padding-bottom:1rem;border-bottom:1px solid #1e293b}
@@ -716,6 +925,56 @@ footer{border-top:1px solid #1e293b;margin-top:2rem;padding:1.2rem 2rem;display:
   <div class="hero">
     <h1>Growth Intelligence Agent</h1>
     <p>Ask why EMEA win rate dropped — get an answer grounded in your strategy, in seconds.</p>
+  </div>
+
+  <!-- Filter Bar -->
+  <div class="filter-bar">
+    <div class="filter-group">
+      <span class="filter-lbl">Region</span>
+      <div class="filter-pills" id="fp-region"></div>
+    </div>
+    <div class="filter-divider"></div>
+    <div class="filter-group">
+      <span class="filter-lbl">Tier</span>
+      <div class="filter-pills" id="fp-tier"></div>
+    </div>
+    <div class="filter-divider"></div>
+    <div class="filter-group">
+      <span class="filter-lbl">Industry</span>
+      <select class="filter-select" id="fs-industry" onchange="_onIndustryChange(this)">
+        <option value="">All industries</option>
+        <option>Technology</option>
+        <option>Financial Services</option>
+        <option>Healthcare</option>
+        <option>Manufacturing</option>
+        <option>Retail &amp; E-commerce</option>
+        <option>Media &amp; Entertainment</option>
+        <option>Public Sector</option>
+      </select>
+    </div>
+    <div class="filter-divider"></div>
+    <div class="filter-group">
+      <span class="filter-lbl">Period</span>
+      <select class="filter-select" id="fs-period" onchange="_onPeriodChange(this)">
+        <option value="">All time</option>
+        <option value="2024-Q1">Q1 2024</option>
+        <option value="2024-Q2">Q2 2024</option>
+        <option value="2024-Q3">Q3 2024</option>
+        <option value="2024-Q4">Q4 2024</option>
+        <option value="2025-Q1">Q1 2025</option>
+        <option value="2025-Q2">Q2 2025</option>
+        <option value="2025-Q3">Q3 2025</option>
+        <option value="2025-Q4">Q4 2025</option>
+      </select>
+    </div>
+    <button class="filter-clear" id="filter-clear" onclick="clearFilters()" style="display:none">✕ Clear filters</button>
+  </div>
+
+  <!-- Filter summary -->
+  <div class="filter-summary" id="filter-summary">
+    <span style="color:#64748b;font-size:.72rem">Filtered:</span>
+    <span id="filter-tags"></span>
+    <span class="filter-ctx" id="filter-ctx"></span>
   </div>
 
   <!-- KPI Cards -->
@@ -914,10 +1173,15 @@ function escHtml(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').
 // ── KPI Cards with deltas ─────────────────────────────────────────────────────
 async function loadKPIs() {
   try {
-    const [cur, hist] = await Promise.all([
-      fetch('/api/metrics').then(r=>r.json()),
+    const params = _buildFP();
+    const metricsUrl = _anyFilter() ? '/api/kpis?' + params : '/api/metrics';
+    const [raw, hist] = await Promise.all([
+      fetch(metricsUrl).then(r=>r.json()),
       fetch('/api/metrics-history?quarter=2025-Q4').then(r=>r.json()).catch(()=>[]),
     ]);
+    const cur     = _anyFilter() ? raw.metrics   : raw;
+    const context = _anyFilter() ? raw.context   : null;
+    _updateFilterSummary(context);
     document.getElementById('status-badge').textContent = '✅ Live Data';
 
     const byName = {}, q4 = {};
@@ -958,109 +1222,75 @@ async function loadKPIs() {
   }
 }
 
+// Register trend chart target-line plugins once at startup (not inside render fn)
+Chart.register({
+  id:'wr-target-line',
+  afterDraw(chart){
+    if(chart.canvas.id!=='chart-wr-region') return;
+    const {ctx,chartArea,scales}=chart;
+    if(!scales||!scales.y) return;
+    const y=scales.y.getPixelForValue(28);
+    ctx.save();ctx.beginPath();ctx.setLineDash([5,4]);
+    ctx.strokeStyle='#f59e0b';ctx.lineWidth=1.5;
+    ctx.moveTo(chartArea.left,y);ctx.lineTo(chartArea.right,y);ctx.stroke();
+    ctx.fillStyle='#f59e0b';ctx.font='10px monospace';
+    ctx.fillText('Target 28%',chartArea.right-68,y-4);ctx.restore();
+  }
+});
+Chart.register({
+  id:'perf-ref-line',
+  afterDraw(chart){
+    if(chart.canvas.id!=='chart-perf-target') return;
+    const {ctx,chartArea,scales}=chart;
+    if(!scales||!scales.x) return;
+    const x=scales.x.getPixelForValue(100);
+    ctx.save();ctx.beginPath();ctx.setLineDash([4,3]);
+    ctx.strokeStyle='rgba(255,255,255,.25)';ctx.lineWidth=1.5;
+    ctx.moveTo(x,chartArea.top);ctx.lineTo(x,chartArea.bottom);ctx.stroke();
+    ctx.fillStyle='rgba(255,255,255,.35)';ctx.font='9px monospace';
+    ctx.fillText('Target',x+4,chartArea.top+12);ctx.restore();
+  }
+});
+
 // ── Trends & Targets charts ───────────────────────────────────────────────────
 function renderTrendCharts(metricsData, histData) {
-  const BLUE = '#3b82f6';
-  const GRID = '#1e293b';
+  const BLUE = '#3b82f6', GRID = '#1e293b';
 
-  // Win Rate by Region from metrics.csv (regional rows computed by compute_metrics.py)
   const wrRegion = metricsData.filter(r=>r.metric_name==='Win Rate' && r.segment!=='All')
     .sort((a,b)=>b.metric_value-a.metric_value);
-  const wrEl = document.getElementById('chart-wr-region');
   const emptyEl = document.getElementById('wr-region-empty');
+  const wrCanv  = document.getElementById('chart-wr-region');
+
   if(wrRegion.length) {
-    new Chart(wrEl, {
+    wrCanv.style.display=''; emptyEl.style.display='none';
+    _chart('chart-wr-region', {
       type:'bar',
-      data:{
-        labels: wrRegion.map(r=>r.segment),
-        datasets:[{data:wrRegion.map(r=>+(r.metric_value*100).toFixed(1)), backgroundColor:BLUE, borderRadius:5}]
-      },
-      options:{
-        plugins:{legend:{display:false}},
-        scales:{
-          y:{ticks:{callback:v=>v+'%'}, grid:{color:GRID}, min:0, max:50},
-          x:{grid:{color:GRID}}
-        },
-        responsive:true
-      }
-    });
-    // Target line annotation via afterDraw plugin
-    Chart.register({
-      id:'target-line',
-      afterDraw(chart){
-        if(chart.canvas.id!=='chart-wr-region') return;
-        const {ctx,chartArea,scales} = chart;
-        const y = scales.y.getPixelForValue(28);
-        ctx.save();
-        ctx.beginPath();
-        ctx.setLineDash([5,4]);
-        ctx.strokeStyle='#f59e0b';
-        ctx.lineWidth=1.5;
-        ctx.moveTo(chartArea.left,y);
-        ctx.lineTo(chartArea.right,y);
-        ctx.stroke();
-        ctx.fillStyle='#f59e0b';
-        ctx.font='10px monospace';
-        ctx.fillText('Target 28%',chartArea.right-68,y-4);
-        ctx.restore();
-      }
+      data:{labels:wrRegion.map(r=>r.segment),
+            datasets:[{data:wrRegion.map(r=>+(r.metric_value*100).toFixed(1)),backgroundColor:BLUE,borderRadius:5}]},
+      options:{plugins:{legend:{display:false}},
+               scales:{y:{ticks:{callback:v=>v+'%'},grid:{color:GRID},min:0,max:50},x:{grid:{color:GRID}}},
+               responsive:true}
     });
   } else {
-    wrEl.style.display='none';
-    emptyEl.style.display='block';
+    wrCanv.style.display='none'; emptyEl.style.display='block';
   }
 
-  // Performance vs Target
   const byName = {};
   metricsData.forEach(r=>{ if(r.segment==='All') byName[r.metric_name]=r.metric_value; });
   const perfData = PERF_TARGET_METRICS.map(d=>{
     const v = byName[d.key];
-    if(v==null) return {label:d.name, pct:0, color:'#475569'};
-    const pct = Math.min(130, d.minimize ? (d.target/v)*100 : (v/d.target)*100);
-    const color = pct>=100 ? '#22c55e' : pct>=80 ? '#f59e0b' : '#ef4444';
-    return {label:d.name, pct:+pct.toFixed(1), color};
+    if(v==null) return {label:d.name,pct:0,color:'#475569'};
+    const pct = Math.min(130, d.minimize?(d.target/v)*100:(v/d.target)*100);
+    return {label:d.name, pct:+pct.toFixed(1), color:pct>=100?'#22c55e':pct>=80?'#f59e0b':'#ef4444'};
   }).reverse();
 
-  new Chart(document.getElementById('chart-perf-target'), {
+  _chart('chart-perf-target', {
     type:'bar',
-    data:{
-      labels: perfData.map(d=>d.label),
-      datasets:[{
-        data: perfData.map(d=>d.pct),
-        backgroundColor: perfData.map(d=>d.color),
-        borderRadius:4
-      }]
-    },
-    options:{
-      indexAxis:'y',
-      plugins:{legend:{display:false}},
-      scales:{
-        x:{ticks:{callback:v=>v+'%'}, grid:{color:GRID}, min:0, max:135},
-        y:{grid:{color:GRID}}
-      },
-      responsive:true
-    }
-  });
-  // Reference line at 100%
-  Chart.register({
-    id:'target-ref',
-    afterDraw(chart){
-      if(chart.canvas.id!=='chart-perf-target') return;
-      const {ctx,chartArea,scales} = chart;
-      const x = scales.x.getPixelForValue(100);
-      ctx.save();
-      ctx.beginPath();
-      ctx.setLineDash([4,3]);
-      ctx.strokeStyle='rgba(255,255,255,.25)';
-      ctx.lineWidth=1.5;
-      ctx.moveTo(x,chartArea.top);
-      ctx.lineTo(x,chartArea.bottom);
-      ctx.stroke();
-      ctx.fillStyle='rgba(255,255,255,.35)';
-      ctx.font='9px monospace';
-      ctx.fillText('Target',x+4,chartArea.top+12);
-      ctx.restore();
-    }
+    data:{labels:perfData.map(d=>d.label),
+          datasets:[{data:perfData.map(d=>d.pct),backgroundColor:perfData.map(d=>d.color),borderRadius:4}]},
+    options:{indexAxis:'y',plugins:{legend:{display:false}},
+             scales:{x:{ticks:{callback:v=>v+'%'},grid:{color:GRID},min:0,max:135},y:{grid:{color:GRID}}},
+             responsive:true}
   });
 }
 
@@ -1069,6 +1299,7 @@ let _pipelineLoaded = false;
 async function loadPipeline() {
   if(_pipelineLoaded) return;
   _pipelineLoaded = true;
+  const fp = _buildFP().toString();
   const BLUE  = '#3b82f6';
   const GRID  = '#1e293b';
   const FUNNEL_ORDER = ['Prospecting','Discovery','Demo','Proposal','Negotiation','Closed Won','Closed Lost'];
@@ -1079,10 +1310,11 @@ async function loadPipeline() {
   };
 
   try {
+    const qs = fp ? '&'+fp : '';
     const [regionRes, stageRes, industryRes] = await Promise.all([
-      fetch('/api/pipeline?segment=region').then(r=>r.json()),
-      fetch('/api/pipeline?segment=stage').then(r=>r.json()),
-      fetch('/api/pipeline?segment=industry').then(r=>r.json()),
+      fetch('/api/pipeline?segment=region'+qs).then(r=>r.json()),
+      fetch('/api/pipeline?segment=stage'+qs).then(r=>r.json()),
+      fetch('/api/pipeline?segment=industry'+qs).then(r=>r.json()),
     ]);
     const parse = d=>{ try{return typeof d.data==='string'?JSON.parse(d.data):d.data;}catch(e){return [];} };
     const rData = parse(regionRes);
@@ -1092,7 +1324,7 @@ async function loadPipeline() {
     // Pipeline by Region — single blue, sorted by value
     if(Array.isArray(rData) && rData.length) {
       const sorted = [...rData].sort((a,b)=>b.open_pipeline_value-a.open_pipeline_value);
-      new Chart(document.getElementById('chart-pipeline-region'),{
+      _chart('chart-pipeline-region',{
         type:'bar',
         data:{
           labels:sorted.map(r=>r.segment),
@@ -1114,7 +1346,7 @@ async function loadPipeline() {
       const byStage = {};
       sDataRaw.forEach(r=>{ byStage[r.segment]=r; });
       const ordered = FUNNEL_ORDER.filter(s=>byStage[s]);
-      new Chart(document.getElementById('chart-pipeline-stage'),{
+      _chart('chart-pipeline-stage',{
         type:'doughnut',
         data:{
           labels:ordered,
@@ -1135,7 +1367,7 @@ async function loadPipeline() {
     // Pipeline by Industry — horizontal bars, pipeline VALUE in $, sorted desc, single color
     if(Array.isArray(iData) && iData.length) {
       const sorted = [...iData].sort((a,b)=>b.open_pipeline_value-a.open_pipeline_value);
-      new Chart(document.getElementById('chart-pipeline-industry'),{
+      _chart('chart-pipeline-industry',{
         type:'bar',
         data:{
           labels:sorted.map(r=>r.segment),
@@ -1286,6 +1518,95 @@ function askAgent(question) {
 document.getElementById('suggestions').innerHTML = SUGGESTIONS.map(s=>
   `<span class="chip" onclick="sendMessage(${JSON.stringify(s)})">${s.substring(0,36)}…</span>`
 ).join('');
+
+// ── Chart registry (prevents "canvas already in use" on re-render) ───────────
+const _chartReg = {};
+function _chart(canvasId, config) {
+  if(_chartReg[canvasId]) { try { _chartReg[canvasId].destroy(); } catch(e){} }
+  const el = document.getElementById(canvasId);
+  if(!el) return null;
+  const c = new Chart(el, config);
+  _chartReg[canvasId] = c;
+  return c;
+}
+
+// ── Filter state ──────────────────────────────────────────────────────────────
+const _F = { regions: new Set(), industries: new Set(), tiers: new Set(), period: '' };
+const _REGION_LABELS = {'North America':'NA','EMEA':'EMEA','APAC':'APAC','LATAM':'LATAM'};
+const _TIER_LABELS   = ['Enterprise','Mid-Market','SMB'];
+const _REGION_VALS   = ['North America','EMEA','APAC','LATAM'];
+
+function _initFilterBar() {
+  const rEl = document.getElementById('fp-region');
+  _REGION_VALS.forEach(v => {
+    const p = document.createElement('span');
+    p.className='filter-pill'; p.textContent=_REGION_LABELS[v]||v; p.dataset.v=v;
+    p.onclick = () => _togglePill(_F.regions, v, p);
+    rEl.appendChild(p);
+  });
+  const tEl = document.getElementById('fp-tier');
+  _TIER_LABELS.forEach(v => {
+    const p = document.createElement('span');
+    p.className='filter-pill'; p.textContent=v; p.dataset.v=v;
+    p.onclick = () => _togglePill(_F.tiers, v, p);
+    tEl.appendChild(p);
+  });
+}
+
+function _togglePill(set, val, el) {
+  if(set.has(val)) { set.delete(val); el.classList.remove('on'); }
+  else             { set.add(val);    el.classList.add('on');    }
+  applyFilters();
+}
+function _onIndustryChange(sel) {
+  _F.industries.clear();
+  if(sel.value) _F.industries.add(sel.value);
+  applyFilters();
+}
+function _onPeriodChange(sel) {
+  _F.period = sel.value;
+  applyFilters();
+}
+function clearFilters() {
+  _F.regions.clear(); _F.industries.clear(); _F.tiers.clear(); _F.period='';
+  document.querySelectorAll('.filter-pill').forEach(p=>p.classList.remove('on'));
+  document.getElementById('fs-industry').value='';
+  document.getElementById('fs-period').value='';
+  applyFilters();
+}
+
+function _buildFP() {
+  const p = new URLSearchParams();
+  if(_F.regions.size)    p.set('regions',    [..._F.regions].join(','));
+  if(_F.industries.size) p.set('industries', [..._F.industries].join(','));
+  if(_F.tiers.size)      p.set('tiers',      [..._F.tiers].join(','));
+  if(_F.period)          p.set('period',     _F.period);
+  return p;
+}
+function _anyFilter() { return _F.regions.size||_F.industries.size||_F.tiers.size||_F.period; }
+
+function _updateFilterSummary(context) {
+  const active = _anyFilter();
+  document.getElementById('filter-clear').style.display = active ? 'block' : 'none';
+  const sumEl = document.getElementById('filter-summary');
+  if(!active) { sumEl.style.display='none'; return; }
+  sumEl.style.display='flex';
+  const tags = [];
+  if(_F.regions.size)    tags.push({label:[..._F.regions].map(r=>_REGION_LABELS[r]||r).join(', ')});
+  if(_F.industries.size) tags.push({label:[..._F.industries].join(', ')});
+  if(_F.tiers.size)      tags.push({label:[..._F.tiers].join(', ')});
+  if(_F.period)          tags.push({label:_F.period.replace('-Q',' Q')});
+  document.getElementById('filter-tags').innerHTML =
+    tags.map(t=>`<span class="filter-summary-tag">${escHtml(t.label)}</span>`).join(' ');
+  const ctx = context ? `${context.n_accounts} accts · ${context.n_opportunities} deals` : '';
+  document.getElementById('filter-ctx').textContent = ctx;
+}
+
+async function applyFilters() {
+  _updateFilterSummary(null);
+  await loadKPIs();
+  if(_pipelineLoaded) { _pipelineLoaded=false; loadPipeline(); }
+}
 
 // ── Drill-down ────────────────────────────────────────────────────────────────
 const _drillCharts = [];
@@ -1450,8 +1771,8 @@ function _buildDrillChart(canvas, s) {
 }
 
 // ── Init ──────────────────────────────────────────────────────────────────────
+_initFilterBar();
 loadKPIs();
-// Pre-warm alerts
 setTimeout(()=>{ if(!_alertsLoaded) runAlerts(false); }, 2000);
 </script>
 </body>
