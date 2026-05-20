@@ -1,13 +1,11 @@
 # Environment / secrets
 .env
 
-# Data (generated, not source-controlled)
-data/raw/
-data/processed/
-{data/
+# Data — committed to repo so Vercel has data at runtime
+# To regenerate: python scripts/generate_data.py && python metrics/compute_metrics.py
 
-# RAG vectorstore (built artifact)
-rag/vectorstore/
+# RAG vectorstore — committed so Vercel can serve RAG queries
+# To rebuild: python rag/build_vectorstore.py
 
 # Python
 __pycache__/
@@ -19,10 +17,21 @@ env/
 *.egg-info/
 dist/
 build/
+uv.lock
 
 # macOS
-.DS_Store
+**/.DS_Store
 
 # IDE
 .vscode/
 .idea/
+
+# Vercel (auto-generated deployment config)
+.vercel/
+
+# Claude Code workspace files
+.claude/
+
+# Binary assets (not version-controlled)
+*.docx
+*.pptx

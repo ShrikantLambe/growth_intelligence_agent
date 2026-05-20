@@ -8,7 +8,6 @@ import sys
 import json
 import pandas as pd
 import plotly.express as px
-import plotly.graph_objects as go
 import streamlit as st
 from datetime import datetime, date, timedelta
 
@@ -464,10 +463,8 @@ tab1, tab2, tab3, tab4 = st.tabs(["💬 AI Chat", "📊 Metrics Explorer", "🚨
 # ── Tab 1: AI Chat ───────────────────────────────────────────────────────────────
 
 with tab1:
-    st.markdown("**Ask the Growth Intelligence Agent anything about your metrics:**")
-
     if filters_active:
-        st.info(f"🔍 **Active filters applied to context:** {filter_summary}", icon="🔍")
+        st.info(f"🔍 **Active filters applied to context:** {filter_summary}")
 
     suggestions = [
         "What is our current win rate by region?",
@@ -477,72 +474,84 @@ with tab1:
         "Summarize our overall growth health",
     ]
 
-    cols = st.columns(len(suggestions))
+    s_cols = st.columns(len(suggestions))
     for i, suggestion in enumerate(suggestions):
-        if cols[i].button(suggestion[:30] + "...", key=f"sugg_{i}", use_container_width=True):
-            st.session_state["prefill_question"] = suggestion
+        if s_cols[i].button(suggestion[:30] + "…", key=f"sugg_{i}", use_container_width=True):
+            st.session_state["pending_question"] = suggestion
+            st.rerun()
 
-    st.markdown('<div class="chat-container">', unsafe_allow_html=True)
+    # Render chat history
     for role, content in st.session_state.chat_history:
-        if role == "user":
-            st.markdown(f'<div class="user-msg">👤 {content}</div>', unsafe_allow_html=True)
-        else:
-            st.markdown(f'<div class="agent-msg">🧠 {content}</div>', unsafe_allow_html=True)
-    st.markdown('</div>', unsafe_allow_html=True)
+        with st.chat_message("user" if role == "user" else "assistant",
+                             avatar="👤" if role == "user" else "🧠"):
+            st.markdown(content)
 
-    prefill = st.session_state.pop("prefill_question", "")
-    question = st.text_input(
-        "Your question",
-        value=prefill,
-        placeholder="e.g. What's driving our pipeline decline in EMEA?",
-        label_visibility="collapsed",
-    )
+    # Consume auto-question set by suggestion chips
+    auto_q = st.session_state.pop("pending_question", None)
 
-    col1, col2 = st.columns([1, 5])
-    ask_clicked = col1.button("Ask Agent 🚀", use_container_width=True)
+    # Chat input — Enter to submit; falls back to chip auto-question
+    prompt = st.chat_input("e.g. What's driving our pipeline decline in EMEA?") or auto_q
 
-    if ask_clicked and question:
-        # Prepend active filter context so agent answers within the right scope
-        agent_question = question
-        if filters_active:
-            agent_question = f"[Active data filters: {filter_summary}]\n\n{question}"
+    if prompt:
+        agent_q = (f"[Active data filters: {filter_summary}]\n\n{prompt}"
+                   if filters_active else prompt)
 
-        st.session_state.chat_history.append(("user", question))
+        with st.chat_message("user", avatar="👤"):
+            st.markdown(prompt)
+        st.session_state.chat_history.append(("user", prompt))
 
-        with st.spinner("🧠 Agent is reasoning..."):
-            try:
-                from agent.agent import ask as agent_ask
-                history_pairs = []
-                msgs = st.session_state.chat_history[:-1]
-                for i in range(0, len(msgs) - 1, 2):
-                    if (i + 1 < len(msgs)
-                            and msgs[i][0] == "user"
-                            and msgs[i + 1][0] == "agent"):
-                        history_pairs.append((msgs[i][1], msgs[i + 1][1]))
-
-                result = agent_ask(agent_question, history_pairs)
-                answer = result["answer"]
-
-                if show_tool_steps and result.get("steps"):
-                    with st.expander("🔧 Agent Tool Steps", expanded=False):
-                        for step in result["steps"]:
-                            st.json(step)
-            except Exception as e:
-                answer = f"⚠️ Agent error: {str(e)}\n\nMake sure your API key is set in `.env` and data is generated."
+        answer = "⚠️ No response received."
+        with st.chat_message("assistant", avatar="🧠"):
+            with st.spinner("Reasoning…"):
+                try:
+                    from agent.agent import ask as agent_ask
+                    history_pairs = []
+                    msgs = st.session_state.chat_history[:-1]
+                    for i in range(0, len(msgs) - 1, 2):
+                        if (i + 1 < len(msgs)
+                                and msgs[i][0] == "user"
+                                and msgs[i + 1][0] == "agent"):
+                            history_pairs.append((msgs[i][1], msgs[i + 1][1]))
+                    result = agent_ask(agent_q, history_pairs)
+                    answer = result["answer"]
+                    st.markdown(answer)
+                    if show_tool_steps and result.get("steps"):
+                        with st.expander("🔧 Tool Steps", expanded=False):
+                            for step in result["steps"]:
+                                st.json(step)
+                except Exception as e:
+                    answer = f"⚠️ Agent error: {str(e)}\n\nEnsure your API key is set in `.env` and data is generated."
+                    st.error(answer)
 
         st.session_state.chat_history.append(("agent", answer))
-        st.rerun()
 
-    if col2.button("Clear Chat", use_container_width=False):
-        st.session_state.chat_history = []
-        st.rerun()
+    if st.session_state.chat_history:
+        if st.button("🗑️ Clear Chat"):
+            st.session_state.chat_history = []
+            st.rerun()
 
 
 # ── Tab 2: Metrics Explorer ──────────────────────────────────────────────────────
 
 with tab2:
     if opps_f is None and metrics_df is None:
-        st.warning("No data found. Run `python scripts/generate_data.py` and then `python metrics/compute_metrics.py`.")
+        st.markdown("""
+        <div style="background:#111827;border:1px solid #1e3a5f;border-radius:12px;padding:2.5rem;text-align:center;margin:2rem 0;">
+            <div style="font-size:2.5rem;margin-bottom:1rem;">📊</div>
+            <div style="color:#e2e8f0;font-size:1.1rem;font-weight:600;margin-bottom:0.5rem;">No data found</div>
+            <div style="color:#64748b;font-size:0.88rem;margin-bottom:1.5rem;">
+                Run these three commands in order to generate and process the data:
+            </div>
+            <div style="background:#0a0f1e;border:1px solid #1e293b;border-radius:8px;padding:1.2rem;text-align:left;font-family:'JetBrains Mono',monospace;font-size:0.84rem;line-height:1.9;">
+                <span style="color:#64748b;">$ </span><span style="color:#4ade80;">python scripts/generate_data.py</span><br>
+                <span style="color:#64748b;">$ </span><span style="color:#4ade80;">python metrics/compute_metrics.py</span><br>
+                <span style="color:#64748b;">$ </span><span style="color:#4ade80;">python rag/build_vectorstore.py</span>
+            </div>
+            <div style="color:#475569;font-size:0.78rem;margin-top:1rem;">
+                Then reload this page — data will appear automatically.
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
     else:
         # Filter summary banner
         if filters_active:
@@ -744,6 +753,73 @@ with tab2:
         else:
             st.info("No usage data matches the current filters.")
 
+        # ── Row 5: Revenue & Renewals ─────────────────────────────────────────────
+        st.markdown("**Revenue & Renewal Pipeline**")
+        ren_c1, ren_c2 = st.columns(2)
+
+        with ren_c1:
+            st.markdown("**Upcoming Renewals by Month**")
+            if subs_f is not None and len(subs_f):
+                s_ren = subs_f.copy()
+                s_ren["renewal_date"] = pd.to_datetime(s_ren["renewal_date"])
+                upcoming = s_ren[s_ren["renewal_date"] >= pd.Timestamp.today()].copy()
+                if len(upcoming):
+                    upcoming["renewal_month"] = upcoming["renewal_date"].dt.to_period("M").astype(str)
+                    monthly = (
+                        upcoming.groupby(["renewal_month", "expansion_flag"])
+                        .agg(arr=("contract_value", "sum"))
+                        .reset_index()
+                    )
+                    monthly["Account type"] = monthly["expansion_flag"].map(
+                        {1: "Expanding", 0: "Base"}
+                    )
+                    monthly = monthly.sort_values("renewal_month").head(24)
+                    fig_ren = px.bar(
+                        monthly, x="renewal_month", y="arr", color="Account type",
+                        barmode="stack", template="plotly_dark",
+                        color_discrete_map={"Expanding": "#22c55e", "Base": "#3b82f6"},
+                        labels={"renewal_month": "Month", "arr": "ARR ($)"},
+                    )
+                    fig_ren.update_layout(
+                        plot_bgcolor="#111827", paper_bgcolor="#111827",
+                        margin=dict(l=0, r=0, t=10, b=0),
+                        legend=dict(orientation="h", yanchor="bottom", y=1.02),
+                    )
+                    st.plotly_chart(fig_ren, use_container_width=True)
+                else:
+                    st.info("No upcoming renewals in the selected data.")
+            else:
+                st.info("No subscription data available.")
+
+        with ren_c2:
+            st.markdown("**ARR by Region (Expanding vs. Base)**")
+            if subs_f is not None and accts_f is not None and len(subs_f):
+                subs_reg = subs_f.merge(
+                    accts_f[["account_id", "region"]], on="account_id", how="left"
+                )
+                reg_arr = (
+                    subs_reg.groupby(["region", "expansion_flag"])["contract_value"]
+                    .sum()
+                    .reset_index()
+                )
+                reg_arr["Account type"] = reg_arr["expansion_flag"].map(
+                    {1: "Expanding", 0: "Base"}
+                )
+                fig_arr = px.bar(
+                    reg_arr, x="region", y="contract_value", color="Account type",
+                    barmode="stack", template="plotly_dark",
+                    color_discrete_map={"Expanding": "#22c55e", "Base": "#3b82f6"},
+                    labels={"region": "Region", "contract_value": "ARR ($)"},
+                )
+                fig_arr.update_layout(
+                    plot_bgcolor="#111827", paper_bgcolor="#111827",
+                    margin=dict(l=0, r=0, t=10, b=0),
+                    legend=dict(orientation="h", yanchor="bottom", y=1.02),
+                )
+                st.plotly_chart(fig_arr, use_container_width=True)
+            else:
+                st.info("Select account filters to see ARR breakdown by region.")
+
 
 # ── Tab 3: Alerts ────────────────────────────────────────────────────────────────
 
@@ -841,6 +917,14 @@ with tab4:
 
     analysis = st.session_state.get("analysis")
     if analysis:
+        dl_col, _ = st.columns([1, 5])
+        dl_col.download_button(
+            "📥 Download Report",
+            data=analysis,
+            file_name=f"growth_analysis_{datetime.now().strftime('%Y%m%d_%H%M')}.md",
+            mime="text/markdown",
+            use_container_width=True,
+        )
         with st.container():
             st.markdown(analysis)
     else:

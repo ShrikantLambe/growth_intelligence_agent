@@ -34,13 +34,14 @@ def _load(filename: str) -> pd.DataFrame:
 @tool
 def get_metric(query: str) -> str:
     """
-    Retrieve growth metrics from the metrics warehouse.
-    Use plain English to describe what you want. Examples:
-      - 'win rate'           → overall and regional win rates
-      - 'pipeline coverage'  → pipeline vs quota ratio
-      - 'NRR'                → net revenue retention
-      - 'seat expansion rate'→ seat expansion metric
-      - 'all metrics'        → every metric in the warehouse
+    Retrieve growth metrics from the metrics warehouse (data/processed/metrics.csv).
+    Use plain English. Examples:
+      - 'win rate'            → overall ~23% and regional win rates (APAC/EMEA/LATAM/NA)
+      - 'pipeline coverage'   → open pipeline vs $7M quota (~4.2x)
+      - 'NRR'                 → net revenue retention (~113%)
+      - 'seat expansion rate' → seat expansion metric (~29%)
+      - 'all metrics'         → every metric in the warehouse
+    Data: 300 accounts · 800 deals · 7 industries · 4 regions (seed=42, May 2026).
     Returns: metric_name, segment, metric_value, date as JSON.
     """
     metrics_path = os.path.join(PROCESSED_DIR, "metrics.csv")
@@ -90,11 +91,11 @@ def get_pipeline_by_segment(query: str = "all") -> str:
     """
     Retrieve CRM opportunity pipeline data segmented by different dimensions.
     Examples:
-      - 'by region'    → pipeline breakdown by geographic region
-      - 'by stage'     → pipeline value at each deal stage
-      - 'by industry'  → pipeline by industry vertical
-      - 'open deals'   → summary of all active open opportunities
-    Returns: pipeline value, deal counts, and win rates per segment.
+      - 'by region'    → NA/EMEA/APAC/LATAM breakdown (NA is ~56% of open pipeline)
+      - 'by stage'     → Prospecting→Discovery→Demo→Proposal→Negotiation funnel
+      - 'by industry'  → 7 verticals: Technology, Financial Services, Healthcare, etc.
+      - 'open deals'   → summary of all 624 active open opportunities
+    Returns: open_pipeline_value, deal counts, closed_won, win_rate, avg_deal_size per segment.
     """
     opps = _load("opportunities.csv")
     accounts = _load("accounts.csv")
@@ -141,13 +142,13 @@ def get_pipeline_by_segment(query: str = "all") -> str:
 @tool
 def get_product_usage(query: str = "summary") -> str:
     """
-    Retrieve product usage analytics across accounts.
+    Retrieve product usage analytics across 300 accounts and 5 product modules.
     Examples:
-      - 'summary'              → overall usage stats and inactive account counts
-      - 'at-risk accounts'     → accounts with no activity in 30+ days
-      - 'top products'         → usage breakdown by product module
-      - 'account ACC0042'      → usage detail for a specific account (e.g., 'account ACC0042')
-    Returns: usage events, active users, last active dates, and risk signals.
+      - 'summary'          → total active users, usage events, at-risk counts (51/300 = 17%)
+      - 'at-risk accounts' → accounts with no activity in 30+ days (last_active < today-30d)
+      - 'top products'     → Enterprise Suite, API Access, Core Platform, Analytics, Compliance
+      - 'account ACC0042'  → usage detail for a specific account (format: ACC0001–ACC0300)
+    Returns: usage events, active users, last active dates, and at-risk signals.
     """
     usage = _load("product_usage.csv")
     q = query.strip().lower()

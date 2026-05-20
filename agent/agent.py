@@ -6,9 +6,8 @@ LangChain agent with tool-use powered by Claude or OpenAI.
 import os
 import logging
 from dotenv import load_dotenv
-from langchain_classic.agents import AgentExecutor, create_tool_calling_agent
-from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain_core.messages import HumanMessage, AIMessage
+from langgraph.prebuilt import create_react_agent
+from langchain_core.messages import HumanMessage, AIMessage, ToolMessage
 
 load_dotenv()
 
@@ -48,31 +47,15 @@ def _extract_text(output) -> str:
 
 # ── Agent factory ───────────────────────────────────────────────────────────────
 
-def build_agent() -> AgentExecutor:
-    """Build and return the Growth Intelligence AgentExecutor."""
+def build_agent():
+    """Build and return the Growth Intelligence agent graph."""
     from tools.mcp_tools import ALL_TOOLS
     from agent.prompts import SYSTEM_PROMPT
 
     llm = get_llm()
-
-    prompt = ChatPromptTemplate.from_messages([
-        ("system", SYSTEM_PROMPT),
-        MessagesPlaceholder("chat_history", optional=True),
-        ("human", "{input}"),
-        MessagesPlaceholder("agent_scratchpad"),
-    ])
-
-    agent = create_tool_calling_agent(llm, ALL_TOOLS, prompt)
-    executor = AgentExecutor(
-        agent=agent,
-        tools=ALL_TOOLS,
-        verbose=True,
-        max_iterations=8,
-        return_intermediate_steps=True,
-        handle_parsing_errors=True,
-    )
-    logger.info("Agent executor built with %d tools", len(ALL_TOOLS))
-    return executor
+    graph = create_react_agent(llm, tools=ALL_TOOLS, prompt=SYSTEM_PROMPT)
+    logger.info("Agent built with %d tools", len(ALL_TOOLS))
+    return graph
 
 
 # ── High-level API ──────────────────────────────────────────────────────────────
@@ -80,7 +63,7 @@ def build_agent() -> AgentExecutor:
 _agent_instance = None
 
 
-def get_agent() -> AgentExecutor:
+def get_agent():
     """Singleton agent instance."""
     global _agent_instance
     if _agent_instance is None:
@@ -101,26 +84,34 @@ def ask(question: str, chat_history: list = None) -> dict:
     """
     logger.info("Agent query: %s", question[:120])
     agent = get_agent()
-    history_messages = []
+
+    messages = []
     if chat_history:
         for human_msg, ai_msg in chat_history:
-            history_messages.append(HumanMessage(content=human_msg))
-            history_messages.append(AIMessage(content=ai_msg))
+            messages.append(HumanMessage(content=human_msg))
+            messages.append(AIMessage(content=ai_msg))
+    messages.append(HumanMessage(content=question))
 
-    result = agent.invoke({
-        "input": question,
-        "chat_history": history_messages,
-    })
+    result = agent.invoke({"messages": messages})
 
+    # Extract tool steps from message history
     steps = []
-    for action, observation in result.get("intermediate_steps", []):
-        steps.append({
-            "tool": action.tool,
-            "input": action.tool_input,
-            "output": observation[:500] + "..." if len(str(observation)) > 500 else observation,
-        })
+    tool_outputs = {}
+    for msg in result["messages"]:
+        if isinstance(msg, ToolMessage):
+            tool_outputs[msg.tool_call_id] = str(msg.content)
+    for msg in result["messages"]:
+        if isinstance(msg, AIMessage) and msg.tool_calls:
+            for tc in msg.tool_calls:
+                out = tool_outputs.get(tc["id"], "")
+                steps.append({
+                    "tool": tc["name"],
+                    "input": tc["args"],
+                    "output": out[:500] + "..." if len(out) > 500 else out,
+                })
 
-    answer = _extract_text(result["output"])
+    final_msg = result["messages"][-1]
+    answer = _extract_text(final_msg.content)
     logger.info("Agent answered (%d chars, %d tool steps)", len(answer), len(steps))
 
     return {

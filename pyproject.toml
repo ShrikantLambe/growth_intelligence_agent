@@ -2,6 +2,11 @@
 name = "growth-intelligence-agent"
 version = "1.0.0"
 requires-python = ">=3.12"
+# Vercel deployment dependencies — intentionally excludes:
+#   sentence-transformers / faiss-cpu  → PyTorch is ~2 GB and blows the 500 MB Lambda limit
+#   streamlit / plotly / faker         → UI and data-gen tools not needed at runtime
+# The get_company_context RAG tool degrades gracefully when the vectorstore is unavailable.
+# For full local development use requirements.txt instead.
 dependencies = [
     "anthropic>=0.25.0",
     "openai>=1.30.0",
