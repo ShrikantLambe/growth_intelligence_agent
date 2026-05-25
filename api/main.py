@@ -891,7 +891,6 @@ footer{border-top:1px solid #1e293b;margin-top:2rem;padding:1.2rem 2rem;display:
   </div>
   <div class="nav-links">
     <span class="nav-status" id="status-badge">⏳ Loading…</span>
-    <a href="/">← Article</a>
     <a href="/architecture">Architecture</a>
     <a href="/docs" target="_blank">API Docs</a>
   </div>
@@ -1076,8 +1075,6 @@ footer{border-top:1px solid #1e293b;margin-top:2rem;padding:1.2rem 2rem;display:
   <div style="color:#334155;font-size:.75rem;font-weight:600">Shrikant Lambe</div>
   <div class="footer-links">
     <a href="https://github.com/ShrikantLambe/growth_intelligence_agent" target="_blank">GitHub</a>
-    <span class="footer-sep">·</span>
-    <a href="/" >Article</a>
     <span class="footer-sep">·</span>
     <a href="https://www.linkedin.com/in/shrikantlambe" target="_blank">LinkedIn</a>
     <span class="footer-sep">·</span>
@@ -1819,7 +1816,6 @@ pre.diagram .gr{color:#22c55e}
   <div class="nav-brand">🧠 Growth Intelligence Agent</div>
   <div class="nav-links">
     <a href="/dashboard">Dashboard</a>
-    <a href="/">Article</a>
     <a href="/docs" target="_blank">API Docs</a>
     <a href="https://github.com/ShrikantLambe/growth_intelligence_agent" target="_blank">GitHub</a>
   </div>
@@ -1909,7 +1905,6 @@ pre.diagram .gr{color:#22c55e}
 
   <div class="links-row">
     <a href="https://github.com/ShrikantLambe/growth_intelligence_agent" target="_blank">GitHub Repository</a>
-    <a href="/">Portfolio Article</a>
     <a href="/dashboard">Live Dashboard</a>
     <a href="/docs" target="_blank">API Reference</a>
   </div>
