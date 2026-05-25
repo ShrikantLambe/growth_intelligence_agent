@@ -1426,7 +1426,7 @@ async function runAlerts(force) {
         </div>
         <div class="alert-meta">${a.is_positive?'✅':'❌'} ${sign}${a.change_pct}% &nbsp;·&nbsp; ${a.previous_value} → ${a.current_value}</div>
         <div class="alert-action">💡 ${a.recommended_action}</div>
-        <span class="alert-investigate" onclick="askAgent(${JSON.stringify(investigateQ)})">→ Investigate with agent</span>
+        <span class="alert-investigate" onclick='askAgent(${JSON.stringify(investigateQ)})'>→ Investigate with agent</span>
       </div>`;
     }).join('');
   } catch(e) {
@@ -1516,7 +1516,7 @@ function askAgent(question) {
 
 // Suggestion chips
 document.getElementById('suggestions').innerHTML = SUGGESTIONS.map(s=>
-  `<span class="chip" onclick="sendMessage(${JSON.stringify(s)})">${s.substring(0,36)}…</span>`
+  `<span class="chip" onclick='sendMessage(${JSON.stringify(s)})'>${s}</span>`
 ).join('');
 
 // ── Chart registry (prevents "canvas already in use" on re-render) ───────────
