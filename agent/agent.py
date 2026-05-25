@@ -18,14 +18,21 @@ logger = logging.getLogger(__name__)
 # ── LLM setup ───────────────────────────────────────────────────────────────────
 
 def get_llm():
-    """Return the configured LLM (Claude or OpenAI)."""
+    """Return the configured LLM — priority: Anthropic → Google → OpenAI."""
     model = os.getenv("LLM_MODEL", "claude-haiku-4-5-20251001")
-    api_key = os.getenv("ANTHROPIC_API_KEY")
 
-    if api_key and api_key != "your_anthropic_api_key_here":
+    anthropic_key = os.getenv("ANTHROPIC_API_KEY")
+    if anthropic_key and anthropic_key != "your_anthropic_api_key_here":
         from langchain_anthropic import ChatAnthropic
         logger.info("Using Anthropic model: %s", model)
-        return ChatAnthropic(model=model, api_key=api_key, temperature=0)
+        return ChatAnthropic(model=model, api_key=anthropic_key, temperature=0)
+
+    google_key = os.getenv("GOOGLE_API_KEY")
+    if google_key:
+        from langchain_google_genai import ChatGoogleGenerativeAI
+        google_model = os.getenv("LLM_MODEL", "gemini-2.0-flash")
+        logger.info("Using Google model: %s", google_model)
+        return ChatGoogleGenerativeAI(model=google_model, google_api_key=google_key, temperature=0)
 
     openai_key = os.getenv("OPENAI_API_KEY")
     if openai_key:
@@ -34,7 +41,7 @@ def get_llm():
         return ChatOpenAI(model="gpt-4o", api_key=openai_key, temperature=0)
 
     raise ValueError(
-        "No LLM API key found. Set ANTHROPIC_API_KEY or OPENAI_API_KEY in your .env file."
+        "No LLM API key found. Set ANTHROPIC_API_KEY, GOOGLE_API_KEY, or OPENAI_API_KEY in your .env file."
     )
 
 
